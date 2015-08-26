@@ -1,0 +1,36 @@
+<header id="header">
+    <div id="top-menu">
+        <a class="logo clearfix" href="/" target="_self">
+            <img src="/static/img/logo.png"/>
+        </a>
+        <ul class="nav">
+            <li class="dropdown">
+                <a href="javascript:void(0);">功能</a>
+                <ul class="menu">
+                    <li><a href="/git" target="_self"><i class="git icon"></i> 代码托管</a></li>
+                    <li><a href="/pm" target="_self"><i class="icon collaboration"></i> 项目管理</a></li>
+                    <li><a href="/webide" target="_self"><i class="ide icon"></i> WebIDE</a></li>
+                    <li><a href="/app" target="_self"><i class="app icon"></i> APP</a></li>
+                </ul>
+            </li>
+            <li><a href="/upgrade" target="_self">价格</a></li>
+            <li><a href="/pp" target="_self">冒泡</a></li>
+            <li><a href="/help" target="_self">帮助</a></li>
+            <li><a href="https://coding.net/u/coding/p/Coding-Feedback/topic/all" target="_self">反馈</a></li>
+        </ul>
+        <div class="login-zone">
+            <div class="btns">
+                <a href="/login" target="_blank" class="login dark button">登录</a>
+                <a href="/register" target="_blank" class="register button">注册</a>
+            </div>
+            <div class="user">
+                <a href="/user" class="ui avatar image" title="{{user.name}}" target="_self">
+                    <img ng-src="{{user.avatar}}"
+                         height="40px"></a>
+                <i class="fa fa-sign-out ng-scope" ng-click="logout()" title="点击退出账号"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+</script>

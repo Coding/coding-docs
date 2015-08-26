@@ -1,0 +1,32 @@
+{
+  "toc": [
+    {
+      "title": "文档",
+      "children": [
+        {
+          "title": "Git 代码托管"
+        },
+        {
+          "title": "欢迎使用 WebIDE 手册"
+        },
+        {
+          "title": "关于WebIDE"
+        }
+      ]
+    },
+    {
+      "title": "Git 代码托管",
+      "children": [
+        {
+          "title": "Git 代码托管"
+        },
+        {
+          "title": "欢迎使用 WebIDE 手册"
+        },
+        {
+          "title": "关于WebIDE"
+        }
+      ]
+    }
+  ]
+}

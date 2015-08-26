@@ -1,0 +1,78 @@
+<div class="help-sidebar">
+    <div class="sidebar-title">
+        <h3>帮助中心</h3>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li ng-repeat="menu in tree">
+                <div class="menu-content">
+                    <label>
+                        <i class="fa fa-angle-right"></i>
+                        <span>常见问题</span>
+                    </label>
+                    <ul class="sub-menu">
+                        <li>
+                            <div class="menu-content">
+                                <label>
+                                    <i class="fa fa-file-text-o "></i>
+                                    <span>Git 代码托管？</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-content">
+                                <label>
+                                    <i class="fa fa-file-text-o "></i>
+                                    <span>什么是质量管理？</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-content">
+                                <label>
+                                    <i class="fa fa-file-text-o "></i>
+                                    <span>什么是代码分析？</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li ng-repeat="menu in tree">
+                <div class="menu-content">
+                    <label>
+                        <i class="fa fa-angle-right"></i>
+                        <span>文档</span>
+                    </label>
+                    <ul class="sub-menu">
+                        <li ng-repeat="menu in menu.children" ng-include="'menu-content.html'">
+                            <div class="menu-content">
+                                <label>
+                                    <i class="fa fa-file-text-o "></i>
+                                    <span>Git 代码托管</span>
+                                </label>
+                                <ul class="sub-toc">
+                                    <li>
+                                        <label>
+                                            <span>1.1 Git 是什么</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span>1.2 欢迎使用 WebIDE 手册</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span>1.3 为什么使用 WebIDE ,而不是使用其他在线开发工具？</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

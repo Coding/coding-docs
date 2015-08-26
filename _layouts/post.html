@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+
+<div class="help-container">
+    <div class="container-wrapper clearfix">
+        {% include sidebar.html %}
+        <div class="help-content">
+            <div class="content-header">
+                <div>
+                    <div class="header-search">
+                        <input type="text"/>
+
+                        <div class="s-button">
+                            搜索
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="content-wrapper">
+                    <section class="document-content">
+                        <div class="document-header">
+                            <h3>
+                                <i class="fa fa-caret-down "></i>
+                                {{ .page.title }}
+                            </h3>
+                        </div>
+                        <div class="document-body">
+                            <article>
+                                {{ .content }}
+                            </article>
+                        </div>
+                    </section>
+                    <div class="unfixed clearfix">
+                        <div class="pull-right">
+                            <span>问题仍未解决？</span>
+                            <a class="ask-help">在线求助</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

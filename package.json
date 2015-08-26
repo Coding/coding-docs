@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "author": "konelove2010@gmail.com",
+  "name": "coding-doc",
+  "description": "Very simple todo, demo for connect web dev.",
+  "version": "1.0.0",
+  "homepage": "https://coding.net/kin/coding-doc",
+  "repository": {
+    "type": "git",
+    "url": "git://coding.net/kin/coding-doc.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">= 0.6"
+  }
+}
