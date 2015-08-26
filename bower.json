@@ -2,7 +2,8 @@
   "name": "coding-event",
   "version": "0.1.0",
   "dependencies": {
-    "font-awesome": "4.3.0"
+    "font-awesome": "4.3.0",
+    "metisMenu": "2.1.0"
   },
   "devDependencies": {
   },

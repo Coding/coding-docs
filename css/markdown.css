@@ -1,0 +1,54 @@
+.markdown {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.markdown h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.markdown h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.markdown h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.markdown h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.markdown h5,
+.markdown h6 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.markdown p, .markdown ul {
+    margin-bottom: 20px;
+}
+
+.markdown ul {
+    padding-left: 20px;
+}
+
+.markdown ul li {
+    list-style: disc;
+}
+
+.markdown img {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #efefef;
+}

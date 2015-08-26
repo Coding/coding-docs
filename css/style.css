@@ -815,7 +815,7 @@ a {
     cursor: pointer;
 }
 
-.sidebar-menu .menu-content label {
+.sidebar-menu li a {
     padding: 5px 10px;
     display: block;
     color: #333333;
@@ -823,16 +823,16 @@ a {
     line-height: 1.5;
 }
 
-.sidebar-menu .menu-content label:hover {
+.sidebar-menu li a:hover {
     color: #000000;
     font-weight: bold;
 }
 
-.sidebar-menu .menu-content.root label {
+.sidebar-menu li .root a {
     padding: 8px 10px;
 }
 
-.sidebar-menu .menu-content.root {
+.sidebar-menu li .root {
     border-bottom: 1px solid #efefef;
 }
 
@@ -841,7 +841,7 @@ a {
     font-size: 12px;
 }
 
-.sidebar-menu .sub-menu .menu-content {
+.sidebar-menu .sub-menu a {
     border-bottom: none;
     padding-left: 15px;
 }
@@ -854,7 +854,7 @@ a {
     padding: 5px 0;
 }
 
-.sidebar-menu .sub-menu .sub-menu .menu-content label {
+.sidebar-menu .sub-menu .sub-menu a {
     padding: 3px 10px;
 }
 
