@@ -1,0 +1,49 @@
+body {
+    font: 13px/1.4 Microsoft Yahei, Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, ul, li, p, h1, h2, h3, h4, h5, h6, table, td, tr, tbody, thead, tfoot, article, input, textarea, select, button, .ui {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+
+}
+
+a {
+    color: #0c94de;
+    text-decoration: none;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: inherit !important;
+}

@@ -1,45 +1,3 @@
-body {
-    font: 13px/1.4 Microsoft Yahei, Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #333;
-    background-color: #fff;
-    font-weight: 400;
-}
-
-body, ul, li, p, h1, h2, h3, h4, h5, h6, table, td, tr, tbody, thead, tfoot, article, input, textarea, select, button, .ui {
-    font-family: Microsoft Yahei, Consolas, Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !important;
-    -webkit-font-smoothing: antialiased;
-    padding: 0;
-    margin: 0;
-}
-
-ul, li {
-    list-style: none;
-    padding: 0;
-
-}
-
-a {
-    text-decoration: none;
-}
-
-.clearfix {
-    overflow: auto;
-    zoom: 1;
-}
-
-.clearfix:before, .clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-    overflow: hidden;
-}
-
-*, :after, :before {
-    box-sizing: border-box;
-}
 
 /**
 *Header
@@ -202,7 +160,6 @@ a {
     padding: 0 2em;
     text-transform: none;
     line-height: 2em;
-    height: 2em;
     background-image: none;
     -webkit-border-radius: 2em;
     -moz-border-radius: 2em;
@@ -278,7 +235,7 @@ a {
 }
 
 .help-container .container-wrapper {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1034,5 +991,168 @@ a {
 
     .document-content .document-body {
         padding: 1em;
+    }
+}
+
+
+#footer {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    background: #FFF;
+}
+
+#footer .partners {
+    text-align: center;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+
+#footer .partners .partner.title {
+    font-size: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    background-color: #666;
+    color: #FFF;
+}
+
+#footer .partners .partner.title > span {
+    margin-top: 9px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+#footer .partners .partner {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+
+#footer .partners .partner img {
+    /*IE*/
+    filter: Gray;
+    /*Webkit*/
+    -webkit-filter: grayscale(100%);
+    /*Firefox*/
+    filter: url('/marketing/static/images/home/filters.svg#grayscale');
+    height: 40px;
+}
+
+#footer .site {
+    font-size: 13px;
+    color: #999;
+    display: inline-block;
+}
+
+#footer .site a {
+    text-decoration: none;
+    color: #999;
+}
+
+#footer .site ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#footer .site p {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#footer .share {
+    float: right;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#footer .share img.w-icon {
+    opacity: 0.5;
+}
+
+#footer .share img.w-icon:hover {
+    opacity: 1;
+}
+
+#footer .share .wechat,
+#footer .share .weibo {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+#footer .share .qrcode {
+    /*display: none;*/
+    position: absolute;
+    top: -255px;
+    right: -100px;
+    z-index: 900;
+    border: 1px solid rgba(0, 0, 0, .1);
+    max-width: 250px;
+    background-color: #FFF;
+    padding: .8em 1.2em;
+    font-size: .875rem;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, .7);
+    border-radius: .2em;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    transition: display ease-in 500ms;
+}
+
+#footer .share .qrcode:before {
+    position: absolute;
+    left: 125px;
+    bottom: -5px;
+    content: "";
+    width: .75em;
+    height: .75rem;
+    background-image: none;
+    background-color: #FFF;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+#footer .partners .partner:hover img {
+    filter: none;
+    /*Webkit*/
+    -webkit-filter: none;
+}
+
+@media only screen and (max-width: 1366px) {
+    .footer .partners .partner img {
+        height: 40px;
+    }
+}
+
+@media only screen  and (max-width: 1024px) {
+    #footer .share {
+        float: inherit;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #footer .site {
+        float: inherit;
+        display: block;
+        text-align: center;
     }
 }

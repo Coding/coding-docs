@@ -1,54 +1,370 @@
 .markdown {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 12px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, '微软雅黑';
 }
 
-.markdown h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-weight: 500;
+.markdown article, .markdown aside, .markdown details, .markdown figcaption, .markdown figure, .markdown footer, .markdown header, .markdown menu, .markdown nav, .markdown section {
+    display: block;
 }
 
-.markdown h2 {
-    font-size: 18px;
-    margin-bottom: 16px;
-    font-weight: 500;
+/* HTML5 媒体文件跟 img 保持一致 */
+.markdown audio, .markdown canvas, .markdown video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 
-.markdown h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    font-weight: 500;
+/* 去除 IE6 input/button 多余的空白 */
+.markdown button, .markdown input {
+    *width: auto;
+    *overflow: visible;
+
+    /* 让 input 和 button 一样高 */
+    line-height: normal;
 }
 
-.markdown h4 {
-    font-size: 15px;
-    margin-bottom: 8px;
-    font-weight: 500;
+.markdown button::-moz-focus-inner,
+.markdown input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
 }
 
-.markdown h5,
-.markdown h6 {
-    font-size: 14px;
-    margin-bottom: 4px;
-    font-weight: 500;
+/* 去掉各Table cell 的边距并让其边重合 */
+.markdown table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.markdown p, .markdown ul {
-    margin-bottom: 20px;
+/* IE bug fixed: th 不继承 text-align */
+.markdown th {
+    text-align: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.markdown ul {
-    padding-left: 20px;
+.markdown p,
+.markdown pre,
+.markdown ul,
+.markdown div,
+.markdown ol {
+    margin: 15px 0 20px 24px;
+    color: #404040;
+    line-height: 22px;
+}
+
+/* 去除默认边框 */
+.markdown fieldset, .markdown img {
+    border: 0;
+}
+
+/* 解决 IE6-7 图片缩放锯齿问题 */
+.markdown img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+.markdown iframe {
+    display: block;
+}
+
+/* 块/段落引用 */
+.markdown blockquote {
+    position: relative;
+    color: #999;
+    font-weight: 300;
+    font-family: Avenir, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+    border-left: 1px solid #1abc9c;
+    padding-left: 1em;
+    margin: 1em 3em 1em 2em;
+    background-color: #f9f9f9;
 }
 
 .markdown ul li {
     list-style: disc;
 }
 
+.markdown pre {
+    background: #f8f8f8;
+    border: 1px solid #f1f3f6;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    line-height: 22px !important;
+}
+
+.markdown pre, .markdown code {
+    font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+/* Firefox 以外，元素没有下划线，需添加 */
+.markdown acronym, .markdown abbr {
+    border-bottom: 1px dotted;
+    font-variant: normal;
+}
+
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+.markdown abbr {
+    cursor: help;
+}
+
+/* 一致的 del 样式 */
+.markdown del {
+    text-decoration: line-through;
+}
+
+.markdown address, .markdown caption, .markdown cite, .markdown code, .markdown dfn, .markdown em, .markdown th, .markdown var {
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+.markdown ul, .markdown ol {
+    list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+.markdown caption, .markdown th {
+    text-align: left;
+}
+
+.markdown q:before, .markdown q:after {
+    content: '';
+}
+
+/* 统一上标和下标 */
+.markdown sub, .markdown sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+.markdown :root sub, .markdown :root sup {
+    vertical-align: baseline; /* for ie9 and other modern browsers */
+}
+
+.markdown sup {
+    top: -0.5em;
+}
+
+.markdown sub {
+    bottom: -0.25em;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+.markdown a {
+}
+
+.markdown a:hover {
+    border-bottom-color: #555;
+    color: #555;
+    text-decoration: none;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+.markdown ins, .markdown a {
+    text-decoration: none;
+}
+
+/* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
+ * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
+ * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/
+ */
+.markdown u {
+    text-decoration: underline;
+}
+
+/* 标记，类似于手写的荧光笔的作用 */
+.markdown mark {
+    background: #fffdd1;
+    border-bottom: 1px solid #ffedce;
+    padding: 2px;
+    margin: 0 5px;
+}
+
+/* 代码片断 */
+.markdown pre, .markdown code {
+    font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.markdown code {
+    border: 1px solid #f1f3f6;
+    padding: 3px;
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+
+.markdown pre code {
+    border: none;
+}
+
+.markdown pre {
+    /*background: #f8f8f8;*/
+    background: #f8f8f8;
+    border: 1px solid #f1f3f6;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    line-height: 22px !important;
+}
+
+/* 一致化 horizontal rule */
+.markdown hr {
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+    *color: pink;
+    height: 10px;
+    *margin: -7px 0 2px;
+}
+
+/* 底部印刷体、版本等标记 */
+.markdown small, .markdown .typo-small,
+.markdown figcaption {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.markdown strong, .markdown b {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 可拖动文件添加拖动手势 */
+[draggable] {
+    cursor: move;
+}
+
+.clearfix:before, .clearfix:after {
+    /*content: "";*/
+    /*display: table;*/
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* 强制文本换行 */
+.markdown .textwrap, .markdown .textwrap td, .markdown .textwrap th {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.markdown .textwrap-table {
+    table-layout: fixed;
+}
+
+/* 提供 serif 版本的字体设置: iOS 下中文自动 fallback 到 sans-serif */
+.markdown .serif {
+    font-family: Palatino, Optima, Georgia, serif;
+}
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    margin-bottom: 0.4em;
+    line-height: 1.5;
+}
+
+.markdown h1 {
+    font-size: 1.6em;
+}
+
+.markdown h2 {
+    font-size: 1.4em;
+}
+
+.markdown h3 {
+    font-size: 1.2em;
+}
+
+.markdown h4 {
+    font-size: 1.2em;
+}
+
+.markdown h5, .markdown h6 {
+    font-size: 1em;
+}
+
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+.markdown ul {
+    list-style: disc;
+    padding-left: 24px;
+}
+
+.markdown ol {
+    list-style: decimal;
+    padding: 0;
+}
+
+.markdown li ul, .markdown li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.markdown li ul {
+    list-style: circle;
+}
+
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+.markdown table th, .markdown table td {
+    border: 1px solid #ddd;
+    padding: 0.5em 0.5em;
+    color: #666;
+}
+
+.markdown table th {
+    background: #fbfbfb;
+}
+
+.markdown table thead th {
+    background: #f1f1f1;
+}
+
+.markdown table caption {
+    border-bottom: none;
+}
+
+/* 高亮选中 */
+::-moz-selection {
+    background: #08c;
+    color: #fff;
+}
+
+::selection {
+    background: #08c;
+    color: #fff;
+}
+
+.markdown em, .markdown legend, .markdown caption {
+    color: #000;
+    font-weight: inherit;
+}
+
+/* Responsive images */
 .markdown img {
+    display: block;
+    max-width: 90%;
     padding: 5px;
-    margin: 10px 0;
+    border-radius: 5px;
     border: 1px solid #efefef;
+    text-align: center;
+    margin: 10px 0;
 }

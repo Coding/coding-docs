@@ -4,6 +4,7 @@ layout: post
 title: WebIDE 使用手册
 ---
 
+
 1.欢迎使用 WebIDE 手册 
 -----
 本手册主要描述 Coding.net 旗下 WebIDE 产品的相关功能说明。
@@ -63,11 +64,11 @@ WebIDE 致力于降低开发者编辑代码的门槛，省去了安装配置本�
  
 ##### 3.1.2.1 私有项目：
 
-1.  进入到已创建好的项目界面, 选择 “代码”-> “WebIDE” 如下图所示：
+1.进入到已创建好的项目界面, 选择 “代码”-> “WebIDE” 如下图所示：
 
     ![图片](https://dn-coding-net-production-pp.qbox.me/35c83b34-d146-47fb-8cfc-a99ed91574f1.png) 
 
-2. 点击“进入WebIDE” 进入到 WebIDE 主界面
+2.点击“进入WebIDE” 进入到 WebIDE 主界面
 
 ##### 3.1.2.2 公有项目：
 

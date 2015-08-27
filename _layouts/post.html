@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 <div class="help-container">
     <div class="container-wrapper clearfix">
         {% include sidebar.html %}
@@ -44,3 +43,13 @@ layout: default
         </div>
     </div>
 </div>
+<link rel="stylesheet" href="{{ "/static/vendor/highlightjs/styles/github.css" | prepend: site.baseurl }}">
+<script src="{{"/static/vendor/highlightjs/highlight.pack.js"}}"></script>
+<script>
+    jQuery("#document").ready(function () {
+        jQuery(".markdown pre code").each(function (i, e) {
+            hljs.highlightBlock(e);
+        });
+    });
+</script>
+

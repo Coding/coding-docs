@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "font-awesome": "4.3.0",
-    "metisMenu": "2.1.0"
+    "metisMenu": "2.1.0",
+    "highlightjs": "8.6.0"
   },
   "devDependencies": {
   },
