@@ -2,14 +2,14 @@
     <div class="footer">
         <div class="share">
             <div class="wechat">
-                <img class="w-icon" ng-click="showQrFn($event)" src="/static/img/wechat.jpg"/>
+                <img class="w-icon" ng-click="showQrFn($event)" src="{{ "/static/img/wechat.jpg" | prepend: site.baseurl }}"/>
 
                 <div class="animated fadeIn qrcode hide"><img
                         src="https://coding.net/static/fcdf6ecd90f6022d143a5e06fbe391b8.jpg"></div>
             </div>
             <div class="weibo">
                 <a href="http://weibo.com/p/1006065153943878/home?from=page_100606&mod=TAB#place" target="_blank">
-                    <img class="w-icon" src="/static/img/weibo.jpg"/>
+                    <img class="w-icon" src="{{ "/static/img/weibo.jpg" | prepend: site.baseurl }}"/>
                 </a>
             </div>
         </div>

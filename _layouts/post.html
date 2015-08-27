@@ -43,11 +43,11 @@ layout: default
         </div>
     </div>
     <div class="back-to-top" style="display: block;">
-        <a href="#branding" title="回到顶部"><img src="/static/img/super-monkey.gif" width="32"></a>
+        <a href="#branding" title="回到顶部"><img src="{{ "/static/img/super-monkey.gif" | prepend: site.baseurl }}" width="32"></a>
     </div>
 </div>
 <link rel="stylesheet" href="{{ "/static/vendor/highlightjs/styles/github.css" | prepend: site.baseurl }}"/>
-<script src="{{"/static/vendor/highlightjs/highlight.pack.js"}}"></script>
+<script src="{{"/static/vendor/highlightjs/highlight.pack.js" | prepend: site.baseurl}}"></script>
 <script >
 jQuery("#document").ready(function () {
     jQuery(".markdown pre code").each(function (i, e) {

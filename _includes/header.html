@@ -1,7 +1,7 @@
 <header id="header">
     <div id="top-menu">
         <a class="logo clearfix" href="/" target="_self">
-            <img src="/static/img/logo.png"/>
+            <img src="{{ "/static/img/logo.png" | prepend: site.baseurl }}"/>
         </a>
         <ul class="nav">
             <li class="dropdown">
@@ -33,4 +33,37 @@
     </div>
 </header>
 <script>
+    jQuery(document).ready(function () {
+        $.ajax({
+            url: "/api/current_user",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#btns").hide();
+                    $("#user a").attr("title", result.data.name);
+                    $("#user img").attr("src", result.data.avatar);
+                    $("#user").show();
+                } else {
+                    $("#user").hide();
+                    $("#btns").show();
+                }
+            }
+        });
+    });
+
+    var logout = function () {
+        $.ajax({
+            url: "/api/logout",
+            type: "POST",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#user").hide();
+                    $("#btns").show();
+                } else {
+                    $("#user").show();
+                    $("#btns").hide();
+                }
+            }
+        })
+    }
 </script>
+
