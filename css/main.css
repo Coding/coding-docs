@@ -3,6 +3,7 @@ body {
     color: #333;
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 body, ul, li, p, h1, h2, h3, h4, h5, h6, table, td, tr, tbody, thead, tfoot, article, input, textarea, select, button, .ui {

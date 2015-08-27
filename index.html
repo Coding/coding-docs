@@ -41,25 +41,86 @@ layout: default
             <div class="tab-box clearfix">
                 <div class="tabs clearfix">
                     <ul>
-                        <li>Git</li>
-                        <li>演示平台</li>
-                        <li>WebIDE</li>
-                        <li>项目管理</li>
-                        <li>用户账户</li>
+                        <li onclick="changeTab(1)">Git</li>
+                        <li onclick="changeTab(2)">演示平台</li>
+                        <li onclick="changeTab(3)">WebIDE</li>
+                        <li onclick="changeTab(4)">项目管理</li>
+                        <li onclick="changeTab(5)">用户账户</li>
                     </ul>
                 </div>
-                <div class="tab-body">
+                <!-- Git -->
+                <div class="tab-body tab-option-1 active">
                     <ul>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
+                        <li><i class="fa fa-caret-right"></i>我能在 Coding.net 上做些什么？</li>
+                        <li><i class="fa fa-caret-right"></i>是否可以通过第三方账号登录？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是冒泡？</li>
+                        <li><i class="fa fa-caret-right"></i>如何发送私信？</li>
                     </ul>
                     <ul>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
-                        <li><i class="fa fa-caret-right"></i>如何上传代码到 Coding</li>
+                        <li><i class="fa fa-caret-right"></i>一个账号可以创建多少个项目？</li>
+                        <li><i class="fa fa-caret-right"></i>如何访问 git 仓库？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是演示平台？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是质量分析？</li>
+                    </ul>
+                </div>
+                <!-- 演示平台 -->
+                <div class="tab-body tab-option-2">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>是否可以通过第三方账号登录？</li>
+                        <li><i class="fa fa-caret-right"></i>为什么登陆失败？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是冒泡？</li>
+                        <li><i class="fa fa-caret-right"></i>如何发送私信？</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>一个账号可以创建多少个项目？</li>
+                        <li><i class="fa fa-caret-right"></i>如何访问 git 仓库？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是演示平台？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是质量分析？</li>
+                    </ul>
+                </div>
+                <!-- WebIDE -->
+                <div class="tab-body tab-option-3">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>是否可以通过第三方账号登录？</li>
+                        <li><i class="fa fa-caret-right"></i>为什么登陆失败？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是冒泡？</li>
+                        <li><i class="fa fa-caret-right"></i>如何发送私信？</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>一个账号可以创建多少个项目？</li>
+                        <li><i class="fa fa-caret-right"></i>如何访问 git 仓库？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是演示平台？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是质量分析？</li>
+                    </ul>
+                </div>
+                <!-- 项目管理 -->
+                <div class="tab-body tab-option-4">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>是否可以通过第三方账号登录？</li>
+                        <li><i class="fa fa-caret-right"></i>为什么登陆失败？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是冒泡？</li>
+                        <li><i class="fa fa-caret-right"></i>如何发送私信？</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>一个账号可以创建多少个项目？</li>
+                        <li><i class="fa fa-caret-right"></i>如何访问 git 仓库？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是演示平台？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是质量分析？</li>
+                    </ul>
+                </div>
+                <!-- 用户账户 -->
+                <div class="tab-body tab-option-5">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>是否可以通过第三方账号登录？</li>
+                        <li><i class="fa fa-caret-right"></i>为什么登陆失败？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是冒泡？</li>
+                        <li><i class="fa fa-caret-right"></i>如何发送私信？</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>一个账号可以创建多少个项目？</li>
+                        <li><i class="fa fa-caret-right"></i>如何访问 git 仓库？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是演示平台？</li>
+                        <li><i class="fa fa-caret-right"></i>什么是质量分析？</li>
                     </ul>
                 </div>
             </div>
@@ -164,3 +225,9 @@ layout: default
         </div>
     </div>
 </div>
+<script>
+    var changeTab = function (i) {
+        $("div[class*=tab-option]").removeClass("active");
+        $("div[class*=tab-option-" + i + "]").addClass("active");
+    }
+</script>

@@ -78,6 +78,7 @@ WebIDE 致力于降低开发者编辑代码的门槛，省去了安装配置本�
 
 2. 点击“进入WebIDE” 进入到 WebIDE 主界面
 
+<a name="aaa"/>
 ### 3.2 界面说明 ###
 
 WebIDE 界面如下图：
@@ -115,6 +116,7 @@ WebIDE 支持图片和pdf 的双击预览。
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/656ca53b-83aa-411b-b051-39380965392c.png) 
 
+<a name="faq"/>
 #### 3.4.4 Push 提交远端仓库
 当你的代码需要提交到远端Git仓库时候，点击菜单栏的“Repository” - > “Push” ，确认本地和远端的分支。
  ![图片](https://dn-coding-net-production-pp.qbox.me/6e32e236-d9a4-468e-be9c-c16816f9a02d.png) 
@@ -143,6 +145,7 @@ WebIDE 支持图片和pdf 的双击预览。
 
 ![图片](https://dn-coding-net-production-pp.qbox.me/15415d4d-0f86-4555-9333-41b74e328538.png) 
 
+<a name="callback-url"/>
 #### 3.5.4 如何切换和分享环境 
 
 当存在多个环境后，点击“Use” 可以切换到不同的环境，切换时当前的 Terminal 会被终止， 然后 Terminal 重新连接到刚才选择的 Environment。

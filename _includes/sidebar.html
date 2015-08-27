@@ -7,6 +7,7 @@
             <li class="active">
                 <a href="#" aria-expanded="true">
                     <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
                     <span>常见问题</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="true">
@@ -39,27 +40,51 @@
             <li class="active">
                 <a href="#">
                     <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
                     <span>文档</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="true">
-                    <li ng-repeat="menu in menu.children" ng-include="'menu-content.html'">
+                    <li>
                         <a href="#">
                             <i class="fa fa-file-text-o "></i>
                             <span>Git 代码托管</span>
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="#">
+                                <a href="/doc/v1/webide.html#aaa">
                                     <span>1.1 Git 是什么</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/doc/v1/webide.html#callback-url">
                                     <span>1.2 欢迎使用 WebIDE 手册</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/doc/v1/webide.html#faq">
+                                    <span>1.3 为什么使用 WebIDE ,而不是使用其他在线开发工具？</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>Git 代码托管</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/doc/v1/webi22de.html#aaa">
+                                    <span>1.1 Git 是什么</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/doc/v1/33.html#callback-url">
+                                    <span>1.2 欢迎使用 WebIDE 手册</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/doc/v1/22.html#faq">
                                     <span>1.3 为什么使用 WebIDE ,而不是使用其他在线开发工具？</span>
                                 </a>
                             </li>
@@ -72,5 +97,24 @@
 </div>
 <script>
     $("#metismenu").metisMenu();
+    $(document).ready(function () {
+        var path = location.pathname;
+        var hash = location.hash;
+        var anchor = $("a[href^='" + path + hash + "']");
+        var expand = function (el) {
+            if (el && el.length > 0) {
+                var ul = el.parent().closest("ul");
+                if (ul && ul.length > 0) {
+                    ul.attr("aria-expanded", "true").removeClass("collapse");
+                    ul.prev("a").attr("aria-expanded", "true").addClass("active");
+                }
+                expand(ul);
+            }
+        };
 
+        expand(anchor);
+        $("#metismenu").metisMenu();
+
+
+    });
 </script>
