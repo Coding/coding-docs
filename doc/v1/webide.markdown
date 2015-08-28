@@ -4,25 +4,12 @@ layout: post
 title: WebIDE 使用手册
 ---
 
+* TOC
+{:toc}
 
 1.欢迎使用 WebIDE 手册 
 -----
 本手册主要描述 Coding.net 旗下 WebIDE 产品的相关功能说明。
-
-
-<ul class="set-api-lineheight">
-<li><a href="#aaa">简单反馈</a></li>
-<li><a href="#redirect">303重定向</a></li>
-<li><a href="#callback">回调通知（callback）</a>
-
-<ul>
-<li><a href="#callback-url">回调地址</a></li>
-<li><a href="#callback-body">回调内容</a></li>
-<li><a href="#callback-security">安全性</a></li>
-<li><a href="#FAQ">常见问题</a></li>
-</ul></li>
-<li><a href="#persistent-op">异步数据预处理</a></li>
-</ul>
 
 
 2.关于WebIDE
@@ -79,6 +66,7 @@ WebIDE 致力于降低开发者编辑代码的门槛，省去了安装配置本�
 2. 点击“进入WebIDE” 进入到 WebIDE 主界面
 
 <a name="aaa"/>
+
 ### 3.2 界面说明 ###
 
 WebIDE 界面如下图：
@@ -110,6 +98,7 @@ WebIDE 支持图片和pdf 的双击预览。
 ![图片](https://dn-coding-net-production-pp.qbox.me/78fbf09c-b6e6-4020-a82f-daa1c55bc3fe.png) 
 
 #### 3.4.3 分支修改
+
 如果需要创建或者修改本地和远程分支，点击菜单栏的“Repository” - > “Branches”，或者点击右下角的分支图标，默认是“Master”。
 
 右下角会弹出如下图的选项，对于本地和远端仓库的操作如Push，Pull ，默认都是操作本地和远端的仓库。
@@ -117,17 +106,22 @@ WebIDE 支持图片和pdf 的双击预览。
  ![图片](https://dn-coding-net-production-pp.qbox.me/656ca53b-83aa-411b-b051-39380965392c.png) 
 
 <a name="faq"/>
+
 #### 3.4.4 Push 提交远端仓库
+
 当你的代码需要提交到远端Git仓库时候，点击菜单栏的“Repository” - > “Push” ，确认本地和远端的分支。
  ![图片](https://dn-coding-net-production-pp.qbox.me/6e32e236-d9a4-468e-be9c-c16816f9a02d.png) 
 
 #### 3.4.5 Pull 从远端仓库拉取到本地
+
 当你的远端代码仓库领先于IDE的本地代码仓库时，需要将远端仓库的代码拉取到本地，点击菜单栏的“Repository” - > “Pull” ，会将代码拉取到本地设置的分支。
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/c389a9bc-aa96-40eb-b440-a776e6391ed3.png) 
 
 ### 3.5 环境管理&分享 ###
+
 #### 3.5.1 什么是环境 ###
+
 环境（Environment）是WebIDE指将终端所操控的系统环境（包括代码，修改过的文件和通过 apt-get 安装的软件等）。每个Workspace可以配置多个环境，和终端关联的环境称为当前环境。环境本质是一个Docker的Container实例。从用户的视角，环境是一个云端的操作系统。
 
 #### 3.5.2 如何管理环境 ###
@@ -146,6 +140,7 @@ WebIDE 支持图片和pdf 的双击预览。
 ![图片](https://dn-coding-net-production-pp.qbox.me/15415d4d-0f86-4555-9333-41b74e328538.png) 
 
 <a name="callback-url"/>
+
 #### 3.5.4 如何切换和分享环境 
 
 当存在多个环境后，点击“Use” 可以切换到不同的环境，切换时当前的 Terminal 会被终止， 然后 Terminal 重新连接到刚才选择的 Environment。

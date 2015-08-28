@@ -119,9 +119,11 @@ Coding.net 目前支持 Github 账号登陆。
 
 
 ### 4.1 账户 SSH 公钥
+
 账户 SSH 公钥是跟用户账户关联的公钥，一旦设置，就拥有账户下所有项目仓库的读写权限。
 
 #### 4.1.1 生成公钥 
+
 打开命令行终端输入ssh-keygen -t rsa -C "username@example.com",( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。
 
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -205,6 +207,7 @@ Coding.net 目前支持 Github 账号登陆。
 
 6.提醒设置
 --------
+
 ### 6.1 关于提醒设置
 
 提醒设置是为 Coding 用户提供在coding平台上的相关信息提醒而设置的一个功能，你可以根据个人需求进行可以化的设置。
@@ -297,17 +300,13 @@ Response body 中的 `code` 为 0，表示正常接收请求。如果 `code`�
 更多 API 信息可查看 http://api-doc.coding.io/
 
 
-
-
-
-
-
 8.码币和shop
 --------
 
 ### 8.1什么是玛币
 
 码币是 Coding 平台推出的线上虚拟货币，可通过在 Coding 上进行 push 代码、完善个人信息、冒泡等动作赚取，目前可用于购买 Coding 商店的礼品以及购买项目升级代金券。
+
 ### 8.2可以用码币做什么
 
 1）你可以利用码币购买 Shop 页面所列 Coding 定制等商品：如洋葱猴抱枕、Coding 毛巾、T恤、短裤、Coding定制拖鞋等
