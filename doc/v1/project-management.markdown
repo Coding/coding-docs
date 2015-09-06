@@ -1,13 +1,13 @@
 ---
 layout: post
 
-title: 项目管理帮助手册
+title: 项目管理使用手册
 ---
 
 * TOC
 {:toc}
 
-## 1. 项目管理帮助手册 ##
+## 1. 项目管理使用手册 ##
 
 本手册主要对 coding.net 旗下项目管理平台的相关功能进行介绍和简单演示。
 *Copyright by coding.net* 
