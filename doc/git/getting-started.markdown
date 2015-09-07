@@ -4,6 +4,9 @@ layout: post
 title: Git管理代码
 ---
 
+* TOC
+{:toc}
+
 ### 3.1 Git管理代码###
 
 #### 3.1.1 安装Git

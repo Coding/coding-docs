@@ -1,0 +1,122 @@
+---
+layout: post
+
+title: 开始使用项目管理
+---
+
+
+## 1. 项目管理使用手册 ##
+
+本手册主要对 coding.net 旗下项目管理平台的相关功能进行介绍和简单演示。
+*Copyright by coding.net* 
+持续更新中
+创建时间2015/7/25
+
+* TOC
+{:toc}
+
+## 2. 关于项目 
+
+### 2.1 项目创建&设置
+
+#### 2.1.1 创建项目 
+
+用户登录之后，将鼠标移至右上角**添加**按钮并在下拉列表中选择**项目**，进入新建项目操作流程；或者将鼠标移至**头像**并在下拉列表中选择**项目**，进入我的项目页，再点击**添加**按钮，进入新建项目操作流程。
+![在这里输入图片描述][1]
+![在这里输入图片描述][2]
+注意：项目一旦创建，项目属性（私有或公开）便无法修改。
+
+#### 2.1.2 公开&私有项目的区别 
+
+公开项目是完全公开的，包括源码、项目讨论、质量控制等，只有项目成员可以编辑该项目，但任何用户都可以进行 fork，关注，收藏等操作。
+私有项目只对项目成员可见，并不会公开展示于项目成员的个人首页上。只有项目所有者才能添加项目成员，项目的所有内容和更新都只有项目成员可以进行操作和查看。
+
+#### 2.1.3 更新项目信息 
+
+只有项目所有者有权更新项目信息。
+在项目主页的左侧一级菜单栏选择**设置**，点击**基本设置**，可以对项目的名称、图标、描述和默认分支进行修改和更新。
+![在这里输入图片描述][3]
+注意：项目属性（私有或公开）一经确定，便不可修改。
+
+#### 2.1.4 删除项目 
+
+只有项目所有者有权删除项目。
+在项目主页的左侧一级菜单栏选择**设置**，点击**高级设置**，再点击**删除项目**，通过身份验证后，即可删除该项目。
+![在这里输入图片描述][4]
+注意：删除项目将会连同项目相关的所有数据（包括 issues、pull requests、动态等在内）一起删除且不可恢复，请慎重。
+
+#### 2.1.5 转让项目 
+
+只有项目所有者有权转让项目给项目成员。
+在项目主页的左侧一级菜单栏选择**设置**，点击**高级设置**，选择项目成员，再点击**转让项目**，通过身份验证后，即可删除该项目。
+![在这里输入图片描述][5]
+
+注意：转让项目时，项目成员不能为空，并且转让项目后原项目所有者的权限将一并移交给新的项目所有者，原项目所有者成为普通项目成员。
+
+#### 2.1.6 项目分组
+
+进入我的项目页，点击右上角**分组**，选中项目，再点击**移至新分组**按钮，并重命名新分组，即可移动项目到指定或新建分组。点击**返回**按钮即可中断项目分组操作。
+![在这里输入图片描述][6]
+
+#### 2.1.7 设置常用项目
+
+进入我的项目页，将鼠标移至目标项目，右上角将出现**白色大头针标识**，点击，即可设置该项目为常用项目。
+![在这里输入图片描述][7]
+此后将鼠标移至右上角**头像**处可以查看或设置常用项目。
+![在这里输入图片描述][8]
+
+### 2.2 项目成员
+
+#### 2.2.1 添加项目成员
+
+只有项目所有者有权限添加项目成员。
+在项目主页的左侧一级菜单栏中选择**成员**，点击**添加**按钮，即可进入添加项目成员弹窗页面。
+![在这里输入图片描述][9]
+![在这里输入图片描述][10]
+弹窗页面内，搜索框支持 email、用户名和唯一标识搜索添加；若点击**我关注的人**、**粉丝**和**我的项目**，即可查看其下所有个人账号，选中即可添加。
+如果该成员已经注册了 Coding 账号，您的邀请将会以私信的形式发送给 TA；如果该成员还没有 Coding 账号，您的邀请则以 email 的形式发送给 TA。
+
+#### 2.2.2 删除项目成员
+
+只有项目所有者有权限删除项目成员。
+在项目主页的左侧一级菜单栏中选择**成员**，选中项目成员并点击项目成员右边的**红色叉字**，即可删除对应项目成员。
+![在这里输入图片描述][11]
+
+#### 2.2.3 退出项目
+
+在项目主页的左侧一级菜单栏中选择**成员**，在项目成员列表里面找到自己并选中，然后点击**退出项目**；
+![在这里输入图片描述][12]
+或者在项目主页的左侧一级菜单栏中选择**设置**，点击**高级设置**，再点击**退出项目**。
+![在这里输入图片描述][13]
+
+
+
+
+  [1]: https://dn-coding-net-production-static.qbox.me/92fe2d5a-e1f1-4454-b2e7-84040d5adfd5.png
+  [2]: https://dn-coding-net-production-static.qbox.me/617c33a3-522f-404e-a1d4-16155bf55950.jpg
+  [3]: https://dn-coding-net-production-static.qbox.me/8b821a8c-dfed-4fc2-9276-3a6542b2b3c7.png
+  [4]: https://dn-coding-net-production-static.qbox.me/a9326b6a-1fb7-456f-97d0-b3e969bea798.jpg?imageView2/2/w/800/h/800
+  [5]: https://dn-coding-net-production-static.qbox.me/91bc9f4a-8965-4d76-85dd-965c6b0e11ad.jpg?imageView2/2/w/800/h/800
+  [6]: https://dn-coding-net-production-static.qbox.me/e6149fa0-6c52-44e1-9348-5637d92322cf.jpg?imageView2/2/w/800/h/800
+  [7]: https://dn-coding-net-production-static.qbox.me/47e150d0-a369-456a-9e3f-dbcf53c54d0b.jpg?imageView2/2/w/800/h/800
+  [8]: https://dn-coding-net-production-static.qbox.me/d4743aad-13d0-46b4-8667-9d6066fe83a8.jpg?imageView2/2/w/800/h/800
+  [9]: https://dn-coding-net-production-static.qbox.me/ac3ba9d8-a05c-43d2-82e4-24daaa341040.jpg?imageView2/2/w/800/h/800
+  [10]: https://dn-coding-net-production-static.qbox.me/c27525a2-70a6-4ca3-964f-27518d0226c3.png?imageView2/2/w/800/h/800
+  [11]: https://dn-coding-net-production-static.qbox.me/150e0c74-cbf8-475a-99bf-2c1be8e0570a.png?imageView2/2/w/800/h/800
+  [12]: https://dn-coding-net-production-static.qbox.me/1bb18b92-2629-40cf-add3-69d843de7d79.png?imageView2/2/w/800/h/800
+  [13]: https://dn-coding-net-production-static.qbox.me/5222465a-4545-404c-9b59-2d782a325955.png?imageView2/2/w/800/h/800
+  [14]: https://dn-coding-net-production-static.qbox.me/bcd21f3c-1893-412a-af07-e8e9a383312d.png?imageView2/2/w/800/h/800
+  [15]: https://coding.net/u/coding/p/Coding-Feedback/git/blob/master/markdown-syntax.md
+  [16]: https://dn-coding-net-production-static.qbox.me/168ec032-475f-4660-bfb0-9a02ded0e769.jpg?imageView2/2/w/800/h/800
+  [17]: https://dn-coding-net-production-static.qbox.me/9cffca9e-06ea-43bc-8a74-2db1462e71e1.png?imageView2/2/w/800/h/800
+  [18]: https://dn-coding-net-production-static.qbox.me/2dc00bb8-d486-412f-9090-63ef7ef10845.png?imageView2/2/w/800/h/800
+  [19]: https://dn-coding-net-production-static.qbox.me/db76b8f1-3c30-45d3-9e0c-9f2d5e31fae4.png?imageView2/2/w/800/h/800
+  [20]: https://dn-coding-net-production-static.qbox.me/2d162819-3a56-4496-920f-6f5ad5ef2fc3.png?imageView2/2/w/800/h/800
+  [21]: https://dn-coding-net-production-static.qbox.me/f7b47f09-eb7b-4a5d-b8d7-069d1995ede4.png?imageView2/2/w/800/h/800
+  [22]: https://dn-coding-net-production-static.qbox.me/1a666602-7b07-4a8c-b504-10a418ae185e.jpg?imageView2/2/w/800/h/800
+  [23]: https://dn-coding-net-production-static.qbox.me/0bfbda67-6a5e-4f39-94bc-c9fae18c87e6.png?imageView2/2/w/800/h/800
+  [24]: https://dn-coding-net-production-static.qbox.me/7d818d4e-bd20-4467-8f15-dcb4f5087b93.png?imageView2/2/w/800/h/800
+  [25]: https://dn-coding-net-production-static.qbox.me/f09dbf3f-8a36-4cb3-9197-073e31e3951c.png?imageView2/2/w/800/h/800
+  [26]: https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800
+  [27]: https://dn-coding-net-production-static.qbox.me/a161eaef-b710-4151-bffb-2eea37c4093d.png?imageView2/2/w/800/h/800
+  [28]: https://dn-coding-net-production-static.qbox.me/2d162819-3a56-4496-920f-6f5ad5ef2fc3.png?imageView2/2/w/800/h/800
