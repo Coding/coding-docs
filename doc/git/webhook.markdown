@@ -1,8 +1,12 @@
 ---
 layout: post
 
-title: 配置SSH公钥
+title: Webhook
 ---
+
+## 上一篇 >> [配置ssh公钥](/help/doc/git/ssh-key.html)
+
+本章节介绍如何通配置Webhook 
 
 7. WebHook 
 ----
@@ -44,5 +48,5 @@ Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为
         "zen": "Coding！ 让开发更简单"
     }
 
-关于WebHook 更多例子，请参看 [Coding.net 开放平台] http://open.coding.io
+关于WebHook 更多例子，请参看 [Coding.net 开放平台]( http://open.coding.io)
 

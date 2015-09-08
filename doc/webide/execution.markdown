@@ -4,12 +4,14 @@ layout: post
 title: 运行程序
 ---  
 
+## 上一篇 >> [终端](/help/doc/webide/terminal.html)
+
 * TOC
 {:toc}
 
-### 3.7 运行程序###
+## 运行程序###
 
-#### 3.7.1 在终端运行程序
+### 在终端运行程序
 
 编写好的代码可以在终端( Terminal ) 里面运行，对于需要创建外部访问链接的应用需要明确绑定到 0.0.0.0 地址, 比如：
 
@@ -22,7 +24,7 @@ title: 运行程序
 >需要强调一下，绑定在本地回环地址 127.0.0.1 是无效的。
 
 
-#### 3.7.2 创建外部访问链接( Generate Access Url )
+### 创建外部访问链接( Generate Access Url )
 
 WebIDE 支持为编写好的程序创建一个外部可以访问的链接，有效期 1 个小时，点击菜单的 Tools -> Generate Access Url 如下图。
 

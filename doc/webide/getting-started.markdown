@@ -4,18 +4,21 @@ layout: post
 title: 开启在线编程之旅
 ---
 
-### 3.1 开启WebIDE
+## 上一篇 >> [WebIDE介绍](/help/doc/webide/introduction.html)
 
 * TOC
 {:toc}
 
-#### 3.1.1 前提条件：
+### 开启WebIDE
+
+#### 前提条件：
+
  -  已经创建好至少一个项目
  -  已创建的 WorkSpace 少于当前账户的配额，具体配额查询项目升级 [项目版本说明][1]
  
-#### 3.1.2 开启WebIDE：
+#### 开启WebIDE：
  
-##### 3.1.2.1 私有项目：
+##### 私有项目：
 
 1.进入到已创建好的项目界面, 选择 “代码”-> “WebIDE” 如下图所示：
 
@@ -23,7 +26,7 @@ title: 开启在线编程之旅
 
 2.点击“进入WebIDE” 进入到 WebIDE 主界面
 
-##### 3.1.2.2 公有项目：
+##### 公有项目：
 
 1.  进入到已创建好的项目界面, 选择“WebIDE” Tab 如下图所示：
 
@@ -33,7 +36,7 @@ title: 开启在线编程之旅
 
 <a name="aaa"/>
 
-### 3.2 界面说明 ###
+### 界面说明 ###
 
 WebIDE 界面如下图：
  ![图片](https://dn-coding-net-production-pp.qbox.me/da1655ec-10ca-4e29-b653-b419380bf8da.png) 
@@ -44,26 +47,26 @@ WebIDE 界面如下图：
 
  - 注：您也可以拖动 Tab 自定义界面。
 
-### 3.3  文件管理
+### 文件管理
 WebIDE 支持文件新建、删除、上传、下载、重命名。 右键点击文件树目录，出现如下菜单：
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/a97d272a-f567-45c6-9205-b808c6747969.png) 
 
 WebIDE 支持图片和pdf 的双击预览。
 
-### 3.4 代码提交&更新 ###
+### 代码提交&更新 ###
     
-#### 3.4.1 Clone 代码
+#### Clone 代码
 
     首次进入 WebIDE 项目时候 WebIDE 会默认 Clone 项目的代码到IDE的 Workspace
     
-#### 3.4.2 Commit 提交本地仓库
+#### Commit 提交本地仓库
  
 当你完成代码编辑后可以点击菜单栏的 “Repository” - > “Commit” ， 选择要提交的文件，提交到本地的代码库。
 
 ![图片](https://dn-coding-net-production-pp.qbox.me/78fbf09c-b6e6-4020-a82f-daa1c55bc3fe.png) 
 
-#### 3.4.3 分支修改
+#### 分支修改
 
 如果需要创建或者修改本地和远程分支，点击菜单栏的“Repository” - > “Branches”，或者点击右下角的分支图标，默认是“Master”。
 
@@ -73,14 +76,15 @@ WebIDE 支持图片和pdf 的双击预览。
 
 <a name="faq"/>
 
-#### 3.4.4 Push 提交远端仓库
+#### Push 提交远端仓库
 
 当你的代码需要提交到远端Git仓库时候，点击菜单栏的“Repository” - > “Push” ，确认本地和远端的分支。
  ![图片](https://dn-coding-net-production-pp.qbox.me/6e32e236-d9a4-468e-be9c-c16816f9a02d.png) 
 
-#### 3.4.5 Pull 从远端仓库拉取到本地
+#### Pull 从远端仓库拉取到本地
 
 当你的远端代码仓库领先于IDE的本地代码仓库时，需要将远端仓库的代码拉取到本地，点击菜单栏的“Repository” - > “Pull” ，会将代码拉取到本地设置的分支。
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/c389a9bc-aa96-40eb-b440-a776e6391ed3.png) 
 
+## 下一篇 >> [环境管理](/help/doc/webide/environment.html)

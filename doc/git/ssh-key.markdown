@@ -4,9 +4,15 @@ layout: post
 title: 配置SSH公钥
 ---
 
-6. 配置SSH公钥
------
+## 上一篇 >> [Git代码托管介绍](/help/doc/git/git-branch.html)
 
+本章节介绍如何通配置SSH公钥
+
+* TOC
+{:toc}
+
+
+## 6. 配置SSH公钥
 
 有关什么是 SSH，可参考中文维基百科（http://zh.wikipedia.org/zh/Secure_Shell）。
 这里要说明的是，Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
@@ -91,4 +97,6 @@ Please contact your system administrator.
 2.重试 push 或者 pull 或者 ssh -T git@git.coding.net
 
 3.遇到询问是否信任服务器公钥，输入 yes 即可
+
+## 下一篇 >> [Webhook](/help/doc/git/webhook.html)
 
