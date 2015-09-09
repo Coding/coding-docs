@@ -20,7 +20,7 @@ Coding.net 用户可以在自己的项目 －> 设置 －> Webhook 中创建、�
 目前我们支持如下的事件：
 
 | Event |	说明 |
-| :--- | :--- |
+| :---: | :--- |
 | Push |	任何时间项目内的 Push 操作 |
 | MR/PR | 任何时间项目内的 Merge Request 和 Pull Request 操作|
 | Topic |	任何时间项目内的讨论创建，评论 |

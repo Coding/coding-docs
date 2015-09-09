@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: WebIDE简介
+title: WebIDE介绍
 ---
 
 本手册主要描述 Coding.net 旗下 WebIDE 产品的相关功能说明。

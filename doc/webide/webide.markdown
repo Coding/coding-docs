@@ -70,7 +70,9 @@ WebIDE 致力于降低开发者编辑代码的门槛，省去了安装配置本�
 ### 3.2 界面说明 ###
 
 WebIDE 界面如下图：
- ![图片](https://dn-coding-net-production-pp.qbox.me/da1655ec-10ca-4e29-b653-b419380bf8da.png) 
+
+ ![WebIDE界面](https://dn-coding-net-production-pp.qbox.me/0213eb7c-31e8-4fed-bf44-b28b38400b31.png) 
+
 1. 顶部菜单栏
 2. 左边是文件树目录
 3. 中间是文本编辑区和文件预览区
@@ -81,7 +83,7 @@ WebIDE 界面如下图：
 ### 3.3  文件管理
 WebIDE 支持文件新建、删除、上传、下载、重命名。 右键点击文件树目录，出现如下菜单：
 
- ![图片](https://dn-coding-net-production-pp.qbox.me/a97d272a-f567-45c6-9205-b808c6747969.png) 
+ ![文件](https://dn-coding-net-production-pp.qbox.me/a97d272a-f567-45c6-9205-b808c6747969.png) 
 
 WebIDE 支持图片和pdf 的双击预览。
 

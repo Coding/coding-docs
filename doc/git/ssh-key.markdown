@@ -4,7 +4,7 @@ layout: post
 title: 配置SSH公钥
 ---
 
-## 上一篇 >> [Git代码托管介绍](/help/doc/git/git-branch.html)
+## 上一篇 >> [代码阅读](/help/doc/git/code-insight.html)
 
 本章节介绍如何通配置SSH公钥
 

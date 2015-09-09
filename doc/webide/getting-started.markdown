@@ -22,7 +22,7 @@ title: 开启在线编程之旅
 
 1.进入到已创建好的项目界面, 选择 “代码”-> “WebIDE” 如下图所示：
 
-    ![图片](https://dn-coding-net-production-pp.qbox.me/35c83b34-d146-47fb-8cfc-a99ed91574f1.png) 
+   ![图片](https://dn-coding-net-production-pp.qbox.me/35c83b34-d146-47fb-8cfc-a99ed91574f1.png) 
 
 2.点击“进入WebIDE” 进入到 WebIDE 主界面
 
@@ -39,7 +39,9 @@ title: 开启在线编程之旅
 ### 界面说明 ###
 
 WebIDE 界面如下图：
- ![图片](https://dn-coding-net-production-pp.qbox.me/da1655ec-10ca-4e29-b653-b419380bf8da.png) 
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/0213eb7c-31e8-4fed-bf44-b28b38400b31.png) 
+
 1. 顶部菜单栏
 2. 左边是文件树目录
 3. 中间是文本编辑区和文件预览区
