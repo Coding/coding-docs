@@ -5,8 +5,6 @@ title: Git代码仓库
 ---
 
 
-## 上一篇 >> [开始使用Git](/help/doc/git/getting-started.html)
-
 本章节介绍如何创建和管理你的代码仓库。
 
 * TOC
@@ -117,5 +115,7 @@ git remote add [shortname] [url] 命令：
 
 上述命令将在当前位置新建一个名为 "study-git" 的文件夹，内容和之前的 learn-git 文件夹一样。
 
+
+## 上一篇 >> [开始使用Git](/help/doc/git/getting-started.html)
 
 ## 下一篇 >> [提交代码](/help/doc/git/push.html)

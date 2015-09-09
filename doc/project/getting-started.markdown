@@ -109,6 +109,7 @@ Coding.net 的团队协作以项目为单位。一个账号可以创建多个项
 在个人主页的左侧一级菜单栏中选择**账户**，然后点击**提醒设置**，进行有关于项目内相关动态的提醒设置，接收相关的系统提醒和邮件提醒。
 ![在这里输入图片描述][14]
 
+
 ## 下一篇 >> [项目文件管理](/help/doc/project/files.html)
 
   [1]: https://dn-coding-net-production-static.qbox.me/92fe2d5a-e1f1-4454-b2e7-84040d5adfd5.png

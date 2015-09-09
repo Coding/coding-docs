@@ -4,7 +4,6 @@ layout: post
 title: Code Insight代码阅读
 ---
 
-## 上一篇 >> [分支管理](/help/doc/git/git-branch.html)
 
 ## 代码阅读
 
@@ -14,5 +13,6 @@ title: Code Insight代码阅读
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/9b35714c-bfd2-422e-8896-32be3d5d4d11.png) 
 
+## 上一篇 >> [分支管理](/help/doc/git/git-branch.html)
 
 ## 下一篇 >> [SSH公钥配置](/help/doc/git/ssh-key.html)

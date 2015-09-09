@@ -4,8 +4,6 @@ layout: post
 title: 开始使用Git
 ---
 
-## 上一篇 >> [Git代码托管介绍](/help/doc/git/introduction.html)
-
 本章节介绍如安装 Git 并在 Coding 上管理代码
 
 * TOC
@@ -61,5 +59,8 @@ title: 开始使用Git
 
 
 以上安装好了 Git 的客户端就可以使用 Git 来管理代码啦。
+
+
+## 上一篇 >> [Git代码托管介绍](/help/doc/git/introduction.html)
 
 ## 下一篇 >> [Git代码仓库](/help/doc/git/repository.html)

@@ -4,7 +4,7 @@ layout: post
 title: 配置SSH公钥
 ---
 
-## 上一篇 >> [代码阅读](/help/doc/git/code-insight.html)
+
 
 本章节介绍如何通配置SSH公钥
 
@@ -98,5 +98,6 @@ Please contact your system administrator.
 
 3.遇到询问是否信任服务器公钥，输入 yes 即可
 
+## 上一篇 >> [代码阅读](/help/doc/git/code-insight.html)
 ## 下一篇 >> [Webhook](/help/doc/git/webhook.html)
 

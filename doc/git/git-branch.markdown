@@ -4,7 +4,6 @@ layout: post
 title: Git分支管理
 ---
 
-## 上一篇 [提交代码](/help/doc/git/push.html)
 
 本章我们会介绍使 Git 与其它版本控制系统区别开来的最关键特点 ———— Git 的分支。它被称为 Git 的“必杀技”。
 以及如何使用和管理分支。
@@ -266,5 +265,7 @@ fork 后会在你的项目空间生成一个对应的项目，然后修改 fork 
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/bf94efb5-a604-4bf5-9e8a-fd9837fbef64.png) 
 所以，当你看到这个错误提示的时候，就知道是因为没有该保护分支权限而导致 push 失败了。
+
+## 上一篇 >> [提交代码](/help/doc/git/push.html)
 
 ## 下一篇 >> [代码阅读](/help/doc/git/code-insight.html)
