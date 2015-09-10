@@ -5,8 +5,7 @@ title: 项目管理
 ---
 
 
-本手册主要描述 Coding.net 旗下演示平台的相关功能说明。
-CopyRight by Coding.net  更新时间 2015-09-01
+本章节主要描述如何在手机App上管理项目。
 
 * TOC
 {:toc}
@@ -44,4 +43,24 @@ CopyRight by Coding.net  更新时间 2015-09-01
  ![图片](https://dn-coding-net-production-pp.qbox.me/535bfbe2-635b-4e42-8291-b375c0236907.png) 
 
 
-## 上一篇 >> [服务管理](/help/doc/paas/services.html)
+### 添加项目成员
+
+>只有项目创建者才有权限添加项目成员。
+>点击项目首页菜单列表「成员」，进入成员列表，点击导航栏右上方的「+」，即可进入添加项目成员页面，目前支持 email，用户名和唯一标识添加。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/5fc5ef41-090f-4935-a27c-da93a062b13a.png) 
+
+### 删除项目成员
+
+>只有项目创建者才有权限删除项目成员。
+>右滑某一列进行删除操作
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/3871549e-397d-44c0-9682-493f86a030ba.png) 
+
+### 退出项目
+
+>进入项目成员列表，点击右侧「退出」按钮，即可退出项目
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/f46ee179-1c7b-45c3-8224-0387044c3e1c.png) 
+ 
+## 下一篇 >> [文件管理](/help/doc/mobile/files.html)
