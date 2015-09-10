@@ -10,7 +10,7 @@ title: 账号的注册&激活
 {:toc}
 
 
-### 2.1 账户注册步骤
+## 账户注册步骤
 
 1）访问首页 Coding.net，点击屏幕右上角的「注册」，输入您的电子邮箱和个性域名后缀，点击「直接体验」。
 
@@ -52,6 +52,11 @@ title: 账号的注册&激活
 Coding.net 目前支持 Github 账号登陆。
 在登录页面右下角点击 Github 小图标即可登陆。
 
+---
+
+## 上一篇 >> [用户账户介绍](/help/doc/account/introduction.html)
+
+## 下一篇 >> [账户设置](/help/doc/account/setting.html)
 
  [1]: https://coding.net/api/project/130548/files/261942/imagePreview
   [2]: https://coding.net/api/project/130548/files/261943/imagePreview

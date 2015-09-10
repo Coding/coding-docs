@@ -22,13 +22,15 @@ title: 个人中心
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/a43c8991-50b7-4e28-ad36-ffb2a81f9835.png) 
 
-## o修改登录密码
+## 修改登录密码
 
 > 去往「我」点击右上角设置图标，进入设置页面点击「账号设置」在账号信息界面点击「修改密码」即可。
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/ecf965cb-487d-45e5-a2ef-6765a6ff78b3.png)
 
 
-## 上一篇 >> [冒泡](/help/doc/mobile/buble.html)
+---
+
+## 上一篇 >> [手机冒泡](/help/doc/mobile/bubble.html)
 
 ## 下一篇 >> [两步认证](/help/doc/mobile/2fa.html)

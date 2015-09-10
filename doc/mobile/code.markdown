@@ -50,7 +50,8 @@ title: 项目代码
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/dfa0e4a6-578b-420d-b79b-15f2c235d266.png) 
 
+---
 
-## 上一篇 >> [讨论管理](/help/doc/mobile/discuss.html)
+## 上一篇 >> [项目讨论](/help/doc/mobile/discuss.html)
 
-## 下一篇 >> [冒泡](/help/doc/mobile/bubble.html)
+## 下一篇 >> [手机冒泡](/help/doc/mobile/bubble.html)

@@ -48,6 +48,8 @@ Coding 为每个项目提供了一个项目文件空间，可供创建和存放�
 
   ![图片](https://dn-coding-net-production-pp.qbox.me/0e95b877-c1c5-409c-badf-85abd29c6538.png) 
 
+---
+
 ## 上一篇 >> [项目管理](/help/doc/mobile/project.html)
 
 ## 下一篇 >> [任务管理](/help/doc/mobile/task.html)

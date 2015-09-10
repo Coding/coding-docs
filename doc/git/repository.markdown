@@ -115,6 +115,7 @@ git remote add [shortname] [url] 命令：
 
 上述命令将在当前位置新建一个名为 "study-git" 的文件夹，内容和之前的 learn-git 文件夹一样。
 
+---
 
 ## 上一篇 >> [开始使用Git](/help/doc/git/getting-started.html)
 

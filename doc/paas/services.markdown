@@ -83,5 +83,7 @@ Coding 对每个演示应用都提供一个 WebUI 的方式可以查看到应用
 
 ![服务控制台](https://dn-coding-net-production-pp.qbox.me/fe27ca53-d7cd-445f-817c-2a3a56a61e87.png)
 
+---
+
 ## 上一篇 >> [开始使用演示](/help/doc/paas/getting-started.html)
 

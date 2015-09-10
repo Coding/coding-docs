@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 冒泡
+title: 手机冒泡
 ---
 
 本章节主要描述如何在手机App使用冒泡。
@@ -9,7 +9,7 @@ title: 冒泡
 * TOC
 {:toc}
 
-## 冒泡 
+## 手机冒泡 
 
 ### 自定义地理位置
 
@@ -32,8 +32,10 @@ title: 冒泡
 
 > 选择好友进入对话框，点击输入框左面语音消息按钮，按住说话
 
+---
+
 ## 上一篇 >> [项目代码](/help/doc/mobile/code.html)
 
-## 下一篇 >> [跟人账户](/help/doc/mobile/account.html)
+## 下一篇 >> [个人中心](/help/doc/mobile/account.html)
 
 

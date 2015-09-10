@@ -38,7 +38,8 @@ title: 项目讨论
 >只有项目成员可以查看或回复已存在的讨论。
 >Tips：项目讨论中评论框只可以@项目成员。
 
+---
 
-## 上一篇 >> [文件管理](/help/doc/mobile/task.html)
+## 上一篇 >> [任务管理](/help/doc/mobile/task.html)
 
 ## 下一篇 >> [项目代码](/help/doc/mobile/code.html)

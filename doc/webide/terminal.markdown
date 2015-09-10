@@ -38,6 +38,8 @@ WebIDE 的终端是一个完成的 Ubuntu Linux Shell 环境，用户可以在�
 对于想要的软件用 apt-get install 安装, 比如安装npm：
 
     ➜  workspace git:(master) ✗ sudo apt-get install npm    
+
+---
  
 ## 下一篇 >> [运行程序](/help/doc/webide/execution.html)
    

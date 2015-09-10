@@ -83,3 +83,9 @@ Response body 中的 `code` 为 0，表示正常接收请求。如果 `code`�
 ### 7.3 开放资源
 
 更多 API 信息可查看 http://api-doc.coding.io/
+
+---
+
+## 上一篇 >> [两步认证](/help/doc/account/2fa.html)
+
+## 下一篇 >> [码币&Shop](/help/doc/account/shop.html)

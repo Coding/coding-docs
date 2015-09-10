@@ -38,6 +38,8 @@ title: 任务管理
 
 > 进入任务界面，点击左上方添加标签按钮，即可添加自定义标签
 
+---
+
 ## 上一篇 >> [文件管理](/help/doc/mobile/files.html)
 
 ## 下一篇 >> [讨论管理](/help/doc/mobile/discuss.html)

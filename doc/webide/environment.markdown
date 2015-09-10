@@ -36,4 +36,6 @@ title: 环境管理
 
 当存在多个环境后，点击“Use” 可以切换到不同的环境，切换时当前的 Terminal 会被终止， 然后 Terminal 重新连接到刚才选择的 Environment。
 
+---
+
 ## 下一篇 >> [终端](/help/doc/webide/terminal.html)

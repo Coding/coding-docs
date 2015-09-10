@@ -60,6 +60,7 @@ title: 开始使用Git
 
 以上安装好了 Git 的客户端就可以使用 Git 来管理代码啦。
 
+---
 
 ## 上一篇 >> [Git代码托管介绍](/help/doc/git/introduction.html)
 

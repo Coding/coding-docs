@@ -62,5 +62,9 @@ title: 项目管理
 >进入项目成员列表，点击右侧「退出」按钮，即可退出项目
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/f46ee179-1c7b-45c3-8224-0387044c3e1c.png) 
- 
+
+---
+
+## 上一篇 >> [移动端介绍](/help/doc/mobile/introduction.html)
+
 ## 下一篇 >> [文件管理](/help/doc/mobile/files.html)
