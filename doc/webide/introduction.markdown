@@ -7,10 +7,6 @@ title: WebIDE介绍
 本手册主要描述 Coding.net 旗下 WebIDE 产品的相关功能说明。
 CopyRight by Coding.net  更新时间 2015-09-01
 
-* TOC
-{:toc}
-
-
 关于WebIDE
 --------
 

@@ -4,11 +4,6 @@ layout: post
 title: 开启在线编程之旅
 ---
 
-## 上一篇 >> [WebIDE介绍](/help/doc/webide/introduction.html)
-
-* TOC
-{:toc}
-
 ### 开启WebIDE
 
 #### 前提条件：
@@ -90,5 +85,7 @@ WebIDE 支持图片和pdf 的双击预览。
  ![图片](https://dn-coding-net-production-pp.qbox.me/c389a9bc-aa96-40eb-b440-a776e6391ed3.png) 
 
 ---
+
+## 上一篇 >> [WebIDE介绍](/help/doc/webide/introduction.html)
 
 ## 下一篇 >> [环境管理](/help/doc/webide/environment.html)

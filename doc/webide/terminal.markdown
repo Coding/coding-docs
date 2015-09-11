@@ -4,11 +4,6 @@ layout: post
 title: 终端 Terminal
 ---
 
-## 上一篇 >> [环境管理](/help/doc/webide/environment.html)
-
-* TOC
-{:toc}
-
 ## 终端 Terminal ###
 
 ### 什么是终端 Terminal 
@@ -40,6 +35,8 @@ WebIDE 的终端是一个完成的 Ubuntu Linux Shell 环境，用户可以在�
     ➜  workspace git:(master) ✗ sudo apt-get install npm    
 
 ---
+ 
+## 上一篇 >> [环境管理](/help/doc/webide/environment.html)
  
 ## 下一篇 >> [运行程序](/help/doc/webide/execution.html)
    

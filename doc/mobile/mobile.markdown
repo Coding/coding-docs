@@ -4,10 +4,6 @@ layout: post
 title: Coding App 帮助手册
 ---
 
-* TOC
-{:toc}
-
-
 1.Coding App 帮助手册 
 -----
 

@@ -4,8 +4,6 @@ layout: post
 title: 演示平台使用手册
 ---
 
-* TOC
-{:toc}
 
 1. 演示平台手册 
 -----

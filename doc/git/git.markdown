@@ -4,9 +4,6 @@ layout: post
 title: Git代码托管使用手册
 ---
 
-* TOC
-{:toc}
-
 1.Git代码托管使用手册 
 -----
 

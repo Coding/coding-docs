@@ -4,9 +4,6 @@ layout: post
 title: WebIDE 使用手册
 ---
 
-* TOC
-{:toc}
-
 1.欢迎使用 WebIDE 手册 
 -----
 本手册主要描述 Coding.net 旗下 WebIDE 产品的相关功能说明。

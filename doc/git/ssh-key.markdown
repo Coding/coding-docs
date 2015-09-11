@@ -4,13 +4,7 @@ layout: post
 title: 配置SSH公钥
 ---
 
-
-
 本章节介绍如何通配置SSH公钥
-
-* TOC
-{:toc}
-
 
 ## 6. 配置SSH公钥
 
@@ -23,15 +17,15 @@ title: 配置SSH公钥
 > 注意：一个公钥只能认证一个用户，而一个用户却可以拥有多个公钥。
 
 
-### 6.1 账户SSH公钥
+### 账户SSH公钥
 
 账户 SSH 公钥是跟用户账户关联的公钥，一旦设置，就拥有账户下所有项目仓库的读写权限。
 
-#### 6.1.1 生成公钥 
+#### 生成公钥 
 
 Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
 输入ssh-keygen -t rsa -C "username@example.com",( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。
-
+ç
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     # Creates a new ssh key, using the provided email as a label
     # Generating public/private rsa key pair.
@@ -44,7 +38,7 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
     # The key fingerprint is:
     # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
 
-#### 6.1.2 添加公钥
+#### 添加公钥
 
 1. 本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏，公钥名称可以随意起名字。
 2. 完成后点击“添加”，然后输入密码或动态码即可添加完成。
@@ -62,7 +56,7 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
           Coding.net Tips : [ Hello Kyle_lyk! You have connected to Coding.net by SSH successfully! ]
 
 
-### 6.2 部署SSH公钥
+### 部署SSH公钥
 
 项目部署 SSH 公钥是跟项目关联的公钥，设置后有该项目的仓库的只读权限。
 
@@ -70,7 +64,7 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
  
 添加方式同 SSH 公钥一致。
 
-### 6.3 关于HostKey
+### 关于HostKey
 
 Coding.net 为了更好的通用性，以后计划默认使用 RSA Host Key 来提供 SSH 通信的加密服务，此 RSA key 的公钥内容如下：
 

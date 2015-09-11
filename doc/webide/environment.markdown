@@ -4,10 +4,8 @@ layout: post
 title: 环境管理
 ---
 
-## 上一篇 >> [开启WebIDE](/help/doc/webide/environment.html)
 
-* TOC
-{:toc}
+
 
 ### 环境管理&分享 ###
 
@@ -37,5 +35,7 @@ title: 环境管理
 当存在多个环境后，点击“Use” 可以切换到不同的环境，切换时当前的 Terminal 会被终止， 然后 Terminal 重新连接到刚才选择的 Environment。
 
 ---
+
+## 上一篇 >> [开启WebIDE](/help/doc/webide/environment.html)
 
 ## 下一篇 >> [终端](/help/doc/webide/terminal.html)

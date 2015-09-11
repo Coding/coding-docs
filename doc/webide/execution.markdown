@@ -4,10 +4,6 @@ layout: post
 title: 运行程序
 ---  
 
-## 上一篇 >> [终端](/help/doc/webide/terminal.html)
-
-* TOC
-{:toc}
 
 ## 运行程序###
 
@@ -34,3 +30,4 @@ WebIDE 支持为编写好的程序创建一个外部可以访问的链接，有�
 
 ![图片](https://dn-coding-net-production-pp.qbox.me/1bca4b34-acbd-423c-a393-4380978bbff8.png) 
                                         
+## 上一篇 >> [终端](/help/doc/webide/terminal.html)

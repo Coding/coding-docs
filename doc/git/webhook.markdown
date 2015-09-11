@@ -4,16 +4,13 @@ layout: post
 title: Webhook
 ---
 
-
-
 本章节介绍如何通配置Webhook 
 
-7. WebHook 
-----
+## WebHook 
 
 Webhook 允许第三方应用监听 Coding.net 上的特定事件，在这些事件发生时通过 HTTP POST 方式通知( 超时5秒) 到第三方应用指定的 Web URL。 例如项目有新的内容 Push，或是Merge Request 有更新等。 WebHook 可方便用户实现自动部署，自动测试，自动打包，监控项目变化等。 
 
-### 7.1 设置触发事件
+### 设置触发事件
 
 Coding.net 用户可以在自己的项目 －> 设置 －> Webhook 中创建、设置 Webhook 所需监听的事件，并配置第三方应用的 Web URL 。
 
@@ -31,7 +28,7 @@ Coding.net 用户可以在自己的项目 －> 设置 －> Webhook 中创建、�
 
 > 注：为防止您填写的 URL 被第三方恶意调用，我们 WebHook 提供了一个预先填写的 Token ，这个 Token 将会随 Post 请求信息一起发送给您，您可验证此 Token 来确认此请求确实是 Coding.net 发出的。
 
-### 7.2 Webhook请求说明
+### Webhook请求说明
 
 Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为 2s 
 

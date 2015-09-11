@@ -4,14 +4,8 @@ layout: post
 title: Git代码托管
 ---
 
-
 本手册主要描述 Coding.net 旗下 Git代码托管产品的相关功能说明。
 CopyRight by Coding.net  更新时间 2015-09-01
-
-
-* TOC
-{:toc}
-
 
 关于Git代码托管
 --------

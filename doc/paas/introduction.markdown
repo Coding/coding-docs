@@ -7,10 +7,6 @@ title: 演示平台介绍
 本手册主要描述 Coding.net 旗下演示平台的相关功能说明。
 CopyRight by Coding.net  更新时间 2015-09-01
 
-* TOC
-{:toc}
-
-
 ### 演示平台 ###
 
 演示平台是 Coding.net 基于 Cloud Foundry 研发的一款应用部署 PaaS 平台，可以将程序部署运行在上面。

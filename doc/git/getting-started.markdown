@@ -6,14 +6,11 @@ title: 开始使用Git
 
 本章节介绍如安装 Git 并在 Coding 上管理代码
 
-* TOC
-{:toc}
-
 ## Git管理代码 ###
 
 ### 安装Git
 
-##### Windows下安装
+#### Windows下安装
 
 1. 先从 **[git 官网](http://git-scm.com/downloads)** 上下载 git 并安装到 C 盘。
 2. 将 git 目录下的 bin（如 C:\Program Files (x86)\Git\bin ）添加到 PATH 环境变量。
@@ -29,20 +26,19 @@ title: 开始使用Git
 
 大功告成，以后你就可以在 cmd 和 Git Bash 中使用 git 命令了， 习惯 bash 的推荐使用 Git Bash
 
-
-##### Linux下安装
+#### Linux下安装
 
 如果要在 Linux 上安装预编译好的 Git 二进制安装包，可以直接用系统提供的包管理工具。
 
 - 在 Fedora 上用 yum 安装：
  
-                     $ yum install git-core
+     $ yum install git-core
 
 - 在 Ubuntu 这类 Debian 体系的系统上，可以用 apt-get 安装：
 
-                     $ apt-get install git
+     $ apt-get install git
 
-##### Mac下安装
+#### Mac下安装
 
 在 Mac 上安装 Git 有两种方式。最容易的当属使用图形化的 Git 安装工具，界面如图所示，
 
