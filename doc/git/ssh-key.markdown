@@ -6,7 +6,7 @@ title: 配置SSH公钥
 
 本章节介绍如何通配置SSH公钥
 
-## 6. 配置SSH公钥
+## 配置SSH公钥
 
 有关什么是 SSH，可参考中文维基百科（http://zh.wikipedia.org/zh/Secure_Shell）。
 这里要说明的是，Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
