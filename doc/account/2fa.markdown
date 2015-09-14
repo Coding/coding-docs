@@ -49,14 +49,14 @@ title: 两步认证
 
 ### 手机丢失或刷机
 
-请用您的注册邮箱发送一封邮件到 support@coding.net，并附上您的电话联系方式，客服会在24小时以内联系您，帮助关闭两步验证。
+请用您的注册邮箱发送一封邮件到 support@coding.net 并附上您的电话联系方式，客服会在24小时以内联系您，帮助关闭两步验证。
 
 ---
 
-## 上一篇 >> [SSH公钥配置](/help/doc/account/ssh-key.html)
-
-## 下一篇 >> [OAuth](/help/doc/account/oauth.html)
-
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/ssh-key.html">上一篇：SSH公钥配置</a></div>
+<div class="right-nav"><a href="/help/doc/account/oauth.html">下一篇：OAuth</a><i class="fa fa-angle-right"></i></div>
+</div>
 
 
 

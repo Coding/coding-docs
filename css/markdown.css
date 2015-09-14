@@ -51,10 +51,15 @@
 .markdown pre,
 .markdown ul,
 .markdown div,
-.markdown ol {
-    margin: 15px 0 20px 24px;
+.markdown ol,
+.markdown table {
+    margin: 15px 10px 20px 24px;
     color: #404040;
     line-height: 22px;
+}
+
+.markdown div > pre {
+    margin-left: 0;
 }
 
 /* 去除默认边框 */
@@ -80,7 +85,7 @@
     font-family: Avenir, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
     border-left: 1px solid #1abc9c;
     padding-left: 1em;
-    margin: 1em 3em 1em 2em;
+    margin: 1em 0 1em 2em;
     background-color: #f9f9f9;
 }
 
@@ -306,7 +311,6 @@
 /* 在文章中，应该还原 ul 和 ol 的样式 */
 .markdown ul {
     list-style: disc;
-    padding-left: 24px;
 }
 
 .markdown ol {
@@ -328,6 +332,7 @@
     border: 1px solid #ddd;
     padding: 0.5em 0.5em;
     color: #666;
+    text-align: left;
 }
 
 .markdown table th {
@@ -361,10 +366,32 @@
 /* Responsive images */
 .markdown img {
     display: block;
-    max-width: 90%;
+    max-width: 100%;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #efefef;
     text-align: center;
     margin: 10px 0;
+}
+
+.markdown .toc {
+}
+
+.markdown .toc .title {
+    font-size: 16px;
+    padding-left: 0;
+    margin-left: -24px;
+    font-weight: 500;
+}
+
+.markdown blockquote > p:first-child,
+.markdown blockquote > ul:first-child,
+.markdown blockquote > ol:first-child {
+    padding-top: 10px;
+}
+
+.markdown blockquote > p:last-child,
+.markdown blockquote > ul:last-child,
+.markdown blockquote > ol:first-child {
+    padding-bottom: 10px;
 }

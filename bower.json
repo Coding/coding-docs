@@ -4,7 +4,8 @@
   "dependencies": {
     "font-awesome": "4.3.0",
     "metisMenu": "2.1.0",
-    "highlightjs": "8.6.0"
+    "highlightjs": "8.6.0",
+    "ScrollToFixed": "1.0.6"
   },
   "devDependencies": {
   },
