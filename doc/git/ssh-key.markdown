@@ -25,8 +25,8 @@ title: 配置SSH公钥
 
 Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
 输入ssh-keygen -t rsa -C "username@example.com",( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。
-ç
-    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    
+    $ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     # Creates a new ssh key, using the provided email as a label
     # Generating public/private rsa key pair.
     Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址
@@ -45,16 +45,16 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
  ![图片](https://dn-coding-net-production-pp.qbox.me/49eab64b-8d8a-4787-a0ed-ce347f753a69.png) 
 3. 完成后在命令行测试，首次建立链接会要求信任主机。
 
-          $ ssh -T git@git.coding.net
-          The authenticity of host 'git.coding.net (61.146.73.68)' can not be established.
-          RSA key fingerprint is 98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
-          Are you sure you want to continue connecting (yes/no)? yes
-          Warning: Permanently added 'git.coding.net,61.146.73.68' (RSA) to the list of kn
-          own hosts.
+`$ ssh -T git@git.coding.net
+ The authenticity of host 'git.coding.net (61.146.73.68)' can not be established.
+ RSA key fingerprint is 98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
+ Are you sure you want to continue connecting (yes/no)? yes
+ Warning: Permanently added 'git.coding.net,61.146.73.68' (RSA) to the list of kn
+ own hosts.
 
-          Enter passphrase for key '/c/Users/Yuankai/.ssh/id_rsa':
-          Coding.net Tips : [ Hello Kyle_lyk! You have connected to Coding.net by SSH successfully! ]
-
+ Enter passphrase for key '/c/Users/Yuankai/.ssh/id_rsa':
+ Coding.net Tips : [ Hello Kyle_lyk! You have connected to Coding.net by SSH successfully! ]
+`
 
 ### 部署SSH公钥
 
@@ -68,7 +68,7 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
 
 Coding.net 为了更好的通用性，以后计划默认使用 RSA Host Key 来提供 SSH 通信的加密服务，此 RSA key 的公钥内容如下：
 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHOWdwLpkos2CLli6DFvQ36yQE6Pe/PtFp3XwyirfZCIoGWnedaWI8zkJWVCs0wgOB9/urFepTDfV2wN49KGy1sl2/CCDEH2K/zeoEAZlTcBrhU17bwg1yMHCyJ7IM+zdLzItDEKYjgoWqVdUGK1dXQQlwt7GP4W7HqffelQQoVxOMoZ5N50MzD+nvV4y8iq0KwDQNy62iU4hui9ajCSVUDLu/06ucd5IojSI9keRIYAXvQf52TJ5EbvoBggp9RhjuWNEG8IhnPP6rzPS11Ocmwg/HsP8xOKL28AeDBAh6B6MEBDtlyp5Yfu9cwZJ9CFtU/x5fHFPtANmgIphAfwN1
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHOWdwLpkos2CLli6DFvQ36yQE6Pe/PtFp3XwyirfZCIoGWnedaWI8zkJWVCs0wgOB9/urFepTDfV2wN49KGy1sl2/CCDEH2K/zeoEAZlTcBrhU17bwg1yMHCyJ7IM+zdLzItDEKYjgoWqVdUGK1dXQQlwt7GP4W7HqffelQQoVxOMoZ5N50MzD+nvV4y8iq0KwDQNy62iU4hui9ajCSVUDLu/06ucd5IojSI9keRIYAXvQf52TJ5EbvoBggp9RhjuWNEG8IhnPP6rzPS11Ocmwg/HsP8xOKL28AeDBAh6B6MEBDtlyp5Yfu9cwZJ9CFtU/x5fHFPtANmgIphAfwN1
 
 fingerprint 是：
 `98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1`

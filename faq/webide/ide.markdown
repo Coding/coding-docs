@@ -9,6 +9,11 @@ title: WebIDE 常见问题
 WebIDE 可以编辑代码，实时自动保存编辑， 支持提交代码，Push/Pull 代码，将代码在终端运行起来。
 同时还有项目文件，上传下载和预览功能，可以预览 markdown, html。
 
+## WebIDE 可以支持什么语言和框架？
+
+WebIDE 是一款在线IDE环境，支持主流的编程语言。
+
+
 ## 什么是 WorkSpace ，如何管理？ 
 
 WorkSpace 是 WebIDE 在云端创建的一个工作空间，每个用户对每个项目只能创建一个WorkSpace。
@@ -17,6 +22,10 @@ WorkSpace 是 WebIDE 在云端创建的一个工作空间，每个用户对每�
 ## 如何分享环境，可以分享给任何人吗？
 
 环境分享，目前只能分享给项目成员，具体操作详见 [环境管理](/help/doc/webide/environment.html)
+
+## WebIDE 如何安装软件？
+
+WebIDE 的终端使用的 Ubuntu Linux，使用 apt-get install 安装软件
 
 ## 如何运行程序？
 
@@ -30,4 +39,8 @@ WorkSpace 是 WebIDE 在云端创建的一个工作空间，每个用户对每�
  
 ## WebIDE 可以安装数据库吗？
 
-你可以在终端里用 apt-get 自行安装任何想要的软件，包括数据库
+你可以在终端里用 apt-get 自行安装任何想要的软件，包括数据库。
+
+## 终端断掉了，刷新后还是不行？
+
+可能是缓存问题，先尝试浏览器刷新，如果报错，请到反馈区将 ws 地址提供给我们。
