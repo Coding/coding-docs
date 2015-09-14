@@ -58,9 +58,11 @@ title: 账户信息
 
 ---
 
-## 上一篇 >> [账户注册&激活](/help/doc/account/register.html)
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/register.html">上一篇：账户注册&激活</a></div>
+<div class="right-nav"><a href="/help/doc/account/setting.html">下一篇：账户设置</a><i class="fa fa-angle-right"></i></div>
+</div>
 
-## 下一篇 >> [账户设置](/help/doc/account/setting.html)
 
   [1]: https://coding.net/api/project/130548/files/261942/imagePreview
   [2]: https://coding.net/api/project/130548/files/261943/imagePreview

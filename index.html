@@ -49,7 +49,7 @@ layout: default
                     </ul>
                 </div>
                 <!-- Git -->
-                <div class="tab-body tab-option-1 active">
+                <div class="tab-body tab-option-1 active clearfix">
                     <ul>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/git/git.html#如何提交代码到-coding-上？">如何提交代码到 Coding 上？</a>
@@ -80,7 +80,7 @@ layout: default
                     </ul>
                 </div>
                 <!-- 演示平台 -->
-                <div class="tab-body tab-option-2">
+                <div class="tab-body tab-option-2 clearfix">
                     <ul>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/paas/language.html#演示平台部署支持什么语言和框架？">演示平台部署支持什么语言和框架？</a></li>
@@ -103,7 +103,7 @@ layout: default
                     </ul>
                 </div>
                 <!-- WebIDE -->
-                <div class="tab-body tab-option-3">
+                <div class="tab-body tab-option-3 clearfix">
                     <ul>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/webide/ide.html#如何运行程序？">WebIDE 怎么运行程序？</a></li>
@@ -128,7 +128,7 @@ layout: default
                     </ul>
                 </div>
                 <!-- 项目管理 -->
-                <div class="tab-body tab-option-4">
+                <div class="tab-body tab-option-4 clearfix">
                     <ul>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/project/setting.html#怎样创建一个新的项目？">如何创建一个公开/私有项目？</a>
@@ -159,7 +159,7 @@ layout: default
                     </ul>
                 </div>
                 <!-- 用户账户 -->
-                <div class="tab-body tab-option-5" >
+                <div class="tab-body tab-option-5 clearfix">
                     <ul>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/account/user.html#无法收到激活邮件-amp-重置密码邮件？">无法收到激活邮件&重置密码邮件？</a>
@@ -195,13 +195,14 @@ layout: default
             <div class="help-nav">
                 <div class="icon-box">
                     <a href="/help/doc/git/introduction.html">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">代码托管</span>
+                        <span class="icon-label"><i class="git icon"></i></span>
+                        <span class="nav-title">代码托管</span>
                     </a>
                 </div>
                 <div class="feature-box">
                     <ul class="nav-feature">
-                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/getting-started.html">开始使用Git</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/getting-started.html">开始使用Git</a>
+                        </li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/git-branch.html">合并分支</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/git-branch.html">WebHook</a></li>
@@ -212,11 +213,12 @@ layout: default
             </div>
             <div class="help-nav">
                 <a href="/help/doc/paas/introduction.html">
-                <div class="icon-box">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">演示平台</span>
-                </div>
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="icon collaboration"></i></span>
+                        <span class="nav-title">演示平台</span>
+                    </div>
                 </a>
+
                 <div class="feature-box">
                     <ul class="nav-feature">
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/getting-started.html">开启演示</a></li>
@@ -230,17 +232,20 @@ layout: default
             </div>
             <div class="help-nav">
                 <a href="/help/doc/webide/introduction.html">
-                <div class="icon-box">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">WebIDE</span>
-                </div>
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="ide icon"></i></span>
+                        <span class="nav-title">WebIDE</span>
+                    </div>
                 </a>
+
                 <div class="feature-box">
                     <ul class="nav-feature">
-                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/getting-started.html">开启WebIDE</a></li>
+                        <li><i class="fa fa-caret-right"></i><a
+                                href="/help/doc/webide/getting-started.html">开启WebIDE</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/terminal.html">终端介绍</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/execution.html">运行程序</a></li>
-                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/environment.html">切换和分享环境</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/environment.html">切换和分享环境</a>
+                        </li>
                         <li></li>
                         <li class="more"><a href=""><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
                     </ul>
@@ -248,11 +253,12 @@ layout: default
             </div>
             <div class="help-nav">
                 <a href="/help/doc/mobile/introduction.html">
-                <div class="icon-box">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">移动App</span>
-                </div>
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="app icon"></i></span>
+                        <span class="nav-title">移动App</span>
+                    </div>
                 </a>
+
                 <div class="feature-box">
                     <ul class="nav-feature">
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/bubble.html">冒泡</a></li>
@@ -266,14 +272,16 @@ layout: default
             </div>
             <div class="help-nav">
                 <a href="/help/doc/project/introduction.html">
-                <div class="icon-box">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">项目管理</span>
-                </div>
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="icon collaboration"></i></span>
+                        <span class="nav-title">项目管理</span>
+                    </div>
                 </a>
+
                 <div class="feature-box">
                     <ul class="nav-feature">
-                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/getting-started.html">项目设置</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/getting-started.html">项目设置</a>
+                        </li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/task.html">任务管理</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/files.html">文件管理</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/discuss.html">项目讨论</a></li>
@@ -284,15 +292,17 @@ layout: default
             </div>
             <div class="help-nav">
                 <a href="/help/doc/account/introduction.html">
-                <div class="icon-box">
-                    <span class="icon-label"><i class="fa fa-code"></i></span>
-                    <span class="nav-title">用户账户</span>
-                </div>
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="fa fa-user"></i></span>
+                        <span class="nav-title">用户账户</span>
+                    </div>
                 </a>
+
                 <div class="feature-box">
                     <ul class="nav-feature">
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/setting.html">账户信息设置</a></li>
-                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/setting.html#section-4">消息提醒设置</a></li>
+                        <li><i class="fa fa-caret-right"></i><a
+                                href="/help/doc/account/setting.html#section-4">消息提醒设置</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/shop.html">关于码币&Shop</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/oauth.html">第三方应用管理</a></li>
                         <li></li>
@@ -308,5 +318,5 @@ layout: default
         $("div[class*=tab-option]").removeClass("active");
         $("div[class*=tab-option-" + i + "]").addClass("active");
     }
-    
+
 </script>
