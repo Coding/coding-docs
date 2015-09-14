@@ -34,9 +34,9 @@ Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为
 
 **POST 请求 Header 说明**
 
-| Header |	说明 |
-| :--- | --- |
-| X-Coding-Event	 | 事件名（例如: push, Merge Request, Task） |
+  | Header |	说明 |
+  | :--- | --- |
+  | X-Coding-Event	 | 事件名（例如: push, Merge Request, Task） |
 
 首次绑定，系统会向您所填写的 url 地址，发送一个简单的请求，以验证该 WebHook 是有效的，请求如下：
 

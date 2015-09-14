@@ -13,6 +13,10 @@ title: 开启在线编程之旅
  
 #### 开启WebIDE：
  
+可以通过独立的域名 https://ide.coding.net 进入到 WebIDE。
+
+也可以通过代码，打开到IDE.
+
 ##### 私有项目：
 
 1.进入到已创建好的项目界面, 选择 “代码”-> “WebIDE” 如下图所示：
@@ -88,4 +92,4 @@ WebIDE 支持图片和pdf 的双击预览。
 
 ## 上一篇 >> [WebIDE介绍](/help/doc/webide/introduction.html)
 
-## 下一篇 >> [环境管理](/help/doc/webide/environment.html)
+## 下一篇 >> [工作空间](/help/doc/webide/Workspace.html)
