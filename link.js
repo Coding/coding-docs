@@ -48,28 +48,22 @@ function main() {
     readDir(doc, function (data) {
         docs.push({
             type: "0",
-            path: linkPrefix + data.path,
+            link: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
         })
     });
     var faq = "faq/";
     readDir(faq, function (data) {
-        faqs.push({
+        docs.push({
             type: "1",
-            path: linkPrefix + data.path,
+            link: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
         })
     });
     watchArray(docs, function (update) {
         fs.writeFile('_data/docs.json', JSON.stringify(docs), function (err) {
-            if (err) throw err;
-            console.log('docs.json saved!');
-        });
-    });
-    watchArray(faqs, function (update) {
-        fs.writeFile('_data/faqs.json', JSON.stringify(faqs), function (err) {
             if (err) throw err;
             console.log('docs.json saved!');
         });
