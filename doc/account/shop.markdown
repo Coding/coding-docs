@@ -38,8 +38,11 @@ Coding会在每个月的月初与月中开具发票并寄出，如果您有开�
 
 ---
 
-## 上一篇 >> [OAuth](/help/doc/account/oauth.html)
-
-## 下一篇 >> [服务级别](/help/doc/account/service-level.html)
 
 [16]: https://coding.net/api/project/130548/files/262582/imagePreview
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/oauth.html">上一篇：OAuth</a></div>
+  <div class="right-nav"><a href="/help/doc/account/service-level.html">下一篇：服务级别</a><i class="fa fa-angle-right"></i></div>
+  </div>

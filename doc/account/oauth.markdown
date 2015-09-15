@@ -81,6 +81,8 @@ Response body 中的 `code` 为 0，表示正常接收请求。如果 `code`�
 
 ---
 
-## 上一篇 >> [两步认证](/help/doc/account/2fa.html)
 
-## 下一篇 >> [码币&Shop](/help/doc/account/shop.html)
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/2fa.html">上一篇：两步认证</a></div>
+<div class="right-nav"><a href="/help/doc/account/shop.html">下一篇：码币&Shop</a><i class="fa fa-angle-right"></i></div>
+</div>

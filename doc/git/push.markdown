@@ -194,6 +194,9 @@ title: Git 提交代码
 
 ---
 
-## 上一篇 >> [Git代码仓库](/help/doc/git/repository.html)
 
-## 下一篇 >> [分支管理](/help/doc/git/git-branch.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/repository.html">上一篇：Git 代码仓库</a></div>
+  <div class="right-nav"><a href="/help/doc/git/git-branch.html">下一篇：分支管理</a><i class="fa fa-angle-right"></i></div>
+  </div>

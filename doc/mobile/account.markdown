@@ -28,6 +28,10 @@ title: 个人中心
 
 ---
 
-## 上一篇 >> [手机冒泡](/help/doc/mobile/bubble.html)
 
-## 下一篇 >> [两步认证](/help/doc/mobile/2fa.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/bubble.html">上一篇：手机冒泡</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/2fa.html">下一篇：两步认证</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

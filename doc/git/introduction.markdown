@@ -41,3 +41,10 @@ Git代码托管是 Coding.net 基于 Java 自主研发的一款 Git 在线代码
 ---
 
 ## 下一篇 >> [开始用Git管理代码](/help/doc/git/getting-started.html)
+
+
+
+  <div class="footer-nav">
+  <div class="right-nav"><a href="/help/doc/git/getting-started.html">下一篇：开始用 Git 管理代码</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

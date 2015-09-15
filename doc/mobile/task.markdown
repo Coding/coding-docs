@@ -37,6 +37,9 @@ title: 任务管理
 
 ---
 
-## 上一篇 >> [文件管理](/help/doc/mobile/files.html)
 
-## 下一篇 >> [讨论管理](/help/doc/mobile/discuss.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/files.html">上一篇：文件管理</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/discuss.html">下一篇：讨论管理</a><i class="fa fa-angle-right"></i></div>
+  </div>

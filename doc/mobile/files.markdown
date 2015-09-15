@@ -46,6 +46,11 @@ Coding 为每个项目提供了一个项目文件空间，可供创建和存放�
 
 ---
 
-## 上一篇 >> [项目管理](/help/doc/mobile/project.html)
 
-## 下一篇 >> [任务管理](/help/doc/mobile/task.html)
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/project.html">上一篇：项目管理</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/task.html">下一篇：任务管理</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

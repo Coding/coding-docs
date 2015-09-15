@@ -90,6 +90,10 @@ WebIDE 支持图片和pdf 的双击预览。
 
 ---
 
-## 上一篇 >> [WebIDE介绍](/help/doc/webide/introduction.html)
 
-## 下一篇 >> [工作空间](/help/doc/webide/Workspace.html)
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/introduction.html">上一篇：WebIDE介绍</a></div>
+  <div class="right-nav"><a href="/help/doc/webide/Workspace.html">下一篇：工作空间</a><i class="fa fa-angle-right"></i></div>
+  </div>

@@ -33,4 +33,9 @@ WebIDE 致力于降低开发者编辑代码的门槛，省去了安装配置本�
  
 ---
 
-## 下一篇 >> [开启WebIDE](/help/doc/webide/getting-started.html)
+
+
+
+  <div class="footer-nav">
+  <div class="right-nav"><a href="/help/doc/webide/getting-started.html">下一篇：开启WebIDE</a><i class="fa fa-angle-right"></i></div>
+  </div>

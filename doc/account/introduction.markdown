@@ -19,4 +19,6 @@ CopyRight by Coding.net  更新时间 2015-09-04
 
 ---
 
-## 下一篇 >> [账号的注册&激活](/help/doc/account/register.html)
+<div class="footer-nav">
+<div class="right-nav"><a href="/help/doc/account/register.html">下一篇：/help/doc/account/register.html</a><i class="fa fa-angle-right"></i></div>
+</div>

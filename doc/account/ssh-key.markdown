@@ -55,8 +55,8 @@ title: SSH公钥配置
 
 ---
 
-## 上一篇 >> [账户设置](/help/doc/account/setting.html)
 
-## 下一篇 >> [两步认证](/help/doc/account/2fa.html)
-
-
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/setting.html">上一篇：账户设置</a></div>
+  <div class="right-nav"><a href="/help/doc/account/2fa.html">下一篇：两步认证</a><i class="fa fa-angle-right"></i></div>
+  </div>

@@ -60,9 +60,6 @@ title: 项目文件管理
 
 ---
 
-## 上一篇 >> [开始使用项目管理](/help/doc/project/getting-started.html)
-
-## 下一篇 >> [任务管理](/help/doc/project/task.html)
 
 [15]: https://dn-coding-net-production-static.qbox.me/bcd21f3c-1893-412a-af07-e8e9a383312d.png?imageView2/2/w/800/h/800
   [16]: https://coding.net/u/coding/p/Coding-Feedback/git/blob/master/markdown-syntax.md
@@ -72,3 +69,12 @@ title: 项目文件管理
   [20]: https://dn-coding-net-production-static.qbox.me/db76b8f1-3c30-45d3-9e0c-9f2d5e31fae4.png?imageView2/2/w/800/h/800
   [21]: https://dn-coding-net-production-static.qbox.me/2d162819-3a56-4496-920f-6f5ad5ef2fc3.png?imageView2/2/w/800/h/800
   [22]: https://dn-coding-net-production-pp.qbox.me/828cdee3-d2ae-459e-9775-a79b396e81c8.jpg
+
+
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/getting-started.html">上一篇：开始使用项目管理</a></div>
+  <div class="right-nav"><a href="/help/doc/project/task.html">下一篇：任务管理</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

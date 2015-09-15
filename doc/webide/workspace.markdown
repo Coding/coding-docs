@@ -42,16 +42,7 @@ WorkSpace 是 WebIDE 在云端创建的一个独立项目代码根目录，每�
 删除工作空间，将会删除你所创建的独立的项目代码根目录， 因此未提交的代码更新将会丢失，同时环境配置也将会被删除。
 
 
-## 下一篇 >> [开始使用WebIDE](/help/doc/webide/environment.html)
-
-## 下一篇 >> [环境管理](/help/doc/webide/environment.html)
-
-
-
-## 下一篇 >> [环境管理](/help/doc/webide/environment.html)
-
-
-
-## 下一篇 >> [环境管理](/help/doc/webide/environment.html)
-
-
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/environment.html">上一篇：环境管理</a></div>
+  <div class="right-nav"><a href="/help/doc/webide/environment.html">下一篇：环境管理</a><i class="fa fa-angle-right"></i></div>
+  </div>

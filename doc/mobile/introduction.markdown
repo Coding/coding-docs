@@ -24,4 +24,8 @@ Coding app 是基于 coding.net 网站设计的一款便捷的软件开发协作
 
 ---
 
-## 下一篇 >> [项目管理](/help/doc/mobile/project.html)
+
+  <div class="footer-nav">
+  <div class="right-nav"><a href="/help/doc/mobile/project.html">下一篇：项目管理</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

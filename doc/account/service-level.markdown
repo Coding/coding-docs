@@ -29,3 +29,7 @@ SLA|  -   |       - | 99.9%
 ---
 
 ## 上一篇 >> [码币&Shop](/help/doc/account/shop.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/shop.html">上一篇：码币&Shop</a></div>
+  </div>

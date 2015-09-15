@@ -37,6 +37,10 @@ title: 项目讨论
 
 ---
 
-## 上一篇 >> [任务管理](/help/doc/mobile/task.html)
 
-## 下一篇 >> [项目代码](/help/doc/mobile/code.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/task.html">上一篇：任务管理</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/code.html">下一篇：项目代码</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

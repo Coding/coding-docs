@@ -67,4 +67,8 @@ Coding 演示平台提供在线的公网运行环境和相关基础服务，如�
 
 ---
 
-## 下一篇 >> [开始使用演示](/help/doc/paas/getting-started.html)
+
+  <div class="footer-nav">
+  <div class="right-nav"><a href="/help/doc/paas/getting-started.html">下一篇：开始使用演示</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

@@ -81,5 +81,10 @@ Coding 对每个演示应用都提供一个 WebUI 的方式可以查看到应用
 
 ---
 
-## 上一篇 >> [开始使用演示](/help/doc/paas/getting-started.html)
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/paas/getting-started.html">上一篇：开始使用演示</a></div>
+  </div>
+
 

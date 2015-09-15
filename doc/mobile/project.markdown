@@ -62,6 +62,10 @@ title: 项目管理
 
 ---
 
-## 上一篇 >> [移动端介绍](/help/doc/mobile/introduction.html)
 
-## 下一篇 >> [文件管理](/help/doc/mobile/files.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/introduction.html">上一篇：移动端介绍</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/files.html">下一篇：文件管理</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

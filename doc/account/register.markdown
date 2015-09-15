@@ -50,9 +50,6 @@ Coding.net 目前支持 Github 账号登陆。
 
 ---
 
-## 上一篇 >> [用户账户介绍](/help/doc/account/introduction.html)
-
-## 下一篇 >> [账户设置](/help/doc/account/setting.html)
 
  [1]: https://coding.net/api/project/130548/files/261942/imagePreview
   [2]: https://coding.net/api/project/130548/files/261943/imagePreview
@@ -70,3 +67,9 @@ Coding.net 目前支持 Github 账号登陆。
   [14]: https://coding.net/api/project/130548/files/261961/imagePreview
   [15]: https://coding.net/api/project/130548/files/261962/imagePreview
   [16]: https://coding.net/api/project/130548/files/262582/imagePreview
+  
+  
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/introduction.html">上一篇：用户账户介绍</a></div>
+  <div class="right-nav"><a href="/help/doc/account/setting.html">下一篇：账户设置</a><i class="fa fa-angle-right"></i></div>
+  </div>

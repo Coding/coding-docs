@@ -58,6 +58,9 @@ title: 开始使用Git
 
 ---
 
-## 上一篇 >> [Git代码托管介绍](/help/doc/git/introduction.html)
 
-## 下一篇 >> [Git代码仓库](/help/doc/git/repository.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/introduction.html">上一篇：Git 代码托管介绍</a></div>
+  <div class="right-nav"><a href="/help/doc/git/repository.html">下一篇：Git 代码仓库</a><i class="fa fa-angle-right"></i></div>
+  </div>

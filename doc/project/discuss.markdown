@@ -51,3 +51,11 @@ Tips：私有项目的讨论和任务的标签是通用的，并且添加标签�
   [29]: https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800
   [30]: https://dn-coding-net-production-static.qbox.me/a161eaef-b710-4151-bffb-2eea37c4093d.png?imageView2/2/w/800/h/800
   [31]: https://dn-coding-net-production-static.qbox.me/2d162819-3a56-4496-920f-6f5ad5ef2fc3.png?imageView2/2/w/800/h/800
+  
+  
+  
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/files.html">上一篇：项目文件管理</a></div>
+  </div>
+

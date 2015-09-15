@@ -31,8 +31,10 @@ title: 手机冒泡
 
 ---
 
-## 上一篇 >> [项目代码](/help/doc/mobile/code.html)
 
-## 下一篇 >> [个人中心](/help/doc/mobile/account.html)
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/code.html">上一篇：项目代码</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/account.html">下一篇：个人中心</a><i class="fa fa-angle-right"></i></div>
+  </div>
 
 

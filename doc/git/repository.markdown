@@ -113,6 +113,9 @@ git remote add [shortname] [url] 命令：
 
 ---
 
-## 上一篇 >> [开始使用Git](/help/doc/git/getting-started.html)
 
-## 下一篇 >> [提交代码](/help/doc/git/push.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/getting-started.html">上一篇：开始使用 Git</a></div>
+  <div class="right-nav"><a href="/help/doc/git/push.html">下一篇：提交代码</a><i class="fa fa-angle-right"></i></div>
+  </div>

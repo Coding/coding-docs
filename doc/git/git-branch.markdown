@@ -264,6 +264,8 @@ fork 后会在你的项目空间生成一个对应的项目，然后修改 fork 
 
 ---
 
-## 上一篇 >> [提交代码](/help/doc/git/push.html)
 
-## 下一篇 >> [代码阅读](/help/doc/git/code-insight.html)
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/push.html">上一篇：提交代码</a></div>
+  <div class="right-nav"><a href="/help/doc/git/code-insight.html">下一篇：代码阅读</a><i class="fa fa-angle-right"></i></div>
+  </div>

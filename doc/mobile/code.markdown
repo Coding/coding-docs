@@ -49,6 +49,11 @@ title: 项目代码
 
 ---
 
-## 上一篇 >> [项目讨论](/help/doc/mobile/discuss.html)
 
-## 下一篇 >> [手机冒泡](/help/doc/mobile/bubble.html)
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/discuss.html">上一篇：项目讨论</a></div>
+  <div class="right-nav"><a href="/help/doc/mobile/bubble.html">下一篇：手机冒泡</a><i class="fa fa-angle-right"></i></div>
+  </div>
+

@@ -29,4 +29,8 @@ title: 两步认证
 
 ---
 
-## 上一篇 >> [个人中心](/help/doc/mobile/account.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/mobile/account.html">上一篇：个人中心</a></div>
+  </div>
+

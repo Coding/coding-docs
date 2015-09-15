@@ -14,6 +14,9 @@ title: Code Insight代码阅读
 
 ---
 
-## 上一篇 >> [分支管理](/help/doc/git/git-branch.html)
 
-## 下一篇 >> [SSH公钥配置](/help/doc/git/ssh-key.html)
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/git-branch.html">上一篇：分支管理</a></div>
+  <div class="right-nav"><a href="/help/doc/git/ssh-key.html">下一篇：SSH公钥配置</a><i class="fa fa-angle-right"></i></div>
+  </div>

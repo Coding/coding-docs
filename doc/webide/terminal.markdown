@@ -36,8 +36,10 @@ WebIDE 的终端是一个完成的 Ubuntu Linux Shell 环境，用户可以在�
 
 ---
  
-## 上一篇 >> [环境管理](/help/doc/webide/environment.html)
- 
-## 下一篇 >> [运行程序](/help/doc/webide/execution.html)
    
-    
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/environment.html">上一篇：环境管理</a></div>
+  <div class="right-nav"><a href="/help/doc/webide/execution.html">下一篇：运行程序</a><i class="fa fa-angle-right"></i></div>
+  </div>

@@ -30,4 +30,8 @@ WebIDE 支持为编写好的程序创建一个外部可以访问的链接，有�
 
 ![图片](https://dn-coding-net-production-pp.qbox.me/1bca4b34-acbd-423c-a393-4380978bbff8.png) 
                                         
-## 上一篇 >> [终端](/help/doc/webide/terminal.html)
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/terminal.html">上一篇：终端</a></div>
+  </div>

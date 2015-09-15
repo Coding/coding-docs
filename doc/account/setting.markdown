@@ -60,9 +60,6 @@ title: 账户信息修改
  
 ---
 
-## 上一篇 >> [账户注册&激活](/help/doc/account/register.html)
-
-## 下一篇 >> [SSH公钥配置](/help/doc/account/ssh-key.html)
 
   [3]: https://coding.net/api/project/130548/files/261945/imagePreview
   [4]: https://coding.net/api/project/130548/files/261946/imagePreview
@@ -79,3 +76,9 @@ title: 账户信息修改
   [15]: https://coding.net/api/project/130548/files/261962/imagePreview
   [16]: https://coding.net/api/project/130548/files/262582/imagePreview
 
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/register.html">上一篇：账户注册&激活</a></div>
+  <div class="right-nav"><a href="/help/doc/account/ssh-key.html">下一篇：SSH公钥配置</a><i class="fa fa-angle-right"></i></div>
+  </div>
