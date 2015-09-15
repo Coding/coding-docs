@@ -13,6 +13,7 @@ marked.setOptions({
 });
 var docs = [];
 var faqs = [];
+var linkPrefix = "https://coding.net/help/"
 
 var readDir = function (dir, fn) {
     fs.readdir(dir, function (err, files) {
@@ -46,8 +47,8 @@ function main() {
     var doc = "doc/";
     readDir(doc, function (data) {
         docs.push({
-            type: "doc",
-            path: data.path,
+            type: "0",
+            path: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
         })
@@ -55,8 +56,8 @@ function main() {
     var faq = "faq/";
     readDir(faq, function (data) {
         faqs.push({
-            type: "faq",
-            path: data.path,
+            type: "1",
+            path: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
         })
