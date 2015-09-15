@@ -37,15 +37,17 @@ git版本过低，最好升级到1.9 以上
 麻烦通过[反馈](https://coding.net/u/coding/p/Coding-Feedback/topic)，提交你的项目的url地址 供研发人员排错。
 
 
-## PUSH一直提示Permission denied (publickey) ?
+## Push 一直提示Permission denied (publickey) ?
 
 这个可能是由于你的没有目标仓库和分支的权限，导致无法更新数据。
- - 检查你的push 方式，通过 SSH 还是 HTTPS ，如果是 SSH 请检查你的 SSH公钥是否正确。 HTTPS 的方式请检查你的密码是否正确
- - 对目标分支是否有写权限。
+
+- 检查你的push 方式，通过 SSH 还是 HTTPS ，如果是 SSH 请检查你的 SSH公钥是否正确。 HTTPS 的方式请检查你的密码是否正确
+- 对目标分支是否有写权限。
 
 ## 代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？
 
 由于Coding 将git 部署在CDN上了，可能你这边对应的 CDN 的节点有问题。 
+
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。
 1. 您的上网IP
 2. 您的 ping git.coding.net 的截图
@@ -61,6 +63,6 @@ Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界�
 
 设置 SSH Key 的方式参见[SSH公钥配置](/help/doc/git/ssh-key.html)
 
-如果用户自己对 ssh 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
-注意： 配置了SSH公钥后，需要使用SSH 地址操作仓库。
+如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
+注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。
 

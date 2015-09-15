@@ -4,15 +4,6 @@ layout: post
 title: 开始使用项目管理
 ---
 
-本手册主要对 coding.net 旗下项目管理平台的相关功能进行介绍和简单演示。
-
-*Copyright by coding.net* 
-持续更新中  最近更新时间2015/9/1
-
-## 关于项目 
-
-Coding.net 的团队协作以项目为单位。一个账号可以创建多个项目，一个项目可以添加多个项目成员。
-
 ## 项目创建&设置
 
 ### 创建项目 
@@ -108,6 +99,8 @@ Coding.net 的团队协作以项目为单位。一个账号可以创建多个项
 
 
 ---
+
+## 上一篇 >> [项目管理介绍](/help/doc/project/introduction.html)
 
 ## 下一篇 >> [项目文件管理](/help/doc/project/files.html)
 
