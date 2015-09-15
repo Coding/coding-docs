@@ -358,10 +358,18 @@
     padding-left: 40px;
     color: #616161;
     cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.help-common-problem .tab-body li:hover {
+.help-common-problem .tab-body li:hover,
+.help-common-problem .tab-body li a:hover {
     color: #333333;
+}
+
+.help-common-problem .tab-body li a {
+    color: #616161;
 }
 
 .help-common-problem .tab-body li i.fa {
@@ -383,6 +391,10 @@
         float: left;
         width: 100%;
         font-size: 13px;
+    }
+
+    .help-common-problem .tab-body li {
+        padding-left: 0;
     }
 }
 

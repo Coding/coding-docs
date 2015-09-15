@@ -395,3 +395,7 @@
 .markdown blockquote > ol:first-child {
     padding-bottom: 10px;
 }
+
+.markdown *:target {
+    padding-top: 65px;
+}

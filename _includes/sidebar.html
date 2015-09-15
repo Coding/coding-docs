@@ -74,7 +74,7 @@
                                     <span>项目文件问题</span>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <li>
@@ -95,7 +95,7 @@
                             <span>用户账户</span>
                         </a>
                     </li>
-                    
+
                 </ul>
             </li>
             <li class="active">
@@ -357,8 +357,9 @@
     $("#metismenu").metisMenu();
     $(document).ready(function () {
         var path = location.pathname;
-        var hash = location.hash;
-        var anchor = $("a[href^='" + path + hash + "']");
+//        var hash = location.hash;
+        var anchor = $("a[href^='" + path + "']");
+        anchor.addClass("active");
         var expand = function (el) {
             if (el && el.length > 0) {
                 var ul = el.parent().closest("ul");
