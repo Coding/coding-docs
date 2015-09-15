@@ -5,7 +5,7 @@ title: 用户账户介绍
 ---
 
 本手册主要描述 Coding.net 账户相关功能说明, Coding 账户是用户在Coding 的唯一身份证明。
-主要包含以下内容能：
+主要包含以下内容：
 
 - [账号的注册&激活](/help/doc/account/register.html)
 - [账户信息修改](/help/doc/account/setting.html)
