@@ -373,7 +373,14 @@
 
         expand(anchor);
         $("#metismenu").metisMenu();
-        $(".sidebar-menu").scrollToFixed({marginTop: 65});
+        $(".sidebar-menu").scrollToFixed({
+            marginTop: 65,
+            limit: function () {
+                var stop = $("#footer").offset().top;
+                var h = $(this).outerHeight(true);
+                return stop - h - 65;
+            }
+        });
 
     });
 </script>
