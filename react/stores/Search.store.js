@@ -16,8 +16,8 @@ var _store = {
 };
 
 
-var loadSearch = function () {
-    new Api.get("http://127.0.0.1:4000/help/test/data.json", {}, function (result) {
+var loadSearch = function (params) {
+    new Api.get("http://127.0.0.1:4000/help/test/data.json", params, function (result) {
         if (result.code == 0) {
             _store.result = result.data || {};
             _store.list = _store.result[_store.tab];
@@ -47,7 +47,7 @@ var SearchStore = objectAssign({}, EventEmitter.prototype, {
 AppDispatcher.register(function (payload) {
     switch (payload.actionType) {
         case Constants.LOAD_SEARCH:
-            loadSearch(payload.key || "");
+            loadSearch(payload.params || "");
             break;
         case Constants.CHANGE_SEARCH:
             changeSearch(payload.tab || "");

@@ -18,10 +18,10 @@ var SearchAction = {
     /**
      * @param  {string} text
      */
-    loadSearch: function (key) {
+    loadSearch: function (params) {
         AppDispatcher.dispatch({
             actionType: Constants.LOAD_SEARCH,
-            key: key
+            params: params
         });
     },
     changeSearch: function (tab) {

@@ -16,8 +16,9 @@ var Loading = React.createClass({
         var nextPage = 2;
         var beginIndex = 1;
         var page = this.props.page || 1;
-        var pageTotal = this.props.pageTotal || 0;
-        var endIndex = this.props.pageTotal || 0;
+        var pageTotal = this.props.totalPage || 0;
+        var endIndex = this.props.totalPage || 0;
+        var count = this.props.count;
         if (page <= pageTotal) {
             prePage = page - 1;
             nextPage = page + 1;
@@ -49,23 +50,25 @@ var Loading = React.createClass({
         PagerAction.go(1);
     },
     goLast: function () {
-        PagerAction.go(this.props.pageTotal);
+        PagerAction.go(this.props.totalPage);
     },
     render: function () {
+        var thiz = this;
         var pagers = this.paging() || [];
+        var page = this.props.page;
         var pagerContent = pagers.map(function (p, index) {
-            var cx = react.addons.classSet;
+            var cx = React.addons.classSet;
             var clazz = cx({
-                "active": p.no == this.props.page
+                "active": p.no == page
             });
             return (
                 <li className={clazz}>
-                    <a href="javascript:void(0)" onClick={this.go.bind(this,p.no)}>{p.no}</a>
+                    <a href="javascript:void(0)" onClick={thiz.go.bind(thiz,p.no)}>{p.no}</a>
                 </li>
             )
         });
         return (
-            <div className="pager">
+            <div className="pager clearfix">
                 <ul className="paging pagination">
                     <li><a href="javascript:void(0)" onClick={this.goFirst}>&laquo;</a></li>
                     {pagerContent}

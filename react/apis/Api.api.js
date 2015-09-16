@@ -3,6 +3,7 @@
  */
 
 var Request = require('request');
+var jQuery = require('jQuery');
 var Api = {
     get: function () {
         var url, params = {}, success = undefined, error = undefined;
@@ -30,16 +31,14 @@ var Api = {
                 break;
         }
         url = Api.sliceURL(url, params);
-        Request
-            .get(url.url, url.params, function (err, response, body) {
-                if (err) {
-                    error && error(err);
-                } else {
-                    if (response.statusCode == 200) {
-                        success && success(eval("(" + body + ")"));
-                    }
-                }
-            });
+
+        jQuery.ajax({
+            url: url.url + "?" + Api.queryString(url.params),
+            type: "GET",
+            success: function (data) {
+                success && success(data);
+            }
+        });
     },
 
 
@@ -56,6 +55,21 @@ var Api = {
             url: url,
             params: newParams
         };
+    },
+
+    queryString: function (params) {
+        var str = "";
+        var i = 0;
+        for (var key in params) {
+            if (key) {
+                if (i > 0) {
+                    str += "&";
+                }
+                str += key + "=" + encodeURIComponent(params[key]);
+            }
+            i++;
+        }
+        return str;
     }
 }
 

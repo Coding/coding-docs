@@ -23,7 +23,7 @@ var SearchApp = React.createClass({
         }
     },
     componentDidMount: function () {
-        SearchAction.loadSearch("aa");
+        SearchAction.loadSearch({key: "", page: 1});
         SearchStore.addChangeListener(this._onChange);
         PagerStore.addChangeListener(this._onPagerChange);
     },
@@ -37,13 +37,14 @@ var SearchApp = React.createClass({
      */
     render: function () {
         var result = this.state.result || [];
+        this.props.totalPage = 10;
         var items = ( result && result.list ) || [];
         return (
             <div>
                 <SearchBox items={items}/>
 
                 <div>
-                    <Pager page={this.state.page} totalPage={this.props.totalPage}/>
+                    <Pager page={this.state.page} totalPage={this.props.totalPage} count={5}/>
                 </div>
             </div>
         );
@@ -57,7 +58,7 @@ var SearchApp = React.createClass({
         var page = PagerStore.getPage();
         this.setState({page: page});
         setTimeout(function () {
-            SearchAction.loadSearch({page: page});
+            SearchAction.loadSearch({key: "", page: page});
         }, 1)
     }
 });

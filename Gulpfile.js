@@ -61,7 +61,7 @@ gulp.task("clean", function () {
 
 
 gulp.task('watch', ["cssmin"], function () {
-    gulp.watch(path.DIR);
+    gulp.watch(path.DIR, ["cssmin"]);
     var watcher = watchify(browserify({
         entries: [path.SEARCH_ENTRY_POINT],
         transform: [['reactify']],

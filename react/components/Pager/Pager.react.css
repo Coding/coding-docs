@@ -1,4 +1,5 @@
-.pager .paging.pagination {
+.pager {
+    margin: 1em 5px;
 }
 
 .pager .paging.pagination > li {
@@ -19,7 +20,7 @@
 
 .pager .paging.pagination > li.active > a, .pager.pagination > li.active > span {
     color: #FFF;
-    border: 1px solid #AFC0CA;
+    background: #AFC0CA;
 }
 
 .pager .paging.pagination > li > a, .pager.pagination > li > span {
@@ -37,4 +38,18 @@
 .pager .paging.pagination > li.active:hover > span {
     background: #AFC0CA;
     color: #FFF;
+}
+
+.pager .pagination > li {
+    display: inline
+}
+
+.pager .pagination > li > a, .pager .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 3px 8px;
+    line-height: 1.42857143;
+    color: #428bca;
+    text-decoration: none;
+    background-color: #fff;
 }
