@@ -48,6 +48,33 @@ title: 账号的注册&激活
 Coding.net 目前支持 Github 账号登陆。
 在登录页面右下角点击 Github 小图标即可登陆。
 
+
+### 邀请好友
+
+- 定向邀请好友
+
+1.点击页面右上方的+，点击 好友
+ ![图片](https://dn-coding-net-production-pp.qbox.me/ec4aa210-13fd-4e87-bbd0-3ffcd65070f6.png) 
+
+2.点击马上邀请好友，输入您要邀请的好友的email
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/2de72cd6-0465-43cc-9a08-738be3dab40a.png) 
+
+- 不定向邀请好友
+ 
+ ![图片](https://dn-coding-net-production-pp.qbox.me/a9cc3f10-e8bf-49ff-ad20-23e570ed7f15.png) 
+您可以复制此网址给您的好友，无需知道对方email,将您的专属邀请链接发给对方就可以啦
+
+### 私信功能
+
+全站Coding 用户可互相发私信，非互相关注的好友关系需要输入验证码才可发送，互相关注的好友则可直接发私信，无需输入验证码。
+
+### 动态
+
+荟萃各类动态，在这里您可以纵览一切活动动向。
+ ![图片](https://dn-coding-net-production-pp.qbox.me/97ad25b6-8a39-4172-9d57-b236ef568a54.png) 
+
+
 ---
 
 
