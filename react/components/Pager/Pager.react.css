@@ -1,0 +1,40 @@
+.pager .paging.pagination {
+}
+
+.pager .paging.pagination > li {
+    float: left;
+}
+
+.pager .paging.pagination > li > a {
+    background: #FFF;
+    color: #AFC0CA;
+    margin-right: 5px;
+}
+
+.pager .paging.pagination > li.active > a {
+    background: #AFC0CA;
+    color: #FFF;
+    margin-right: 5px;
+}
+
+.pager .paging.pagination > li.active > a, .pager.pagination > li.active > span {
+    color: #FFF;
+    border: 1px solid #AFC0CA;
+}
+
+.pager .paging.pagination > li > a, .pager.pagination > li > span {
+    color: #337ab7;
+    border: 1px solid #AFC0CA;
+}
+
+.pager .paging.pagination > li:hover > a,
+.pager .paging.pagination > li:hover > span {
+    background: #AFC0CA;
+    color: #FFF;
+}
+
+.pager .paging.pagination > li.active:hover > a,
+.pager .paging.pagination > li.active:hover > span {
+    background: #AFC0CA;
+    color: #FFF;
+}
