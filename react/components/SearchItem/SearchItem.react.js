@@ -22,10 +22,11 @@ var SearchItem = React.createClass({
                     <span className="type doc">{type}</span>
                 </figure>
                 <div className="detail">
-                    <h3><a href={item.link}>{item.title}</a></h3>
+                    <h3><a href={item.link} dangerouslySetInnerHTML={{__html:item.title}}></a></h3>
 
-                    <div className="meta"><span>{item.author || 'Coding.net'}</span><span><i
-                        className="fa fa-clock-o"></i>{time}</span><span>{item.comments || 0}</span>
+                    <div className="meta">
+                        <span><a href={item.author_home}>{item.author_name}</a></span>
+                        <span><i className="fa fa-clock-o"></i>{time}</span>
                     </div>
                 </div>
             </article>

@@ -465,6 +465,11 @@
     font-weight: bold;
 }
 
+.search-box .search-item em {
+    color: #FF0C0C;
+    font-style: normal;
+}
+
 .search-box .search-item .type.doc {
     background-color: #79bb98;
 }
@@ -489,6 +494,10 @@
     color: #444444;
 }
 
+.search-box .search-item h3 a {
+    color: #444444;
+}
+
 .search-box .search-item .meta {
     font-size: 12px;
     color: #929292;
@@ -496,6 +505,10 @@
 
 .search-box .search-item .meta span {
     margin-right: 30px;
+}
+
+.search-box .search-item .meta a {
+    color: #929292;
 }
 
 .search-box .search-item .meta span i.fa {
@@ -773,6 +786,10 @@
     margin-right: -1px;
     padding: 10px 0 10px 30px;
     line-height: 28px;
+}
+
+.sidebar-title a {
+    color: #444444;
 }
 
 .sidebar-title h3 {

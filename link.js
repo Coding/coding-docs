@@ -48,6 +48,7 @@ function main() {
     readDir(doc, function (data) {
         docs.push({
             type: "0",
+            title: /^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g.exec(data.content)[2],
             link: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
@@ -57,6 +58,7 @@ function main() {
     readDir(faq, function (data) {
         docs.push({
             type: "1",
+            title: /^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g.exec(data.content)[2],
             link: linkPrefix + data.path,
             content: data.content,
             markdown: marked(data.content, 'Maruku')
