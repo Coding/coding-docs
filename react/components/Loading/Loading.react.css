@@ -1,0 +1,194 @@
+@-moz-keyframes common-rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes common-rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes common-rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes common-rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes common-loading-text-opacity {
+    0% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0.5
+    }
+    50% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-o-keyframes common-loading-text-opacity {
+    0% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0.5
+    }
+    50% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes common-loading-text-opacity {
+    0% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0.5
+    }
+    50% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes common-loading-text-opacity {
+    0% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0.5
+    }
+    50% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.common-loading-container,
+.common-loading {
+    height: 30px;
+    position: relative;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.common-loading-container {
+    margin: 40px auto;
+}
+
+.common-loading {
+    border: 1px solid transparent;
+    border-color: transparent #000 transparent #000;
+    -moz-animation: common-rotate-loading 1.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: common-rotate-loading 1.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: common-rotate-loading 1.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: common-rotate-loading 1.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+.common-loading-container:hover .common-loading,
+.common-loading-container .common-loading {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.common-loading-text {
+    -moz-animation: common-loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: common-loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: common-loading-text-opacity 2s linear 0s infinite normal;
+    animation: common-loading-text-opacity 2s linear 0s infinite normal;
+    color: #000;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 30px;
+}
+
+.common-loading-text img {
+    vertical-align: middle;
+}

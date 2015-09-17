@@ -363,6 +363,8 @@
     $(document).ready(function () {
         var path = location.pathname;
 //        var hash = location.hash;
+        $(".sub-menu").removeClass("active");
+        $(".sub-menu > li a").removeClass("active");
         var anchor = $("a[href^='" + path + "']");
         anchor.addClass("active");
         var expand = function (el) {

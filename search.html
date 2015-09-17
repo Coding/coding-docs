@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<div class="help-container">
+    <div class="container-wrapper clearfix">
+        {% include sidebar.html %}
+        <div class="help-content">
+            <div class="content-header">
+                <div>
+                    <div class="header-search">
+                        <input type="text"/>
+
+                        <div class="s-button">
+                            搜索
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body clearfix">
+                <div class="content-wrapper">
+                    <div id="search-app">
+                        <div class="common-loading-container" ng-style="containerStyle"
+                             style="width: 40px; height: 40px; margin: 40px auto;">
+                            <div class="common-loading common-coding icon monkey" ng-style="loadingStyle"
+                                 style="width: 40px; height: 40px;"></div>
+                            <div class="common-loading-text" ng-style="loadingTextStyle"
+                                 style="width: 40px; height: 40px; line-height: 40px;"><img
+                                    src="{{"/static/img/monkey_48_48_b.png" | prepend: site.baseurl}}" width="24" height="24"></div>
+                        </div>
+                    </div>
+                    <div class="unfixed clearfix">
+                        <div class="pull-right">
+                            <span>问题仍未解决？</span>
+                            <a href="https://coding.net/u/coding/p/Coding-Feedback/topic" class="ask-help">在线求助</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-to-top" style="display: block;">
+        <a href="#branding" title="回到顶部"><img src="{{ "/static/img/super-monkey.gif" | prepend: site.baseurl }}"
+            width="32"></a>
+    </div>
+</div>
+<link rel="stylesheet" href="{{ "/static/vendor/highlightjs/styles/github.css" | prepend: site.baseurl }}"/>
+<link rel="stylesheet" href="{{ "/static/css/bundle.min.css" | prepend: site.baseurl }}"/>
+<script src="{{"/static/vendor/highlightjs/highlight.pack.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/dist/react/app/search.bundle.js" | prepend: site.baseurl}}"></script>
+<script>
+    jQuery("#document").ready(function () {
+        jQuery(".markdown pre code").each(function (i, e) {
+            hljs.highlightBlock(e);
+        });
+    });
+</script>
+<script>
+    jQuery(document).ready(function () {
+
+        // hide #back-top first
+        jQuery(".back-to-top").hide();
+
+        // fade in #back-top
+        jQuery(function () {
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 1000) {
+                    jQuery('.back-to-top').fadeIn();
+                } else {
+                    jQuery('.back-to-top').fadeOut();
+                }
+            });
+
+            // scroll body to 0px on click
+            jQuery('.back-to-top a').click(function () {
+                jQuery('body,html,header').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+
+    });
+</script>
