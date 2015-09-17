@@ -19,7 +19,7 @@ var SearchApp = React.createClass({
 
     getInitialState: function () {
         return {
-            key: "",
+            q: "",
             result: SearchStore.getList(),
             page: 1
         }
@@ -27,12 +27,12 @@ var SearchApp = React.createClass({
     componentWillMount: function () {
         var parsed = QueryString.parse(location.search);
         this.setState({
-            key: parsed.key || "",
+            q: parsed.q || "",
             page: parsed.page || 1
         });
     },
     componentDidMount: function () {
-        SearchAction.loadSearch({key: this.state.key, page: this.state.page});
+        SearchAction.loadSearch({q: this.state.q, page: this.state.page});
         SearchStore.addChangeListener(this._onChange);
         PagerStore.addChangeListener(this._onPagerChange);
     },
@@ -46,13 +46,20 @@ var SearchApp = React.createClass({
      */
     render: function () {
         var result = this.state.result || [];
+        var totalPage = this.state.result.totalPage || 0;
         this.props.totalPage = 10;
         var items = ( result && result.list ) || [];
         var noticeContent = "";
-        if (this.state.key) {
+        if (this.state.q) {
             noticeContent = (
                 <div className="content-note">
-                    “{this.state.key}”的搜索结果
+                    “{this.state.q}”的搜索结果
+                </div>
+            );
+        } else {
+            noticeContent = (
+                <div className="content-note">
+                    请输入搜索关键词
                 </div>
             );
         }
@@ -62,7 +69,7 @@ var SearchApp = React.createClass({
                 <SearchBox items={items}/>
 
                 <div>
-                    <Pager page={this.state.page} totalPage={this.props.totalPage} count={5}/>
+                    <Pager page={this.state.page} totalPage={totalPage} count={5}/>
                 </div>
             </div>
         );
@@ -75,9 +82,9 @@ var SearchApp = React.createClass({
     _onPagerChange: function () {
         var page = PagerStore.getPage();
         this.setState({page: page});
-        var key = this.state.key;
+        var q = this.state.q;
         setTimeout(function () {
-            SearchAction.loadSearch({key: key, page: page});
+            SearchAction.loadSearch({q: q, page: page});
         }, 1)
     }
 });

@@ -4,6 +4,7 @@
 
 var Request = require('request');
 var jQuery = require('jQuery');
+var Config = require("../configs/app.config.json");
 var Api = {
     get: function () {
         var url, params = {}, success = undefined, error = undefined;
@@ -31,7 +32,8 @@ var Api = {
                 break;
         }
         url = Api.sliceURL(url, params);
-
+        var isFullLink = new RegExp("^[^\/]+:\/\/(.*)").test(url.url);
+        url.url = isFullLink ? url.url : (Config.API_HOST + url.url);
         jQuery.ajax({
             url: url.url + "?" + Api.queryString(url.params),
             type: "GET",

@@ -5,4 +5,5 @@ _site
 .sass-cache
 /test
 /node_modules
+/react/configs/app.config.json
 .idea

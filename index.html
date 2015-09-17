@@ -12,21 +12,23 @@ layout: default
                         <div class="search-label">
                             <label>帮助中心</label>
                         </div>
-                        <div class="search-input-box">
-                            <div class="search-input-box-layout">
-                                <div class="search-input">
-                                    <div class="search-input-layout">
-                                        <div class="search-icon">
-                                            <i class="fa fa-search"></i>
+                        <form id="search-form" action="/help/search.html">
+                            <div class="search-input-box">
+                                <div class="search-input-box-layout">
+                                    <div class="search-input">
+                                        <div class="search-input-layout">
+                                            <div class="search-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <input name="q" type="text" placeholder="输入关键词，搜索问题答案"/>
                                         </div>
-                                        <input type="text" placeholder="输入关键词，搜索问题答案"/>
+                                    </div>
+                                    <div class="search-button" onclick="doSearch()">
+                                        搜索
                                     </div>
                                 </div>
-                                <div class="search-button">
-                                    搜索
-                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -118,7 +120,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/webide/ide.html#如何分享环境，可以分享给任何人吗？">分享环境是如何分享，可以分享给任何人吗？</a></li>
                         <li><i class="fa fa-caret-right"></i>
-                            <a href="/help/faq/webide/ide.html#运行程序后，生成的-access-url-报502，404-是怎么回事？">生成的 URL 访问老是 404/502 错误，如何解决？</a></li>
+                            <a href="/help/faq/webide/ide.html#运行程序后，生成的-access-url-报502，404-是怎么回事？">生成的 URL 访问老是
+                                404/502 错误，如何解决？</a></li>
                         <li><i class="fa fa-caret-right"></i>
                             <a href="/help/faq/webide/ide.html#webide-可以安装数据库吗？">WebIDE 可以安装数据库吗？</a>
                         </li>
@@ -207,7 +210,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/git-branch.html">WebHook</a></li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/git/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/git/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -226,7 +230,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/services.html">一键部署</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/services.html">DB服务管理</a></li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/paas/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/paas/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -247,7 +252,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/environment.html">切换和分享环境</a>
                         </li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/webide/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/webide/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -266,7 +272,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/2fa.html">两步验证</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/code.html">代码评审</a></li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/mobile/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/mobile/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -286,7 +293,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/files.html">文件管理</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/discuss.html">项目讨论</a></li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/project/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/project/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -306,7 +314,8 @@ layout: default
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/shop.html">关于码币&Shop</a></li>
                         <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/oauth.html">第三方应用管理</a></li>
                         <li></li>
-                        <li class="more"><a href="/help/doc/account/introduction.html"><span>查看更多</span><i class="fa fa-angle-right"></i></a></li>
+                        <li class="more"><a href="/help/doc/account/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -317,6 +326,10 @@ layout: default
     var changeTab = function (i) {
         $("div[class*=tab-option]").removeClass("active");
         $("div[class*=tab-option-" + i + "]").addClass("active");
+    };
+
+    var doSearch = function () {
+        $("#search-form").submit();
     }
 
 </script>

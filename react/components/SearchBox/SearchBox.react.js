@@ -9,12 +9,12 @@ var Loading = require("../Loading/Loading.react");
 var SearchBox = React.createClass({
     getInitialState: function () {
         return {
-            tab: 'documents'
+            tab: 'help_documents'
         }
     },
     changeDocuments(){
-        this.setState({tab: "documents"})
-        SearchAction.changeSearch("documents");
+        this.setState({tab: "help_documents"})
+        SearchAction.changeSearch("help_documents");
     },
     changeProjectTopics(){
         this.setState({tab: "project_topics"})
@@ -23,7 +23,7 @@ var SearchBox = React.createClass({
     render: function () {
         var cx = React.addons.classSet;
         var documentClass = cx({
-            "active": this.state.tab == "documents"
+            "active": this.state.tab == "help_documents"
         });
         var projectTopicClass = cx({
             "active": this.state.tab == "project_topics"
@@ -44,6 +44,14 @@ var SearchBox = React.createClass({
                     {listContent}
                 </ul>
             )
+        } else if (!items && !key) {
+            itemsContent = (
+                <div className="search-notice">请输入关键词搜索</div>
+            );
+        } else if (!items && key) {
+            itemsContent = (
+                <div className="search-notice"></div>
+            );
         }
         return (
             <div className="search-box">
