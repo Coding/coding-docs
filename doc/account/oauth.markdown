@@ -75,9 +75,9 @@ Response body 中的 `code` 为 0，表示正常接收请求。如果 `code`�
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/92b17830-1112-4086-a6ba-f46b51b8caa5.png) 
 
-### 开放资源
+### Coding 开放平台
 
-更多 API 信息可查看 http://api-doc.coding.io/
+更多 API 和开放资源，可查看 [Coding 开放平台](http://open.coding.net/)
 
 ---
 
