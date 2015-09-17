@@ -14,16 +14,25 @@ var SearchStore = require("../stores/Search.store");
 var Pager = require("../components/Pager/Pager.react");
 var PagerStore = require("../stores/Pager.store");
 var PagerAction = require("../actions/Pager.action");
+var QueryString = require('query-string');
 var SearchApp = React.createClass({
 
     getInitialState: function () {
         return {
+            key: "",
             result: SearchStore.getList(),
             page: 1
         }
     },
+    componentWillMount: function () {
+        var parsed = QueryString.parse(location.search);
+        this.setState({
+            key: parsed.key || "",
+            page: parsed.page || 1
+        });
+    },
     componentDidMount: function () {
-        SearchAction.loadSearch({key: "", page: 1});
+        SearchAction.loadSearch({key: this.state.key, page: this.state.page});
         SearchStore.addChangeListener(this._onChange);
         PagerStore.addChangeListener(this._onPagerChange);
     },
@@ -39,8 +48,17 @@ var SearchApp = React.createClass({
         var result = this.state.result || [];
         this.props.totalPage = 10;
         var items = ( result && result.list ) || [];
+        var noticeContent = "";
+        if (this.state.key) {
+            noticeContent = (
+                <div className="content-note">
+                    “{this.state.key}”的搜索结果
+                </div>
+            );
+        }
         return (
             <div>
+                {noticeContent}
                 <SearchBox items={items}/>
 
                 <div>
@@ -57,8 +75,9 @@ var SearchApp = React.createClass({
     _onPagerChange: function () {
         var page = PagerStore.getPage();
         this.setState({page: page});
+        var key = this.state.key;
         setTimeout(function () {
-            SearchAction.loadSearch({key: "", page: page});
+            SearchAction.loadSearch({key: key, page: page});
         }, 1)
     }
 });
