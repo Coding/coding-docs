@@ -30,7 +30,7 @@ var SearchBox = React.createClass({
         });
         var items = this.props.items;
         var itemsContent = (<Loading/>);
-        if (items) {
+        if (items && items.length > 0) {
             var listContent = items.map(function (item, index) {
                 return (
                     <li>
@@ -44,13 +44,9 @@ var SearchBox = React.createClass({
                     {listContent}
                 </ul>
             )
-        } else if (!items && !key) {
+        } else {
             itemsContent = (
-                <div className="search-notice">请输入关键词搜索</div>
-            );
-        } else if (!items && key) {
-            itemsContent = (
-                <div className="search-notice"></div>
+                <div className="search-notice">没有搜索到相关结果</div>
             );
         }
         return (

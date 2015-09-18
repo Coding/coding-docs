@@ -1,6 +1,8 @@
 var fs = require('fs');
 var watchArray = require('watch-array');
 var marked = require('marked');
+var htmlToText = require('html-to-text');
+var jquery = require("jquery");
 marked.setOptions({
     renderer: new marked.Renderer(),
     gfm: true,
@@ -42,6 +44,11 @@ var readFile = function (file, fn) {
     });
 }
 
+marked.setOptions({
+    gfm: true,
+    breaks: true,
+    sanitize: true
+});
 
 function main() {
     var doc = "doc/";
@@ -50,8 +57,10 @@ function main() {
             type: "0",
             title: /^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g.exec(data.content)[2],
             link: linkPrefix + data.path,
-            content: data.content,
-            markdown: marked(data.content, 'Maruku')
+            markdown: data.content,
+            content: htmlToText.fromString(marked(data.content.replace(/^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g, "")), {
+                wordwrap: 0
+            })
         })
     });
     var faq = "faq/";
@@ -60,8 +69,10 @@ function main() {
             type: "1",
             title: /^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g.exec(data.content)[2],
             link: linkPrefix + data.path,
-            content: data.content,
-            markdown: marked(data.content, 'Maruku')
+            markdown: data.content,
+            content: htmlToText.fromString(marked(data.content.replace(/^---\s+layout:\s+(.*)\s+title:\s+(.*)\s+---/g, "")), {
+                wordwrap: 0
+            })
         })
     });
     watchArray(docs, function (update) {

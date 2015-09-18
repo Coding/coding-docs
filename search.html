@@ -6,17 +6,19 @@ layout: default
     <div class="container-wrapper clearfix">
         {% include sidebar.html %}
         <div class="help-content">
-            <div class="content-header">
-                <div>
-                    <div class="header-search">
-                        <input type="text"/>
+            <form id="search-form" action="/help/search.html">
+                <div class="content-header">
+                    <div>
+                        <div class="header-search">
+                            <input name="q" type="text"/>
 
-                        <div class="s-button">
-                            搜索
+                            <div class="s-button" onclick="doSearch()">
+                                搜索
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div class="content-body clearfix">
                 <div class="content-wrapper">
                     <div id="search-app">
@@ -26,7 +28,9 @@ layout: default
                                  style="width: 40px; height: 40px;"></div>
                             <div class="common-loading-text" ng-style="loadingTextStyle"
                                  style="width: 40px; height: 40px; line-height: 40px;"><img
-                                    src="{{"/static/img/monkey_48_48_b.png" | prepend: site.baseurl}}" width="24" height="24"></div>
+                                    src="{{"/static/img/monkey_48_48_b.png" | prepend: site.baseurl}}" width="24"
+                                height="24">
+                            </div>
                         </div>
                     </div>
                     <div class="unfixed clearfix">
@@ -57,7 +61,6 @@ layout: default
 </script>
 <script>
     jQuery(document).ready(function () {
-
         // hide #back-top first
         jQuery(".back-to-top").hide();
 
@@ -81,4 +84,7 @@ layout: default
         });
 
     });
+    var doSearch = function () {
+        $("#search-form").submit();
+    }
 </script>

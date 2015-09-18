@@ -67,15 +67,18 @@ var Loading = React.createClass({
                 </li>
             )
         });
-        return (
-            <div className="pager clearfix">
-                <ul className="paging pagination">
-                    <li><a href="javascript:void(0)" onClick={this.goFirst}>&laquo;</a></li>
-                    {pagerContent}
-                    <li><a href="javascript:void(0)" onClick={this.goLast}>&raquo;</a></li>
-                </ul>
-            </div>
-        );
+        if (this.props.totalPage > 1) {
+            return (
+                <div className="pager clearfix">
+                    <ul className="paging pagination">
+                        <li><a href="javascript:void(0)" onClick={this.goFirst}>&laquo;</a></li>
+                        {pagerContent}
+                        <li><a href="javascript:void(0)" onClick={this.goLast}>&raquo;</a></li>
+                    </ul>
+                </div>
+            );
+        }
+        return (<div></div>);
     }
 });
 

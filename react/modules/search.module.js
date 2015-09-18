@@ -14,6 +14,7 @@ var SearchStore = require("../stores/Search.store");
 var Pager = require("../components/Pager/Pager.react");
 var PagerStore = require("../stores/Pager.store");
 var PagerAction = require("../actions/Pager.action");
+var jQuery = require("jquery");
 var QueryString = require('query-string');
 var SearchApp = React.createClass({
 
@@ -26,6 +27,7 @@ var SearchApp = React.createClass({
     },
     componentWillMount: function () {
         var parsed = QueryString.parse(location.search);
+        jQuery("#search-form input[name=q]").val(parsed.q);
         this.setState({
             q: parsed.q || "",
             page: parsed.page || 1
@@ -75,9 +77,11 @@ var SearchApp = React.createClass({
         );
     },
     _onChange: function () {
+        var result = SearchStore.getList();
         this.setState({
-            result: SearchStore.getList()
-        })
+            result: result,
+            page: result.page
+        });
     },
     _onPagerChange: function () {
         var page = PagerStore.getPage();

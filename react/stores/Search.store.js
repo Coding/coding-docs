@@ -11,12 +11,14 @@ var CHANGE_EVENT = 'change';
 var Config = require("../configs/app.config.json")
 var _store = {
     tab: "help_documents",
+    q: "",
     result: {},
     list: []
 };
 
 
 var loadSearch = function (params) {
+    _store.q = params.q;
     new Api.get("/api/esearch/help", params, function (result) {
         if (result.code == 0) {
             _store.result = result.data || {};
@@ -45,9 +47,10 @@ var convertResult = function (result) {
 
     docs.list = (docs.list || []).map(function (item, index) {
         return {
-            type: "文档",
+            type: 0,
             title: item.title,
             link: item.link,
+            content: [].concat(item.content).join(""),
             author_name: "coding",
             author_home: "https://coding.net/u/coding",
             created_at: item.created_at
@@ -55,12 +58,15 @@ var convertResult = function (result) {
     });
     topics.list = (topics.list || []).map(function (item, index) {
         return {
-            type: "反馈",
+            type: 1,
             title: item.title,
             link: item.project && item.project.project_path + "/" + item.id,
+            content: [].concat(item.content).join(""),
             author_name: item.owner && item.owner.name,
             author_home: item.owner && (Config.API_HOST + item.owner.path),
-            created_at: item.created_at
+            created_at: item.created_at,
+            comment_count: item.comment_count || 0,
+            labels: item.labels
         };
     });
     result['help_documents'] = docs;
@@ -71,7 +77,7 @@ var convertResult = function (result) {
 
 var changeSearch = function (tab) {
     _store.tab = tab;
-    _store.list = _store.result && _store.result[tab];
+    loadSearch({q: _store.q, page: 1});
     SearchStore.emit(CHANGE_EVENT);
 }
 

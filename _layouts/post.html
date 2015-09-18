@@ -6,17 +6,19 @@ layout: default
     <div class="container-wrapper clearfix">
         {% include sidebar.html %}
         <div class="help-content">
-            <div class="content-header">
-                <div>
-                    <div class="header-search">
-                        <input type="text"/>
+            <form id="search-form" action="/help/search.html">
+                <div class="content-header">
+                    <div>
+                        <div class="header-search">
+                            <input name="q" type="text"/>
 
-                        <div class="s-button">
-                            搜索
+                            <div class="s-button" onclick="doSearch()">
+                                搜索
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div class="content-body clearfix">
                 <div class="content-wrapper">
                     <section class="document-content">
@@ -44,20 +46,21 @@ layout: default
         </div>
     </div>
     <div class="back-to-top" style="display: block;">
-        <a href="#branding" title="回到顶部"><img src="{{ "/static/img/super-monkey.gif" | prepend: site.baseurl }}" width="32"></a>
+        <a href="#branding" title="回到顶部"><img src="{{ "/static/img/super-monkey.gif" | prepend: site.baseurl }}"
+            width="32"></a>
     </div>
 </div>
 <link rel="stylesheet" href="{{ "/static/vendor/highlightjs/styles/github.css" | prepend: site.baseurl }}"/>
 <script src="{{"/static/vendor/highlightjs/highlight.pack.js" | prepend: site.baseurl}}"></script>
 <script >
-jQuery("#document").ready(function () {
+    jQuery("#document").ready(function () {
     jQuery(".markdown pre code").each(function (i, e) {
         hljs.highlightBlock(e);
     });
 });
-</script>
+        </script>
 <script>
-    jQuery(document).ready(function(){
+    jQuery(document).ready(function () {
 
         // hide #back-top first
         jQuery(".back-to-top").hide();
@@ -82,4 +85,7 @@ jQuery("#document").ready(function () {
         });
 
     });
+    var doSearch = function () {
+        $("#search-form").submit();
+    }
 </script>

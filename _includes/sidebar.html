@@ -361,7 +361,6 @@
     $("#metismenu").metisMenu();
     $(document).ready(function () {
         var path = location.pathname;
-//        var hash = location.hash;
         $(".sub-menu").removeClass("active");
         $(".sub-menu > li a").removeClass("active");
         var anchor = $("a[href^='" + path + "']");
@@ -379,14 +378,6 @@
 
         expand(anchor);
         $("#metismenu").metisMenu();
-        $(".sidebar-menu").scrollToFixed({
-            marginTop: 65,
-            limit: function () {
-                var stop = $("#footer").offset().top;
-                var h = $(this).outerHeight(true);
-                return stop - h - 65;
-            }
-        });
 
     });
 </script>
