@@ -53,3 +53,14 @@
     text-decoration: none;
     background-color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+    .pager {
+        text-align: center;
+    }
+
+    .pager .paging.pagination {
+        display: inline-block;
+    }
+
+}

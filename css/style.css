@@ -680,6 +680,10 @@
     font-weight: normal;
 }
 
+.sidebar-title h3 i.fa {
+    display: none;
+}
+
 .help-sidebar .sidebar-menu {
     padding: 20px 0;
     font-size: 16px;
@@ -784,6 +788,21 @@
         font-size: 14px;
     }
 
+    .help-sidebar .sidebar-menu {
+        border-right: none;
+    }
+
+    .sidebar-title h3 {
+        cursor: pointer;
+    }
+
+    .sidebar-title h3 i.fa {
+        display: inline-block;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
 }
 
 /***
