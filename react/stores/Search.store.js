@@ -8,7 +8,8 @@ var Api = require('../apis/Api.api');
 var Events = require('events');
 var EventEmitter = Events.EventEmitter
 var CHANGE_EVENT = 'change';
-var Config = require("../configs/app.config.json")
+var Config = require("../configs/app.config.json");
+var LoadingStore = require("../stores/Loading.store");
 var _store = {
     tab: "help_documents",
     q: "",
@@ -19,7 +20,12 @@ var _store = {
 
 var loadSearch = function (params) {
     _store.q = params.q;
+    _store.result = {};
+    _store.list = {};
+    SearchStore.emit(CHANGE_EVENT);
+    LoadingStore.doLoading();
     new Api.get("/api/esearch/help", params, function (result) {
+        LoadingStore.doLoaded();
         if (result.code == 0) {
             _store.result = result.data || {};
             _store.result = convertResult(_store.result);

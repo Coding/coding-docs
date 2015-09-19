@@ -3,9 +3,18 @@
  */
 
 var React = require('react/addons');
+var LoadingStore = require("../../stores/Loading.store");
 var Loading = React.createClass({
     getInitialState: function () {
-        return {}
+        return {
+            loading: false
+        }
+    },
+    componentDidMount: function () {
+        LoadingStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount: function () {
+        LoadingStore.removeChangeListener(this._onChange);
     },
     render: function () {
         var imageSize = this.props.imageSize || 24;
@@ -26,17 +35,30 @@ var Loading = React.createClass({
             'height': (imageSize + w) + 'px',
             'line-height': (imageSize + w) + 'px'
         };
-        return (
-            <div className="common-loading-container" style={containerStyle}>
-                <div className="common-loading common-coding icon monkey"
-                     style={loadingStyle}></div>
-                <div className="common-loading-text"
-                     style={loadingTextStyle}><img
-                    src="/help/static/img/monkey_48_48_b.png" width={imageSize}
-                    height={imageSize}/>
+        var hideStyle = {
+            display: "none"
+        };
+
+        if (this.state.loading) {
+            return (
+                <div className="common-loading-container" style={containerStyle}>
+                    <div className="common-loading common-coding icon monkey"
+                         style={loadingStyle}></div>
+                    <div className="common-loading-text"
+                         style={loadingTextStyle}><img
+                        src="/help/static/img/monkey_48_48_b.png" width={imageSize}
+                        height={imageSize}/>
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+        return (<i style={hideStyle}></i>);
+    },
+    _onChange: function () {
+        var loading = LoadingStore.getLoading();
+        this.setState({
+            loading: loading
+        });
     }
 });
 

@@ -14,5 +14,7 @@ var keyMirror = require('keymirror');
 module.exports = keyMirror({
     LOAD_SEARCH: null,
     CHANGE_SEARCH: null,
-    PAGER_CHANGE: null
+    PAGER_CHANGE: null,
+    LOADING: null,
+    LOADED: null
 });

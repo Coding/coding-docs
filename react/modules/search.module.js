@@ -89,7 +89,7 @@ var SearchApp = React.createClass({
         var q = this.state.q;
         setTimeout(function () {
             SearchAction.loadSearch({q: q, page: page});
-        }, 1)
+        }, 0)
     }
 });
 

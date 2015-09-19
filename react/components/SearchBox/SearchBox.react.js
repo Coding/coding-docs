@@ -6,11 +6,18 @@ var React = require('react/addons');
 var SearchItem = require("../SearchItem/SearchItem.react");
 var SearchAction = require("../../actions/Search.action");
 var Loading = require("../Loading/Loading.react");
+var LoadingStore = require("../../stores/Loading.store");
 var SearchBox = React.createClass({
     getInitialState: function () {
         return {
             tab: 'help_documents'
         }
+    },
+    componentDidMount: function () {
+        LoadingStore.addChangeListener(this._onLoadingChange);
+    },
+    componentWillUnmount: function () {
+        LoadingStore.removeChangeListener(this._onLoadingChange);
     },
     changeDocuments(){
         this.setState({tab: "help_documents"})
@@ -29,7 +36,12 @@ var SearchBox = React.createClass({
             "active": this.state.tab == "project_topics"
         });
         var items = this.props.items;
-        var itemsContent = (<Loading/>);
+        var itemsContent = "";
+        if (!this.state.loading) {
+            itemsContent = (
+                <div className="search-notice">没有搜索到相关结果</div>
+            );
+        }
         if (items && items.length > 0) {
             var listContent = items.map(function (item, index) {
                 return (
@@ -44,10 +56,6 @@ var SearchBox = React.createClass({
                     {listContent}
                 </ul>
             )
-        } else {
-            itemsContent = (
-                <div className="search-notice">没有搜索到相关结果</div>
-            );
         }
         return (
             <div className="search-box">
@@ -58,10 +66,14 @@ var SearchBox = React.createClass({
                     </ul>
                 </div>
                 <div className="search-body">
+                    <Loading ref="loading"/>
                     {itemsContent}
                 </div>
             </div>
         );
+    },
+    _onLoadingChange: function () {
+        this.setState({loading: LoadingStore.getLoading()});
     }
 });
 
