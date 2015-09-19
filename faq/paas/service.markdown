@@ -56,4 +56,7 @@ MySQL 有连接数量限制，目前并发连接上限是 10 个，请注意在�
 
 ----
 
-## 上一篇 >> [演示部署问题](/help/faq/paas/deploy.html)
+
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/faq/paas/deploy.html">上一篇：演示部署问题</a></div>
+</div>

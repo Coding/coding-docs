@@ -63,4 +63,7 @@ https://github.com/iphoting/heroku-buildpack-php-tyler
 
 ---
 
-## 下一篇 >> [演示部署问题](/help/faq/paas/deploy.html)
+
+<div class="footer-nav">
+<div class="right-nav"><a href="/help/faq/paas/deploy.html">下一篇：演示部署问题</a><i class="fa fa-angle-right"></i></div>
+</div>

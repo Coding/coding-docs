@@ -281,11 +281,7 @@
     font-weight: 500;
     color: #000;
     padding-bottom: 20px;
-}
-
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
-.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-    margin-bottom: 0.4em;
+    margin-top: 30px;
     line-height: 1.5;
 }
 
@@ -399,4 +395,22 @@
 
 .markdown *:target {
     padding-top: 65px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .markdown p,
+    .markdown pre,
+    .markdown ul,
+    .markdown div,
+    .markdown ol,
+    .markdown table {
+        margin: .5em .5em .6em 1em;
+        color: #404040;
+        line-height: 22px;
+    }
+
+    .markdown .toc .title {
+        margin-left: -1em;
+    }
 }

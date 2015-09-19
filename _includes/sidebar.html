@@ -2,7 +2,7 @@
     <div class="sidebar-title">
         <h3><a href="/help/">帮助中心</a><span class="pull-right"><i class="fa fa-angle-down"></i> </span></h3>
     </div>
-    <div class="sidebar-menu">
+    <div class="sidebar-menu animated">
         <ul class="metismenu" id="metismenu">
             <li class="active">
                 <a href="#" aria-expanded="true">
@@ -379,7 +379,19 @@
         expand(anchor);
         $("#metismenu").metisMenu();
         $(".sidebar-title").click(function () {
-            
+            var thiz = $(".sidebar-menu");
+            var display = thiz.css("display");
+            var fa = $(this).find("i.fa");
+            var faDisplay = fa.css("display");
+            if (faDisplay != "none") {
+                if (display == "none") {
+                    thiz.slideDown();
+                    fa.addClass("fa-angle-up").removeClass("fa-angle-down");
+                } else {
+                    fa.addClass("fa-angle-down").removeClass("fa-angle-up");
+                    thiz.slideUp();
+                }
+            }
         });
     });
 </script>

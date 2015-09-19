@@ -88,6 +88,8 @@ title: 部署常见问题
 
 ---
 
-## 上一篇 >> [语言&框架支持问题](/help/faq/paas/language.html)
 
-## 下一篇 >> [第三方服务问题](/help/faq/paas/service.html)
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/faq/paas/language.html">上一篇：语言&框架支持问题</a></div>
+<div class="right-nav"><a href="/help/faq/paas/service.html">下一篇：第三方服务问题</a><i class="fa fa-angle-right"></i></div>
+</div>
