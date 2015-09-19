@@ -4,19 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="keywords" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.keywords }}{% endif %}">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/markdown.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/static/css/coding.font.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/static/vendor/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/static/vendor/metisMenu/dist/metisMenu.min.css" | prepend: site.baseurl }}">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/help/dist/build/css/main.min.css?bltiq37r">
+  <!-- endinject -->
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <script src="{{"/static/vendor/jquery/dist/jquery.min.js" | prepend: site.baseurl}}"></script>
-  <script src="{{"/static/vendor/metisMenu/dist/metisMenu.min.js" | prepend: site.baseurl}}"></script>
-  <script src="{{"/static/vendor/ScrollToFixed/jquery-scrolltofixed-min.js" | prepend: site.baseurl}}"></script>
-  <script src="{{"/static/js/toc.js" | prepend: site.baseurl}}"></script>
+  <!-- inject:js -->
+  <script src="/help/dist/build/js/main.min.js?avviojm2"></script>
+  <!-- endinject -->
 </head>

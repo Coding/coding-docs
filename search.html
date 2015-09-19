@@ -48,10 +48,7 @@ layout: default
             width="32"></a>
     </div>
 </div>
-<link rel="stylesheet" href="{{ "/static/vendor/highlightjs/styles/github.css" | prepend: site.baseurl }}"/>
-<link rel="stylesheet" href="{{ "/static/css/bundle.min.css" | prepend: site.baseurl }}"/>
-<script src="{{"/static/vendor/highlightjs/highlight.pack.js" | prepend: site.baseurl}}"></script>
-<script src="{{"/dist/react/app/search.bundle.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/dist/build/app/search.bundle.min.js" | prepend: site.baseurl}}"></script>
 <script>
     jQuery("#document").ready(function () {
         jQuery(".markdown pre code").each(function (i, e) {
