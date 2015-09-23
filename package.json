@@ -10,8 +10,8 @@
     "url": "https://git.coding.net/kloze/coding-manual.git"
   },
   "scripts": {
-    "build": "npm install gulp -g && bower install && gulp build",
-    "start": "npm install gulp -g && bower install && gulp build && jekyll server"
+    "build": "bower install && gulp build",
+    "start": "bower install && gulp build && jekyll server"
   },
   "dependencies": {
     "babel-core": "^5.6.0",
