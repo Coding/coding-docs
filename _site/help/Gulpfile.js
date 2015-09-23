@@ -52,6 +52,7 @@ var file = {
         path.CSS + "/**/*.css",
         path.STATIC + "/css/**/*.css",
         path.VENDOR + "/font-awesome/css/font-awesome.min.css",
+        path.VENDOR + "/highlightjs/styles/github.css",
         path.VENDOR + "/metisMenu/dist/metisMenu.min.css"
     ],
     JS: [
