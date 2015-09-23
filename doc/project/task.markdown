@@ -12,27 +12,33 @@ title: 项目任务管理
 
  - 任务详情页
 
-![在这里输入图片描述][23]
+![任务详情页](https://dn-coding-net-production-static.qbox.me/f7b47f09-eb7b-4a5d-b8d7-069d1995ede4.png?imageView2/2/w/800/h/800)
 
  - 项目内任务中心
-![在这里输入图片描述][24]
+
+![项目内任务中心](https://dn-coding-net-production-static.qbox.me/1a666602-7b07-4a8c-b504-10a418ae185e.jpg?imageView2/2/w/800/h/800)
 
  - 我的任务页
-![在这里输入图片描述][25]
+
+![我的任务页](https://dn-coding-net-production-pp.qbox.me/a702fcad-ec27-49ec-8ff4-033f2456f6ed.png)
 
  -  任务弹窗页
 
-![在这里输入图片描述][26]
+![任务弹窗](https://dn-coding-net-production-pp.qbox.me/762aad49-a057-4aa4-a2f6-0de1a5bab02a.png)
 
 #### 创建任务
 
  - 项目内任务中心创建任务
-在项目主页的左侧一级菜单栏选择**任务**，在屏幕上方的文本框输入任务标题和任务描述，点击左边的**日历**图标和**感叹号**图标选择任务截止日期和任务紧急程度，点击右边的**头像**图标选择任务执行成员，回车即可创建任务，如需给任务添加标签，可以点击任务下方的**时钟**按钮，进入任务详情页添加。
-![在这里输入图片描述][27]
+
+ 在项目主页的左侧一级菜单栏选择**任务**，在屏幕上方的文本框输入任务标题和任务描述，点击左边的**日历**图标和**感叹号**图标选择任务截止日期和任务紧急程度，点击右边的**头像**图标选择任务执行成员，回车即可创建任务，如需给任务添加标签，可以点击任务下方的**时钟**按钮，进入任务详情页添加。
+ 
+ ![任务中心内创建](https://dn-coding-net-production-static.qbox.me/7d818d4e-bd20-4467-8f15-dcb4f5087b93.png?imageView2/2/w/800/h/800)
 
  - 全局创建任务
+ 
 将鼠标移至右上角**添加**按钮并选择任务，在任务弹窗页面全局创建任务，并给任务加标签。全局创建任务后，页面出现任务创建提示，点击即可进入任务详情页。
-![在这里输入图片描述][28]
+
+ ![全局创建任务](https://dn-coding-net-production-static.qbox.me/f09dbf3f-8a36-4cb3-9197-073e31e3951c.png?imageView2/2/w/800/h/800)
 
 注意：目前只有私有项目具有任务功能。
 
@@ -73,16 +79,6 @@ Tips：讨论标签和任务标签是通用的，并且添加标签时一次可�
 
 ---
 
-
-
-   [23]: https://dn-coding-net-production-static.qbox.me/0bfbda67-6a5e-4f39-94bc-c9fae18c87e6.png?imageView2/2/w/800/h/800
-  [24]: https://dn-coding-net-production-static.qbox.me/7d818d4e-bd20-4467-8f15-dcb4f5087b93.png?imageView2/2/w/800/h/800
-  [25]: https://dn-coding-net-production-static.qbox.me/f09dbf3f-8a36-4cb3-9197-073e31e3951c.png?imageView2/2/w/800/h/800
-  [26]: https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800
-  [27]: https://dn-coding-net-production-static.qbox.me/a161eaef-b710-4151-bffb-2eea37c4093d.png?imageView2/2/w/800/h/800
-  [28]: https://dn-coding-net-production-static.qbox.me/2d162819-3a56-4496-920f-6f5ad5ef2fc3.png?imageView2/2/w/800/h/800
-  
-  
 
   <div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/files.html">上一篇：项目文件管理</a></div>
