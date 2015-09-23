@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coding 帮助文档</title>
+  <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
+  <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
+  <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?zmbmwkrn">
+  <!-- endinject -->
+
+  <link rel="canonical" href="https://coding.net/help/">
+  <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
+
+  <!-- inject:js -->
+  <script src="/help/dist/js/main.min.js?hljtc5sm"></script>
+  <!-- endinject -->
+</head>
+
+
+<body>
+
+<header id="header">
+    <div id="top-menu">
+        <a class="logo clearfix" href="/" target="_self">
+            <img src="/help/static/img/logo.png"/>
+        </a>
+        <ul class="nav">
+            <li class="dropdown">
+                <a href="javascript:void(0);">功能</a>
+                <ul class="menu">
+                    <li><a href="/git" target="_self"><i class="git icon"></i> 代码托管</a></li>
+                    <li><a href="/pm" target="_self"><i class="icon collaboration"></i> 项目管理</a></li>
+                    <li><a href="/webide" target="_self"><i class="ide icon"></i> WebIDE</a></li>
+                    <li><a href="/app" target="_self"><i class="app icon"></i> APP</a></li>
+                </ul>
+            </li>
+            <li><a href="/upgrade" target="_self">价格</a></li>
+            <li><a href="/pp" target="_self">冒泡</a></li>
+            <li><a href="/help" target="_self">帮助</a></li>
+            <li><a href="https://coding.net/u/coding/p/Coding-Feedback/topic/all" target="_self">反馈</a></li>
+        </ul>
+        <div class="login-zone">
+            <div class="btns">
+                <a href="/login" target="_blank" class="login dark button">登录</a>
+                <a href="/register" target="_blank" class="register button">注册</a>
+            </div>
+            <div class="user">
+                <a href="/user" class="ui avatar image" title="" target="_self">
+                    <img ng-src=""
+                         height="40px"></a>
+                <i class="fa fa-sign-out ng-scope" ng-click="logout()" title="点击退出账号"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    jQuery(document).ready(function () {
+        $.ajax({
+            url: "/api/current_user",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#btns").hide();
+                    $("#user a").attr("title", result.data.name);
+                    $("#user img").attr("src", result.data.avatar);
+                    $("#user").show();
+                } else {
+                    $("#user").hide();
+                    $("#btns").show();
+                }
+            }
+        });
+    });
+
+    var logout = function () {
+        $.ajax({
+            url: "/api/logout",
+            type: "POST",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#user").hide();
+                    $("#btns").show();
+                } else {
+                    $("#user").show();
+                    $("#btns").hide();
+                }
+            }
+        })
+    }
+</script>
+
+
+
+<div class="main-container">
+    <section class="help-banner">
+    <div class="layout-table">
+        <div class="layout-cell">
+            <div class="content">
+                <div class="search">
+                    <div class="search-form">
+                        <div class="search-label">
+                            <label>帮助中心</label>
+                        </div>
+                        <form id="search-form" action="/help/search.html">
+                            <div class="search-input-box">
+                                <div class="search-input-box-layout">
+                                    <div class="search-input">
+                                        <div class="search-input-layout">
+                                            <div class="search-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <input name="q" type="text" placeholder="输入关键词，搜索问题答案"/>
+                                        </div>
+                                    </div>
+                                    <div class="search-button" onclick="doSearch()">
+                                        搜索
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="help-container">
+    <div class="container-wrapper clearfix">
+        <div class="help-common-problem">
+            <h1>常见问题</h1>
+
+            <div class="tab-box clearfix">
+                <div class="tabs clearfix">
+                    <ul>
+                        <li onclick="changeTab(1)">Git</li>
+                        <li onclick="changeTab(2)">演示平台</li>
+                        <li onclick="changeTab(3)">WebIDE</li>
+                        <li onclick="changeTab(4)">项目管理</li>
+                        <li onclick="changeTab(5)">用户账户</li>
+                    </ul>
+                </div>
+                <!-- Git -->
+                <div class="tab-body tab-option-1 active clearfix">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#如何提交代码到-coding-上？">如何提交代码到 Coding 上？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#每次-push-的时候如何不用输入密码？">每次 Push 的时候如何不用输入密码？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#我的-git-是1-7版本为什么无法提交代码？">我的 Git 是1.7版本为什么无法提交代码？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#如何设置分支的提交权限，让部分人可以提交？">如何设置分支的提交权限，让部分人可以提交？</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#coding-的代码管理支持图形化工具吗？">Coding 的代码管理支持图形化工具吗？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/repository.html#如何访问-coding-的-git-仓库？">如何访问 Coding 的 Git 仓库？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#如何在-coding-上回退代码版本？">如何在 Coding 上回退代码版本？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/git/git.html#如何设-ssh-key？怎么设置了之后还是要输入密码？">如何设 SSH Key？怎么设置了之后还是要输入密码？</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 演示平台 -->
+                <div class="tab-body tab-option-2 clearfix">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/language.html#演示平台部署支持什么语言和框架？">演示平台部署支持什么语言和框架？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/deploy.html#支持-push-代码后自动更新部署演示吗？">项目提交的代码演示平台可以同步更新吗？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/deploy.html#一键部署时提示-“内存使用已达到上限”？">演示平台部署提示内存达到上限了，怎么办？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/service.html#演示中的文件系统服务数据下载方法？">演示平台的文件系统可以上传和下载吗？</a></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/deploy.html#演示平台最多可以支持多大的ip访问？">演示平台最多可以支持多大的IP访问？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/service.html#演示平台的第三方服务可以跨应用访问吗？">演示平台的第三方服务可以夸项目访问吗？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/deploy.html#如何绑定自定义域名，可以用自己注册的吗？">如何绑定自定义域名，可以用自己注册的吗？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/paas/deploy.html#项目演示的状态一直为-“部署中”？">演示平台部署失败或者一直在部署中？</a></li>
+                    </ul>
+                </div>
+                <!-- WebIDE -->
+                <div class="tab-body tab-option-3 clearfix">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#如何运行程序？">WebIDE 怎么运行程序？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#webide-可以支持什么语言和框架？">WebIDE 可以支持什么语言和框架？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#webide-如何安装软件？">WebIDE 如何安装软件？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#webide-能实现什么基础操作？">WebIDE 支持上传和下载文件吗？预览文件吗？</a></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#如何分享环境，可以分享给任何人吗？">分享环境是如何分享，可以分享给任何人吗？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#运行程序后，生成的-access-url-报502，404-是怎么回事？">生成的 URL 访问老是
+                                404/502 错误，如何解决？</a></li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#webide-可以安装数据库吗？">WebIDE 可以安装数据库吗？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/webide/ide.html#终端断掉了，刷新后还是不行？">终端断掉了，刷新后还是不行？</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 项目管理 -->
+                <div class="tab-body tab-option-4 clearfix">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/setting.html#怎样创建一个新的项目？">如何创建一个公开/私有项目？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/setting.html#公开项目与私有项目有什么区别？">公开项目和私有项目有什么区别？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/task.html#私有项目如何给任务添加标签？">私有项目如何给任务添加标签？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/setting.html#怎样创建一个新的项目？">公开项目和私有项目如何转换？</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/setting.html#可以对项目进行分组吗？">项目可以分组吗，如何显示分组？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/repository.html#git-有多少存储空间？">项目仓库的免费容量是多大？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/files.html#我可以预览哪些文档？">文件在线预览支持哪些格式？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/project/files.html#私有项目的文件可以供项目外的人查看吗？">私有项目的文件可以供项目外的人查看吗？</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 用户账户 -->
+                <div class="tab-body tab-option-5 clearfix">
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#无法收到激活邮件-amp-重置密码邮件？">无法收到激活邮件&重置密码邮件？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#激活邮件的链接点开跳到首页了？">激活邮件的链接点开跳到首页了？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#怎么修改邮箱，个性后缀，昵称？">怎么修改邮箱，个性后缀，昵称？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#手机号验证了，收不到验证码？">手机号验证了，收不到验证码？</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#什么是码币，码币有什么用？">什么是码币，码币有什么用？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#商城购买的商品什么时候发货，怎么没有货单？">商城购买的商品什么时候发货，怎么没有货单？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#如何邀请好友？">如何邀请好友？</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i>
+                            <a href="/help/faq/account/user.html#怎么开启两步验证？两步验证手机丢失怎么办？">怎么开启两步验证？两步验证手机丢失怎么办？</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="help-navigation clearfix">
+            <div class="help-nav">
+                <div class="icon-box">
+                    <a href="/help/doc/git/introduction.html">
+                        <span class="icon-label"><i class="git icon"></i></span>
+                        <span class="nav-title">代码托管</span>
+                    </a>
+                </div>
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/getting-started.html">开始使用Git</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/git-branch.html">合并分支</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/git/git-branch.html">WebHook</a></li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/git/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-nav">
+                <a href="/help/doc/paas/introduction.html">
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="icon collaboration"></i></span>
+                        <span class="nav-title">演示平台</span>
+                    </div>
+                </a>
+
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/getting-started.html">开启演示</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/getting-started.html">文件系统</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/services.html">一键部署</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/paas/services.html">DB服务管理</a></li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/paas/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-nav">
+                <a href="/help/doc/webide/introduction.html">
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="ide icon"></i></span>
+                        <span class="nav-title">WebIDE</span>
+                    </div>
+                </a>
+
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a
+                                href="/help/doc/webide/getting-started.html">开启WebIDE</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/terminal.html">终端介绍</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/execution.html">运行程序</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/webide/environment.html">切换和分享环境</a>
+                        </li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/webide/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-nav">
+                <a href="/help/doc/mobile/introduction.html">
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="app icon"></i></span>
+                        <span class="nav-title">移动App</span>
+                    </div>
+                </a>
+
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/bubble.html">冒泡</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/task.html">任务协作</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/2fa.html">两步验证</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/mobile/code.html">代码评审</a></li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/mobile/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-nav">
+                <a href="/help/doc/project/introduction.html">
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="icon collaboration"></i></span>
+                        <span class="nav-title">项目管理</span>
+                    </div>
+                </a>
+
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/getting-started.html">项目设置</a>
+                        </li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/task.html">任务管理</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/files.html">文件管理</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/project/discuss.html">项目讨论</a></li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/project/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-nav">
+                <a href="/help/doc/account/introduction.html">
+                    <div class="icon-box">
+                        <span class="icon-label"><i class="fa fa-user"></i></span>
+                        <span class="nav-title">用户账户</span>
+                    </div>
+                </a>
+
+                <div class="feature-box">
+                    <ul class="nav-feature">
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/setting.html">账户信息设置</a></li>
+                        <li><i class="fa fa-caret-right"></i><a
+                                href="/help/doc/account/setting.html#section-4">消息提醒设置</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/shop.html">关于码币&Shop</a></li>
+                        <li><i class="fa fa-caret-right"></i><a href="/help/doc/account/oauth.html">第三方应用管理</a></li>
+                        <li></li>
+                        <li class="more"><a href="/help/doc/account/introduction.html"><span>查看更多</span><i
+                                class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var changeTab = function (i) {
+        $("div[class*=tab-option]").removeClass("active");
+        $("div[class*=tab-option-" + i + "]").addClass("active");
+    };
+
+    var doSearch = function () {
+        $("#search-form").submit();
+    }
+
+</script>
+</div>
+
+<footer id="footer">
+    <div class="footer">
+        <div class="share">
+            <div class="wechat">
+                <img class="w-icon" ng-click="showQrFn($event)" src="/help/static/img/wechat.jpg"/>
+
+                <div class="animated fadeIn qrcode hide"><img
+                        src="https://coding.net/static/fcdf6ecd90f6022d143a5e06fbe391b8.jpg"></div>
+            </div>
+            <div class="weibo">
+                <a href="http://weibo.com/p/1006065153943878/home?from=page_100606&mod=TAB#place" target="_blank">
+                    <img class="w-icon" src="/help/static/img/weibo.jpg"/>
+                </a>
+            </div>
+        </div>
+        <div class="site">
+            <ul>
+                <li><a href="/" target="_self">首页</a></li>
+                <li><a href="/about" target="_self">关于Coding</a></li>
+                <li><a href="/jobs" target="_self">招贤纳士</a></li>
+                <li><a href="/terms" target="_self">服务条款</a></li>
+                <li><a href="/privacy" target="_self">隐私策略</a></li>
+                <li><a href="/help" target="_self">帮助中心</a></li>
+                <li><a href="http://status.coding.net/">Status</a></li>
+                <li><a href="http://blog.coding.net/">Blog</a></li>
+            </ul>
+            <p>
+                Copyright&nbsp;&nbsp;&copy;&nbsp;2014&nbsp;Coding.net&nbsp;&nbsp;
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#999;text-decoration:none;">粤ICP备14029750号-1</a>&nbsp;&nbsp;
+                粤B-20140247&nbsp;&nbsp;
+                <a href="http://www.gdgs.gov.cn/" style="color:#999;text-decoration:none;">广东省工商行政管理局</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    jQuery("#document").ready(function () {
+        $(".wechat .w-icon").click(function (e) {
+            var qr = $(".wechat .qrcode");
+            if (qr.hasClass("hide")) {
+                qr.addClass("show");
+                qr.removeClass("hide");
+            } else {
+                qr.addClass("hide");
+                qr.removeClass("show");
+            }
+            e.stopPropagation();
+        })
+
+        $(document).click(function () {
+            var qr = $(".wechat .qrcode");
+            qr.addClass("hide");
+            qr.removeClass("show");
+        });
+    });
+</script>
+
+<!-- Google Analytics -->
+<script>
+    setTimeout(function () {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//coding.net/static/cb990796e9329ec26a433008ac440ab4.js', 'ga');
+        ga('create', 'UA-65952334-1', 'auto');
+        ga('send', 'pageview');
+    }, 0)
+</script>
+<!-- -->
+</body>
+
+</html>
