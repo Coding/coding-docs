@@ -11,7 +11,8 @@ title: 码币和商城
 ### 可以用码币做什么
 
 1）你可以利用码币购买 Shop 页面所列 Coding 定制等商品：如洋葱猴抱枕、Coding 毛巾、T恤、短裤、Coding 定制拖鞋等
-2）购买Coding推出的项目升级业务，拥有更多资源，提供更多个性化的服务详情请点击https://coding.net/upgrade
+
+2）购买 Coding 推出的项目升级业务，拥有更多资源，提供更多个性化的服务详情请点击https://coding.net/upgrade
 (推代码是真的能挣钱！)
 
 ### 如何得到码币
