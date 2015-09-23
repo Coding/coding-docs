@@ -256,3 +256,8 @@ x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
 ![在这里输入图片描述][16]
 
   [16]: https://dn-coding-net-production-pp.qbox.me/ce4167be-058d-4cfc-9848-49ef2aebee94.png
+
+
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/discuss.html">上一篇：项目讨论</a></div>
+</div>

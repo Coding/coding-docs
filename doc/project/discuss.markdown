@@ -41,8 +41,8 @@ Tips：私有项目的讨论和任务的标签是通用的，并且添加标签�
 ###  关注讨论
 
 在讨论详情页，每个项目成员都可以点击讨论标题下关注者旁（或者在讨论内容的结尾处）的**添加**按钮，在成员下拉框中添加或者取消某个或某几个项目成员对当前任务的关注。
----
 
+---
 
   [28]: https://dn-coding-net-production-static.qbox.me/f09dbf3f-8a36-4cb3-9197-073e31e3951c.png?imageView2/2/w/800/h/800
   [29]: https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800
@@ -53,6 +53,7 @@ Tips：私有项目的讨论和任务的标签是通用的，并且添加标签�
   
 
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/files.html">上一篇：项目文件管理</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/task.html">上一篇：任务管理</a></div>
+  <div class="right-nav"><a href="/help/doc/project/task.html">下一篇：附 Markdown语法</a><i class="fa fa-angle-right"></i></div>
   </div>
 

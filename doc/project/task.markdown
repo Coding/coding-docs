@@ -75,9 +75,7 @@ Tips：讨论标签和任务标签是通用的，并且添加标签时一次可�
 
 
 
-  [21]: https://dn-coding-net-production-static.qbox.me/f7b47f09-eb7b-4a5d-b8d7-069d1995ede4.png?imageView2/2/w/800/h/800
-  [22]: https://dn-coding-net-production-static.qbox.me/1a666602-7b07-4a8c-b504-10a418ae185e.jpg?imageView2/2/w/800/h/800
-  [23]: https://dn-coding-net-production-static.qbox.me/0bfbda67-6a5e-4f39-94bc-c9fae18c87e6.png?imageView2/2/w/800/h/800
+   [23]: https://dn-coding-net-production-static.qbox.me/0bfbda67-6a5e-4f39-94bc-c9fae18c87e6.png?imageView2/2/w/800/h/800
   [24]: https://dn-coding-net-production-static.qbox.me/7d818d4e-bd20-4467-8f15-dcb4f5087b93.png?imageView2/2/w/800/h/800
   [25]: https://dn-coding-net-production-static.qbox.me/f09dbf3f-8a36-4cb3-9197-073e31e3951c.png?imageView2/2/w/800/h/800
   [26]: https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800
