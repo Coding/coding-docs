@@ -18,11 +18,16 @@ title: 账号的注册&激活
 ### 账户登录
 
 1）注册账户后即可输入账号进行登录
+
 2）可以通过Coding.net 目前支持通过第三方账号 Github 账号登陆，在登录页面右下角点击 Github 小图标即可登陆。
+
 3）未登录时可以实现的功能
-1.首页：观看网站介绍视频，进行全站搜索等。
-2.广场: 查看最近更新的公开项目，最新的冒泡，最热门的公开项目等。
-3.项目：查看特别策划项目，主题项目等。
+
+ - 首页：观看网站介绍视频，进行全站搜索等。
+
+ - 广场: 查看最近更新的公开项目，最新的冒泡，最热门的公开项目等。
+
+ - 项目：查看特别策划项目，主题项目等。
 
 ### 重发激活邮件
 
@@ -53,12 +58,12 @@ Coding.net 目前支持 Github 账号登陆。
 
 - 定向邀请好友
 
-1.点击页面右上方的+，点击 好友
- ![图片](https://dn-coding-net-production-pp.qbox.me/ec4aa210-13fd-4e87-bbd0-3ffcd65070f6.png) 
+   1.点击页面右上方的+，点击 好友
+   ![图片](https://dn-coding-net-production-pp.qbox.me/ec4aa210-13fd-4e87-bbd0-3ffcd65070f6.png) 
 
-2.点击马上邀请好友，输入您要邀请的好友的email
+   2.点击马上邀请好友，输入您要邀请的好友的email
 
- ![图片](https://dn-coding-net-production-pp.qbox.me/2de72cd6-0465-43cc-9a08-738be3dab40a.png) 
+    ![图片](https://dn-coding-net-production-pp.qbox.me/2de72cd6-0465-43cc-9a08-738be3dab40a.png) 
 
 - 不定向邀请好友
  

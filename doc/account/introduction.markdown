@@ -15,7 +15,7 @@ title: 用户账户介绍
 - [码币和商城](/help/doc/account/shop.html)
 - [服务级别](/help/doc/account/service-level.html)
 
-CopyRight by Coding.net  更新时间 2015-09-04
+CopyRight by Coding.net  更新时间 2015-09-21
 
 ---
 
