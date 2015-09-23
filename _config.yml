@@ -6,7 +6,7 @@ description: Coding.net 是一个面向开发者的云端开发平台,提供 git
 baseurl: "/help" # the subpath of your site, e.g. /blog/
 url: "https://coding.net" # the base hostname & protocol for your site
 github_username:  kone
-exclude:  ["node_modules","react","test","bower","bower.json","bower","link.js","package.json","README.md","css","static/vendor","static/js","static/css"]
+exclude:  ["node_modules","react","test","bower","bower.json","bower","link.js","package.json","README.md","css","static/vendor","static/js","static/css","npm-debug.log"]
 destination: _site/help
 # Build settings
 markdown: redcarpet

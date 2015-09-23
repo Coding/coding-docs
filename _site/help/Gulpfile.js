@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-var htmlreplace = require('gulp-html-replace');
 var source = require('vinyl-source-stream');
 var clean = require('gulp-clean');
 var browserify = require('browserify');
@@ -9,7 +8,6 @@ var reactify = require('reactify');
 var using = require('gulp-using');
 var streamify = require('gulp-streamify');
 var exec = require('child_process').exec;
-var webserver = require('gulp-webserver');
 var series = require('stream-series');
 var inject = require('gulp-inject');
 var random_string = require('random-string');
