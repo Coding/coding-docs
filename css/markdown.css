@@ -1,6 +1,6 @@
 .markdown {
     font-family: '微软雅黑', 'Helvetica Neue', sans-serif, SimHei;
-    font-size: 12px;
+    font-size: 10pt;
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -220,6 +220,11 @@
     padding: 1em 1.5em;
     border-radius: 5px;
     line-height: 22px !important;
+}
+
+.markdown ul p,
+.markdown ul p {
+    margin: 5px 0;
 }
 
 /* 一致化 horizontal rule */

@@ -1,15 +1,18 @@
 {
   "private": true,
   "author": "konelove2010@gmail.com",
-  "name": "coding-doc",
-  "description": "Very simple todo, demo for connect web dev.",
+  "name": "coding-manual",
+  "description": "Coding.net 帮助文档中心",
   "version": "1.0.0",
-  "homepage": "https://coding.net/kin/coding-doc",
+  "homepage": "https://coding.net/u/kloze/p/coding-manual/git",
   "repository": {
     "type": "git",
-    "url": "git://coding.net/kin/coding-doc.git"
+    "url": "https://git.coding.net/kloze/coding-manual.git"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "npm install && bower install && gulp build",
+    "start": "npm install && bower install && gulp build && jekyll server"
+  },
   "dependencies": {
     "babel-core": "^5.6.0",
     "babel-runtime": "^5.8.20",

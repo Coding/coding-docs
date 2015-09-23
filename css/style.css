@@ -745,7 +745,7 @@
 
 .sidebar-menu .sub-menu {
     padding: 8px 0;
-    font-size: 12px;
+    font-size: 10pt;
 }
 
 .sidebar-menu .sub-menu a {
@@ -755,6 +755,7 @@
 
 .sidebar-menu .sub-menu .sub-toc {
     padding-left: 20px;
+    font-size: 12px;
 }
 
 .sidebar-menu .sub-menu .sub-menu {

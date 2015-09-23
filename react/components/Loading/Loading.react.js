@@ -33,7 +33,7 @@ var Loading = React.createClass({
         var loadingTextStyle = {
             'width': (imageSize + w) + 'px',
             'height': (imageSize + w) + 'px',
-            'line-height': (imageSize + w) + 'px'
+            'lineHeight': (imageSize + w) + 'px'
         };
         var hideStyle = {
             display: "none"

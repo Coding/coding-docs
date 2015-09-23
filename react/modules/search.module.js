@@ -18,6 +18,12 @@ var jQuery = require("jquery");
 var QueryString = require('query-string');
 var SearchApp = React.createClass({
 
+
+    getDefaultProps: function () {
+        return {
+            totalPage: 10
+        }
+    },
     getInitialState: function () {
         return {
             q: "",
@@ -49,7 +55,6 @@ var SearchApp = React.createClass({
     render: function () {
         var result = this.state.result || [];
         var totalPage = this.state.result.totalPage || 0;
-        this.props.totalPage = 10;
         var items = ( result && result.list ) || [];
         var noticeContent = "";
         if (this.state.q) {
