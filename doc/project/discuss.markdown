@@ -20,7 +20,7 @@ title: 项目讨论
 
 在项目主页的左侧一级菜单栏选择**讨论**，点击**添加**按钮，即可进入新讨论的创建页面。
 讨论的内容编辑框支持 Markdown 语法以及全屏预览功能。
-[点击此处][31]查看 Markdown 语法说明。
+[Markdown语法](/help/doc/project/markdown.html)查看 Markdown 语法说明。
 
 ### 编辑&删除讨论
 
