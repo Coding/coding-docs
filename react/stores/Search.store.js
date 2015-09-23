@@ -66,7 +66,7 @@ var convertResult = function (result) {
         return {
             type: 1,
             title: item.title,
-            link: item.project && item.project.project_path + "/" + item.id,
+            link: item.project && item.project.project_path + "/topic/" + item.id,
             content: [].concat(item.content).join(""),
             author_name: item.owner && item.owner.name,
             author_home: item.owner && (Config.API_HOST + item.owner.path),

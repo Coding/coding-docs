@@ -17,6 +17,11 @@ ul, li {
 
 }
 
+* {
+    outline: none;
+    font-style: normal;
+}
+
 a {
     color: #0c94de;
     text-decoration: none;
