@@ -425,7 +425,7 @@
 }
 
 .help-banner .search {
-    max-width: 900px;
+    max-width: 980px;
     padding: 0 1em;
     margin: 0 auto;
 }
@@ -451,7 +451,7 @@
     display: table-cell;
     width: 120px;
     vertical-align: middle;
-    text-align: center;
+    text-align: left;
     font-size: 22px;
     color: #666;
     font-weight: bold;
@@ -564,11 +564,6 @@
     height: 78px;
     text-align: center;
     line-height: 78px;
-    -webkit-transition: background .5s cubic-bezier(.15, .62, .69, .88);
-    -moz-transition: background .5s cubic-bezier(.15, .62, .69, .88);
-    -ms-transition: background .5s cubic-bezier(.15, .62, .69, .88);
-    -o-transition: background .5s cubic-bezier(.15, .62, .69, .88);
-    transition: background .5s cubic-bezier(.15, .62, .69, .88);
 }
 
 .help-navigation .help-nav:hover .icon-label {
@@ -671,7 +666,6 @@
 .sidebar-title {
     border-bottom: 2px solid #d8d8d8;
     border-right: 1px solid #fff;
-    margin-right: -1px;
     padding: 10px 0 10px 30px;
     line-height: 28px;
 }
