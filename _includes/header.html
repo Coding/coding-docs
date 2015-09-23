@@ -38,13 +38,13 @@
             url: "/api/current_user",
             success: function (result) {
                 if (result.code == 0) {
-                    $("#btns").hide();
-                    $("#user a").attr("title", result.data.name);
-                    $("#user img").attr("src", result.data.avatar);
-                    $("#user").show();
+                    $(".login-zone .btns").hide();
+                    $(".login-zone .user a").attr("title", result.data.name);
+                    $(".login-zone .user img").attr("src", result.data.avatar);
+                    $(".login-zone .user").show();
                 } else {
-                    $("#user").hide();
-                    $("#btns").show();
+                    $(".login-zone .user").hide();
+                    $(".login-zone .btns").show();
                 }
             }
         });
@@ -56,11 +56,11 @@
             type: "POST",
             success: function (result) {
                 if (result.code == 0) {
-                    $("#user").hide();
-                    $("#btns").show();
+                    $(".login-zone .user").hide();
+                    $(".login-zone .btns").show();
                 } else {
-                    $("#user").show();
-                    $("#btns").hide();
+                    $(".login-zone .user").show();
+                    $(".login-zone .btns").hide();
                 }
             }
         })

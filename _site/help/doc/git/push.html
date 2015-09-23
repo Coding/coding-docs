@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?r75pge64">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?p0kdbn4j">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/push.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?iwlrazpp"></script>
+  <script src="/help/dist/js/main.min.js?he1gvtcq"></script>
   <!-- endinject -->
 </head>
 
@@ -65,13 +65,13 @@
             url: "/api/current_user",
             success: function (result) {
                 if (result.code == 0) {
-                    $("#btns").hide();
-                    $("#user a").attr("title", result.data.name);
-                    $("#user img").attr("src", result.data.avatar);
-                    $("#user").show();
+                    $(".login-zone .btns").hide();
+                    $(".login-zone .user a").attr("title", result.data.name);
+                    $(".login-zone .user img").attr("src", result.data.avatar);
+                    $(".login-zone .user").show();
                 } else {
-                    $("#user").hide();
-                    $("#btns").show();
+                    $(".login-zone .user").hide();
+                    $(".login-zone .btns").show();
                 }
             }
         });
@@ -83,11 +83,11 @@
             type: "POST",
             success: function (result) {
                 if (result.code == 0) {
-                    $("#user").hide();
-                    $("#btns").show();
+                    $(".login-zone .user").hide();
+                    $(".login-zone .btns").show();
                 } else {
-                    $("#user").show();
-                    $("#btns").hide();
+                    $(".login-zone .user").show();
+                    $(".login-zone .btns").hide();
                 }
             }
         })
