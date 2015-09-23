@@ -37,12 +37,12 @@ var path = {
 var dist = {
     DIR: "dist",
     SRC: "dist/react",
-    BUILD: 'dist/build',
-    FONT: 'dist/build/fonts',
     SRC_APP: "dist/react/app",
     SRC_STATIC: "dist/react/static",
-    BUILD_APP: "dist/build/app",
-    BUILD_STATIC: "dist/build/static"
+    BUILD: 'dist',
+    FONT: 'dist/fonts',
+    BUILD_APP: "dist/app",
+    BUILD_STATIC: "dist/static"
 }
 
 
