@@ -61,7 +61,7 @@ title: 项目文件管理
 ---
 
 
-[15]: https://dn-coding-net-production-static.qbox.me/bcd21f3c-1893-412a-af07-e8e9a383312d.png?imageView2/2/w/800/h/800
+  [15]: https://dn-coding-net-production-static.qbox.me/bcd21f3c-1893-412a-af07-e8e9a383312d.png?imageView2/2/w/800/h/800
   [16]: https://coding.net/u/coding/p/Coding-Feedback/git/blob/master/markdown-syntax.md
   [17]: https://dn-coding-net-production-static.qbox.me/168ec032-475f-4660-bfb0-9a02ded0e769.jpg?imageView2/2/w/800/h/800
   [18]: https://dn-coding-net-production-static.qbox.me/9cffca9e-06ea-43bc-8a74-2db1462e71e1.png?imageView2/2/w/800/h/800

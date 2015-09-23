@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>部署常见问题</title>
+  <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
+  <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
+  <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?wzwiyvui">
+  <!-- endinject -->
+
+  <link rel="canonical" href="https://coding.net/help/faq/paas/deploy.html">
+  <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
+
+  <!-- inject:js -->
+  <script src="/help/dist/js/main.min.js?bjqllsyp"></script>
+  <!-- endinject -->
+</head>
+
+
+<body>
+
+<header id="header">
+    <div id="top-menu">
+        <a class="logo clearfix" href="/" target="_self">
+            <img src="/help/static/img/logo_mooncake.png"/>
+        </a>
+        <ul class="nav">
+            <li class="dropdown">
+                <a href="javascript:void(0);">功能</a>
+                <ul class="menu">
+                    <li><a href="/git" target="_self"><i class="git icon"></i> 代码托管</a></li>
+                    <li><a href="/pm" target="_self"><i class="icon collaboration"></i> 项目管理</a></li>
+                    <li><a href="/webide" target="_self"><i class="ide icon"></i> WebIDE</a></li>
+                    <li><a href="/app" target="_self"><i class="app icon"></i> APP</a></li>
+                </ul>
+            </li>
+            <li><a href="/upgrade" target="_self">价格</a></li>
+            <li><a href="/pp" target="_self">冒泡</a></li>
+            <li><a href="/help" target="_self">帮助</a></li>
+            <li><a href="https://coding.net/u/coding/p/Coding-Feedback/topic/all" target="_self">反馈</a></li>
+        </ul>
+        <div class="login-zone">
+            <div class="btns">
+                <a href="/login" target="_blank" class="login dark button">登录</a>
+                <a href="/register" target="_blank" class="register button">注册</a>
+            </div>
+            <div class="user">
+                <a href="/user" class="ui avatar image" title="" target="_self">
+                    <img ng-src=""
+                         height="40px"></a>
+                <i class="fa fa-sign-out ng-scope" ng-click="logout()" title="点击退出账号"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    jQuery(document).ready(function () {
+        $.ajax({
+            url: "/api/current_user",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#btns").hide();
+                    $("#user a").attr("title", result.data.name);
+                    $("#user img").attr("src", result.data.avatar);
+                    $("#user").show();
+                } else {
+                    $("#user").hide();
+                    $("#btns").show();
+                }
+            }
+        });
+    });
+
+    var logout = function () {
+        $.ajax({
+            url: "/api/logout",
+            type: "POST",
+            success: function (result) {
+                if (result.code == 0) {
+                    $("#user").hide();
+                    $("#btns").show();
+                } else {
+                    $("#user").show();
+                    $("#btns").hide();
+                }
+            }
+        })
+    }
+</script>
+
+
+
+<div class="main-container">
+    <div class="help-container">
+    <div class="container-wrapper clearfix">
+        <div class="help-sidebar">
+    <div class="sidebar-title">
+        <h3><a href="/help/">帮助中心</a><span class="pull-right"><i class="fa fa-angle-down"></i> </span></h3>
+    </div>
+    <div class="sidebar-menu animated">
+        <ul class="metismenu" id="metismenu">
+            <li class="active">
+                <a href="#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>常见问题</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-question "></i>
+                            <span>Git 代码托管</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/faq/git/git.html">
+                                    <span>Git 操作问题</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/faq/git/repository.html">
+                                    <span>代码仓库问题</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-question "></i>
+                            <span>演示平台</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/faq/paas/language.html">
+                                    <span>语言和框架支持</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/faq/paas/deploy.html">
+                                    <span>演示部署问题</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/faq/paas/service.html">
+                                    <span>使用三方服务</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-question "></i>
+                            <span>项目管理</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/faq/project/setting.html">
+                                    <span>项目设置问题</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/faq/project/task.html">
+                                    <span>项目任务问题</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/faq/project/files.html">
+                                    <span>项目文件问题</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/help/faq/webide/ide.html">
+                            <i class="fa fa-question "></i>
+                            <span>WebIDE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/help/faq/mobile/all.html">
+                            <i class="fa fa-question "></i>
+                            <span>移动端</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/help/faq/account/user.html">
+                            <i class="fa fa-question "></i>
+                            <span>用户账户</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>文档</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>Git 代码托管</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/git/introduction.html">
+                                    <span>代码托管介绍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/getting-started.html">
+                                    <span>开始使用 Git</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/repository.html">
+                                    <span>Git 仓库管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/push.html">
+                                    <span>提交代码</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/git-branch.html">
+                                    <span>分支管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/code-insight.html">
+                                    <span>代码阅读</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/git/ssh-key.html">
+                                    <span>SSH公钥配置</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/help/doc/git/webhook.html">
+                                    <span>Webhook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>WebIDE</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/webide/introduction.html">
+                                    <span>WebIDE介绍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/webide/getting-started.html">
+                                    <span>开启WebIDE</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/webide/environment.html">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/webide/terminal.html">
+                                    <span>终端Terminal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/webide/execution.html">
+                                    <span>运行程序</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>演示平台</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/paas/introduction.html">
+                                    <span>演示介绍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/paas/getting-started.html">
+                                    <span>开始使用演示</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/paas/services.html">
+                                    <span>进阶服务管理</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>项目管理</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/project/introduction.html">
+                                    <span>项目管理介绍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/project/getting-started.html">
+                                    <span>开始使用项目管理</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/help/doc/project/files.html">
+                                    <span>项目文件管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/project/task.html">
+                                    <span>任务管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/project/discuss.html">
+                                    <span>项目讨论</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/project/markdown.html">
+                                    <span>MarkDown 语法</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>用户账户</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/account/introduction.html">
+                                    <span>用户账户介绍</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/help/doc/account/register.html">
+                                    <span>账户注册与激活</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/setting.html">
+                                    <span>账户设置</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/ssh-key.html">
+                                    <span>SSH公钥配置</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/2fa.html">
+                                    <span>两步认证</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/oauth.html">
+                                    <span>应用管理与API</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/shop.html">
+                                    <span>码币与商城</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/account/service-level.html">
+                                    <span>服务级别</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>移动App</span>
+                        </a>
+                        <ul class="sub-toc" aria-expanded="false">
+                            <li>
+                                <a href="/help/doc/mobile/introduction.html">
+                                    <span>移动端介绍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/project.html">
+                                    <span>项目管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/files.html">
+                                    <span>文件管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/task.html">
+                                    <span>任务管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/discuss.html">
+                                    <span>项目讨论</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/code.html">
+                                    <span>项目代码</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/help/doc/mobile/bubble.html">
+                                    <span>手机冒泡</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/account.html">
+                                    <span>个人中心</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/doc/mobile/2fa.html">
+                                    <span>两步认证</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $("#metismenu").metisMenu();
+    $(document).ready(function () {
+        var path = location.pathname;
+        $(".sub-menu").removeClass("active");
+        $(".sub-menu > li a").removeClass("active");
+        var anchor = $("a[href^='" + path + "']");
+        anchor.addClass("active");
+        var expand = function (el) {
+            if (el && el.length > 0) {
+                var ul = el.parent().closest("ul");
+                if (ul && ul.length > 0) {
+                    ul.attr("aria-expanded", "true").removeClass("collapse");
+                    ul.prev("a").attr("aria-expanded", "true").addClass("active");
+                }
+                expand(ul);
+            }
+        };
+
+        expand(anchor);
+        $("#metismenu").metisMenu();
+        $(".sidebar-title").click(function () {
+            var thiz = $(".sidebar-menu");
+            var display = thiz.css("display");
+            var fa = $(this).find("i.fa");
+            var faDisplay = fa.css("display");
+            if (faDisplay != "none") {
+                if (display == "none") {
+                    thiz.slideDown();
+                    fa.addClass("fa-angle-up").removeClass("fa-angle-down");
+                } else {
+                    fa.addClass("fa-angle-down").removeClass("fa-angle-up");
+                    thiz.slideUp();
+                }
+            }
+        });
+    });
+</script>
+
+        <div class="help-content">
+            <form id="search-form" action="/help/search.html">
+                <div class="content-header">
+                    <div>
+                        <div class="header-search">
+                            <input name="q" type="text"/>
+
+                            <div class="s-button" onclick="doSearch()">
+                                搜索
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="content-body clearfix">
+                <div class="content-wrapper">
+                    <section class="document-content">
+                        <div class="document-header">
+                            <h3>
+                                <i class="fa fa-caret-down "></i>
+                                部署常见问题
+                            </h3>
+                        </div>
+                        <div class="document-body">
+                            <article class="markdown">
+                                <div class="toc"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.toc').toc({
+            title: '<h2 class="title">目录</h2>',
+            listType: 'ul',
+            showEffect: "none",
+            noBackToTopLinks: true
+        });
+    });
+</script>
+                                <p>演示部署相关的常见问题列表：</p>
+
+<hr>
+
+<h2 id="项目一键部署失败？">项目一键部署失败？</h2>
+
+<p>部署失败或无法启动的可能原因和解决办法：</p>
+
+<ol>
+<li>项目无效：一般会在日志里有提示 Staging failed: An application could not be detected by any available buildpack。请参考我们提供的 <a href="https://coding.net/u/demo">示例项目</a>，检查自己的项目是否符合要求，或者查看相应语言的 <a href="http://docs.coding.io">文档</a>。</li>
+<li>网络问题：这个有两种情况，一种是由于网络波动导致的数据传输出错，一般日志里会有 stdin: not in gzip format 之类的错误，重试部署即可；还有一种是部分包管理器要下载的资源在国外，国内无法访问，我们已经为多数包管理器配置了代理和本地缓存以加快部署，但可能还有些没处理的，如果你发现了请向我们 反馈。</li>
+<li>部署超时：系统部署项目的最长时间为 15分钟，部署的过程包括下载依赖、编译和打包等，如果部署达到了这个时间还没完成就会失败。这个问题最常见的原因就是上面的 网络问题。</li>
+<li>应用循环重启：这种情况实际上是应用在反复崩溃(CRASH)，表现为状态始终是 ”正在启动”，有两个可能的原因：一个是内存不足，日志里一般会有 &quot;reason&quot;=&gt;&quot;CRASHED&quot; 错误，请加大内存重新部署；另一个是应用监听的端口不对，日志里一般会有 failed to start accepting connections 错误，请修改应用的监听端口为 PORT 环境变量里的值。</li>
+<li>缺少启动命令：部分语言和框架需的项目部署时需要用户手工指定制动命令，如果没有指定项目可能会一直停留在 ”正在启动” 状态，日志里可以看到 missing start command 错误，请创建 Procfile 文件指定启动命令。</li>
+<li>系统故障：请到 <a href="http://status.coding.net">http://status.coding.net</a> 查看系统的组件状态和详细的事件历史。</li>
+</ol>
+
+<p>各种无法辨识的异常情况，请到 反馈区 发表讨论，我们有专家在线跟进解答。</p>
+
+<h2 id="一键部署时提示-“内存使用已达到上限”？">一键部署时提示 “内存使用已达到上限”？</h2>
+
+<p>每个用户的运行空间有 512M 的免费内存可以使用，出现这个提示说明你的内存已经使用完了。 可以通过删除其他项目的演示来释放内存，或者调小其他应用演示的内存。</p>
+
+<h2 id="项目演示的状态一直为-“部署中”？">项目演示的状态一直为 “部署中”？</h2>
+
+<p>系统部署项目的最长时间为 15分钟。如果部署的时间还不是很久，那请再等等，打开 “查看日志” 页面可以看到部署的日志信息。如果超过了 15 分钟 还没有部署成功，这时可以先点击 “停止” 按钮，再点击 “一键部署” 来重新部署。</p>
+
+<h2 id="如何绑定自定义域名，可以用自己注册的吗？">如何绑定自定义域名，可以用自己注册的吗？</h2>
+
+<p>打开项目演示，点击开始检测，成功后开启功能，选择部署到“香港”(高级项目)服务器即可。</p>
+
+<h2 id="演示平台最多可以支持多大的ip访问？">演示平台最多可以支持多大的IP访问？</h2>
+
+<p>演示平台不支持高并发访问，不做任何 SLA 保障，我们没有做 IP 数限制，但是如果某个应用访问量太大，影响其它应用的访问，这个应用有可能会被停止。</p>
+
+<h2 id="如何部署纯静态-html-网站？">如何部署纯静态 HTML 网站？</h2>
+
+<p>请参考官方的 <a href="https://coding.net/u/demo/p/static-site/git">demo</a> 进行配置， 不要忘记在 项目中添加 Staticfile，该文件为静态网站的特征文件。</p>
+
+<h2 id="项目的语言或框架被识别错了？">项目的语言或框架被识别错了？</h2>
+
+<p>如果你的项目内同时存在两种语言的标记文件，那项目的运行环境可能不会被正确的识别，这时候可以到部署的 “高级选项” 里手工指定运行环境。</p>
+
+<h2 id="jekyll、hexo-等静态网站部署支持？">Jekyll、Hexo 等静态网站部署支持？</h2>
+
+<p>演示平台是通用的 PAAS 平台，可以运行各种 Web 应用程序，用户可以通过演示平台的各种语言支持自己去写代码实现， 这里给出一个基于 Ruby 运行环境实现可以自动重新构建站点的 <a href="https://coding.net/u/demo/p/jekyll-demo/git">Jekyll 示例</a>。</p>
+
+<p>上面的例子是在服务器端重新构建网站的，对新手来说可能有一定难度。所以，我们推荐在本地构建好静态站点再 push 上来，这样可以直接把站点部署为纯静态网站，稍作一些配置就可以实现自动更新，这种方式不需要用户写代码， 具体配置方法参考 静态网站支持 文档。</p>
+
+<p>温馨提示： 演示平台现已内置 Jekyll 支持，支持自动检测 Jekyll 网站（仅检测 master 分支，非 master 分支可忽略检测结果开启演示直接部署 Jekyll 站点所在的分支）。
+静态网站部署后部分 URL 访问显示 404？</p>
+
+<p>由于一些底层的技术原因，目前部署的应用里包含的中文名文件或文件夹在应用里会无法访问，请尽量不要在部署的源文件或文件夹里出现非英文文件名。</p>
+
+<h2 id="push-代码并部署后，演示的效果和预期不符？">Push 代码并部署后，演示的效果和预期不符？</h2>
+
+<p>平台只管把代码更新到你要部署的版本，运行效果是程序的问题。有两种方法可以检查代码是不是最新版本：</p>
+
+<p>检查部署后的 commit id 是不是最新的
+在 文件系统 直接看运行中的文件是不是最新的</p>
+
+<h2 id="支持部署时自动获取-git-子模块的代码吗？">支持部署时自动获取 git 子模块的代码吗？</h2>
+
+<p>不支持，请在部署前预先使用子模块 (submodule) 的代码替换子模块放到应用源码里。</p>
+
+<h2 id="演示平台里部署的项目表单或-url-乱码？">演示平台里部署的项目表单或 url 乱码？</h2>
+
+<p>这与平台无关，请自行 Google 相应语言框架的处理方法。</p>
+
+<h2 id="支持-push-代码后自动更新部署演示吗？">支持 Push 代码后自动更新部署演示吗？</h2>
+
+<p>不支持，我们不推荐这样频繁部署演示，而且也不能保证每次 push 后都可以部署成功，毕竟大多数演示不是 静态 HTML 站点。
+如果有此需求请使用WebIDE </p>
+
+<h2 id="“查看日志”-那里看到一些-err-开头的信息？">“查看日志” 那里看到一些 ERR 开头的信息？</h2>
+
+<p>这个 ERR 不一定是错误信息，部分 web 服务器启动时会有信息输出到 STDERR，请自行分辨是否是自己应用的错误信息。</p>
+
+<h2 id="演示平台部署的网站支持-https-吗？">演示平台部署的网站支持 HTTPS 吗？</h2>
+
+<p>不支持，但是你使用 https 地址也可以访问，只是浏览器会提示证书不受信任，因为我们使用的是自签名证书。</p>
+
+<hr>
+
+<div class="footer-nav">
+<div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/faq/paas/language.html">上一篇：语言&框架支持问题</a></div>
+<div class="right-nav"><a href="/help/faq/paas/service.html">下一篇：第三方服务问题</a><i class="fa fa-angle-right"></i></div>
+</div>
+
+                            </article>
+                        </div>
+                    </section>
+                    <div class="unfixed clearfix">
+                        <div class="pull-right">
+                            <span>问题仍未解决？</span>
+                            <a href="https://coding.net/u/coding/p/Coding-Feedback/topic" class="ask-help">在线求助</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-to-top" style="display: block;">
+        <a href="#branding" title="回到顶部"><img src="/help/static/img/super-monkey.gif"
+            width="32"></a>
+    </div>
+</div>
+<script >
+    jQuery("#document").ready(function () {
+    jQuery(".markdown pre code").each(function (i, e) {
+        hljs.highlightBlock(e);
+    });
+});
+        </script>
+<script>
+    jQuery(document).ready(function () {
+
+        // hide #back-top first
+        jQuery(".back-to-top").hide();
+
+        // fade in #back-top
+        jQuery(function () {
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 1000) {
+                    jQuery('.back-to-top').fadeIn();
+                } else {
+                    jQuery('.back-to-top').fadeOut();
+                }
+            });
+
+            // scroll body to 0px on click
+            jQuery('.back-to-top a').click(function () {
+                jQuery('body,html,header').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+
+    });
+    var doSearch = function () {
+        $("#search-form").submit();
+    }
+</script>
+
+</div>
+
+<footer id="footer">
+    <div class="footer">
+        <div class="share">
+            <div class="wechat">
+                <img class="w-icon" ng-click="showQrFn($event)" src="/help/static/img/wechat.jpg"/>
+
+                <div class="animated fadeIn qrcode hide"><img
+                        src="https://coding.net/static/fcdf6ecd90f6022d143a5e06fbe391b8.jpg"></div>
+            </div>
+            <div class="weibo">
+                <a href="http://weibo.com/p/1006065153943878/home?from=page_100606&mod=TAB#place" target="_blank">
+                    <img class="w-icon" src="/help/static/img/weibo.jpg"/>
+                </a>
+            </div>
+        </div>
+        <div class="site">
+            <ul>
+                <li><a href="/" target="_self">首页</a></li>
+                <li><a href="/about" target="_self">关于Coding</a></li>
+                <li><a href="/jobs" target="_self">招贤纳士</a></li>
+                <li><a href="/terms" target="_self">服务条款</a></li>
+                <li><a href="/privacy" target="_self">隐私策略</a></li>
+                <li><a href="/help" target="_self">帮助中心</a></li>
+                <li><a href="http://status.coding.net/">Status</a></li>
+                <li><a href="http://blog.coding.net/">Blog</a></li>
+            </ul>
+            <p>
+                Copyright&nbsp;&nbsp;&copy;&nbsp;2014&nbsp;Coding.net&nbsp;&nbsp;
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#999;text-decoration:none;">粤ICP备14029750号-1</a>&nbsp;&nbsp;
+                粤B-20140247&nbsp;&nbsp;
+                <a href="http://www.gdgs.gov.cn/" style="color:#999;text-decoration:none;">广东省工商行政管理局</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    jQuery("#document").ready(function () {
+        $(".wechat .w-icon").click(function (e) {
+            var qr = $(".wechat .qrcode");
+            if (qr.hasClass("hide")) {
+                qr.addClass("show");
+                qr.removeClass("hide");
+            } else {
+                qr.addClass("hide");
+                qr.removeClass("show");
+            }
+            e.stopPropagation();
+        })
+
+        $(document).click(function () {
+            var qr = $(".wechat .qrcode");
+            qr.addClass("hide");
+            qr.removeClass("show");
+        });
+    });
+</script>
+
+<!-- Google Analytics -->
+<script>
+    setTimeout(function () {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//coding.net/static/cb990796e9329ec26a433008ac440ab4.js', 'ga');
+        ga('create', 'UA-65952334-1', 'auto');
+        ga('send', 'pageview');
+    }, 0)
+</script>
+<!-- -->
+</body>
+
+</html>

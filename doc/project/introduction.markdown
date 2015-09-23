@@ -24,4 +24,8 @@ Coding.net 在 Git 代码托管的基础上自主研发一套供软件开发人�
  
 
 
-## 下一篇 >> [开始使用项目管理](/help/doc/project/getting-started.html)
+---
+  
+  <div class="footer-nav">
+  <div class="right-nav"><a href="/help/doc/project/getting-started.html">下一篇：开始使用项目管理</a><i class="fa fa-angle-right"></i></div>
+  </div>

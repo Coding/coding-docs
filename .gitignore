@@ -1,7 +1,6 @@
 /dist
 /static/vendor
 /bower
-_site
 .sass-cache
 /test
 /node_modules
