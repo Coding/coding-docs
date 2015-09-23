@@ -551,6 +551,7 @@
 .help-navigation .icon-box {
     width: 80px;
     float: left;
+    text-align: center;
 }
 
 .help-navigation .icon-label {
