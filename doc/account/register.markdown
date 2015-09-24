@@ -63,7 +63,7 @@ Coding.net 目前支持 Github 账号登陆。
 
    2.点击马上邀请好友，输入您要邀请的好友的email
 
-    ![图片](https://dn-coding-net-production-pp.qbox.me/2de72cd6-0465-43cc-9a08-738be3dab40a.png) 
+   ![图片](https://dn-coding-net-production-pp.qbox.me/2de72cd6-0465-43cc-9a08-738be3dab40a.png) 
 
 - 不定向邀请好友
  
