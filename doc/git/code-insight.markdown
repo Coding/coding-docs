@@ -18,5 +18,5 @@ title: Code Insight代码阅读
 
   <div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/git-branch.html">上一篇：分支管理</a></div>
-  <div class="right-nav"><a href="/help/doc/git/ssh-key.html">下一篇：SSH公钥配置</a><i class="fa fa-angle-right"></i></div>
+  <div class="right-nav"><a href="/help/doc/git/qc.html">下一篇：代码质量管理</a><i class="fa fa-angle-right"></i></div>
   </div>

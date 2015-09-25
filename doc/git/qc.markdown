@@ -1,13 +1,15 @@
 ---
 layout: post
 
-title: 代码质量分析
+title: 代码质量管理
 ---
 
 
-## 代码质量分析
+## 代码质量管理
 
 质量管理功能能够对 git 库中的代码进行静态的检测和分析，以判断其是否符合最佳实践，并提供质量分析报告，为相关管理成员提供项目决策及管理参考。
+
+ ![代码质量分析](https://dn-coding-net-tweet.qbox.me/dcb5523a-701e-4cb6-8210-7bee41df7f75.png) 
 
 ### 质量分析的规则
 
@@ -27,3 +29,11 @@ title: 代码质量分析
 ### 质量分析的限制
 
 单个项目一天可以创建最多3个质量分析报告（包含所有状态）。单个项目的分析任务（包含所有状态）数量不能超过20个。若超过20个分析任务，在新添加任务前，需要先删除历史报告。如有重要分析报告，请及时进行保存。
+
+---
+
+
+  <div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/code-insight.html">上一篇：代码阅读</a></div>
+  <div class="right-nav"><a href="/help/doc/git/ssh-key.html">下一篇：SSH公钥配置</a><i class="fa fa-angle-right"></i></div>
+  </div>

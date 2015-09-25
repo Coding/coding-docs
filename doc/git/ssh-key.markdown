@@ -97,7 +97,7 @@ Please contact your system administrator.
 
 
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/code-insight.html">上一篇：代码阅读 Git</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/qc.html">上一篇：代码质量管理</a></div>
   <div class="right-nav"><a href="/help/doc/git/webhook.html">下一篇：Webhook</a><i class="fa fa-angle-right"></i></div>
   </div>
 
