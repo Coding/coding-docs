@@ -38,6 +38,7 @@
     "reactify": "1.1.1",
     "request": "^2.60.0",
     "stream-series": "0.1.1",
+    "vinyl-source-stream": "^1.1.0",
     "watch-array": "0.0.4",
     "watchify": "3.2.1"
   },
