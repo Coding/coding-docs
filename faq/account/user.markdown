@@ -55,7 +55,7 @@ Shop中的商品会在每周五进行发货（周五当天订购商品需等到�
 
 冒泡是 Coding.net 为方便程序开发者们进行交流、享受技术开发乐趣而打造的即时状态更新功能。支持 Markdown 语法，Emoji 表情，3M 以下的图片上传，预览功能等。
 用户发布的冒泡是好友和关注相同话题的用户可见的，同时编辑会推荐部分有价值的冒泡广场可见，并支持评论和回复功能。
-[MarkDown语法说明](/help/doc/project/mardown.html))查看 Markdown 语法说明。
+[MarkDown语法说明](/help/doc/project/markdown.html)查看 Markdown 语法说明。
 
 ## 怎么开启两步验证？两步验证手机丢失怎么办？
 
