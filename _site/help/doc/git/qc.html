@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>环境管理</title>
+  <title>代码质量管理</title>
   <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/help/dist/css/main.min.css?osrnsavx">
   <!-- endinject -->
 
-  <link rel="canonical" href="https://coding.net/help/doc/webide/environment.html">
+  <link rel="canonical" href="https://coding.net/help/doc/git/qc.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
@@ -527,7 +527,7 @@
                         <div class="document-header">
                             <h3>
                                 <i class="fa fa-caret-down "></i>
-                                环境管理
+                                代码质量管理
                             </h3>
                         </div>
                         <div class="document-body">
@@ -543,38 +543,35 @@
         });
     });
 </script>
-                                <h3 id="环境管理-amp-分享">环境管理&amp;分享</h3>
+                                <h2 id="代码质量管理">代码质量管理</h2>
 
-<h4 id="什么是环境">什么是环境</h4>
+<p>质量管理功能能够对 git 库中的代码进行静态的检测和分析，以判断其是否符合最佳实践，并提供质量分析报告，为相关管理成员提供项目决策及管理参考。</p>
 
-<p>环境（Environment）是WebIDE指将终端所操控的系统环境（包括代码，修改过的文件和通过 apt-get 安装的软件等）。每个Workspace可以配置多个环境，和终端关联的环境称为当前环境。环境本质是一个Docker的Container实例。从用户的视角，环境是一个云端的操作系统。</p>
+<p><img src="https://dn-coding-net-tweet.qbox.me/dcb5523a-701e-4cb6-8210-7bee41df7f75.png" alt="代码质量分析"> </p>
 
-<h4 id="如何管理环境">如何管理环境</h4>
+<h3 id="质量分析的规则">质量分析的规则</h3>
 
-<p>点击右边的环境设置“Environment”图标，弹出环境设置tab，如下图所示：</p>
+<p>下面整理了 Java、JavaScript、PHP、Ruby 和 Python 等语言的分析规则。详情包括：
+•去除不实用的规则 （如限制代码长度，限制文件行数）；
+•将不是问题但是值得注意的规则标记为“提示信息”(TODO 等)；
+•将代码格式的和可读性问题的规则标记为“次要问题”；
+•将代码重构的规则标识为“主要问题”；
+•将有安全隐患或者影响代码稳定性的规则标记为“严重问题”；
+•将问题严重，必须修改的规则标记为“阻断错误”。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/8b94439d-b591-46f1-9bcc-2b938289cfe6.png" alt="图片"> </p>
+<h3 id="质量分析原理">质量分析原理</h3>
 
-<p>点击 “ ？”可以查看，环境设置的帮助说明，用户可以将环境保存下来然后分享给其它的项目成员使用。</p>
+<p>代码质量分析需要将代码某个版本的版本库提取到分析引擎进行分析，因此需要一定的时间，尤其是大规模的项目可能需要较长时间。</p>
 
-<h4 id="如何保存环境">如何保存环境</h4>
+<h3 id="质量分析的限制">质量分析的限制</h3>
 
-<p>鼠标浮动过去，点击“Save As” 可以将当前环境保存起来, 这样项目成员就可以在进入这个项目的时候使用相同的环境进行了。“Reset” 就是将当前的环境重置到，初始环境，慎重使用。 
-“Save As” 后结果如下：</p>
-
-<p><img src="https://dn-coding-net-production-pp.qbox.me/15415d4d-0f86-4555-9333-41b74e328538.png" alt="图片"> </p>
-
-<p><a name="callback-url"/></p>
-
-<h4 id="如何切换和分享环境">如何切换和分享环境</h4>
-
-<p>当存在多个环境后，点击“Use” 可以切换到不同的环境，切换时当前的 Terminal 会被终止， 然后 Terminal 重新连接到刚才选择的 Environment。</p>
+<p>单个项目一天可以创建最多3个质量分析报告（包含所有状态）。单个项目的分析任务（包含所有状态）数量不能超过20个。若超过20个分析任务，在新添加任务前，需要先删除历史报告。如有重要分析报告，请及时进行保存。</p>
 
 <hr>
 
 <p><div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/workspace.html">上一篇：工作空间</a></div>
-  <div class="right-nav"><a href="/help/doc/webide/terminal.html">下一篇：终端</a><i class="fa fa-angle-right"></i></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/code-insight.html">上一篇：代码阅读</a></div>
+  <div class="right-nav"><a href="/help/doc/git/ssh-key.html">下一篇：SSH公钥配置</a><i class="fa fa-angle-right"></i></div>
   </div></p>
 
                             </article>

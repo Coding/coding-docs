@@ -4,10 +4,10 @@
   "name": "coding-manual",
   "description": "Coding.net 帮助文档中心",
   "version": "1.0.0",
-  "homepage": "https://coding.net/u/kloze/p/coding-manual/git",
+  "homepage": "https://coding.net/u/kin/p/coding-manual/git",
   "repository": {
     "type": "git",
-    "url": "https://git.coding.net/kloze/coding-manual.git"
+    "url": "https://git.coding.net/kin/coding-manual.git"
   },
   "scripts": {
     "build": "npm install && bower install && gulp build",
