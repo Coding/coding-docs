@@ -39,6 +39,6 @@ title: 环境管理
 
 
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/environment.html">上一篇：开启WebIDE</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/workspace.html">上一篇：工作空间</a></div>
   <div class="right-nav"><a href="/help/doc/webide/terminal.html">下一篇：终端</a><i class="fa fa-angle-right"></i></div>
   </div>

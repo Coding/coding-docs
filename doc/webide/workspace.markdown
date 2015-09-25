@@ -5,7 +5,7 @@ title: 工作空间
 ---
 
 
-## 什么是 WorkSpace ？
+## 什么是 WorkSpace
 
 WorkSpace 是 WebIDE 在云端创建的一个独立项目代码根目录，每个用户对每个项目只能创建一个WorkSpace。
 它包含了用户在云端的代码根目录和可选的环境配置。 
@@ -43,6 +43,6 @@ WorkSpace 是 WebIDE 在云端创建的一个独立项目代码根目录，每�
 
 
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/environment.html">上一篇：环境管理</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/getting-started.html">上一篇：开启WebIDE</a></div>
   <div class="right-nav"><a href="/help/doc/webide/environment.html">下一篇：环境管理</a><i class="fa fa-angle-right"></i></div>
   </div>

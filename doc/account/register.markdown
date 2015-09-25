@@ -32,11 +32,11 @@ title: 账号的注册&激活
 ### 重发激活邮件
 
 1）如果注册后5分钟内未收到账号激活邮件，请回到登录界面重新发送激活邮件。
-![在这里输入图片描述][1]
+![注册](https://dn-coding-net-production-pp.qbox.me/03301a82-c400-4cf4-88d2-44eae1c443da.png) 
 
 2）依照提示，输入电子邮箱和验证码，点击「确认」
 
-![在这里输入图片描述][2]
+![重发邮件](https://dn-coding-net-production-pp.qbox.me/dac16820-fef2-46ff-aa68-bfaebc1bd6d7.png) 
 
 3）如果长时间收不到激活邮件，请检查一下你的垃圾邮件夹，或者重新尝试一下。如果连续尝试都无法收到激活邮件，则很可能您的邮件服务器拒收了来自 Coding.net 的邮件，您需要将 Coding.net 加入域白名单以确保收到来自 Coding.net 的邮件。
 
@@ -81,24 +81,6 @@ Coding.net 目前支持 Github 账号登陆。
 
 
 ---
-
-
- [1]: https://coding.net/api/project/130548/files/261942/imagePreview
-  [2]: https://coding.net/api/project/130548/files/261943/imagePreview
-  [3]: https://coding.net/api/project/130548/files/261945/imagePreview
-  [4]: https://coding.net/api/project/130548/files/261946/imagePreview
-  [5]: https://coding.net/api/project/130548/files/261947/imagePreview
-  [6]: https://coding.net/api/project/130548/files/261949/imagePreview
-  [7]: https://coding.net/api/project/130548/files/261953/imagePreview
-  [8]: https://coding.net/api/project/130548/files/261954/imagePreview
-  [9]: https://coding.net/api/project/130548/files/261955/imagePreview
-  [10]: https://coding.net/api/project/130548/files/261956/imagePreview
-  [11]: https://coding.net/api/project/130548/files/261958/imagePreview
-  [12]: https://coding.net/api/project/130548/files/261959/imagePreview
-  [13]: https://coding.net/api/project/130548/files/261960/imagePreview
-  [14]: https://coding.net/api/project/130548/files/261961/imagePreview
-  [15]: https://coding.net/api/project/130548/files/261962/imagePreview
-  [16]: https://coding.net/api/project/130548/files/262582/imagePreview
   
   
   <div class="footer-nav">
