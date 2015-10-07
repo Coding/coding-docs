@@ -84,6 +84,6 @@ Coding.net 目前支持 Github 账号登陆。
   
   
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/introduction.html">上一篇：用户账户介绍</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/index.html">上一篇：用户账户介绍</a></div>
   <div class="right-nav"><a href="/help/doc/account/setting.html">下一篇：账户设置</a><i class="fa fa-angle-right"></i></div>
   </div>

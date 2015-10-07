@@ -120,7 +120,7 @@ title: 开始使用项目管理
   
   
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/introduction.html">上一篇：项目管理介绍</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/index.html">上一篇：项目管理介绍</a></div>
   <div class="right-nav"><a href="/help/doc/project/files.html">下一篇：项目文件管理</a><i class="fa fa-angle-right"></i></div>
   </div>
 

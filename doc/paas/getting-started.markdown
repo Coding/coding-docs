@@ -91,7 +91,7 @@ title: 开始使用演示平台
 
 
   <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/paas/introduction.html">上一篇：演示介绍</a></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/paas/index.html">上一篇：演示介绍</a></div>
   <div class="right-nav"><a href="/help/doc/paas/services.html">下一篇：服务管理</a><i class="fa fa-angle-right"></i></div>
   </div>
 

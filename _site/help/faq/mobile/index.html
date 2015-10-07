@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>配置SSH公钥</title>
+  <title>移动端常见问题</title>
   <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/help/dist/css/main.min.css?1hv71ro1">
   <!-- endinject -->
 
-  <link rel="canonical" href="https://coding.net/help/doc/git/ssh-key.html">
+  <link rel="canonical" href="https://coding.net/help/faq/mobile/">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
@@ -528,7 +528,7 @@
                         <div class="document-header">
                             <h3>
                                 <i class="fa fa-caret-down "></i>
-                                配置SSH公钥
+                                移动端常见问题
                             </h3>
                         </div>
                         <div class="document-body">
@@ -544,101 +544,55 @@
         });
     });
 </script>
-                                <p>本章节介绍如何通配置SSH公钥</p>
+                                <h2 id="移动端可以删除项目吗？">移动端可以删除项目吗？</h2>
 
-<h2 id="配置ssh公钥">配置SSH公钥</h2>
+<p>如果您是项目的创建者，才会有权限进行删除操作，请您在项目首页的项目信息点击右侧「&gt;」进入项目设置界面，点击「高级设置」即可删除项目。</p>
 
-<p>有关什么是 SSH，可参考中文维基百科（<a href="http://zh.wikipedia.org/zh/Secure_Shell%EF%BC%89%E3%80%82">http://zh.wikipedia.org/zh/Secure_Shell）。</a>
-这里要说明的是，Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
-用户可以在认证身份时选择在账户里面设置 SSH公钥，并获所有仓库的读写权限（注意！您的公钥对应的私钥必须要妥善保存，如果您的私钥被第三方获取，那么他将可以以您的身份来操作 Git 仓库，这跟密码被盗一样严重）]， 也可以在项目设置里面设置项目部署公钥，获取仓库的只读权限。</p>
+<h2 id="如何给任务添加标签？">如何给任务添加标签？</h2>
 
-<p>添加公钥后，您就可以在项目的代码页面点击 SSH 切换到 SSH 协议的 clone 地址，类似这样：（<a href="mailto:git@coding.net">git@coding.net</a>:wzw/leave-a-message.git），这样就可以使用 SSH 协议来访问 Git 仓库了，每次链接都不需要再输入账号和密码了。</p>
+<p>在任务详情界面点击左上方「添加标签」，去往标签管理界面，选择相应的标签或者创建新标签即可。</p>
 
-<blockquote>
-<p>注意：一个公钥只能认证一个用户，而一个用户却可以拥有多个公钥。</p>
-</blockquote>
+<h2 id="如何编辑-markdown-格式的讨论？">如何编辑 MarkDown 格式的讨论？</h2>
 
-<h3 id="账户ssh公钥">账户SSH公钥</h3>
+<p>在发讨论界面，讨论内容编辑状态下键盘顶部会出现 MarkDown 快捷键，您编辑完成 MarkDown 格式的讨论也可以进行预览。</p>
 
-<p>账户 SSH 公钥是跟用户账户关联的公钥，一旦设置，就拥有账户下所有项目仓库的读写权限。</p>
+<h2 id="如何更改个性后缀？">如何更改个性后缀？</h2>
 
-<h4 id="生成公钥">生成公钥</h4>
+<p>个性后缀一经确认，不能修改，个性后缀相当于你的身份ID。但是用户名可以去账户进行修改。</p>
 
-<p>Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
-输入ssh-keygen -t rsa -C &quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
-# Creates a new ssh key, using the provided email as a label
-# Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址
-</code></pre></div>
-<p>成功之后</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Your identification has been saved in /Users/you/.ssh/id_rsa.
-# Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
-# The key fingerprint is:
-# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-</code></pre></div>
-<h4 id="添加公钥">添加公钥</h4>
+<h2 id="如何发表话题冒泡？">如何发表话题冒泡？</h2>
 
-<ol>
-<li>本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏，公钥名称可以随意起名字。</li>
-<li>完成后点击“添加”，然后输入密码或动态码即可添加完成。
-<img src="https://dn-coding-net-production-pp.qbox.me/49eab64b-8d8a-4787-a0ed-ce347f753a69.png" alt="图片"> </li>
-<li>完成后在命令行测试，首次建立链接会要求信任主机。</li>
-</ol>
+<p>您在发表冒泡页面点击「#」，进入话题热门推荐列表，选择推荐话题或新建话题即可发表话题。</p>
 
-<p>`$ ssh -T <a href="mailto:git@git.coding.net">git@git.coding.net</a>
- The authenticity of host &#39;git.coding.net (61.146.73.68)&#39; can not be established.
- RSA key fingerprint is 98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
- Are you sure you want to continue connecting (yes/no)? yes
- Warning: Permanently added &#39;git.coding.net,61.146.73.68&#39; (RSA) to the list of kn
- own hosts.</p>
+<h2 id="如何批量下载、移动、删除文件？">如何批量下载、移动、删除文件？</h2>
 
-<p>Enter passphrase for key &#39;/c/Users/Yuankai/.ssh/id_rsa&#39;:
- Coding.net Tips : [ Hello Kyle_lyk! You have connected to Coding.net by SSH successfully! ]
-`</p>
+<p>进入文件夹界面，点击左上角「编辑」，多项选中文件，点击底部「下载」、「移动」或「删除」即可。</p>
 
-<h3 id="部署ssh公钥">部署SSH公钥</h3>
+<h2 id="想要查看公开项目或者-fork-公开项目怎么办？">想要查看公开项目或者 fork 公开项目怎么办？</h2>
 
-<p>项目部署 SSH 公钥是跟项目关联的公钥，设置后有该项目的仓库的只读权限。</p>
+<p>客户端暂时还没有提供项目广场的入口，您可以去往好友的个人中心找到「Ta 的项目」，即可查看好友的公开项目。
+进入公开项目首页，点击「Fork」按钮，Fork 成功后将跳往复制后的新项目首页。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/862d0517-5b77-49c7-bfb2-398674e476dd.png" alt="图片"> </p>
+<h2 id="代码提交历史在哪里？">代码提交历史在哪里？</h2>
 
-<p>添加方式同 SSH 公钥一致。</p>
+<p>进入代码子目录列表点击右上角时钟 icon 即可进入「提交历史」列表。</p>
 
-<h3 id="关于hostkey">关于HostKey</h3>
+<h2 id="合并-pull-request-merge-request-有哪些限制？">合并 Pull Request / Merge Request 有哪些限制？</h2>
 
-<p>Coding.net 为了更好的通用性，以后计划默认使用 RSA Host Key 来提供 SSH 通信的加密服务，此 RSA key 的公钥内容如下：</p>
+<p>有权限操作分支的项目成员可进行 “合并”、“拒绝” 操作
+有权限操作分支的项目成员和 PR/MR 发起人若是同一人（ “合并”、“拒绝”、 “取消”皆可操作） 
+非项目成员的 PR/MR 发起人只可进行 “取消” 操作</p>
 
-<p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHOWdwLpkos2CLli6DFvQ36yQE6Pe/PtFp3XwyirfZCIoGWnedaWI8zkJWVCs0wgOB9/urFepTDfV2wN49KGy1sl2/CCDEH2K/zeoEAZlTcBrhU17bwg1yMHCyJ7IM+zdLzItDEKYjgoWqVdUGK1dXQQlwt7GP4W7HqffelQQoVxOMoZ5N50MzD+nvV4y8iq0KwDQNy62iU4hui9ajCSVUDLu/06ucd5IojSI9keRIYAXvQf52TJ5EbvoBggp9RhjuWNEG8IhnPP6rzPS11Ocmwg/HsP8xOKL28AeDBAh6B6MEBDtlyp5Yfu9cwZJ9CFtU/x5fHFPtANmgIphAfwN1</p>
+<h2 id="如何查看某个提交的文件改动以及前后代码对比呢？">如何查看某个提交的文件改动以及前后代码对比呢？</h2>
 
-<p>fingerprint 是：
-<code>98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1</code></p>
+<p>进入某个 PR/MR 详情，点击查看「文件改动」，进入文件改动列表，点击某一个列即可查看文件改动详情。
+点击右上角「查看文件」即可查看某个提交的文件代码前后对比。</p>
 
-<p>如果您之前有信任过 Coding.net 的 ECDSA 格式的 Host key，那么之后的 Push 和 Pull 可能会遇到如下错误：
-<code>
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
-Please contact your system administrator.
-</code>
-如果您确认，输出的公钥指纹是上文描述的内容。那么可以信任这是 Coding.net 的服务器，不是第三方劫持。 您需要做如下操作
-1.删除 ~/.ssh/known_hosts 中 coding.net 相关的行</p>
+<h2 id="如何开启两步验证？">如何开启两步验证？</h2>
 
-<p>2.重试 push 或者 pull 或者 ssh -T <a href="mailto:git@git.coding.net">git@git.coding.net</a></p>
-
-<p>3.遇到询问是否信任服务器公钥，输入 yes 即可</p>
-
-<hr>
-
-<p><div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/qc.html">上一篇：代码质量管理</a></div>
-  <div class="right-nav"><a href="/help/doc/git/webhook.html">下一篇：Webhook</a><i class="fa fa-angle-right"></i></div>
-  </div></p>
+<p>首先，您要登录 coding.net ，去往个人账户开启两步验证；
+其次，根据提示打开 Coding 客户端，点击项目列表右上方的「+」，选择下拉菜单中的「两步验证」，进入身份验证器界面，点击「开始验证」扫描 web 端二维码；
+最后，将扫描生成的动态验证码输入至 web 端，点击「验证并开启」，开启后需要输入登录密码验证，点击「确认」两步验证成功开启。</p>
 
                             </article>
                         </div>

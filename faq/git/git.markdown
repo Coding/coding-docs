@@ -8,7 +8,7 @@ title: Git 操作常见问题
 
 ## 如何提交代码到 Coding 上？
 
-可以查看 Coding 的 [Git 代码托管文档](/help/doc/git/introduction.html)
+可以查看 Coding 的 [Git 代码托管文档](/help/doc/git/index.html)
 可以参照网上的相关Git教程 如 [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 ## 每次 Push 的时候如何不用输入密码？

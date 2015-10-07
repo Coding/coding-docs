@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>项目管理介绍</title>
+  <title>Git代码托管</title>
   <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/help/dist/css/main.min.css?1hv71ro1">
   <!-- endinject -->
 
-  <link rel="canonical" href="https://coding.net/help/doc/project/introduction.html">
+  <link rel="canonical" href="https://coding.net/help/doc/git/">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
@@ -42,8 +42,9 @@
             </li>
             <li><a href="/upgrade" target="_self">价格</a></li>
             <li><a href="/pp" target="_self">冒泡</a></li>
+            <li><a href="https://blog.coding.net" target="_self">博客</a></li>
             <li><a href="/help" target="_self">帮助</a></li>
-            <li><a href="https://coding.net/u/coding/p/Coding-Feedback/topic/all" target="_self">反馈</a></li>
+            
         </ul>
         <div class="login-zone">
             <div class="btns">
@@ -178,19 +179,19 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/help/faq/webide/ide.html">
+                        <a href="/help/faq/webide/index.html">
                             <i class="fa fa-question-circle "></i>
                             <span>WebIDE</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/help/faq/mobile/all.html">
+                        <a href="/help/faq/mobile/index.html">
                             <i class="fa fa-question-circle "></i>
                             <span>移动端</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/help/faq/account/user.html">
+                        <a href="/help/faq/account/index.html">
                             <i class="fa fa-question-circle "></i>
                             <span>用户账户</span>
                         </a>
@@ -212,7 +213,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/git/introduction.html">
+                                <a href="/help/doc/git/index.html">
                                     <span>代码托管介绍</span>
                                 </a>
                             </li>
@@ -266,7 +267,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/webide/introduction.html">
+                                <a href="/help/doc/webide/index.html">
                                     <span>WebIDE介绍</span>
                                 </a>
                             </li>
@@ -304,7 +305,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/paas/introduction.html">
+                                <a href="/help/doc/paas/index.html">
                                     <span>演示介绍</span>
                                 </a>
                             </li>
@@ -328,7 +329,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/project/introduction.html">
+                                <a href="/help/doc/project/index.html">
                                     <span>项目管理介绍</span>
                                 </a>
                             </li>
@@ -367,7 +368,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/account/introduction.html">
+                                <a href="/help/doc/account/index.html">
                                     <span>用户账户介绍</span>
                                 </a>
                             </li>
@@ -416,7 +417,7 @@
                         </a>
                         <ul class="sub-toc" aria-expanded="false">
                             <li>
-                                <a href="/help/doc/mobile/introduction.html">
+                                <a href="/help/doc/mobile/index.html">
                                     <span>移动端介绍</span>
                                 </a>
                             </li>
@@ -527,7 +528,7 @@
                         <div class="document-header">
                             <h3>
                                 <i class="fa fa-caret-down "></i>
-                                项目管理介绍
+                                Git代码托管
                             </h3>
                         </div>
                         <div class="document-body">
@@ -543,30 +544,43 @@
         });
     });
 </script>
-                                <p>本手册主要对 coding.net 旗下项目管理平台的相关功能进行介绍和简单演示。</p>
+                                <p>本手册主要描述 Coding.net 旗下 Git代码托管产品的相关功能说明。
+CopyRight by Coding.net  更新时间 2015-09-01</p>
 
-<p><em>Copyright by coding.net</em> 
-持续更新中  最近更新时间2015/9/21</p>
+<h2 id="关于git代码托管">关于Git代码托管</h2>
 
-<h2 id="关于项目管理">关于项目管理</h2>
+<h3 id="git代码托管">Git代码托管</h3>
 
-<p>Coding.net 在 Git 代码托管的基础上自主研发一套供软件开发人员使用的项目管理和团队协作工具。为了提高团队协作下软件开发的效率。</p>
+<p>Git代码托管是 Coding.net 基于 Java 自主研发的一款 Git 在线代码托管平台。
+开发者可以将源代码通过 Git 命令托管到 Coding.net, 并且享受 Coding.net 提供的各种延伸工具，如 合并请求( Merge Request/Pull Request)，Line Notes，保护分支，代码阅读，Webhook 等。</p>
 
-<p>团队协作以项目为单位。一个账号可以创建多个项目，一个项目可以添加多个项目成员。</p>
+<h3 id="git代码托管的优势">Git代码托管的优势</h3>
 
-<p>主要功能如下：</p>
+<p>Git 是一种版本控制系统。在开发过程中，为了跟踪代码，文档，项目等信息中的变化，版本控制变得前所未有的重要。
+相比集中式版本控制系统如 SVN ，分布式版本控制系统 Git 拥有更强大的分支管理与合并能力，支持离线开发，并良好地保留了提交过程，让您和您的团队在开发过程中如虎添翼。
+同时相较于传统的代码都是管理到本机或者内网。 一旦本机或者内网机器出问题，代码可能会丢失，使用远端代码仓库将永远存在一个备份。同时也免去了搭建本地代码版本控制服务的繁琐。
+云计算时代 Git 以其强大的分支和克隆功能，更加方便了开发者远程协作。</p>
+
+<h3 id="git代码托管主要功能">Git代码托管主要功能</h3>
 
 <ul>
-<li>Git 代码操作整合</li>
-<li>任务管理</li>
-<li>讨论管理</li>
-<li>在线文件管理</li>
+<li>分支合并 ( MergeRequest/Pull Request )</li>
+<li>保护分支</li>
+<li>代码阅读 CodeInsight</li>
+<li>Line Notes</li>
+<li>WebHook</li>
 </ul>
+
+<h3 id="git相关参考资料">Git相关参考资料</h3>
+
+<p><a href="https://git-scm.com/book/zh/v2">git教程中文版v2</a></p>
+
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的Git教程</a></p>
 
 <hr>
 
 <p><div class="footer-nav">
-  <div class="right-nav"><a href="/help/doc/project/getting-started.html">下一篇：开始使用项目管理</a><i class="fa fa-angle-right"></i></div>
+  <div class="right-nav"><a href="/help/doc/git/getting-started.html">下一篇：开始用 Git 管理代码</a><i class="fa fa-angle-right"></i></div>
   </div></p>
 
                             </article>
