@@ -211,6 +211,18 @@ Coding 推荐使用合并请求，在线将2个分支合并。合并请求分为
 
 在 MR 页面里面，MR 的提交者可以取消 MR ，MR 目标分支的管理者（对该分支有写权限的项目成员），可以选择合并或者拒绝。MR 支持 Markdown 语法评论。
 
+### # 标志引用资源
+
+每个任务，讨论，MR 也有一个独特的引用 ID， 并通过 #ID 被引用到项目内其它地方。
+项目内支持 Markdown 编辑器的地方都支持“#”自动提示(任务描述、讨论、合并请求描述等)，并引用相应资源。
+
+- 讨论
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/a878cf72-cef4-44a5-906c-653325062bdd.png) 
+
+- Merge Request 
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/80092778-981d-4edb-87e8-6a1cbecc5378.png)
 
 **公开项目** 
 

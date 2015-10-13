@@ -46,13 +46,15 @@ git版本过低，最好升级到1.9 以上
 
 ## 代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？
 
-由于Coding 将git 部署在CDN上了，可能你这边对应的 CDN 的节点有问题。 
+由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
 
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。
+
 1. 您的上网IP
 2. 您的 ping git.coding.net 的截图
 3. 您的DNS设置
-
+4. 修改您的 DNS 修改到 115.231.16.157 
+5. 再次 ping git.coding.net 的截图
 
 ## 如何在 Coding 上回退代码版本？
 
