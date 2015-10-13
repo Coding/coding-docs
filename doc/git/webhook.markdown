@@ -47,6 +47,15 @@ Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为
 
 关于WebHook 更多例子，请参看 [Coding 开放平台]( http://open.coding.net)
 
+## hook 常见排错
+
+填写完成 url 地址后 Coding 会发送一条测试 http 信息到，如果有 response 则 webhook 会变成勾。
+也可以通过手动点击 “测试” 完成这个过程。
+
+如果可以收到测试信息但是又无法收到其他正常的 hook 信息，请尝试到 http://requestb.in/ 上建立一个 url ，然后看看是否收可以收到请求。如果可以收到，证明 Coding 的 Webhook 服务正常。请检查你的 hook 程序。
+
+注意： webhook 有5秒的超时设置，你的程序必在超时时间内返回。 
+
 ---
 
 
