@@ -12,7 +12,7 @@ title: 配置SSH公钥
 这里要说明的是，Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
 用户可以在认证身份时选择在账户里面设置 SSH公钥，并获所有仓库的读写权限（注意！您的公钥对应的私钥必须要妥善保存，如果您的私钥被第三方获取，那么他将可以以您的身份来操作 Git 仓库，这跟密码被盗一样严重）]， 也可以在项目设置里面设置项目部署公钥，获取仓库的只读权限。
 
-添加公钥后，您就可以在项目的代码页面点击 SSH 切换到 SSH 协议的 clone 地址，类似这样：（git@coding.net:wzw/leave-a-message.git），这样就可以使用 SSH 协议来访问 Git 仓库了，每次链接都不需要再输入账号和密码了。
+添加公钥后，您就可以在项目的代码页面点击 SSH 切换到 SSH 协议的 clone 地址，类似这样：（git@git.coding.net:wzw/leave-a-message.git），这样就可以使用 SSH 协议来访问 Git 仓库了，每次链接都不需要再输入账号和密码了。
 
 > 注意：一个公钥只能认证一个用户，而一个用户却可以拥有多个公钥。
 
@@ -29,7 +29,7 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
     $ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     # Creates a new ssh key, using the provided email as a label
     # Generating public/private rsa key pair.
-    Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址
+    Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址,如果使用非默认地址可能需要配置 .ssh/config
 
 成功之后
 
@@ -45,18 +45,29 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
  ![图片](https://dn-coding-net-production-pp.qbox.me/49eab64b-8d8a-4787-a0ed-ce347f753a69.png) 
 3. 完成后在命令行测试，首次建立链接会要求信任主机。
 
-`$ ssh -T git@git.coding.net
+`$ ssh -T git@git.coding.net    // 注意 git.coding.net 接入到 CDN 上所以会解析多个不同的 host ip
  The authenticity of host 'git.coding.net (61.146.73.68)' can not be established.
  RSA key fingerprint is 98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
  Are you sure you want to continue connecting (yes/no)? yes
  Warning: Permanently added 'git.coding.net,61.146.73.68' (RSA) to the list of kn
- own hosts.
+ own hosts.  
 
  Enter passphrase for key '/c/Users/Yuankai/.ssh/id_rsa':
  Coding.net Tips : [ Hello Kyle_lyk! You have connected to Coding.net by SSH successfully! ]
 `
 
-### 部署SSH公钥
+> 注意： 同一个公钥只能绑定一个账户，Coding 暂时不支持同一公钥绑定多个账户。
+
+如果需要使用多个账户建议生成多个公钥，可以在.ssh/config文件中加上下边一段
+    
+    Host git.coding.net
+    User xxxx@email.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/coding_rsa  // 生成的非默认地址的公钥存放点
+
+
+
+### 项目部署SSH公钥
 
 项目部署 SSH 公钥是跟项目关联的公钥，设置后有该项目的仓库的只读权限。
 

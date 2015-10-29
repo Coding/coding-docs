@@ -79,6 +79,15 @@ Coding 对每个演示应用都提供一个 WebUI 的方式可以查看到应用
 
 ![服务控制台](https://dn-coding-net-production-pp.qbox.me/fe27ca53-d7cd-445f-817c-2a3a56a61e87.png)
 
+#### 数据库管理
+
+对于数据库服务管理，如果不习惯使用控制台操作还可以通过如下两种方式
+
+- [Coding Plus](https://coding.net/u/bluishoul/p/coding-plus/git) 插件
+- WebUI 管理工具 [Adminer](http://db-admin.coding.io) 支持演示平台的数据库类型
+- 自己搭建 Web 管理工具，如 phpmyadmin
+
+
 ---
 
 
