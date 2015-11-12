@@ -14,10 +14,15 @@ title: Git 操作常见问题
 ## 每次 Push 的时候如何不用输入密码？
 
 可以有2个办法：
-1. 配置 SSH 公钥，使用 SSH 协议操作，具体见 [SSH 公钥配置](/help/doc/git/ssh-key.html)
-2. 配置本地的 HTTPS Remote URL 加上你的username@password ， 仓库目录下 .git/config
-    
-    https://{username}:{passwd}@git.coding.net
+
+- 针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 [SSH 公钥配置](/help/doc/git/ssh-key.html)
+
+- 对于 Https 协议
+ 1. 配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net
+ 2. 使用 Git 命令存储 git config --global credential.helper store , ~/.gitconfig文件多出下面配置项
+
+		[credential]
+		helper = store
 
 ## 我的 Git 是1.7版本为什么无法提交代码？
 
@@ -34,6 +39,7 @@ git版本过低，最好升级到1.9 以上
 ## 出现 'Coding.net Tips : [Internal server error]' 怎么会事？
 
 出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 
+
 麻烦通过[反馈](https://coding.net/u/coding/p/Coding-Feedback/topic)，提交你的项目的url地址 供研发人员排错。
 
 
@@ -46,15 +52,42 @@ git版本过低，最好升级到1.9 以上
 
 ## 代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？
 
-由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
+我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：
+> 注意： Windows 用户需要在 git bash 下运行
+	
+	#!/bin/bash
+	# this script will collect some logs for Coding.net 
 
+	### how to use ###
+	# first enter your git reposiztory 
+	# then execute this bash, please make sure you have correct rights 
+
+	echo "## git version  ##################" >> git.log
+	git version  >> git.log
+	echo "## ping ##########################" >> git.log
+	ping -c 5 git.coding.net  >> git.log
+	echo "## curl git.coding.net ###########" >> git.log
+	curl -v https://git.coding.net >> git.log 2>&1
+	echo "## curl git-upload-pack  ##############" >> git.log
+	curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service=git-upload-pack  >> git.log 2>&1
+	echo "## ssh -vT git.coding.net ##############" >> git.log
+	ssh -vT git@git.coding.net >> git.log 2>&1
+	echo "## ssh -vT git-upload-pack ##############" >> git.log
+	ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git >> git.log 2>&1
+	echo "## git pull  ##############" >> git.log
+	GIT_CURL_VERBOSE=1 GIT_TRACE=1 GIT_TRACE_PACKET=1 git pull  >> git.log  2>&1
+
+
+同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。
 
-1. 您的上网IP
-2. 您的 ping git.coding.net 的截图
-3. 您的DNS设置
-4. 修改您的 DNS 修改到 115.231.16.157 
-5. 再次 ping git.coding.net 的截图
+	1. 您的上网IP
+	2. 您的 ping git.coding.net 的截图
+	3. 您的DNS设置
+	4. 修改您的 DNS 修改到 115.231.16.157 
+	5. 再次 ping git.coding.net 的截图
+
+
 
 ## 如何在 Coding 上回退代码版本？
 

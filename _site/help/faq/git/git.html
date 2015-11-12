@@ -553,11 +553,21 @@
 
 <h2 id="每次-push-的时候如何不用输入密码？">每次 Push 的时候如何不用输入密码？</h2>
 
-<p>可以有2个办法：
-1. 配置 SSH 公钥，使用 SSH 协议操作，具体见 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置</a>
-2. 配置本地的 HTTPS Remote URL 加上你的username@password ， 仓库目录下 .git/config</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">https://{username}:{passwd}@git.coding.net
-</code></pre></div>
+<p>可以有2个办法：</p>
+
+<ul>
+<li><p>针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置</a></p></li>
+<li><p>对于 Https 协议</p>
+
+<ol>
+<li>配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net</li>
+<li><p>使用 Git 命令存储 git config --global credential.helper store , ~/.gitconfig文件多出下面配置项</p>
+
+<p>[credential]
+helper = store</p></li>
+</ol></li>
+</ul>
+
 <h2 id="我的-git-是1-7版本为什么无法提交代码？">我的 Git 是1.7版本为什么无法提交代码？</h2>
 
 <p>git版本过低，最好升级到1.9 以上</p>
@@ -572,8 +582,9 @@
 
 <h2 id="出现-39-coding-net-tips-internal-server-error-39-怎么会事？">出现 &#39;Coding.net Tips : [Internal server error]&#39; 怎么会事？</h2>
 
-<p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 
-麻烦通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
+<p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 </p>
+
+<p>麻烦通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
 
 <h2 id="push-一直提示permission-denied-publickey">Push 一直提示Permission denied (publickey) ?</h2>
 
@@ -586,18 +597,41 @@
 
 <h2 id="代码-push-不了，报-ssl-abort，ssl-protocol-error，或者-connection-timeout-怎么办？">代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？</h2>
 
-<p>由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 </p>
+<p>我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：</p>
 
-<p>麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。</p>
+<blockquote>
+<p>注意： Windows 用户需要在 git bash 下运行</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<span class="c"># this script will collect some logs for Coding.net </span>
 
-<ol>
-<li>您的上网IP</li>
-<li>您的 ping git.coding.net 的截图</li>
-<li>您的DNS设置</li>
-<li>修改您的 DNS 修改到 115.231.16.157 </li>
-<li>再次 ping git.coding.net 的截图</li>
-</ol>
+<span class="c">### how to use ###</span>
+<span class="c"># first enter your git reposiztory </span>
+<span class="c"># then execute this bash, please make sure you have correct rights </span>
 
+<span class="nb">echo</span> <span class="s2">"## git version  ##################"</span> &gt;&gt; git.log
+git version  &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## ping ##########################"</span> &gt;&gt; git.log
+ping -c 5 git.coding.net  &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## curl git.coding.net ###########"</span> &gt;&gt; git.log
+curl -v https://git.coding.net &gt;&gt; git.log 2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## curl git-upload-pack  ##############"</span> &gt;&gt; git.log
+curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service<span class="o">=</span>git-upload-pack  &gt;&gt; git.log 2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## ssh -vT git.coding.net ##############"</span> &gt;&gt; git.log
+ssh -vT git@git.coding.net &gt;&gt; git.log 2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## ssh -vT git-upload-pack ##############"</span> &gt;&gt; git.log
+ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## git pull  ##############"</span> &gt;&gt; git.log
+<span class="nv">GIT_CURL_VERBOSE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE_PACKET</span><span class="o">=</span>1 git pull  &gt;&gt; git.log  2&gt;&amp;1
+</code></pre></div>
+<p>同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
+麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">1. 您的上网IP
+2. 您的 ping git.coding.net 的截图
+3. 您的DNS设置
+4. 修改您的 DNS 修改到 115.231.16.157 
+5. 再次 ping git.coding.net 的截图
+</code></pre></div>
 <h2 id="如何在-coding-上回退代码版本？">如何在 Coding 上回退代码版本？</h2>
 
 <p>Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界面。需要使用 git 操作回退，然后更新到 Coding 服务器上

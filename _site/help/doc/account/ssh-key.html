@@ -563,13 +563,13 @@
 <h3 id="生成公钥">生成公钥</h3>
 
 <p>打开命令行终端输入ssh-keygen -t rsa -C &quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+<div class="highlight"><pre><code class="language-" data-lang="">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # Creates a new ssh key, using the provided email as a label
 # Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址
 </code></pre></div>
 <p>成功之后</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Your identification has been saved in /Users/you/.ssh/id_rsa.
+<div class="highlight"><pre><code class="language-" data-lang="">Your identification has been saved in /Users/you/.ssh/id_rsa.
 # Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
@@ -589,7 +589,7 @@ Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 
 </blockquote>
 
 <p>如果需要使用多个账户建议生成多个公钥，可以在.ssh/config文件中加上下边一段</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Host git.coding.net
+<div class="highlight"><pre><code class="language-" data-lang="">Host git.coding.net
 User xxxx@email.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/coding_rsa  // 生成的非默认地址的公钥存放点
