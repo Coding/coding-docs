@@ -117,6 +117,14 @@ Markdown 标记区块引用是使用类似 email 中用 > 的引用方式，只�
 
 ![在这里输入图片描述][7]
 
+代办列表: 表示列表是否勾选状态
+
+    - [ ] 不勾选
+    - [x] 勾选
+
+*效果图如下：*
+![图片](https://dn-coding-net-production-pp.qbox.me/6ff6802f-8105-4a6b-b8a4-2abc380c1107.png) 
+
 
 ### 代码
 

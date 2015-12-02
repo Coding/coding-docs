@@ -196,7 +196,12 @@
                             <span>用户账户</span>
                         </a>
                     </li>
-
+                    <li>
+                        <a href="/help/faq/codeinsight/index.html">
+                            <i class="fa fa-question-circle "></i>
+                            <span>CodeInsight</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="active">
@@ -579,7 +584,8 @@
 
 <ol>
 <li>配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net</li>
-<li><p>使用 Git 命令存储 git config --global credential.helper store , ~/.gitconfig文件多出下面配置项</p>
+<li><p>使用 Git 命令存储 git config --global credential.helper store 
+~/.gitconfig文件多出下面配置项</p>
 
 <p>[credential]
 helper = store</p></li>
@@ -588,7 +594,7 @@ helper = store</p></li>
 
 <h2 id="我的-git-是1-7版本为什么无法提交代码？">我的 Git 是1.7版本为什么无法提交代码？</h2>
 
-<p>git版本过低，最好升级到1.9 以上</p>
+<p>由于 git版本过低，最好升级到1.9 以上</p>
 
 <h2 id="如何设置分支的提交权限，让部分人可以提交？">如何设置分支的提交权限，让部分人可以提交？</h2>
 
@@ -602,7 +608,7 @@ helper = store</p></li>
 
 <p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 </p>
 
-<p>麻烦通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
+<p>您可以通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
 
 <h2 id="push-一直提示permission-denied-publickey">Push 一直提示Permission denied (publickey) ?</h2>
 
@@ -659,8 +665,11 @@ ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&
 
 <p>设置 SSH Key 的方式参见<a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></p>
 
-<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
-注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
+<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码</p>
+
+<blockquote>
+<p>注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
+</blockquote>
 
                             </article>
                         </div>

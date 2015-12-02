@@ -13,15 +13,14 @@ WebIDE 可以编辑代码，实时自动保存编辑， 支持提交代码，Pus
 
 ## WebIDE 可以支持什么语言和框架？
 
-WebIDE 是一款在线IDE环境，包括编辑器和运行环境，编辑器支持主流的编程语言的语法高亮和自动提示， 运行环境只要是 Linux 下支持的都可以可以通过安装软件支持。
+WebIDE 是一款在线IDE环境，包括编辑器和运行环境，编辑器支持主流的编程语言的语法高亮和自动提示， WebIDE 内置的运行环境是 Ubuntu Linux，只要环境支持的语言和框架都是支持的。
 
-
-## 什么是 WorkSpace ，如何管理？ 
+## 什么是 WorkSpace，如何管理？ 
 
 WorkSpace 是 WebIDE 在云端创建的一个工作空间，每个用户对每个项目只能创建一个WorkSpace。
-它包含了用户在云端的代码根目录和可选的环境配置。 详细参加 [工作空间](/help/doc/webide/workspace.html)
+它包含了用户在云端的代码根目录和可选的环境配置。 详细参见 [工作空间](/help/doc/webide/workspace.html)
 
-## 如何分享环境，可以分享给任何人吗？
+## 如何分享环境，可以分享给任code何人吗？
 
 环境分享，目前只能分享给项目成员，具体操作详见 [环境管理](/help/doc/webide/environment.html)
 
@@ -46,3 +45,8 @@ WebIDE 的终端使用的 Ubuntu Linux，使用 apt-get install 安装软件
 ## 终端断掉了，刷新后还是不行？
 
 可能是缓存问题，先尝试浏览器刷新，如果有报错信息，请到[在线提问](https://coding.net/u/coding/p/Coding-Feedback/topic)将 WorkSpace 地址提供给我们。
+
+## WebIDE 安全性如何？
+
+WebIDE 使用容器技术进行隔离，每一个 WorkSpace 都是一个单独的容器，完全禁止跨容器访问，保障容器内的数据安全。
+同时使用 WorkSpace 内置的 SSH Key 去拉取代码， 无需用户名和密码。

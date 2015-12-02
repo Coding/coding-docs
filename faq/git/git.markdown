@@ -19,14 +19,15 @@ title: Git 操作常见问题
 
 - 对于 Https 协议
  1. 配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net
- 2. 使用 Git 命令存储 git config --global credential.helper store , ~/.gitconfig文件多出下面配置项
+ 2. 使用 Git 命令存储 git config --global credential.helper store 
+ 		~/.gitconfig文件多出下面配置项
 
 		[credential]
 		helper = store
 
 ## 我的 Git 是1.7版本为什么无法提交代码？
 
-git版本过低，最好升级到1.9 以上
+由于 git版本过低，最好升级到1.9 以上
 
 ## 如何设置分支的提交权限，让部分人可以提交？
 
@@ -40,7 +41,7 @@ git版本过低，最好升级到1.9 以上
 
 出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 
 
-麻烦通过[反馈](https://coding.net/u/coding/p/Coding-Feedback/topic)，提交你的项目的url地址 供研发人员排错。
+您可以通过[反馈](https://coding.net/u/coding/p/Coding-Feedback/topic)，提交你的项目的url地址 供研发人员排错。
 
 
 ## Push 一直提示Permission denied (publickey) ?
@@ -87,8 +88,6 @@ git版本过低，最好升级到1.9 以上
 	4. 修改您的 DNS 修改到 115.231.16.157 
 	5. 再次 ping git.coding.net 的截图
 
-
-
 ## 如何在 Coding 上回退代码版本？
 
 Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界面。需要使用 git 操作回退，然后更新到 Coding 服务器上
@@ -99,5 +98,5 @@ Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界�
 设置 SSH Key 的方式参见[SSH公钥配置](/help/doc/git/ssh-key.html)
 
 如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
-注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。
+> 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。
 

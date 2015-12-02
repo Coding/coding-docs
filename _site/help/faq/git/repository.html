@@ -196,7 +196,12 @@
                             <span>用户账户</span>
                         </a>
                     </li>
-
+                    <li>
+                        <a href="/help/faq/codeinsight/index.html">
+                            <i class="fa fa-question-circle "></i>
+                            <span>CodeInsight</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="active">
@@ -566,19 +571,27 @@
 
 <h2 id="如何访问-coding-的-git-仓库？">如何访问 Coding 的 Git 仓库？</h2>
 
-<p>目前用户可以通过以下三种协议对 git 仓库进行访问：
-1) HTTPS：读写仓库加密通道，有单次上传限制，如下表示超过这个限制了。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">error: RPC failed; result=22, HTTP code = 413B | 2.39 MiB/s
-</code></pre></div>
-<p>2) SSH：读写仓库加密通道，无单次上传限制，需先在个人设置页面上传 SSH-RSA 公钥，完成配对验证。
-3) Git：只读，并且只对公开项目有效。
-注意：Git 用户名为 Coding 的账户邮箱或者个性后缀，密码为 Coding 的账户密码。</p>
+<p>目前用户可以通过以下三种协议对 git 仓库进行访问：</p>
+
+<ul>
+<li><p>HTTPS：读写仓库加密通道，有单次上传限制，如下命令行表示超过这个限制了。</p>
+
+<p>error: RPC failed; result=22, HTTP code = 413B | 2.39 MiB/s</p></li>
+<li><p>SSH：读写仓库加密通道，无单次上传限制，需先在个人设置页面上传 SSH-RSA 公钥，完成配对验证。</p></li>
+<li><p>Git：只读，并且只对公开项目有效。</p></li>
+</ul>
+
+<blockquote>
+<p>注意：Git 用户名为 Coding 的账户邮箱或者个性后缀，密码为 Coding 的账户密码。</p>
+</blockquote>
 
 <p>具体参见  Git帮助文档的<a href="/help/doc/git/repository.html">代码仓库</a></p>
 
 <h2 id="如何导入已有仓库到-coding？">如何导入已有仓库到 Coding？</h2>
 
-<p>在新建项目页面，填写你要导入的项目的名称和描述后，选择导入仓库选项卡，根据你要导入的仓库类型选择版本控制类型，填写导入项目的公开 Clone 地址，如：<a href="https://github.com/twbs/bootstrap.git">https://github.com/twbs/bootstrap.git</a> （svn 仓库导入格式如 <a href="http://code.taobao.org/svn/dev_codes/trunk%EF%BC%89%E3%80%82">http://code.taobao.org/svn/dev_codes/trunk）。</a> Coding 暂不支持导入外站的私有项目，另外受制于网络条件，Coding不能一定保证导入成功。结果会通过站内通知和邮件告知您。</p>
+<p>在新建项目页面，填写你要导入的项目的名称和描述后，选择导入仓库选项卡，根据你要导入的仓库类型选择版本控制类型，填写导入项目的公开 Clone 地址，如：<a href="https://github.com/twbs/bootstrap.git">https://github.com/twbs/bootstrap.git</a> （svn 仓库导入格式如 <a href="http://code.taobao.org/svn/dev_codes/trunk%EF%BC%89%E3%80%82">http://code.taobao.org/svn/dev_codes/trunk）。</a> </p>
+
+<p>Coding 暂不支持导入外站的私有项目，另外受制于网络条件，Coding不能一定保证导入成功。结果会通过站内通知和邮件告知您。</p>
 
 <h2 id="是不是所有项目都需要-readme-开源许可证和-gitignore-文件？">是不是所有项目都需要 README ,开源许可证和 .gitignore 文件？</h2>
 
@@ -586,11 +599,30 @@
 
 <h2 id="git-有多少存储空间？">Git 有多少存储空间？</h2>
 
-<p>Git 的免费存储空间为：单项目限制 1G，另外请注意，Git 是用来存放源码的，如果里面存有大量的二进制文件（图片，音乐，视频，可执行程序，编译后的库等等）将会快速占用大量的空间，因此不建议这样做。</p>
+<p>Git 的免费存储空间为：单项目限制 1G，</p>
+
+<p>另外请注意，Git 是用来存放源码的，如果里面存有大量的二进制文件（图片，音乐，视频，可执行程序，编译后的库等等）将会快速占用大量的空间，因此不建议这样做。</p>
 
 <h2 id="用户可以建多少个仓库？">用户可以建多少个仓库？</h2>
 
 <p>Git 仓库跟项目是1对1的关系，用户可以免费建1000个项目。</p>
+
+<h2 id="存放在代码仓库的数据是否安全">存放在代码仓库的数据是否安全?</h2>
+
+<p>Coding 的目标是成为一个云端的软件开发平台，保护数据的安全性是我们最重要的任务。目前我们采取了以下措施：</p>
+
+<ul>
+<li><p>整站 SSL 加密，Coding 的所有内容都必须通过 SSL 加密的方式才能访问，极大的降低了在信息传输过程中泄露任何用户信息的可能性。</p></li>
+<li><p>严格的权限管理， 对于私有项目代码，非项目成员无法访问并获取项目内的资源，所有用户一视同仁。</p></li>
+<li><p>独立的安全小组， Coding 内部有一个独立的安全小组，负责全面检查 Coding 系统的安全性问题，包括系统功能，服务器部署，客户端消息处理等等。</p></li>
+<li><p>外部安全专家，我们聘请了外部的白帽子安全专家，定期对 Coding 整个系统进行检查，保证系统整体的安全性。</p></li>
+<li><p>数据实时备份，在同一机房，Coding 的数据库和文件都有实时热备机制。在出现数据丢失的时候，可以第一时间找回数据。对于用户要求删除的数据我们会保留 7 天并清除，Coding 不会私自保存用户的数据。</p></li>
+<li><p>异地数据备份，为了防止机房故障导致的数据丢失，Coding 采取了定时异地备份。</p></li>
+</ul>
+
+<blockquote>
+<p>众所周知，数据安全是一个长期的持续改进过程。如果您对 Coding 有相关的建议，请及时通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>联系我们</p>
+</blockquote>
 
                             </article>
                         </div>
