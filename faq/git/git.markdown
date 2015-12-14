@@ -18,12 +18,13 @@ title: Git 操作常见问题
 - 针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 [SSH 公钥配置](/help/doc/git/ssh-key.html)
 
 - 对于 Https 协议
- 1. 配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net
- 2. 使用 Git 命令存储 git config --global credential.helper store 
- 		~/.gitconfig文件多出下面配置项
+ 1. 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net 
+ 2. 然后配置 Git 命令存储认证， 
 
-		[credential]
-		helper = store
+ 		$git config --global credential.helper store 
+		
+		~/.gitconfig 文件多出下面配置项:
+		credential.helper = store
 
 ## 我的 Git 是1.7版本为什么无法提交代码？
 

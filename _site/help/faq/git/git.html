@@ -583,12 +583,13 @@
 <li><p>对于 Https 协议</p>
 
 <ol>
-<li>配置 HTTPS Remote URL 时加上你的 username@password， https://{username}:{passwd}@git.coding.net</li>
-<li><p>使用 Git 命令存储 git config --global credential.helper store 
-~/.gitconfig文件多出下面配置项</p>
+<li>首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net </li>
+<li><p>然后配置 Git 命令存储认证， </p>
 
-<p>[credential]
-helper = store</p></li>
+<p>$git config --global credential.helper store </p>
+
+<p>~/.gitconfig 文件多出下面配置项:
+credential.helper = store</p></li>
 </ol></li>
 </ul>
 

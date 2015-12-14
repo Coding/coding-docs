@@ -27,6 +27,7 @@ title: SSH公钥配置
     # Creates a new ssh key, using the provided email as a label
     # Generating public/private rsa key pair.
     Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址
+    Enter passphrase (empty for no passphrase):
 
 成功之后
 
