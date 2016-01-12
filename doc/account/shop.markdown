@@ -17,7 +17,7 @@ title: 码币和商城
 
 ### 如何得到码币
 
-![如何获取码币](https://dn-coding-net-production-pp.qbox.me/6a63b44f-cf67-4499-934a-c3d88cf4fdf4.png)
+![如何获取码币](https://dn-coding-net-production-pp.qbox.me/6413ee66-41f5-493e-8a53-971a003d252a.jpg)
 
 ### Coding Shop 是什么
 
