@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?bhrm1okf">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/git/git.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?fkfss1iy"></script>
+  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
   <!-- endinject -->
 </head>
 
@@ -639,31 +639,31 @@ credential.helper = store</p></li>
 <blockquote>
 <p>注意： Windows 用户需要在 git bash 下运行</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
-<span class="c"># this script will collect some logs for Coding.net </span>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#!/bin/bash
+# this script will collect some logs for Coding.net 
 
-<span class="c">### how to use ###</span>
-<span class="c"># first enter your git reposiztory </span>
-<span class="c"># then execute this bash, please make sure you have correct rights </span>
+### how to use ###
+# first enter your git reposiztory 
+# then execute this bash, please make sure you have correct rights 
 
-<span class="nb">echo</span> <span class="s2">"## git version  ##################"</span> &gt;&gt; git.log
+echo &quot;## git version  ##################&quot; &gt;&gt; git.log
 git version  &gt;&gt; git.log
-<span class="nb">echo</span> <span class="s2">"## ping ##########################"</span> &gt;&gt; git.log
+echo &quot;## ping ##########################&quot; &gt;&gt; git.log
 ping -c 5 git.coding.net  &gt;&gt; git.log
-<span class="nb">echo</span> <span class="s2">"## curl git.coding.net ###########"</span> &gt;&gt; git.log
+echo &quot;## curl git.coding.net ###########&quot; &gt;&gt; git.log
 curl -v https://git.coding.net &gt;&gt; git.log 2&gt;&amp;1
-<span class="nb">echo</span> <span class="s2">"## curl git-upload-pack  ##############"</span> &gt;&gt; git.log
-curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service<span class="o">=</span>git-upload-pack  &gt;&gt; git.log 2&gt;&amp;1
-<span class="nb">echo</span> <span class="s2">"## ssh -vT git.coding.net ##############"</span> &gt;&gt; git.log
+echo &quot;## curl git-upload-pack  ##############&quot; &gt;&gt; git.log
+curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service=git-upload-pack  &gt;&gt; git.log 2&gt;&amp;1
+echo &quot;## ssh -vT git.coding.net ##############&quot; &gt;&gt; git.log
 ssh -vT git@git.coding.net &gt;&gt; git.log 2&gt;&amp;1
-<span class="nb">echo</span> <span class="s2">"## ssh -vT git-upload-pack ##############"</span> &gt;&gt; git.log
+echo &quot;## ssh -vT git-upload-pack ##############&quot; &gt;&gt; git.log
 ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&gt;&amp;1
-<span class="nb">echo</span> <span class="s2">"## git pull  ##############"</span> &gt;&gt; git.log
-<span class="nv">GIT_CURL_VERBOSE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE_PACKET</span><span class="o">=</span>1 git pull  &gt;&gt; git.log  2&gt;&amp;1
+echo &quot;## git pull  ##############&quot; &gt;&gt; git.log
+GIT_CURL_VERBOSE=1 GIT_TRACE=1 GIT_TRACE_PACKET=1 git pull  &gt;&gt; git.log  2&gt;&amp;1
 </code></pre></div>
 <p>同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">1. 您的上网IP
+<div class="highlight"><pre><code class="language-text" data-lang="text">1. 您的上网IP
 2. 您的 ping git.coding.net 的截图
 3. 您的DNS设置
 4. 修改您的 DNS 修改到 115.231.16.157 

@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?bhrm1okf">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/repository.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?fkfss1iy"></script>
+  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
   <!-- endinject -->
 </head>
 
@@ -622,10 +622,10 @@
 <h4 id="初始化新仓库">初始化新仓库</h4>
 
 <p>要对现有的某个文件夹开始用 Git 管理，只需到所在的目录，执行：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">      $ git init
+<div class="highlight"><pre><code class="language-text" data-lang="text">      $ git init
 </code></pre></div>
 <p>命令行中会出现以下提示</p>
-<div class="highlight"><pre><code class="language-" data-lang="">      Initialized empty Git repository in X:/XXX/.git/
+<div class="highlight"><pre><code class="language-text" data-lang="text">      Initialized empty Git repository in X:/XXX/.git/
 </code></pre></div>
 <p>在当前文件夹中会出现一个 .git 文件夹。所有 Git 需要的数据和资源都存放在这个目录中。</p>
 
@@ -652,27 +652,27 @@
 <p>要添加一个新的远程仓库，可以使用 git remote 命令，给远程仓库一个别名，以HTTPS 地址为例运行： </p>
 
 <p>git remote add [shortname] [url] 命令：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  $ git remote add codingios https://git.coding.net/Kyle_lyk/learn-git.git
+<div class="highlight"><pre><code class="language-text" data-lang="text">  $ git remote add codingios https://git.coding.net/Kyle_lyk/learn-git.git
 </code></pre></div>
 <p>此处以 coding.net 上的一个开源项目 learn-git 为例，添加其为远程仓库，并取别名为&quot;learn-git&quot;，接下来用 git remote 命令来查看当前添加的远程仓库：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  $ git remote -v 
+<div class="highlight"><pre><code class="language-text" data-lang="text">  $ git remote -v 
 </code></pre></div>
 <p>得到以下结果：</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> learn-git  https://git.coding.net/Kyle_lyk/learn-git.git&lt;fetch&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text"> learn-git  https://git.coding.net/Kyle_lyk/learn-git.git&lt;fetch&gt;
  learn-git  https://git.coding.net/Kyle_lyk/learn-git.git&lt;push&gt;
 </code></pre></div>
 <p>现在可以用字符串 learn-git 指代对应的仓库地址了。比如说，要抓取所有 learn-git 有的，但本地仓库没有的信息，可以运行 </p>
-<div class="highlight"><pre><code class="language-" data-lang=""> $ git fetch learn-git
+<div class="highlight"><pre><code class="language-text" data-lang="text"> $ git fetch learn-git
 </code></pre></div>
 <p>现在，learn-git 的主干（master）已经完全可以在本地访问了，对应的名字是 learn-git/master，你可以将它合并到自己的某个分支，或者切换到这个分支，看看有些什么有趣的更新。</p>
 
 <h4 id="克隆远程仓库">克隆远程仓库</h4>
 
 <p>除了  所述的方法，也可以直接通过 git clone 命令来直接复制远程仓库到本地目录：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">https://git.coding.net/Kyle_lyk/learn-git.git
+<div class="highlight"><pre><code class="language-text" data-lang="text">https://git.coding.net/Kyle_lyk/learn-git.git
 </code></pre></div>
 <p>运行该命令之后，你会发现在当前目录下出现了一个名为 learn-git 的文件夹，其中包含一个 .git 文件夹，用于保存下载下来的所有版本记录，然后从中取出最新版本的文件拷贝。打开 learn-git 文件夹，你会看到项目中的所有文件已经在里边了，准备好后续的开发和使用。如果希望在克隆的时候，自己定义新建文件夹的名称，可以在上面的命令末尾指定新的名字：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ git clone https://git.coding.net/Kyle_lyk/learn-git.git study-git
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone https://git.coding.net/Kyle_lyk/learn-git.git study-git
 </code></pre></div>
 <blockquote>
 <p>注意： 上述 clone 使用的是 HTTPS 的方式，Coding 支持 SSH，HTTPS, Git 3种方式获取代码</p>

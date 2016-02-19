@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?bhrm1okf">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/ssh-key.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?fkfss1iy"></script>
+  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
   <!-- endinject -->
 </head>
 
@@ -601,13 +601,13 @@
 
 <p>Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
 输入ssh-keygen -t rsa -C &quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,( 注册的邮箱)，接下来点击enter键即可（也可以输入密码）。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 # Creates a new ssh key, using the provided email as a label
 # Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 推荐使用默认地址,如果使用非默认地址可能需要配置 .ssh/config
 </code></pre></div>
 <p>成功之后</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Your identification has been saved in /Users/you/.ssh/id_rsa.
+<div class="highlight"><pre><code class="language-text" data-lang="text">Your identification has been saved in /Users/you/.ssh/id_rsa.
 # Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
@@ -637,7 +637,7 @@ Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  // 
 </blockquote>
 
 <p>如果需要使用多个账户建议生成多个公钥，可以在.ssh/config文件中加上下边一段</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Host git.coding.net
+<div class="highlight"><pre><code class="language-text" data-lang="text">Host git.coding.net
 User xxxx@email.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/coding_rsa  // 生成的非默认地址的公钥存放点
