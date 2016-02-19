@@ -250,11 +250,7 @@ fork 后会在你的项目空间生成一个对应的项目，然后修改 fork 
 #### 代码行级比对
 
 代码行级比对( Line Notes ) 是 Coding 开发的可以针对代码的 diff 进行行级别的评论功能，支持 Markdown 语法，可以方便的用来进行 Code Review。
-你可以在代码 commit 页面，和合并请求( MR /PR ) 页面使用该功能。如下图：
-
-
-> 此处放上之前 Line Notes 上线推广时录制的 Gif。
-
+你可以在代码 commit 页面，和合并请求( MR /PR ) 页面使用该功能。
 
 ### 保护分支
 
