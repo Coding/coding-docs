@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/project/markdown.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
+  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
   <!-- endinject -->
 </head>
 
@@ -579,14 +579,14 @@
         });
     });
 </script>
-                                <h3 id="什么是markdown语法？">什么是Markdown语法？</h3>
+                                <h3 id="markdown">什么是Markdown语法？</h3>
 
 <p>Markdown 是一种轻量级标记语言，目标是实现「易读易写」。Coding.net的许多版块都采用了Markdown语法，比如冒泡，讨论，Pull Request等。</p>
 
-<h3 id="标题">标题</h3>
+<h3 id=">标题</h3>
 
 <p>在Markdown中，你只需要在文本前面加上# 即可，同理、你还可以增加二级标题、三级标题、四级标题、五级标题和六级标题，总共六级，只需要增加# 即可，标题字号相应降低。例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"># 一级标题
+<div class="highlight"><pre><code class="language-" data-lang=""># 一级标题
 ## 二级标题
 ### 三级标题
 #### 四级标题
@@ -597,28 +597,28 @@
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/d46c3a8f-b74a-4008-ad1d-a56be443d5fa.png" alt="在这里输入图片描述"></p>
 
-<h3 id="锚点">锚点</h3>
+<h3 id=">锚点</h3>
 
 <p>Coding 会针对每个标题，在解析时都会添加锚点id，如</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"># 锚点
+<div class="highlight"><pre><code class="language-" data-lang=""># 锚点
 </code></pre></div>
 <p>会被解析成：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;h1 id=&quot;user-content-锚点&quot;&gt;锚点&lt;/h1&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;h1 id="user-content-锚点"&gt;锚点&lt;/h1&gt;
 </code></pre></div>
 <p>注意我们添加了一个user-content-的前缀所以如果要自己添加跳转链接要使用markdown的形式，且链接要加一个&#39;user-content-&#39;前缀，如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[问内链接](#user-content-锚点);
+<div class="highlight"><pre><code class="language-" data-lang="">[问内链接](#user-content-锚点);
 </code></pre></div>
-<h3 id="引用">引用</h3>
+<h3 id=">引用</h3>
 
 <p>Markdown 标记区块引用是使用类似 email 中用 &gt; 的引用方式，只需要在整个段落的第一行最前面加上 &gt; ：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; Coding.net 为软件开发者提供基于云计算技术的软件开发平台，包括项目管理，代码托管，运行空间和质量控制等等。
+<div class="highlight"><pre><code class="language-" data-lang="">&gt; Coding.net 为软件开发者提供基于云计算技术的软件开发平台，包括项目管理，代码托管，运行空间和质量控制等等。
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/d735ad0c-2113-48dd-ae5d-2d3b3fca6977.png" alt="在这里输入图片描述"></p>
 
 <p>区块引用可以嵌套，只要根据层次加上不同数量的 &gt; ：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; 这是第一级引用。
+<div class="highlight"><pre><code class="language-" data-lang="">&gt; 这是第一级引用。
 &gt;
 &gt; &gt; 这是第二级引用。
 &gt;
@@ -629,24 +629,24 @@
 <p><img src="https://dn-coding-net-production-pp.qbox.me/db2ce6d5-5dc9-4c92-b226-50174d853eb9.png" alt="在这里输入图片描述"></p>
 
 <p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; ## 这是一个标题。
+<div class="highlight"><pre><code class="language-" data-lang="">&gt; ## 这是一个标题。
 &gt;
 &gt; 1. 这是第一行列表项。
 &gt; 2. 这是第二行列表项。
 &gt;
 &gt; 给出一些例子代码：
 &gt;
-&gt; return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&gt; return shell_exec("echo $input | $markdown_script");
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/58bc73bd-f1ba-4cc1-9d90-24758e099de7.png" alt="在这里输入图片描述"></p>
 
-<h3 id="列表">列表</h3>
+<h3 id=">列表</h3>
 
 <p>列表项目标记通常放在最左边，项目标记后面要接一个字符的空格。
 <strong>无序列表</strong>：使用星号、加号或是减号作为列表标记</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">- Red
+<div class="highlight"><pre><code class="language-" data-lang="">- Red
 - Green
 - Blue
 </code></pre></div>
@@ -655,7 +655,7 @@
 <p><img src="https://dn-coding-net-production-pp.qbox.me/d5772b14-8976-4e9f-945b-4b06d2a6e8f1.png" alt="在这里输入图片描述"></p>
 
 <p>有序列表：使用数字接着一个英文句点</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">1. Red
+<div class="highlight"><pre><code class="language-" data-lang="">1. Red
 2. Green
 3. Blue
 </code></pre></div>
@@ -664,7 +664,7 @@
 <p><img src="https://dn-coding-net-production-pp.qbox.me/d0321f44-c344-43d4-817e-9040735cf5b3.png" alt="在这里输入图片描述"></p>
 
 <p>如果要在列表项目内放进引用，那 &gt; 就需要缩进：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">*  Coding.net有以下主要功能:
+<div class="highlight"><pre><code class="language-" data-lang="">*  Coding.net有以下主要功能:
     &gt; 代码托管平台
     &gt; 在线运行环境    
     &gt; 代码质量监控    
@@ -675,20 +675,20 @@
 <p><img src="https://dn-coding-net-production-pp.qbox.me/21bfcf00-3a71-4b90-9f6e-e692dd3100a2.png" alt="在这里输入图片描述"></p>
 
 <p>代办列表: 表示列表是否勾选状态</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">- [ ] 不勾选
+<div class="highlight"><pre><code class="language-" data-lang="">- [ ] 不勾选
 - [x] 勾选
 </code></pre></div>
 <p><em>效果图如下：</em>
 <img src="https://dn-coding-net-production-pp.qbox.me/6ff6802f-8105-4a6b-b8a4-2abc380c1107.png" alt="图片"> </p>
 
-<h3 id="代码">代码</h3>
+<h3 id=">代码</h3>
 
 <p>只要把你的代码块包裹在 ``` 之间，你就不需要通过无休止的缩进来标记代码块了。
 在围栏式代码块中，你可以指定一个可选的语言标识符，然后我们就可以为它启用语法着色了。
 举个例子，这样可以为一段 Ruby 代码着色：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">```ruby
-require &#39;redcarpet&#39;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
+<div class="highlight"><pre><code class="language-" data-lang="">```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 </code></pre></div>
@@ -696,12 +696,12 @@ puts markdown.to_html
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/64a6b611-e0b9-443d-b7a2-c134613b63f9.png" alt="在这里输入图片描述"></p>
 
-<h3 id="强调">强调</h3>
+<h3 id=">强调</h3>
 
 <p>在Markdown中，可以使用 * 和 _ 来表示斜体和加粗。</p>
 
 <p>斜体：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">*Coding，让开发更简单*
+<div class="highlight"><pre><code class="language-" data-lang="">*Coding，让开发更简单*
 _Coding，让开发更简单_
 </code></pre></div>
 <p><em>效果图如下：</em></p>
@@ -709,33 +709,33 @@ _Coding，让开发更简单_
 <p><img src="https://dn-coding-net-production-pp.qbox.me/0e72e420-fd75-4dc8-8093-66a57e38cd68.png" alt="在这里输入图片描述"></p>
 
 <p>加粗：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">**Coding，让开发更简单**
+<div class="highlight"><pre><code class="language-" data-lang="">**Coding，让开发更简单**
 __Coding，让开发更简单__
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/372a6abf-f801-4a70-9f20-49f9e7db632d.png" alt="在这里输入图片描述"></p>
 
-<h3 id="自动链接">自动链接</h3>
+<h3 id=">自动链接</h3>
 
 <p>方括号显示说明，圆括号内显示网址， Markdown 会自动把它转成链接，例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[超强大的云开发平台Coding](http://coding.net)
+<div class="highlight"><pre><code class="language-" data-lang="">[超强大的云开发平台Coding](http://coding.net)
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/3aeea7b8-a675-4491-adbb-b64b1145ff1a.png" alt="在这里输入图片描述"></p>
 
 <p>或者也可以直接用&lt; &gt;，将网址或者邮箱地址放在中间，也能将地址直接转成链接：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;support@coding.net&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;support@coding.net&gt;
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/c028625a-182b-4f76-8805-245c0e27e389.png" alt="在这里输入图片描述"></p>
 
-<h3 id="表格">表格</h3>
+<h3 id=">表格</h3>
 
 <p>在 Markdown 中，可以制作表格，例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">```
+<div class="highlight"><pre><code class="language-" data-lang="">```
 
 First Header | Second Header | Third Header
 ------------ | ------------- | ------------
@@ -749,7 +749,7 @@ Content Cell | Content Cell  | Content Cell
 <p><img src="https://dn-coding-net-production-pp.qbox.me/9a77d37a-95d4-4ad6-ab09-0d41f766fe34.jpg" alt="在这里输入图片描述"></p>
 
 <p>或者也可以让表格两边内容对齐，中间内容居中，例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">```
+<div class="highlight"><pre><code class="language-" data-lang="">```
 
 First Header | Second Header | Third Header
 :----------- | :-----------: | -----------:
@@ -762,20 +762,20 @@ Left         | Center        | Right
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/0d4014c0-3f54-462a-8a99-4706c62b9e5e.jpg" alt="在这里输入图片描述"></p>
 
-<h3 id="分割线">分割线</h3>
+<h3 id=">分割线</h3>
 
 <p>在 Markdown 中，可以制作分割线，例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-" data-lang="">---
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/aeb88b18-688b-41e9-a4a3-0f970ab3af3e.png" alt="在这里输入图片描述"></p>
 
-<h3 id="上下标">上下标</h3>
+<h3 id=">上下标</h3>
 
 <p>^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。
 例如：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
+<div class="highlight"><pre><code class="language-" data-lang="">x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
 </code></pre></div>
 <p><em>效果图如下：</em></p>
 

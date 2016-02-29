@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/pages/">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
+  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
   <!-- endinject -->
 </head>
 
@@ -589,27 +589,27 @@
 <p>Coding Pages 目前支持 jekyll 2.4.0</p>
 </blockquote>
 
-<h4 id="创建用户-pages">创建用户 Pages</h4>
+<h4 id="pages">创建用户 Pages</h4>
 
 <p>1.在 Coding 上创建一个<strong>与您的用户名（Global Key）相同</strong>的项目。</p>
 
 <p>2.在本地创建一个项目，你可以添加一个 index.html 文件用做测试。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
-   &lt;head&gt;
-     &lt;title&gt;My Coding Pages&lt;/title&gt;
-   &lt;/head&gt;
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+     <span class="nt">&lt;title&gt;</span>My Coding Pages<span class="nt">&lt;/title&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
 
-   &lt;body&gt;
-      &lt;h1&gt;Hello Coding!&lt;/h1&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
+   <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Hello Coding!<span class="nt">&lt;/h1&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 <p>3.将项目文件夹初始化为 Git 版本库，提交 index.html 到版本库，并为项目添加远程仓库地址。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git init
+<div class="highlight"><pre><code class="language-" data-lang="">git init
 
 git add index.html
 
-git commit -m &#39;init&#39;
+git commit -m 'init'
 
 git remote add origin  git@git.coding.net:{user_name}/{project_name}
 </code></pre></div>
@@ -618,16 +618,16 @@ git remote add origin  git@git.coding.net:{user_name}/{project_name}
 </blockquote>
 
 <p>4.在本地创建一个 coding-pages 分支，切换到该分支</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git checkout -b coding-pages
+<div class="highlight"><pre><code class="language-" data-lang="">git checkout -b coding-pages
 </code></pre></div>
 <p>5.将 coding-pages 分支推送到 Coding.net</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git push origin coding-pages
+<div class="highlight"><pre><code class="language-" data-lang="">git push origin coding-pages
 </code></pre></div>
 <blockquote>
 <p>如果您需要创建非 jekyll 的静态页面演示，可以在 coding-pages 分支里加入一个 .nojekyll 文件。</p>
 </blockquote>
 
-<h4 id="开启-pages-演示">开启 Pages 演示</h4>
+<h4 id="pages">开启 Pages 演示</h4>
 
 <p>进入私有项目页面，点击左侧栏的 <code>代码</code> 面板 ，选择 <code>Pages 服务</code> 一项可以看到部署 Pages 的设置。（公开项目点击 Pages 选项卡即可）</p>
 
@@ -637,11 +637,11 @@ git remote add origin  git@git.coding.net:{user_name}/{project_name}
 <p>如果您的部署未成功（页面显示 <code>404 page not found</code>），建议您先在本地或 <a href="https://ide.coding.net">WebIDE</a> 测试部署。</p>
 </blockquote>
 
-<h4 id="绑定自定义域名">绑定自定义域名</h4>
+<h4 id=">绑定自定义域名</h4>
 
 <p>Coding Pages 支持绑定自定义域名。<strong>在您开启 Pages 演示后</strong>，在部署页面输入您欲绑定的域名，点击「添加域名绑定」；之后按照页面提示，在您的域名管理面板中添加 CNAME 记录指向到 <code>{user_name}.coding.me</code> 即可；如果您使用的域名服务提供商不支持添加 CNAME 记录，建议更换到其他支持该功能的域名提供商。</p>
 
-<h4 id="创建项目-pages">创建项目 Pages</h4>
+<h4 id="pages">创建项目 Pages</h4>
 
 <p>您也可以为自己的项目生成一个官网或博客。</p>
 

@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/git/git.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
+  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
   <!-- endinject -->
 </head>
 
@@ -581,12 +581,12 @@
 </script>
                                 <hr>
 
-<h2 id="如何提交代码到-coding-上？">如何提交代码到 Coding 上？</h2>
+<h2 id="coding">如何提交代码到 Coding 上？</h2>
 
 <p>可以查看 Coding 的 <a href="/help/doc/git/index.html">Git 代码托管文档</a>
 可以参照网上的相关Git教程 如 <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的 Git 教程</a></p>
 
-<h2 id="每次-push-的时候如何不用输入密码？">每次 Push 的时候如何不用输入密码？</h2>
+<h2 id="push">每次 Push 的时候如何不用输入密码？</h2>
 
 <p>可以有2个办法：</p>
 
@@ -605,25 +605,25 @@ credential.helper = store</p></li>
 </ol></li>
 </ul>
 
-<h2 id="我的-git-是1-7版本为什么无法提交代码？">我的 Git 是1.7版本为什么无法提交代码？</h2>
+<h2 id="git-1-7">我的 Git 是1.7版本为什么无法提交代码？</h2>
 
 <p>由于 git版本过低，最好升级到1.9 以上</p>
 
-<h2 id="如何设置分支的提交权限，让部分人可以提交？">如何设置分支的提交权限，让部分人可以提交？</h2>
+<h2 id=">如何设置分支的提交权限，让部分人可以提交？</h2>
 
 <p>你可以用保护分支功能来划分不同成员对不同分支的操作权限, 参见<a href="/help/doc/git/git-branch.html">分支管理</a> 的保护分支章节</p>
 
-<h2 id="coding-的代码管理支持图形化工具吗？">Coding 的代码管理支持图形化工具吗？</h2>
+<h2 id="coding">Coding 的代码管理支持图形化工具吗？</h2>
 
 <p>支持，我们推荐使用 SourceTree， 具体参见<a href="/help/doc/git/getting-started.html">开始使用 Git</a>的安装章节。</p>
 
-<h2 id="出现-39-coding-net-tips-internal-server-error-39-怎么会事？">出现 &#39;Coding.net Tips : [Internal server error]&#39; 怎么会事？</h2>
+<h2 id="39-coding-net-tips-internal-server-error-39">出现 &#39;Coding.net Tips : [Internal server error]&#39; 怎么会事？</h2>
 
 <p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 </p>
 
 <p>您可以通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
 
-<h2 id="push-一直提示permission-denied-publickey">Push 一直提示Permission denied (publickey) ?</h2>
+<h2 id="push-permission-denied-publickey">Push 一直提示Permission denied (publickey) ?</h2>
 
 <p>这个可能是由于你的没有目标仓库和分支的权限，导致无法更新数据。</p>
 
@@ -632,49 +632,49 @@ credential.helper = store</p></li>
 <li>对目标分支是否有写权限。</li>
 </ul>
 
-<h2 id="代码-push-不了，报-ssl-abort，ssl-protocol-error，或者-connection-timeout-怎么办？">代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？</h2>
+<h2 id="push-ssl-abort-ssl-protocol-error-connection-timeout">代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？</h2>
 
 <p>我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：</p>
 
 <blockquote>
 <p>注意： Windows 用户需要在 git bash 下运行</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-text" data-lang="text">#!/bin/bash
-# this script will collect some logs for Coding.net 
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<span class="c"># this script will collect some logs for Coding.net </span>
 
-### how to use ###
-# first enter your git reposiztory 
-# then execute this bash, please make sure you have correct rights 
+<span class="c">### how to use ###</span>
+<span class="c"># first enter your git reposiztory </span>
+<span class="c"># then execute this bash, please make sure you have correct rights </span>
 
-echo &quot;## git version  ##################&quot; &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## git version  ##################"</span> &gt;&gt; git.log
 git version  &gt;&gt; git.log
-echo &quot;## ping ##########################&quot; &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## ping ##########################"</span> &gt;&gt; git.log
 ping -c 5 git.coding.net  &gt;&gt; git.log
-echo &quot;## curl git.coding.net ###########&quot; &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## curl git.coding.net ###########"</span> &gt;&gt; git.log
 curl -v https://git.coding.net &gt;&gt; git.log 2&gt;&amp;1
-echo &quot;## curl git-upload-pack  ##############&quot; &gt;&gt; git.log
-curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service=git-upload-pack  &gt;&gt; git.log 2&gt;&amp;1
-echo &quot;## ssh -vT git.coding.net ##############&quot; &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## curl git-upload-pack  ##############"</span> &gt;&gt; git.log
+curl -v https://git.coding.net/wzw/test-for-1.git/info/refs?service<span class="o">=</span>git-upload-pack  &gt;&gt; git.log 2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## ssh -vT git.coding.net ##############"</span> &gt;&gt; git.log
 ssh -vT git@git.coding.net &gt;&gt; git.log 2&gt;&amp;1
-echo &quot;## ssh -vT git-upload-pack ##############&quot; &gt;&gt; git.log
+<span class="nb">echo</span> <span class="s2">"## ssh -vT git-upload-pack ##############"</span> &gt;&gt; git.log
 ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&gt;&amp;1
-echo &quot;## git pull  ##############&quot; &gt;&gt; git.log
-GIT_CURL_VERBOSE=1 GIT_TRACE=1 GIT_TRACE_PACKET=1 git pull  &gt;&gt; git.log  2&gt;&amp;1
+<span class="nb">echo</span> <span class="s2">"## git pull  ##############"</span> &gt;&gt; git.log
+<span class="nv">GIT_CURL_VERBOSE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE_PACKET</span><span class="o">=</span>1 git pull  &gt;&gt; git.log  2&gt;&amp;1
 </code></pre></div>
 <p>同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">1. 您的上网IP
+<div class="highlight"><pre><code class="language-" data-lang="">1. 您的上网IP
 2. 您的 ping git.coding.net 的截图
 3. 您的DNS设置
 4. 修改您的 DNS 修改到 115.231.16.157 
 5. 再次 ping git.coding.net 的截图
 </code></pre></div>
-<h2 id="如何在-coding-上回退代码版本？">如何在 Coding 上回退代码版本？</h2>
+<h2 id="coding">如何在 Coding 上回退代码版本？</h2>
 
 <p>Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界面。需要使用 git 操作回退，然后更新到 Coding 服务器上
 具体的操作可以使用 git revert 或者  git reset </p>
 
-<h2 id="如何设-ssh-key？怎么设置了之后还是要输入密码？">如何设 SSH Key？怎么设置了之后还是要输入密码？</h2>
+<h2 id="ssh-key">如何设 SSH Key？怎么设置了之后还是要输入密码？</h2>
 
 <p>设置 SSH Key 的方式参见<a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></p>
 

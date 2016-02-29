@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/git-branch.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
+  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
   <!-- endinject -->
 </head>
 
@@ -582,18 +582,18 @@
                                 <p>本章我们会介绍使 Git 与其它版本控制系统区别开来的最关键特点 ———— Git 的分支。它被称为 Git 的“必杀技”。
 以及如何使用和管理分支。</p>
 
-<h3 id="什么是分支">什么是分支</h3>
+<h3 id=">什么是分支</h3>
 
 <p>分支一方面类似科幻电影里面经常出现的平行宇宙，每个分支的代码版本都是独立演进的，分支之间的代码版本完全不会干扰另外一个代码版本的开发。但是，与平行宇宙不同的一点是，分支之间还能合并。</p>
 
 <p>Git 的分支相比 SVN 要轻量很多，这是因为 Git 分支并不是复制一个新仓库，而是为一个分支存储一个指针，这个指针将指向某个提交对象。没错，这就和数据结构中常见的指针链表一样。所以 Git 的分支只是指针，并没有将仓库进行复制，每次提交都会让当前的分支向后移动，指向最后一次提交的对象。当你在切换分支时，Git 也只是改变指向当前所在分支的特殊指针 HEAD，所以可以快速地在各个分支之间进行切换。</p>
 
-<h3 id="分支的功能">分支的功能</h3>
+<h3 id=">分支的功能</h3>
 
 <p>分支在实际中可以方便的隔离开发。
 假设你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。</p>
 
-<h3 id="创建一个分支">创建一个分支</h3>
+<h3 id=">创建一个分支</h3>
 
 <p><strong>在 Coding.net 上创建分支</strong></p>
 
@@ -606,17 +606,17 @@
 <p><strong>在命令行创建本地分支</strong></p>
 
 <p>也可以在命令行用 <code>git branch</code>  新建一个分支，回到上一章中提到的 learn-git 项目，我们在本地运行以下命令：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $ git branch learn-branch
+<div class="highlight"><pre><code class="language-" data-lang=""> $ git branch learn-branch
 </code></pre></div>
 <p>这条命令将会在本地仓库创建一个名为 &quot;learn-branch&quot; 的分支，这条分支指向最近一次提交的数据。要注意的是，运行该命令后，当前工作分支仍然是在 &quot;master&quot; 分支上，需要使用 <code>git checkout</code> 命令来进行分支之间的切换。</p>
 
-<h3 id="切换分支">切换分支</h3>
+<h3 id=">切换分支</h3>
 
 <p><strong>本地分支切换</strong></p>
 
 <p>之前我们已经在本地创建好了分支，接下来切换到 &quot;learn-branch&quot; 分支：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ git checkout learn-branch
-Switched to branch &#39;learn-branch&#39;
+<div class="highlight"><pre><code class="language-" data-lang="">$ git checkout learn-branch
+Switched to branch 'learn-branch'
 </code></pre></div>
 <p><code>git checkout</code> 下面这句话告诉我们，我们已经成功地将工作分支切换到了 &quot;learn-branch&quot; 分支。</p>
 
@@ -630,27 +630,27 @@ Switched to branch &#39;learn-branch&#39;
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/0402da8a-22f4-40d4-87b2-ead3db740f97.png" alt="图片"> </p>
 
-<h3 id="合并分支">合并分支</h3>
+<h3 id=">合并分支</h3>
 
 <p>接下来我们将描述本地两种常见情形下的合并分支操作。本地的分支合并都是在命令行解决的。</p>
 
-<h4 id="快进式合并">快进式合并</h4>
+<h4 id=">快进式合并</h4>
 
 <p>快进式合并分支，也叫Fast Foreword。 我们在 &quot;learn-branch&quot; 分支上进行一些操作，创建一个新的 txt 文件 &quot;learn-branch.txt&quot;，接着在其中输入一行 &quot;I am studying git branch&quot;:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $touch learn-branch.txt
+<div class="highlight"><pre><code class="language-" data-lang=""> $touch learn-branch.txt
  $echo I am studying git branch &gt; learn-branch.txt
 </code></pre></div>
 <p>接下来我们将 &quot;learn-branch.txt&quot; 加入到跟踪文件，并提交到本地仓库：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $git add learn-branch.txt
- $git commit -m &quot;add learn-branch.txt&quot;
+<div class="highlight"><pre><code class="language-" data-lang=""> $git add learn-branch.txt
+ $git commit -m "add learn-branch.txt"
  [learn-branch fce6c4e] add learn-branch.txt
   1 files changed, 1 insertions(+)
   create mode 100644 learn-branch.txt   
 </code></pre></div>
 <p>接下来我们回到 &quot;master&quot; 分支，并将 &quot;learn-branch&quot; 分支合并进来：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $ git checkout master
- Switched to branch &#39;master&#39;
- Your branch is up-to-date with &#39;origin/master&#39;.
+<div class="highlight"><pre><code class="language-" data-lang=""> $ git checkout master
+ Switched to branch 'master'
+ Your branch is up-to-date with 'origin/master'.
 
  $ git merge learn-branch
  Updating ca62ea0..fce6c4e
@@ -662,33 +662,33 @@ Switched to branch &#39;learn-branch&#39;
 <p><code>git merge [分支名]</code> 命令将指定分支合并到当前工作分支中。请注意，合并时出现了 &quot;Fast forward&quot; 的提示。由于当前 &quot;master&quot; 分支所在的提交对象是要并入的 learn-branch 分支的直接上游，Git 只需把 master 分支指针直接右移。换句话说，如果顺着一个分支走下去可以到达另一个分支的话，那么 Git 在合并两者时，只会简单地把指针右移，因为这种单线的历史分支不存在任何需要解决的分歧，所以这种合并过程可以称为快进（Fast forward）。</p>
 
 <p>合并之后，&quot;master&quot; 分支和 &quot;learn-branch&quot; 分支实际上是指向同一个位置。此时你可以通过 </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $git branch -d [分支名]
+<div class="highlight"><pre><code class="language-" data-lang=""> $git branch -d [分支名]
 </code></pre></div>
 <p>来删除某个分支。</p>
 
-<h4 id="普通分支合并">普通分支合并</h4>
+<h4 id=">普通分支合并</h4>
 
 <p>分支合并之前，最好使用 git pull 将 &quot;master&quot; 分支的代码更新到最新：</p>
 
 <p>如果我们在合并之前对 &quot;master&quot; 分支和 &quot;learn-branch&quot; 分支都做了一些修改，那合并时就不会像快进合并那么简单了。</p>
 
 <p>我们首先在 &quot;master&quot; 分支中做一些修改，比如将 &quot;lear-branch.txt&quot; 的内容进行修改：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $echo I am on master branch &gt; lear-branch.txt
- $git commit -m &quot;alpha&quot;
+<div class="highlight"><pre><code class="language-" data-lang=""> $echo I am on master branch &gt; lear-branch.txt
+ $git commit -m "alpha"
  [master a72cad8] alpha
   1 files changed, 1 insertions(+), 1 deletion(-)
 </code></pre></div>
 <p>接下来，我们进入到 &quot;learn-branch&quot; 分支，也对 &quot;learn-branch.txt&quot; 进行一些修改：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $git checkout learn-branch
- Swtiched to branch &#39;learn-branch&#39;
+<div class="highlight"><pre><code class="language-" data-lang=""> $git checkout learn-branch
+ Swtiched to branch 'learn-branch'
  $echo I am on learn-branch branch &gt; lear-branch.txt
- $git commit -m &quot;beta&quot;
+ $git commit -m "beta"
  [learn-branch 27a4a6e] beta
   1 files changed, 1 insertions(+), 1 deletion(-)
 </code></pre></div>
 <p>我们回到 &quot;master&quot; 分支再尝试合并分支：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $git checkout master
- Swtiched to branch &#39;master&#39; 
+<div class="highlight"><pre><code class="language-" data-lang=""> $git checkout master
+ Swtiched to branch 'master' 
  $git merge learn-branch
  Auto-merging learn-branch.txt
  CONFLICT (content): Merge conflict in learn-branch.txt
@@ -697,41 +697,41 @@ Switched to branch &#39;learn-branch&#39;
 <p>通常来说，当工作分支所指向的提交对象并不是需合并分支的直接祖先，Git 不得不进行一些额外处理。Git 会根据分支的内容自动创建了一个包含了合并结果的提交对象，这个新的提交对象会包涵两次提交的内容。但是我们在两个分支中操作了同一个文件的同一个部分，这就需要我们手动来解决冲突了。</p>
 
 <p>现在运行 <code>git status</code> 命令，我们会看到在哪里出现了冲突：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $ git status
+<div class="highlight"><pre><code class="language-" data-lang=""> $ git status
  On branch master
  You have unmerged paths.
-   (fix conflicts and run &quot;git commit&quot;)
+   (fix conflicts and run "git commit")
 
  Unmerged paths:
-   (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+   (use "git add &lt;file&gt;..." to mark resolution)
 
          both modified:      learn-branch.txt
 
- no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+ no changes added to commit (use "git add" and/or "git commit -a")
 </code></pre></div>
 <p>现在我们打开 learn-branch.txt，会发现 Git 加入了冲突解决标记：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<div class="highlight"><pre><code class="language-" data-lang=""> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  I am on master branch 
  =======
  I am on learn-branch branch 
  &gt;&gt;&gt;&gt;&gt;&gt;&gt; learn-branch
 </code></pre></div>
 <p>可以看到 ======= 隔开的上半部分，是 HEAD（即 master 分支，在运行 merge 命令时的工作分支）中的内容，下半部分是在 learn-branch 分支中的内容。解决冲突的办法无非是二者选其一或者人工亲自整合到一起。把上述内容修改为这样：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> I am on master branch 
+<div class="highlight"><pre><code class="language-" data-lang=""> I am on master branch 
 </code></pre></div>
 <p>接下来运行 <code>git add</code> 来告诉 Git 冲突已经解决，并运行 <code>git commit</code> 来完成合并：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $git add learn-branch.txt
- $git commit -m &quot;conflict resolved&quot;
+<div class="highlight"><pre><code class="language-" data-lang=""> $git add learn-branch.txt
+ $git commit -m "conflict resolved"
  [master cadd265] conflict resloved
 </code></pre></div>
 <p>这样的合并冲突在快进合并中不可能发生。</p>
 
-<h4 id="分支推送到仓库">分支推送到仓库</h4>
+<h4 id=">分支推送到仓库</h4>
 
 <p>当你想和其他人分享某个本地分支时，你需要把它推送到一个你拥有写权限的远程仓库。你创建的本地分支不会因为你的写入操作而被自动同步到你引入的远程服务器上，你需要明确地执行推送分支的操作。换句话说，对于无意分享的分支，你尽管保留为私人分支好了，而只推送那些协同工作要用到的特性分支。</p>
 
 <p>我们可以使用 <code>git push [仓库名] [分支名]</code> 将之前在本地创建的 &quot;learn-branch&quot; 分支推送到 部署在 Coding.net 的 &quot;learn-git&quot; 项目中：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> $ git push origin serverfix
+<div class="highlight"><pre><code class="language-" data-lang=""> $ git push origin serverfix
  Counting objects: 7, done.
  Delta compression using up to 2 threads.
  Compressing objects: 100% (2/2), done.
@@ -742,10 +742,10 @@ Switched to branch &#39;learn-branch&#39;
 </code></pre></div>
 <p>现在查看 &quot;learn-git&quot; 仓库，你就会发现除了 &quot;master&quot; 分支外，还增加了一个 &quot;learn-branch&quot; 分支。</p>
 
-<h4 id="合并请求">合并请求</h4>
+<h4 id=">合并请求</h4>
 
 <p>Coding 推荐使用合并请求，在线将2个分支合并。合并请求分为</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">-  MergeRequest  针对私有项目 
+<div class="highlight"><pre><code class="language-" data-lang="">-  MergeRequest  针对私有项目 
 -  PullRequest  针对公开项目
 </code></pre></div>
 <p><strong>私有项目</strong></p>
@@ -762,7 +762,7 @@ Switched to branch &#39;learn-branch&#39;
 
 <p>在 MR 页面里面，MR 的提交者可以取消 MR ，MR 目标分支的管理者（对该分支有写权限的项目成员），可以选择合并或者拒绝。MR 支持 Markdown 语法评论。</p>
 
-<h3 id="标志引用资源"># 标志引用资源</h3>
+<h3 id="># 标志引用资源</h3>
 
 <p>每个任务，讨论，MR 也有一个独特的引用 ID， 并通过 #ID 被引用到项目内其它地方。
 项目内支持 Markdown 编辑器的地方都支持“#”自动提示(任务描述、讨论、合并请求描述等)，并引用相应资源。</p>
@@ -799,16 +799,12 @@ Switched to branch &#39;learn-branch&#39;
 
 <p>点击提交，即可以创建一个合并请求( PR ) ，系统会自动判断出该 PR 的是否可以合并状态。 </p>
 
-<h4 id="代码行级比对">代码行级比对</h4>
+<h4 id=">代码行级比对</h4>
 
 <p>代码行级比对( Line Notes ) 是 Coding 开发的可以针对代码的 diff 进行行级别的评论功能，支持 Markdown 语法，可以方便的用来进行 Code Review。
-你可以在代码 commit 页面，和合并请求( MR /PR ) 页面使用该功能。如下图：</p>
+你可以在代码 commit 页面，和合并请求( MR /PR ) 页面使用该功能。</p>
 
-<blockquote>
-<p>此处放上之前 Line Notes 上线推广时录制的 Gif。</p>
-</blockquote>
-
-<h3 id="保护分支">保护分支</h3>
+<h3 id=">保护分支</h3>
 
 <p>保护分支是 Coding 针对 Git 中有关代码权限开发的一个功能，阅读之前，我假设您已经知道分支的基本概念和用法。简而言之，保护分支就是将特定的分支保护起来，以防止被破坏。</p>
 
@@ -825,6 +821,10 @@ Switched to branch &#39;learn-branch&#39;
 
 <p><img src="https://dn-coding-net-production-pp.qbox.me/bf94efb5-a604-4bf5-9e8a-fd9837fbef64.png" alt="图片"> 
 所以，当你看到这个错误提示的时候，就知道是因为没有该保护分支权限而导致 push 失败了。</p>
+
+<p>当对 Git 仓库某分支开启禁止 Force Push 的选项后，服务器会对推送至这个分支的更新做 “快进模式检查”（FastForwarded Update Check），如果不是以 “快进模式”（FastForwarded）更新，则会被服务器拒绝更新，以防误操作导致丢失代码历史，会在命令行提示如下错误：</p>
+
+<p><img src="https://dn-coding-net-production-pp.qbox.me/29f7366d-a114-456c-84e7-b9b21b23dcc8.png" alt=""></p>
 
 <hr>
 

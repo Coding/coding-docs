@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?kzhvnbyq">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/paas/language.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?31gr61v9"></script>
+  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
   <!-- endinject -->
 </head>
 
@@ -581,55 +581,55 @@
 </script>
                                 <hr>
 
-<h2 id="演示平台部署支持什么语言和框架？">演示平台部署支持什么语言和框架？</h2>
+<h2 id=">演示平台部署支持什么语言和框架？</h2>
 
 <p>演示平台支持主流的语言和框架，具体查看<a href="http://docs.coding.io/">演示部署文档</a></p>
 
-<h2 id="java-项目用到了非-maven-中央库里的-jar-包？">Java 项目用到了非 Maven 中央库里的 jar 包？</h2>
+<h2 id="java-maven-jar">Java 项目用到了非 Maven 中央库里的 jar 包？</h2>
 
 <p>如果你使用第三方的 maven 源，可以通过自定义 maven 配置文件来让系统使用你的自定义源，具体方法参考 Java 语言支持 的 自定义 章节。</p>
 
-<h2 id="java-项目打印出的日志乱码？">Java 项目打印出的日志乱码？</h2>
+<h2 id="java">Java 项目打印出的日志乱码？</h2>
 
 <p>请在 pom.xml 配置文件里设置源文件的编码为 UTF-8，配置方法：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;project&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;project&gt;
     &lt;properties&gt;
         &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
     &lt;/properties&gt;
 &lt;/project&gt;
 </code></pre></div>
-<h2 id="java-tomcat-是否支持设置-uriencoding-选项？">Java Tomcat 是否支持设置 URIEncoding 选项？</h2>
+<h2 id="java-tomcat-uriencoding">Java Tomcat 是否支持设置 URIEncoding 选项？</h2>
 
 <p>不支持，URIEncoding 设置不能解决所有乱码问题，我们推荐用户自己通过编码解决编码问题，而不是依赖 Tomcat 的配置， 因为万一以后不使用 Tomcat 而换为其它没有这个配置选项的 Servlet 容器，还是会出现编码问题。解决方法可以参考 Tomcat 编码问题官方 FAQ，我们也给出了一个手工处理编码问题的 代码示例。</p>
 
-<h2 id="支持部署非-maven-的-java-项目吗？">支持部署非 maven 的 Java 项目吗？</h2>
+<h2 id="maven-java">支持部署非 maven 的 Java 项目吗？</h2>
 
 <p>不支持，Java 语言目前只支持部署 maven 项目，我们不推荐把依赖的 jar 包放到版本控制里，请使用 maven 管理， maven 依赖会在部署时自动下载，详情参考 <a href="http://docs.coding.io/languages/java/">Java 语言支持</a>。</p>
 
-<h2 id="php-演示是否支持伪静态-url-rewrite">PHP 演示是否支持伪静态(url rewrite)?</h2>
+<h2 id="php-url-rewrite">PHP 演示是否支持伪静态(url rewrite)?</h2>
 
 <p>支持，具体配置方法请参考 <a href="http://docs.coding.io/languages/php/">PHP 语言支持</a> 的 Web 服务器 章节。</p>
 
-<h2 id="php-的某个内置扩展无法使用？">PHP 的某个内置扩展无法使用？</h2>
+<h2 id="php">PHP 的某个内置扩展无法使用？</h2>
 
 <p>部分 PHP 的内置扩展没有开启，需要用户手工配置 composer.json 来开启，详情参考 <a href="http://docs.coding.io/languages/php/">PHP 语言支持</a> 的 扩展 章节。</p>
 
-<h2 id="低版本-php-5-5以下-支持？">低版本 PHP (5.5以下)支持？</h2>
+<h2 id="php-5-5">低版本 PHP (5.5以下)支持？</h2>
 
 <p>我们只支持 5.5/5.6 版本的 PHP，如果需要使用更低的版本，可以通过自定义 buildpack 来实现，参考：</p>
 
 <p><a href="https://github.com/CHH/heroku-buildpack-php">https://github.com/CHH/heroku-buildpack-php</a>
 <a href="https://github.com/iphoting/heroku-buildpack-php-tyler">https://github.com/iphoting/heroku-buildpack-php-tyler</a></p>
 
-<h2 id="node-js-如何执行-grunt-bower-npm-命令？">Node.js 如何执行 grunt/bower/npm 命令？</h2>
+<h2 id="node-js-grunt-bower-npm">Node.js 如何执行 grunt/bower/npm 命令？</h2>
 
 <p>如果你需要在部署的时候执行一些额外的构建命令，可以在 package.json 中指定，具体方法参考 <a href="http://docs.coding.io/languages/nodejs/">Node.js 语言支持</a>) 的 自定义构建 章节。</p>
 
-<h2 id="asp-net-语言支持？">ASP.NET 语言支持？</h2>
+<h2 id="asp-net">ASP.NET 语言支持？</h2>
 
 <p>我们官方不提供 asp.net 的支持，但是用户可以通过自定义 <a href="http://docs.coding.io/references/buildpack/">buildpack</a> 来实现支持（目前不是很完美）， 参考这两个社区 buildpack：<a href="https://github.com/cloudfoundry-community/.net-buildpack">.net-buildpack</a> 和 <a href="https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr">cloudfoundry-buildpack-clr</a>。</p>
 
-<h2 id="支持演示非-web-项目吗？">支持演示非 web 项目吗？</h2>
+<h2 id="web">支持演示非 web 项目吗？</h2>
 
 <p>官方不提供非 web 项目支持，但可以通过自定义 buildpack 实现，有兴趣的用户可以自己参考 CF 和 heroku 的 buildpack 文档来研究。</p>
 
