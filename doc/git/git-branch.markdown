@@ -274,6 +274,10 @@ fork 后会在你的项目空间生成一个对应的项目，然后修改 fork 
  ![图片](https://dn-coding-net-production-pp.qbox.me/bf94efb5-a604-4bf5-9e8a-fd9837fbef64.png) 
 所以，当你看到这个错误提示的时候，就知道是因为没有该保护分支权限而导致 push 失败了。
 
+当对 Git 仓库某分支开启禁止 Force Push 的选项后，服务器会对推送至这个分支的更新做 “快进模式检查”（FastForwarded Update Check），如果不是以 “快进模式”（FastForwarded）更新，则会被服务器拒绝更新，以防误操作导致丢失代码历史，会在命令行提示如下错误：
+
+![](https://dn-coding-net-production-pp.qbox.me/29f7366d-a114-456c-84e7-b9b21b23dcc8.png)
+
 ---
 
 
