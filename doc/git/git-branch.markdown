@@ -103,6 +103,12 @@ Coding.net 提供在线的分支切换，在项目代码页，master 标签下�
 
 来删除某个分支。
 
+#### FastForward 模式合并 MR/PR
+
+MR 和 PR 在合并的时候默认会产生一个合并提交，但是如果在合并的时候勾选了“Fast-Forward 模式合并”，服务器会在合并的时候判断该 MR 或者 PR 是否符合“快进模式”合并，如果符合则会按照“快进模式”合并，不产生合并提交，如果是不符合“快进模式”合并的情况，则忽略该选项，依然以产生合并提交的方式合并。这个选项相当于 git merge 的 `--ff` 参数。
+
+![](https://dn-coding-net-production-pp.qbox.me/8a4f7147-05a0-46be-a911-6383e155df08.png?imageView2/2/w/800/h/800&imageMogr2/format/png)
+
 #### 普通分支合并
 
 分支合并之前，最好使用 git pull 将 "master" 分支的代码更新到最新：
