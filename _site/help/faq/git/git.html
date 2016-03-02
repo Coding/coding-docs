@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/git/git.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -579,67 +579,70 @@
         });
     });
 </script>
-                                <hr>
+                                <hr />
 
-<h2 id="coding">如何提交代码到 Coding 上？</h2>
+<h2 id="coding-">如何提交代码到 Coding 上？</h2>
 
 <p>可以查看 Coding 的 <a href="/help/doc/git/index.html">Git 代码托管文档</a>
 可以参照网上的相关Git教程 如 <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的 Git 教程</a></p>
 
-<h2 id="push">每次 Push 的时候如何不用输入密码？</h2>
+<h2 id="push-">每次 Push 的时候如何不用输入密码？</h2>
 
 <p>可以有2个办法：</p>
 
 <ul>
-<li><p>针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置</a></p></li>
-<li><p>对于 Https 协议</p>
-
-<ol>
-<li>首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net </li>
-<li><p>然后配置 Git 命令存储认证， </p>
-
-<p>$git config --global credential.helper store </p>
-
-<p>~/.gitconfig 文件多出下面配置项:
-credential.helper = store</p></li>
-</ol></li>
+  <li>
+    <p>针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置</a></p>
+  </li>
+  <li>
+    <p>对于 Https 协议</p>
+    <ol>
+      <li>首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net</li>
+      <li>然后配置 Git 命令存储认证，</li>
+    </ol>
+  </li>
 </ul>
 
-<h2 id="git-1-7">我的 Git 是1.7版本为什么无法提交代码？</h2>
+ 		$git config –global credential.helper store 
+
+<div class="highlighter-rouge"><pre class="highlight"><code>	~/.gitconfig 文件多出下面配置项:
+	credential.helper = store
+</code></pre>
+</div>
+
+<h2 id="git-17">我的 Git 是1.7版本为什么无法提交代码？</h2>
 
 <p>由于 git版本过低，最好升级到1.9 以上</p>
 
-<h2 id=">如何设置分支的提交权限，让部分人可以提交？</h2>
+<h2 id="section">如何设置分支的提交权限，让部分人可以提交？</h2>
 
 <p>你可以用保护分支功能来划分不同成员对不同分支的操作权限, 参见<a href="/help/doc/git/git-branch.html">分支管理</a> 的保护分支章节</p>
 
-<h2 id="coding">Coding 的代码管理支持图形化工具吗？</h2>
+<h2 id="coding--1">Coding 的代码管理支持图形化工具吗？</h2>
 
 <p>支持，我们推荐使用 SourceTree， 具体参见<a href="/help/doc/git/getting-started.html">开始使用 Git</a>的安装章节。</p>
 
-<h2 id="39-coding-net-tips-internal-server-error-39">出现 &#39;Coding.net Tips : [Internal server error]&#39; 怎么会事？</h2>
+<h2 id="codingnet-tips--internal-server-error-">出现 ‘Coding.net Tips : [Internal server error]’ 怎么会事？</h2>
 
-<p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 </p>
+<p>出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。</p>
 
 <p>您可以通过<a href="https://coding.net/u/coding/p/Coding-Feedback/topic">反馈</a>，提交你的项目的url地址 供研发人员排错。</p>
 
-<h2 id="push-permission-denied-publickey">Push 一直提示Permission denied (publickey) ?</h2>
+<h2 id="push-permission-denied-publickey-">Push 一直提示Permission denied (publickey) ?</h2>
 
 <p>这个可能是由于你的没有目标仓库和分支的权限，导致无法更新数据。</p>
 
 <ul>
-<li>检查你的push 方式，通过 SSH 还是 HTTPS ，如果是 SSH 请检查你的 SSH公钥是否正确。 HTTPS 的方式请检查你的密码是否正确</li>
-<li>对目标分支是否有写权限。</li>
+  <li>检查你的push 方式，通过 SSH 还是 HTTPS ，如果是 SSH 请检查你的 SSH公钥是否正确。 HTTPS 的方式请检查你的密码是否正确</li>
+  <li>对目标分支是否有写权限。</li>
 </ul>
 
-<h2 id="push-ssl-abort-ssl-protocol-error-connection-timeout">代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？</h2>
+<h2 id="push--ssl-abortssl-protocol-error-connection-timeout-">代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？</h2>
 
-<p>我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：</p>
+<p>我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：
+&gt; 注意： Windows 用户需要在 git bash 下运行</p>
 
-<blockquote>
-<p>注意： Windows 用户需要在 git bash 下运行</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 <span class="c"># this script will collect some logs for Coding.net </span>
 
 <span class="c">### how to use ###</span>
@@ -660,29 +663,32 @@ ssh -vT git@git.coding.net &gt;&gt; git.log 2&gt;&amp;1
 ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&gt;&amp;1
 <span class="nb">echo</span> <span class="s2">"## git pull  ##############"</span> &gt;&gt; git.log
 <span class="nv">GIT_CURL_VERBOSE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE</span><span class="o">=</span>1 <span class="nv">GIT_TRACE_PACKET</span><span class="o">=</span>1 git pull  &gt;&gt; git.log  2&gt;&amp;1
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
 麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">1. 您的上网IP
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. 您的上网IP
 2. 您的 ping git.coding.net 的截图
 3. 您的DNS设置
 4. 修改您的 DNS 修改到 115.231.16.157 
 5. 再次 ping git.coding.net 的截图
-</code></pre></div>
-<h2 id="coding">如何在 Coding 上回退代码版本？</h2>
+</code></pre>
+</div>
+
+<h2 id="coding--2">如何在 Coding 上回退代码版本？</h2>
 
 <p>Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界面。需要使用 git 操作回退，然后更新到 Coding 服务器上
-具体的操作可以使用 git revert 或者  git reset </p>
+具体的操作可以使用 git revert 或者  git reset</p>
 
 <h2 id="ssh-key">如何设 SSH Key？怎么设置了之后还是要输入密码？</h2>
 
 <p>设置 SSH Key 的方式参见<a href="/help/doc/git/ssh-key.html">SSH公钥配置</a></p>
 
-<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码</p>
+<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
+&gt; 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
 
-<blockquote>
-<p>注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
-</blockquote>
 
                             </article>
                         </div>

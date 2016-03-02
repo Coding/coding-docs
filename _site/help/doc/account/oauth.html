@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/account/oauth.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -581,75 +581,78 @@
 </script>
                                 <p>本章节主要介绍如何使用应用管理来管理你的第三方应用和使用 Coding 的 OpenAPI：</p>
 
-<h3 id=">第三方应用注册</h3>
+<h3 id="section">第三方应用注册</h3>
 
 <p>在账户 -&gt; 应用管理页面添加应用，注册要接入 Coding 的应用。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/44b91ec2-f6b4-4520-b9f4-206eaf6c5507.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/44b91ec2-f6b4-4520-b9f4-206eaf6c5507.png" alt="图片" /></p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/8868a88a-e38d-48a6-93bb-edbd8d995194.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/8868a88a-e38d-48a6-93bb-edbd8d995194.png" alt="图片" /></p>
 
-<p>其中&quot;回调地址&quot;是用户授权后，Coding 回调到应用，并且回传&quot;授权码&quot;的地址。
+<p>其中”回调地址”是用户授权后，Coding 回调到应用，并且回传”授权码”的地址。
 保存后，会返回到应用列表。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/400ebd43-f10f-4819-81b3-c890ff2562f4.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/400ebd43-f10f-4819-81b3-c890ff2562f4.png" alt="图片" /></p>
 
-<p>此时再查看应用，会生成 <code>client id</code> 和 <code>client secret</code>。</p>
+<p>此时再查看应用，会生成 <code class="highlighter-rouge">client id</code> 和 <code class="highlighter-rouge">client secret</code>。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/c6e5054f-01bb-489d-8f84-a9f0400ce8ee.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/c6e5054f-01bb-489d-8f84-a9f0400ce8ee.png" alt="图片" /></p>
 
-<p>保存 <code>client id</code>和 <code>client secret</code>，以便后续认证使用。</p>
+<p>保存 <code class="highlighter-rouge">client id</code>和 <code class="highlighter-rouge">client secret</code>，以便后续认证使用。</p>
 
-<h3 id="api-amp-oauth">开放 API &amp; OAuth</h3>
+<h3 id="api--oauth">开放 API &amp; OAuth</h3>
 
-<h4 id="coding-api">Coding 开放 API</h4>
+<h4 id="coding--api">Coding 开放 API</h4>
 
 <p>1.注册应用无需审核即可使用授权。
 2.采用 OAuth 2.0 协议认证。</p>
 
-<h4 id=">认证流程图</h4>
+<h4 id="section-1">认证流程图</h4>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/32fb9213-9ccb-4f70-8c58-8921f8c2d349.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/32fb9213-9ccb-4f70-8c58-8921f8c2d349.png" alt="图片" /></p>
 
-<h4 id=">认证流程简介</h4>
+<h4 id="section-2">认证流程简介</h4>
 
-<p>1）将用户引导到 Coding 第三方登录页面上。<code>https://coding.net/oauth_authorize.html?client_id={client_id}&amp;redirect_uri={redirect_uri}&amp;response_type=code[&amp;scope={scope}]</code></p>
+<p>1）将用户引导到 Coding 第三方登录页面上。<code class="highlighter-rouge">https://coding.net/oauth_authorize.html?client_id={client_id}&amp;redirect_uri={redirect_uri}&amp;response_type=code[&amp;scope={scope}]</code></p>
 
 <p> 如果用户未登录 Coding，跳转到登录页面。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/878b45df-fd69-4784-b68d-a85e6fce7c3c.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/878b45df-fd69-4784-b68d-a85e6fce7c3c.png" alt="图片" /></p>
 
-<p>2）用户登录，并对应用请求的 <code>scope</code> 进行授权。</p>
+<p>2）用户登录，并对应用请求的 <code class="highlighter-rouge">scope</code> 进行授权。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/19347165-4d15-4d64-b601-d041b3e1e34d.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/19347165-4d15-4d64-b601-d041b3e1e34d.png" alt="图片" /></p>
 
-<p>3）授权通过，Coding 会将授权码回传给应用在 Coding 注册的回调地址（<code>http://xxx.com/callback?code=xxx</code>），应用直接获取授权码 <code>code</code>即可。</p>
+<p>3）授权通过，Coding 会将授权码回传给应用在 Coding 注册的回调地址（<code class="highlighter-rouge">http://xxx.com/callback?code=xxx</code>），应用直接获取授权码 <code class="highlighter-rouge">code</code>即可。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/91295ede-e0b6-42bd-9b75-8402d171c58e.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/91295ede-e0b6-42bd-9b75-8402d171c58e.png" alt="图片" /></p>
 
 <p>4）应用向 Coding 的 Token Endpoint 发送请求。
- <code>https://coding.net/api/oauth/access_token?client_id={client_id}&amp;client_secret={client_secret}&amp;grant_type=authorization_code&amp;code={code}</code> 返回值 <code>{ expires_in: &quot;271645&quot;, refresh_token: &quot;xxxxxx&quot;, access_token:&quot;xxxxxx&quot; }</code> </p>
+ <code class="highlighter-rouge">https://coding.net/api/oauth/access_token?client_id={client_id}&amp;client_secret={client_secret}&amp;grant_type=authorization_code&amp;code={code}</code> 返回值 <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">expires_in:</span><span class="w"> </span><span class="nt">"271645"</span><span class="err">,</span><span class="w"> </span><span class="err">refresh_token</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxxxx"</span><span class="p">,</span><span class="w"> </span><span class="err">access_token</span><span class="p">:</span><span class="s2">"xxxxxx"</span><span class="w"> </span><span class="p">}</span></code> </p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/ab3a24b3-8358-46b8-b258-e8708e9da45b.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/ab3a24b3-8358-46b8-b258-e8708e9da45b.png" alt="图片" /></p>
 
 <p>5）使用 access_token 访问受保护的资源</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> https://coding.net/api/current_user?access_token={access_token}
-</code></pre></div>
-<p><img src="https://dn-coding-net-production-pp.qbox.me/2e33f408-ed45-49ee-86ac-a082565a288a.png" alt="图片"> </p>
 
-<p>Response body 中的 <code>code</code> 为 0，表示正常接收请求。如果 <code>code</code>为 1，表示请求异常，请参照 msg中的返回信息进行处理。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code> https://coding.net/api/current_user?access_token={access_token}
+</code></pre>
+</div>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/92b17830-1112-4086-a6ba-f46b51b8caa5.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/2e33f408-ed45-49ee-86ac-a082565a288a.png" alt="图片" /></p>
 
-<h3 id="coding">Coding 开放平台</h3>
+<p>Response body 中的 <code class="highlighter-rouge">code</code> 为 0，表示正常接收请求。如果 <code class="highlighter-rouge">code</code>为 1，表示请求异常，请参照 msg中的返回信息进行处理。</p>
+
+<p><img src="https://dn-coding-net-production-pp.qbox.me/92b17830-1112-4086-a6ba-f46b51b8caa5.png" alt="图片" /></p>
+
+<h3 id="coding-">Coding 开放平台</h3>
 
 <p>更多 API 和开放资源，可查看 <a href="http://open.coding.net/">Coding 开放平台</a></p>
 
-<hr>
+<hr />
 
 <div class="footer-nav">
 <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/account/2fa.html">上一篇：两步认证</a></div>
-<div class="right-nav"><a href="/help/doc/account/shop.html">下一篇：码币&Shop</a><i class="fa fa-angle-right"></i></div>
+<div class="right-nav"><a href="/help/doc/account/shop.html">下一篇：码币&amp;Shop</a><i class="fa fa-angle-right"></i></div>
 </div>
 
                             </article>

@@ -9,6 +9,6 @@ github_username:  kone
 exclude:  ["node_modules","react","test","bower","bower.json","bower","link.js","package.json","README.md","css","static/vendor","static/js","static/css","npm-debug.log"]
 destination: _site/help
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

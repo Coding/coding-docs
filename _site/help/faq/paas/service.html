@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/paas/service.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -579,17 +579,17 @@
         });
     });
 </script>
-                                <hr>
+                                <hr />
 
-<h2 id="mysql">MySQL 服务有时候会拒绝连接？</h2>
+<h2 id="mysql-">MySQL 服务有时候会拒绝连接？</h2>
 
 <p>MySQL 有连接数量限制，目前并发连接上限是 10 个，请注意在程序中及时关闭链接，其它的服务也有类似的限制。</p>
 
-<h2 id="sql">导入自己的 SQL 文件时提示无权限？</h2>
+<h2 id="sql-">导入自己的 SQL 文件时提示无权限？</h2>
 
 <p>演示平台提供的数据库用户只有有限的权限（无创建数据库权限），请把 SQL 文件内的建库语句(CREATE DATABASE) 去除，再执行导入试试。</p>
 
-<h2 id=">使用本地客户端工具连接数据库？</h2>
+<h2 id="section">使用本地客户端工具连接数据库？</h2>
 
 <p>目前不支持使用本地客户端工具连接数据库或其它服务，请使用网页上的服务控制台功能。</p>
 
@@ -597,37 +597,37 @@
 
 <p>演示平台不支持 crontab，也没有提供可替代的服务支持，目前用户只能自己编写程序来实现定时任务。 自定义的定时任务程序可以嵌入在应用主程序里，也可以在 Procfile 里添加选项启动独立的进程。</p>
 
-<h2 id="err">“查看日志” 那里看到一些 ERR 开头的信息？</h2>
+<h2 id="err-">“查看日志” 那里看到一些 ERR 开头的信息？</h2>
 
 <p>这个 ERR 不一定是错误信息，部分 web 服务器启动时会有信息输出到 STDERR，请自行分辨是否是自己应用的错误信息。</p>
 
-<h2 id="https">演示平台部署的网站支持 HTTPS 吗？</h2>
+<h2 id="https-">演示平台部署的网站支持 HTTPS 吗？</h2>
 
 <p>不支持，但是你使用 https 地址也可以访问，只是浏览器会提示证书不受信任，因为我们使用的是自签名证书。</p>
 
-<h2 id=">绑定数据库等服务的方法？</h2>
+<h2 id="section-1">绑定数据库等服务的方法？</h2>
 
 <p>成功开启演示后默认进入控制台页面，点击左侧 “服务管理” 选项，在这里添加和绑定服务，目前支持的服务有： mysql，postgresql，redis，mongodb，filesystem。</p>
 
-<h2 id=">演示里环境变量添加方法？</h2>
+<h2 id="section-2">演示里环境变量添加方法？</h2>
 
 <p>在演示平台通过检测成功开启后，选择左侧菜单栏中的 “环境变量”，可以管理环境变量。</p>
 
 <p>注意： 对环境变量做的修改需要重启应用才会生效。</p>
 
-<h2 id=">演示中的文件系统服务数据下载方法？</h2>
+<h2 id="section-3">演示中的文件系统服务数据下载方法？</h2>
 
 <p>开启项目演示后，点击左侧菜单栏“服务管理”，绑定服务后可以看到 “已绑定服务”，点击操作里的 “控制台”， 右上角即有 “备份数据” 按钮可以打包下载所有数据。不支持下载应用本身的文件系统数据。</p>
 
-<h2 id=">“源码路径” 是什么，怎么设置？</h2>
+<h2 id="section-4">“源码路径” 是什么，怎么设置？</h2>
 
 <p>在演示的控制台可以看到高级选项-源码路径，源码目录是指要部署的目录，只有这个目录下的文件或代码才会被部署。</p>
 
-<h2 id=">演示平台的第三方服务可以跨应用访问吗？</h2>
+<h2 id="section-5">演示平台的第三方服务可以跨应用访问吗？</h2>
 
 <p>服务和应用是多对多的关系，是可以跨应用的</p>
 
-<hr>
+<hr />
 
 <div class="footer-nav">
 <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/faq/paas/deploy.html">上一篇：演示部署问题</a></div>

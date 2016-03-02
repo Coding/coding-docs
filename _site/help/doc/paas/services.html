@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/paas/services.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -579,25 +579,25 @@
         });
     });
 </script>
-                                <h3 id=">进阶使用</h3>
+                                <h3 id="section">进阶使用</h3>
 
 <p>演示功能包含以下几个子模块，所有演示相关操作都是在此完成，完全通过图形界面操作（我们不提供命令行工具）。</p>
 
 <ul>
-<li>控制台</li>
-<li>查看日志</li>
-<li>文件系统</li>
-<li>环境变量</li>
-<li>服务管理</li>
+  <li>控制台</li>
+  <li>查看日志</li>
+  <li>文件系统</li>
+  <li>环境变量</li>
+  <li>服务管理</li>
 </ul>
 
 <p>控制台和日志功能上面已经介绍，这里不再重复，只介绍下面几个功能：</p>
 
-<h3 id=">文件系统</h3>
+<h3 id="section-1">文件系统</h3>
 
 <p>Coding 对每个演示应用都提供一个 WebUI 的方式可以查看到应用实时的文件系统，这对于调试时查找问题来说有时候会很有用（只读，不支持在线编辑）</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/70a0905c-e50f-4349-b477-0e8bf9e3ec67.png" alt="文件系统"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/70a0905c-e50f-4349-b477-0e8bf9e3ec67.png" alt="文件系统" /></p>
 
 <p>同时文件系统的文件是无法在 WebUI 上传或下载的，但是文件系统服务的数据是可以导入导出的，进入文件系统服务的控制台，有备份和恢复按钮，可以导出和导入 zip 压缩文件。</p>
 
@@ -605,74 +605,75 @@
 
 <p>文件系统部署详细说明参见 <a href="http://docs.coding.io/services/filesystem/">文件系统</a></p>
 
-<h3 id=">环境变量</h3>
+<h3 id="section-2">环境变量</h3>
 
 <p>环境变量功能可以以图形界面的方式编辑应用运行时的环境变量（环境变量的改动，需要 <strong>重启应用</strong> 才能生效）。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/0f04744d-cfa1-4927-b2d8-1934e07a770b.png" alt="环境变量"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/0f04744d-cfa1-4927-b2d8-1934e07a770b.png" alt="环境变量" /></p>
 
 <p>关于在应用中如何使用环境变量参加 <a href="http://docs.coding.io/references/env/">环境变量</a></p>
 
-<h3 id=">服务管理</h3>
+<h3 id="section-3">服务管理</h3>
 
 <p>大部分应用都会依赖数据库、缓存之类组件，这些在演示平台上都是以服务的方式提供的，演示平台目前支持以下第三方服务：</p>
 
 <ul>
-<li><a href="http://docs.coding.io/services/mysql">MySQL</a></li>
-<li><a href="http://docs.coding.io/services/postgresql">PostgreSQL</a></li>
-<li><a href="http://docs.coding.io/services/redis">Redis</a></li>
-<li><a href="http://docs.coding.io/services/mysql/mongodb">MongoDB</a></li>
-<li><a href="http://docs.coding.io/services/mysql/filesystem">Filesystem</a></li>
+  <li><a href="http://docs.coding.io/services/mysql">MySQL</a></li>
+  <li><a href="http://docs.coding.io/services/postgresql">PostgreSQL</a></li>
+  <li><a href="http://docs.coding.io/services/redis">Redis</a></li>
+  <li><a href="http://docs.coding.io/services/mysql/mongodb">MongoDB</a></li>
+  <li><a href="http://docs.coding.io/services/mysql/filesystem">Filesystem</a></li>
 </ul>
 
 <p>下面以 MySQL 为例来介绍如何添加并使用第三方服务。</p>
 
-<h4 id=">添加服务</h4>
+<h4 id="section-4">添加服务</h4>
 
-<p>点击服务管理页面右上角的 <strong>添加服务</strong> 按钮，在弹出窗口里选择 MySQL，输入服务名称并勾选 &quot;绑定创建后的服务到此项目(可选)&quot;：</p>
+<p>点击服务管理页面右上角的 <strong>添加服务</strong> 按钮，在弹出窗口里选择 MySQL，输入服务名称并勾选 “绑定创建后的服务到此项目(可选)”：</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/6bab0ff6-46ca-4931-8759-301829ae51d6.png" alt="添加服务"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/6bab0ff6-46ca-4931-8759-301829ae51d6.png" alt="添加服务" /></p>
 
 <p>点击 <strong>确定</strong> 按钮创建服务，可以看到新创建的服务 mysql-test 已经出现在 “已绑定服务” 列表里了:</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/ca0e4e37-f2af-49d5-871c-f9e1b2b7db4e.png" alt="服务列表"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/ca0e4e37-f2af-49d5-871c-f9e1b2b7db4e.png" alt="服务列表" /></p>
 
-<h4 id=">绑定服务</h4>
+<h4 id="section-5">绑定服务</h4>
 
 <p>服务必须绑定到应用上才可以使用，只有和服务绑定的应用才能使用该服务。在服务管理的 “可用服务” 的每个服务都有 <strong>绑定</strong> 按钮，
 点击此按钮就可以把选定的服务绑定到当前应用了。由于上一步在创建服务的同时勾选了绑定到当前应用，这一步不需要做了。</p>
 
 <blockquote>
-<p><strong>提示：</strong> 同一个服务可以绑定到多个应用，反过来一个应用也是可以绑定多个服务的。</p>
+  <p><strong>提示：</strong> 同一个服务可以绑定到多个应用，反过来一个应用也是可以绑定多个服务的。</p>
 </blockquote>
 
-<h4 id=">连接信息</h4>
+<h4 id="section-6">连接信息</h4>
 
 <p>在网页上可以查看已绑定服务的连接信息（连接信息也可以在应用运行时通过环境变量获取，<a href="http://docs.coding.io/services/">参考文档</a>），应用通过此连接信息来使用服务：</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/d35a086d-d6f6-4f72-b6db-74ccad3139ca.png" alt="连接信息"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/d35a086d-d6f6-4f72-b6db-74ccad3139ca.png" alt="连接信息" /></p>
 
-<h4 id=">服务控制台</h4>
+<h4 id="section-7">服务控制台</h4>
 
 <p>服务控制台提供一个简单的网页界面来管理服务，可以在此执行服务数据的备份恢复，或者查询修改数据库数据等。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/fe27ca53-d7cd-445f-817c-2a3a56a61e87.png" alt="服务控制台"></p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/fe27ca53-d7cd-445f-817c-2a3a56a61e87.png" alt="服务控制台" /></p>
 
-<h4 id=">数据库管理</h4>
+<h4 id="section-8">数据库管理</h4>
 
 <p>对于数据库服务管理，如果不习惯使用控制台操作还可以通过如下两种方式</p>
 
 <ul>
-<li><a href="https://coding.net/u/bluishoul/p/coding-plus/git">Coding Plus</a> 插件</li>
-<li>WebUI 管理工具 <a href="http://db-admin.coding.io">Adminer</a> 支持演示平台的数据库类型</li>
-<li>自己搭建 Web 管理工具，如 phpmyadmin</li>
+  <li><a href="https://coding.net/u/bluishoul/p/coding-plus/git">Coding Plus</a> 插件</li>
+  <li>WebUI 管理工具 <a href="http://db-admin.coding.io">Adminer</a> 支持演示平台的数据库类型</li>
+  <li>自己搭建 Web 管理工具，如 phpmyadmin</li>
 </ul>
 
-<hr>
+<hr />
 
-<p><div class="footer-nav">
+<div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/paas/getting-started.html">上一篇：开始使用演示</a></div>
-  </div></p>
+  </div>
+
 
                             </article>
                         </div>

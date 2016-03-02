@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/webide/execution.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -579,43 +579,49 @@
         });
     });
 </script>
-                                <h2 id=">运行程序</h2>
+                                <h2 id="section">运行程序</h2>
 
-<h3 id=">在终端运行程序</h3>
+<h3 id="section-1">在终端运行程序</h3>
 
-<p>编写好的代码可以在终端( Terminal ) 里面运行，对于需要创建外部访问链接的应用需要明确绑定到 0.0.0.0 地址, </p>
+<p>编写好的代码可以在终端( Terminal ) 里面运行，对于需要创建外部访问链接的应用需要明确绑定到 0.0.0.0 地址,</p>
 
 <p>这里以 Ruby 语言为例子，另外系统默认是没有安装 Ruby 需要使用 apt-get install 安装：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">➜  workspace git:(master) ✗ ruby app.rb -o 0.0.0.0 -p 8080
+
+<div class="highlighter-rouge"><pre class="highlight"><code>➜  workspace git:(master) ✗ ruby app.rb -o 0.0.0.0 -p 8080
 == Sinatra (v1.4.6) has taken the stage on 8080 for development with backup from 
 Thin web server (v1.6.3 codename Protein Powder)
 Maximum connections set to 1024
 
 Listening on 0.0.0.0:8080, CTRL+C to stop 
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>也可以使用启动 Python 内置的 SimpHTTPServer 模块。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">➜  workspace git:(master) ✗ python -m SimpleHTTPServer 
+
+<div class="highlighter-rouge"><pre class="highlight"><code>➜  workspace git:(master) ✗ python -m SimpleHTTPServer 
 Serving HTTP on 0.0.0.0 port 8000 ...  
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>也可以安装 apache 或者 ngnix 等 web server，配置方式参见 Ubuntu 下配置</p>
 
 <blockquote>
-<p>需要强调一下，绑定在本地回环地址 127.0.0.1 是无效的。</p>
+  <p>需要强调一下，绑定在本地回环地址 127.0.0.1 是无效的。</p>
 </blockquote>
 
-<h3 id="generate-access-url">创建外部访问链接( Generate Access Url )</h3>
+<h3 id="generate-access-url-">创建外部访问链接( Generate Access Url )</h3>
 
 <p>WebIDE 支持为编写好的程序创建一个外部可以访问的链接，有效期 1 个小时，点击菜单的 Tools -&gt; Generate Access Url 如下图。</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/543dfde7-8bf0-49a8-95c8-80c33f18c106.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/543dfde7-8bf0-49a8-95c8-80c33f18c106.png" alt="图片" /></p>
 
 <p>设置你需要绑定的端口，需要跟程序运行监听的端口一致, 如上面的8080，点击链接访问如下：</p>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/1bca4b34-acbd-423c-a393-4380978bbff8.png" alt="图片"> </p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/1bca4b34-acbd-423c-a393-4380978bbff8.png" alt="图片" /></p>
 
-<p><div class="footer-nav">
+<div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/webide/terminal.html">上一篇：终端</a></div>
-  </div></p>
+  </div>
 
                             </article>
                         </div>

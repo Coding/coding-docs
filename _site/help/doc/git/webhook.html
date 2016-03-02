@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?fnsx9uyy">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/webhook.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?ozitlrus"></script>
+  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
   <!-- endinject -->
 </head>
 
@@ -579,99 +579,109 @@
         });
     });
 </script>
-                                <p>本章节介绍如何通配置Webhook </p>
+                                <p>本章节介绍如何通配置Webhook</p>
 
 <h2 id="webhook">WebHook</h2>
 
-<p>Webhook 允许第三方应用监听 Coding.net 上的特定事件，在这些事件发生时通过 HTTP POST 方式通知( 超时5秒) 到第三方应用指定的 Web URL。 例如项目有新的内容 Push，或是 Merge Request 有更新等。 WebHook 可方便用户实现自动部署，自动测试，自动打包，监控项目变化等。 </p>
+<p>Webhook 允许第三方应用监听 Coding.net 上的特定事件，在这些事件发生时通过 HTTP POST 方式通知( 超时5秒) 到第三方应用指定的 Web URL。 例如项目有新的内容 Push，或是 Merge Request 有更新等。 WebHook 可方便用户实现自动部署，自动测试，自动打包，监控项目变化等。</p>
 
-<h3 id=">设置触发事件</h3>
+<h3 id="section">设置触发事件</h3>
 
 <p>Coding.net 用户可以在自己的项目 －&gt; 设置 －&gt; Webhook 中创建、设置 Webhook 所需监听的事件，并配置第三方应用的 Web URL 。</p>
 
 <p>目前我们支持如下的事件：</p>
 
-<table><thead>
-<tr>
-<th style="text-align: center">Event</th>
-<th style="text-align: left">说明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center">Push</td>
-<td style="text-align: left">任何时间项目内的 Push 操作</td>
-</tr>
-<tr>
-<td style="text-align: center">MR/PR</td>
-<td style="text-align: left">任何时间项目内的 Merge Request 和 Pull Request 操作</td>
-</tr>
-<tr>
-<td style="text-align: center">Topic</td>
-<td style="text-align: left">任何时间项目内的讨论创建，评论</td>
-</tr>
-<tr>
-<td style="text-align: center">Task</td>
-<td style="text-align: left">任何时间项目内的任务操作</td>
-</tr>
-<tr>
-<td style="text-align: center">Document</td>
-<td style="text-align: left">任何时间项目内的文档操作</td>
-</tr>
-<tr>
-<td style="text-align: center">Watch</td>
-<td style="text-align: left">任何时间第三方用户关注你的项目(限公开项目)</td>
-</tr>
-<tr>
-<td style="text-align: center">Star</td>
-<td style="text-align: left">任何时间对项目的收藏(限公开项目)</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Event</th>
+      <th style="text-align: left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Push</td>
+      <td style="text-align: left">任何时间项目内的 Push 操作</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MR/PR</td>
+      <td style="text-align: left">任何时间项目内的 Merge Request 和 Pull Request 操作</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Topic</td>
+      <td style="text-align: left">任何时间项目内的讨论创建，评论</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Task</td>
+      <td style="text-align: left">任何时间项目内的任务操作</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Document</td>
+      <td style="text-align: left">任何时间项目内的文档操作</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Watch</td>
+      <td style="text-align: left">任何时间第三方用户关注你的项目(限公开项目)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Star</td>
+      <td style="text-align: left">任何时间对项目的收藏(限公开项目)</td>
+    </tr>
+  </tbody>
+</table>
 
 <blockquote>
-<p>注：为防止您填写的 URL 被第三方恶意调用，我们 WebHook 提供了一个预先填写的 Token ，这个 Token 将会随 Post 请求信息一起发送给您，您可验证此 Token 来确认此请求确实是 Coding.net 发出的。</p>
+  <p>注：为防止您填写的 URL 被第三方恶意调用，我们 WebHook 提供了一个预先填写的 Token ，这个 Token 将会随 Post 请求信息一起发送给您，您可验证此 Token 来确认此请求确实是 Coding.net 发出的。</p>
 </blockquote>
 
-<h3 id="webhook">Webhook请求说明</h3>
+<h3 id="webhook-1">Webhook请求说明</h3>
 
-<p>Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为 2s </p>
+<p>Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为 2s</p>
 
 <p><strong>POST 请求 Header 说明</strong></p>
 
-<table><thead>
-<tr>
-<th style="text-align: left">Header</th>
-<th>说明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">X-Coding-Event</td>
-<td>事件名（例如: push, Merge Request, Task）</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Header</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">X-Coding-Event</td>
+      <td>事件名（例如: push, Merge Request, Task）</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>首次绑定，系统会向您所填写的 url 地址，发送一个简单的请求，以验证该 WebHook 是有效的，请求如下：</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="w">
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w"> 
     </span><span class="nt">"zen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coding！ 让开发更简单"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre>
+</div>
+
 <p>关于WebHook 更多例子，请参看 <a href="http://open.coding.net">Coding 开放平台</a></p>
 
-<h2 id="hook">hook 常见排错</h2>
+<h2 id="hook-">hook 常见排错</h2>
 
 <p>填写完成 url 地址后 Coding 会发送一条测试 http 信息到，如果有 response 则 webhook 会变成勾。
 也可以通过手动点击 “测试” 完成这个过程。</p>
 
-<p>如果收不到测试信息或者其他正常的 hook 信息，请尝试到 <a href="http://requestb.in/">http://requestb.in/</a> 上建立一个 url ，然后看看是否可以收到请求信息。
+<p>如果收不到测试信息或者其他正常的 hook 信息，请尝试到 http://requestb.in/ 上建立一个 url ，然后看看是否可以收到请求信息。
 如果可以收到，证明 Coding 的 Webhook 服务正常。请检查你的 hook 程序。</p>
 
-<p>注意： webhook 有5秒的超时设置，你的程序必在超时时间内返回。 </p>
+<p>注意： webhook 有5秒的超时设置，你的程序必在超时时间内返回。</p>
 
-<hr>
+<hr />
 
-<p><div class="footer-nav">
+<div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/ssh-key.html">上一篇：配置 ssh 公钥 Git</a></div>
-  </div></p>
+  </div>
+
 
                             </article>
                         </div>
