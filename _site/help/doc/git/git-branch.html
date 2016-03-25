@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?sddutkml">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?llinvkl8">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/doc/git/git-branch.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?kzv9ia0p"></script>
+  <script src="/help/dist/js/main.min.js?ajvpaxpe"></script>
   <!-- endinject -->
 </head>
 
@@ -683,6 +683,12 @@ Switched to branch 'learn-branch'
 </div>
 
 <p>来删除某个分支。</p>
+
+<h4 id="fastforward--mrpr">FastForward 模式合并 MR/PR</h4>
+
+<p>MR 和 PR 在合并的时候默认会产生一个合并提交，但是如果在合并的时候勾选了“Fast-Forward 模式合并”，服务器会在合并的时候判断该 MR 或者 PR 是否符合“快进模式”合并，如果符合则会按照“快进模式”合并，不产生合并提交，如果是不符合“快进模式”合并的情况，则忽略该选项，依然以产生合并提交的方式合并。这个选项相当于 git merge 的 <code class="highlighter-rouge">--ff</code> 参数。</p>
+
+<p><img src="https://dn-coding-net-production-pp.qbox.me/8a4f7147-05a0-46be-a911-6383e155df08.png?imageView2/2/w/800/h/800&amp;imageMogr2/format/png" alt="" /></p>
 
 <h4 id="section-6">普通分支合并</h4>
 
