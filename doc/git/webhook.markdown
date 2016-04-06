@@ -62,5 +62,6 @@ Webhook 的每个 POST 请求都有包含特殊的 Header, 默认超时时间为
 
   <div class="footer-nav">
   <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/ssh-key.html">上一篇：配置 ssh 公钥 Git</a></div>
+  <div class="right-nav"><a href="/help/doc/git/svn.html">下一篇：SVN 支持</a><i class="fa fa-angle-right"></i></div>
   </div>
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>项目讨论</title>
+  <title>SVN 支持</title>
   <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/help/dist/css/main.min.css?rjf4glnd">
   <!-- endinject -->
 
-  <link rel="canonical" href="https://coding.net/help/doc/project/discuss.html">
+  <link rel="canonical" href="https://coding.net/help/doc/git/svn.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
@@ -568,7 +568,7 @@
                         <div class="document-header">
                             <h3>
                                 <i class="fa fa-caret-down "></i>
-                                项目讨论
+                                SVN 支持
                             </h3>
                         </div>
                         <div class="document-body">
@@ -584,68 +584,75 @@
         });
     });
 </script>
-                                <p>本篇介绍如何使用项目讨论。</p>
+                                <h3 id="svn-">SVN 支持</h3>
+<p>Coding.net 上的 git 仓库也支持通过标准的 <a href="https://subversion.apache.org">subversion</a> (以下简称 svn)客户端来访问，我们在服务器端实现了 svn 协议到 git 的透明转换，svn 客户端通过 svn+ssh 协议连接到我们的服务器，数据传输全程走 ssh 加密通道。</p>
 
-<h2 id="section">关于项目讨论</h2>
+<h4 id="svn--1">开启 SVN 支持</h4>
 
-<ul>
-  <li>
-    <p>私有项目
-项目讨论是只有项目成员可见的互动交流区域。该项目上的所有成员都可以在讨论区创建新的讨论帖，评论或者回复讨论。只有项目所有者和该讨论发起者可以编辑或删除已存在的讨论。
-<img src="https://dn-coding-net-production-static.qbox.me/72516dfe-529a-4ed3-a20b-a8cdc2f249b9.png?imageView2/2/w/800/h/800" alt="在这里输入图片描述" /></p>
-  </li>
-  <li>
-    <p>公开项目
-项目讨论完全是公开的，任何已登录用户都可以在讨论区创建新的讨论，评论或者回复讨论。但只有项目所有者和该讨论发起者可以编辑或删除已存在的讨论。
-<img src="https://dn-coding-net-production-static.qbox.me/a161eaef-b710-4151-bffb-2eea37c4093d.png?imageView2/2/w/800/h/800" alt="在这里输入图片描述" /></p>
-  </li>
-</ul>
+<p>必须有项目管理员在 “项目设置 - 仓库设置” 页面点击 “开启 SVN 服务” 按钮开启 SVN 服务后，服务器端才会允许 svn 客户端连接到 git 仓库，svn 客户端版本要求在 <code class="highlighter-rouge">1.8</code> 以上。</p>
 
-<h3 id="section-1">创建讨论</h3>
+<h4 id="svn--2">SVN 客户端使用</h4>
 
-<p>在项目主页的左侧一级菜单栏选择<strong>讨论</strong>，点击<strong>添加</strong>按钮，即可进入新讨论的创建页面。
-讨论的内容编辑框支持 Markdown 语法以及全屏预览功能。
-<a href="/help/doc/project/markdown.html">Markdown语法</a>查看 Markdown 语法说明。</p>
-
-<h3 id="section-2">编辑&amp;删除讨论</h3>
-
-<p>只有项目创建者和该讨论创建者可以编辑或删除已存在的讨论。
-点击讨论标题下的<strong>编辑</strong>或<strong>删除</strong>图标，即可编辑和删除讨论。</p>
-
-<h3 id="section-3">添加&amp;删除讨论标签</h3>
-
-<p>创建、编辑或者查看讨论时，点击<strong>添加</strong>标签按钮，出现标签下拉列表，选中标签即可添加或删除。
-Tips：私有项目的讨论和任务的标签是通用的，并且添加标签时一次可以添加多个，还可以按标签查看讨论。
-注意：已登录用户可以在任何公开项目内创建、编辑&amp;删除讨论，但只有项目成员有权添加或删除标签。</p>
-
-<h3 id="section-4"># 标志引用资源</h3>
-
-<p>每个讨论也有一个独特的引用 ID， 并通过 #ID 被引用到项目内其它地方。
-项目内支持 Markdown 编辑器的地方都支持“#”自动提示(任务描述、讨论、合并请求描述等)，并引用相应资源。</p>
+<p>这里以命令行为例简单演示下 svn 客户端的使用：</p>
 
 <ul>
-  <li>讨论</li>
+  <li>首次检出代码</li>
 </ul>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/a878cf72-cef4-44a5-906c-653325062bdd.png" alt="图片" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ svn checkout --depth empty svn+ssh://svn.coding.net/username/reponame
+Checked out revision 1.
+</code></pre>
+</div>
 
 <ul>
-  <li>Merge Request</li>
+  <li>获取 <code class="highlighter-rouge">trunk</code> 分支代码（对应 git 的 master 分支）</li>
 </ul>
 
-<p><img src="https://dn-coding-net-production-pp.qbox.me/80092778-981d-4edb-87e8-6a1cbecc5378.png" alt="图片" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ svn update trunk
+Updating 'trunk':
+A    trunk
+A    trunk/README.md
+Updated to revision 1.
+</code></pre>
+</div>
 
-<h3 id="section-5">关注讨论</h3>
+<ul>
+  <li>切换分支</li>
+</ul>
 
-<p>在讨论详情页，每个项目成员都可以点击讨论标题下关注者旁（或者在讨论内容的结尾处）的<strong>添加</strong>按钮，在成员下拉框中添加或者取消某个或某几个项目成员对当前任务的关注。</p>
+<p>要想切换本地工作空间到另一个分支可以使用 svn switch 命令：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ svn checkout --depth empty svn+ssh://svn.coding.net/username/reponame/trunk
+$ svn switch svn+ssh://svn.coding.net/username/reponame/branches/my_branch
+</code></pre>
+</div>
+
+<h4 id="git-">git 分支标签映射规则</h4>
+
+<p>git 仓库的分支和标签按照如下规则映射到 svn 路径：</p>
+
+<ul>
+  <li>master -&gt; /trunk，即：svn checkout <仓库地址>/trunk 可以检出 master 分支</仓库地址></li>
+  <li>分支 -&gt; /branches/分支，例如：svn checkout <仓库地址>/branches/test 可以检出 test 分支</仓库地址></li>
+  <li>标签 -&gt; /tags/标签，例如：svn checkout <仓库地址>/tags/v1.0 可以检出 v1.0 标签</仓库地址></li>
+  <li>暂不支持分支标签的创建删除和合并，git submodule 检出为空目录</li>
+</ul>
+
+<blockquote>
+  <p><strong>如何查看某个 svn 版本对应的 git commit？</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>执行 svn propget git-commit –revprop -r HEAD svn+ssh://svn@git.coding.net/user/repo，HEAD 替换为版本号数字可以查看该版本号对应的 git commit。</p>
+</blockquote>
+
+<p><strong>提示：</strong>本功能目前处于测试阶段，尚未实现完整 SVN 功能，如您在使用中遇到问题请向我们 <a href="https://coding.net/feedback">提交错误报告</a>。</p>
 
 <hr />
 
 <div class="footer-nav">
-  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/task.html">上一篇：任务管理</a></div>
-  <div class="right-nav"><a href="/help/doc/project/task.html">下一篇：附 Markdown语法</a><i class="fa fa-angle-right"></i></div>
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/git/webhook.html">上一篇：WebHook</a></div>
   </div>
-
 
                             </article>
                         </div>
