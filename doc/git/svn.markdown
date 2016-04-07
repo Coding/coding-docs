@@ -51,7 +51,7 @@ git 仓库的分支和标签按照如下规则映射到 svn 路径：
 
 > **如何查看某个 svn 版本对应的 git commit？**
 
-> 执行 svn propget git-commit --revprop -r HEAD svn+ssh://svn@git.coding.net/user/repo，HEAD 替换为版本号数字可以查看该版本号对应的 git commit。
+> 执行 svn propget git-commit --revprop -r HEAD svn+ssh://git.coding.net/user/repo，HEAD 替换为版本号数字可以查看该版本号对应的 git commit。
 
 **提示：**本功能目前处于测试阶段，尚未实现完整 SVN 功能，如您在使用中遇到问题请向我们 [提交错误报告](https://coding.net/feedback)。
 
