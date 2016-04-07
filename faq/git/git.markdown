@@ -101,3 +101,39 @@ Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界�
 如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
 > 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。
 
+## 无法使用 22 端口的 SSH 服务怎么办？
+
+SSH 的默认端口是 22，有时您或您的公司的防火墙会完全屏蔽掉这个端口。如果此时您不方便通过 HTTPS 方式进行 Git 操作，您可以使用 Coding.net 提供的 443 端口的 SSH 服务，您需要确保 [SSH 已配置成功](https://coding.net/help/doc/account/ssh-key.html)，然后执行：
+
+```
+$ ssh -T -p 443 git@git-ssh.coding.net
+The authenticity of host '[git-ssh.coding.net]:443 ([180.150.178.244]:443)' can't be established.
+RSA key fingerprint is SHA256:jok3FH7q5LJ6qvE7iPNehBgXRw51ErE77S0Dn+Vg/Ik.
+RSA key fingerprint is MD5:98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+输入 yes 即可得到：
+
+```
+Hello username You've connected to Coding.net by SSH successfully!
+```
+
+此时您就可以通过 ssh://git@git-ssh.coding.net:443/{username}/{reponame}.git 的形式进行 Git 操作了。
+
+另外，您还可以修改您的 SSH 配置文件默认使用该方式进行 Git 操作。
+
+只需要修改您的 ~/.ssh/config 文件即可：
+
+```
+Host git.coding.net
+  Hostname git-ssh.coding.net
+  Port 443
+```
+
+最后您可以通过以下命令测试是否配置正确：
+
+```
+$ ssh -T git@git.coding.net
+Hello username You've connected to Coding.net by SSH successfully!
+```

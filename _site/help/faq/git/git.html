@@ -694,6 +694,42 @@ ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git &gt;&gt; git.log 2&
 <p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
 &gt; 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
 
+<h2 id="ssh-">无法使用 22 端口的 SSH 服务怎么办？</h2>
+
+<p>SSH 的默认端口是 22，有时您或您的公司的防火墙会完全屏蔽掉这个端口。如果此时您不方便通过 HTTPS 方式进行 Git 操作，您可以使用 Coding.net 提供的 443 端口的 SSH 服务，您需要确保 <a href="https://coding.net/help/doc/account/ssh-key.html">SSH 已配置成功</a>，然后执行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ssh -T -p 443 git@git-ssh.coding.net
+The authenticity of host '[git-ssh.coding.net]:443 ([180.150.178.244]:443)' can't be established.
+RSA key fingerprint is SHA256:jok3FH7q5LJ6qvE7iPNehBgXRw51ErE77S0Dn+Vg/Ik.
+RSA key fingerprint is MD5:98:ab:2b:30:60:00:82:86:bb:85:db:87:22:c4:4f:b1.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre>
+</div>
+
+<p>输入 yes 即可得到：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Hello username You've connected to Coding.net by SSH successfully!
+</code></pre>
+</div>
+
+<p>此时您就可以通过 ssh://git@git-ssh.coding.net:443/{username}/{reponame}.git 的形式进行 Git 操作了。</p>
+
+<p>另外，您还可以修改您的 SSH 配置文件默认使用该方式进行 Git 操作。</p>
+
+<p>只需要修改您的 ~/.ssh/config 文件即可：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Host git.coding.net
+  Hostname git-ssh.coding.net
+  Port 443
+</code></pre>
+</div>
+
+<p>最后您可以通过以下命令测试是否配置正确：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ssh -T git@git.coding.net
+Hello username You've connected to Coding.net by SSH successfully!
+</code></pre>
+</div>
 
                             </article>
                         </div>
