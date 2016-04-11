@@ -265,6 +265,30 @@ x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
 
   [16]: https://dn-coding-net-production-pp.qbox.me/ce4167be-058d-4cfc-9848-49ef2aebee94.png
 
+### 图片
+Markdown 使用了类似链接的语法来插入图片, 包含两种形式: 内联 和 引用.
+
+内联图片语法如下:
+
+` ![Alt text](/path/to/img.jpg) `
+
+或
+
+`![Alt text](/path/to/img.jpg "Optional title") `
+
+也就是:
+
+一个感叹号:` ! `;
+紧跟一对方括号, 包含了可选填的图片 alt 属性;
+或紧跟一对圆括号, 包含了图片的 URL 或者路径, 以及一个可选的用单引号或双引号包裹的 title 属性.
+
+引用图片语法如下:
+
+` ![Alt text][id] `
+
+"id" 是图片引用的名称. 图片引用使用链接定义的相同语法:
+
+` [id]: url/to/image  "Optional title attribute" `
 
 <div class="footer-nav">
 <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/project/discuss.html">上一篇：项目讨论</a></div>
