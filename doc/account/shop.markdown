@@ -27,6 +27,7 @@ title: 码币和商城
 - 完成手机验证 奖励 0.1mb
 - App 首次登录 奖励 0.1mb
 - 我们不定期发布的其他形式的码币悬赏活动，数量不等
+- 给 Coding 博客 [投稿](https://coding.net/u/coding/p/Blog/git)  奖励 1-2mb
 
 ### Coding Shop 是什么
 
