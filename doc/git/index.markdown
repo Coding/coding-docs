@@ -41,6 +41,8 @@ Git 是一种版本控制系统。在开发过程中，为了跟踪代码，文�
 
 [廖雪峰的Git教程][1]
 
+[Git 命令速查表](https://dn-coding-net-production-pp.qbox.me/e8dd7837-b39d-413e-9beb-ed51984719e0.png)
+
 ---
 
 

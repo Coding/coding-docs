@@ -217,6 +217,13 @@ Coding 推荐使用合并请求，在线将2个分支合并。合并请求分为
 
 在 MR 页面里面，MR 的提交者可以取消 MR ，MR 目标分支的管理者（对该分支有写权限的项目成员），可以选择合并或者拒绝。MR 支持 Markdown 语法评论。
 
+#### 通过命令行创建 MR
+
+- push 到 mr/master/branch_name 分支即可自动创建 MR，如 $git push origin Feature-x:mr/master/Feature-X
+- 自动创建的使用最后一个 commit message 作为标题和内容
+- 自动解析 commit message 中 @ 的人，自动加成评审者，自动# 加为关联资源
+- 自动创建出来的新的分支，只能有创建者再次 push 到这个分支，也允许 force push
+
 ### # 标志引用资源
 
 每个任务，讨论，MR 也有一个独特的引用 ID， 并通过 #ID 被引用到项目内其它地方。
