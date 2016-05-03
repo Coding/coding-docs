@@ -17,8 +17,7 @@ title: 码币和商城
 
 ### 如何得到码币
 
-- Web端 [冒泡](https://coding.net/pp) 被管理员推荐上广场 奖励 0.01mb
-- 手机端 冒泡被管理员推荐上广场 奖励 0.02mb
+- [冒泡](https://coding.net/pp) 被管理员推荐上广场 奖励 0.01mb
 - [任务操作](https://coding.net/help/doc/project/task.html) 奖励 0.01mb
 - 新增发起 [合并请求](https://coding.net/help/doc/git/git-branch.html#section-4) 奖励 0.01mb
 - [邀请好友](https://coding.net/user/relationship/friends) 注册 Coding 并绑定手机号 奖励 0.02mb
@@ -27,7 +26,7 @@ title: 码币和商城
 - 完成 [手机验证](https://coding.net/user/account/setting/basic) 奖励 0.1mb
 - 开启 [两步验证](https://coding.net/help/doc/account/2fa.html) 奖励 0.1mb
 - [App](https://coding.net/app)  首次登录 奖励 0.1mb
-- 我们不定期发布的其他形式的码币悬赏活动，数量不等
+- 我们不定期发布的其他形式的码币悬赏活动（请关注 [Coding冒泡](https://coding.net/u/coding/bubble)，[Coding微博](http://weibo.com/clouddevelopment) 及 [Coding微信公众号](https://coding.net/static/fcdf6ecd90f6022d143a5e06fbe391b8.jpg)），数量不等
 - 给 Coding 博客 [投稿](https://coding.net/u/coding/p/Blog/git)  奖励 1-2mb
 
 ### Coding Shop 是什么
