@@ -62,14 +62,16 @@ git push origin coding-pages
 
 进入私有项目页面，点击左侧栏的 `代码` 面板 ，选择 `Pages 服务` 一项可以看到部署 Pages 的设置。（公开项目点击 Pages 选项卡即可）
 
-填写您欲部署的分支（默认为 `coding-pages` ），点击 `立即开启` ，稍等片刻即可完成部署并得到可访问的地址：
+填写您欲部署的分支（默认为 `coding-pages` ），点击 `立即开启` ，稍等片刻即可完成部署并通过 {user_name}.coding.me 访问您的网站。
 
 > 如果您的部署未成功（页面显示 `404 page not found`），建议您先在本地或 [WebIDE](https://ide.coding.net) 测试部署。
 
 #### 绑定自定义域名
 
-Coding Pages 支持绑定自定义域名。**在您开启 Pages 演示后**，在部署页面输入您欲绑定的域名，点击「添加域名绑定」；之后按照页面提示，在您的域名管理面板中添加 CNAME 记录指向到 `{user_name}.coding.me` 即可；如果您使用的域名服务提供商不支持添加 CNAME 记录，建议更换到其他支持该功能的域名提供商。
+Coding Pages 支持绑定自定义域名。**在您开启 Pages 演示后**，在部署页面输入您欲绑定的域名，点击「添加域名绑定」；之后按照页面提示，在您的域名管理面板中添加 CNAME 记录指向到 `pages.coding.me` 即可。
+为了您的网站 SEO，我们建议您绑定一个 www 域名即可，如果您使用的域名 DNS 解析服务不支持添加 CNAME 记录，建议更换 Nameservers 到其他支持该功能的域名提供商（如 Cloudflare.com）。
 
+ ![图片](https://dn-coding-net-production-pp.qbox.me/797eff38-40e8-4ec8-a74c-b8a89246009d.png) 
 
 #### 创建项目 Pages
 
@@ -93,4 +95,4 @@ git push -u origin coding-pages
 ```
 之后即可通过 {user_name}.coding.me/project_name 的地址来访问您的项目演示页面。
 
-> Coding Pages 服务默认使用 coding.me 域名（寓意为 “Coding 迷”），Pages 页面的地址规则一般是 {user_name}.coding.me/{project_name} 的形式。
+Coding Pages 服务默认使用 coding.me 域名（寓意为 “Coding 迷”），Pages 页面的地址规则一般是 {user_name}.coding.me/{project_name} 的形式。注意项目 Pages 可能会由于资源路径不正确显示不全，可以通过绑定一个域名或使用 Chrome 开发者工具查找错误自行修正资源 URL。
