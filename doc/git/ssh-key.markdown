@@ -38,9 +38,9 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
     # The key fingerprint is:
     # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
 
-#### 添加公钥
+#### 在 Coding.net 添加公钥
 
-1. 本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏，公钥名称可以随意起名字。
+1. 本地打开 id_rsa.pub 文件（或执行 $cat id_rsa.pub ），复制其中全部内容，添加到账户["SSH 公钥"页面](https://coding.net/user/account/setting/keys) 中，公钥名称可以随意起名字。
 2. 完成后点击“添加”，然后输入密码或动态码即可添加完成。
  ![图片](https://dn-coding-net-production-pp.qbox.me/49eab64b-8d8a-4787-a0ed-ce347f753a69.png) 
 3. 完成后在命令行测试，首次建立链接会要求信任主机。
@@ -67,9 +67,9 @@ Mac/Linux 打开命令行终端, Windows 打开 Git Bash 。
 
 
 
-### 项目部署SSH公钥
+### 项目部署 SSH 公钥
 
-项目部署 SSH 公钥是跟项目关联的公钥，设置后有该项目的仓库的只读权限。
+部署公钥是 SSH 公钥的一种，不同之处在于：个人设置的 SSH 公钥是用来认证用户身份并进行 Git 操作的，而部署公钥是用来授权项目的只读权限（用于部署）的。注意：部署公钥没有 push 权限（只有只读权限）；一个部署公钥可以同时应用于多个项目，而且一个项目也可以设置多个部署公钥。
 
  ![图片](https://dn-coding-net-production-pp.qbox.me/862d0517-5b77-49c7-bfb2-398674e476dd.png) 
  
