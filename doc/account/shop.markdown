@@ -17,7 +17,7 @@ title: 码币和商城
 
 ### 如何获取码币
 
-- 使用人民币 [兑换](https://coding.net/user/account/credit)
+- 使用人民币 [兑换](https://coding.net/user/account/credit) （请通过点击账户码币页面的"购买码币"，以充值的形式购买码币。码币与人民币的兑换标准是 1 码币= 50 元人民币（0.1 码币起购买）,支持支付宝及微信付款）
 - [冒泡](https://coding.net/pp) 被管理员推荐上广场 奖励 0.01mb
 - [邀请好友](https://coding.net/user/relationship/friends) 注册 Coding 并绑定手机号 奖励 0.02mb
 - 过生日赠送 0.1mb
