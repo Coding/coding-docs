@@ -15,8 +15,9 @@ title: 码币和商城
 2）购买 Coding 推出的项目升级业务，拥有更多资源，提供更多个性化的服务详情请点击https://coding.net/upgrade
 (推代码是真的能挣钱！)
 
-### 如何得到码币
+### 如何获取码币
 
+- 使用人民币 [兑换](https://coding.net/user/account/credit)
 - [冒泡](https://coding.net/pp) 被管理员推荐上广场 奖励 0.01mb
 - [邀请好友](https://coding.net/user/relationship/friends) 注册 Coding 并绑定手机号 奖励 0.02mb
 - 过生日赠送 0.1mb
