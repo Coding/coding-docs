@@ -6,57 +6,82 @@ title: Git 操作常见问题
 
 ---
 
-## 如何提交代码到 Coding 上？
+## Git 是什么？如何使用 Git 提交代码到 Coding.net？
+Git 是一种在全球范围都广受欢迎的版本控制系统。在开发过程中，为了跟踪代码，文档，项目等信息中的变化，版本控制变得前所未有的重要。但跟踪变化远远不能满足现代软件开发行业的协同需求，基于 Git 的 Workflow 满足了合作编程的需求，让开发从此变得更加高效和有趣。相比集中式版本控制系统如 SVN ，分布式版本控制系统 Git 拥有更强大的分支管理与合并能力，支持离线开发，并良好地保留了提交过程，让您和您的团队在开发过程中如虎添翼。
 
-可以查看 Coding 的 [Git 代码托管文档](/help/doc/git/index.html)
-可以参照网上的相关Git教程 如 [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+关于使用 Git 提交代码，请阅读 [Git 代码托管文档](/help/doc/git/index.html)，您也可以通过阅读 CODING 工程师参与翻译的 [《Pro Git》](https://git-scm.com/book/zh/v2) 进一步掌握 Git 这个强大的版本控制系统。
 
-## 每次 Push 的时候如何不用输入密码？
+## CODING 是什么？为什么要使用 Coding.net ？
 
-可以有2个办法：
+CODING 是国内专业的一站式云端软件服务平台，成立于 2014 年 2 月，总部位于深圳，并于北京、上海、成都、西雅图设立分部，已获得了 IDG 和光速的两轮投资共计 1500 万美元。旗下自主研发运营 Coding.net 云端开发协作平台，累积 25 万开发者，37 万个项目。在云计算时代，把代码托管、产品演示、WebIDE 等开发工具集成到浏览器中，免除繁杂的开发环境部署，节省成本，帮助软件开发者提高生产效率，并实现 “Coding Anytime Anywhere” 的愿景。2015 年 10 月，基于 Coding.net 的工具平台，CODING 推出云端软件众包服务平台 “码市”，旨在通过云端协作以及众包的方式提高软件交付的效率，帮助软件开发行业实现高效的资源匹配。
 
-- 针对 SSH 协议的方式， 配置SSH 公钥，使用 SSH 协议操作，具体见 [SSH 公钥配置](/help/doc/git/ssh-key.html)
+Coding.net 为开发者提供了免费的基础服务，包括但不限于 Git 代码托管，项目管理，Pages 服务，代码质量管理。您可以在 Coding.net 一站完成代码及代码质量，项目及项目人员的管理，Coding.net 让开发变得前所未有的敏捷和简单。
 
-- 对于 Https 协议
- 1. 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net 
- 2. 然后配置 Git 命令存储认证， 
+同时，Coding.net 采用整站 SSL 加密，数据实时备份，异地数据备份等措施保护您的数据安全及系统可用性，具体请阅读我们的 [安全策略](https://coding.net/security) 及 [Git 代码托管服务等级协议](https://coding.net/gitsla)。
 
- 		$git config --global credential.helper store 
+## 怎样在每次 Push 时不用重复输入密码？
+
+有两种方法：
+
+- 使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 [SSH 公钥配置文档](/help/doc/git/ssh-key.html)
+
+- 对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net   然后执行配置 Git 命令存储认证命令： 
+```
+$git config --global credential.helper store 
+```
 		
-		~/.gitconfig 文件多出下面配置项:
-		credential.helper = store
+执行后在 ~/.gitconfig 文件会多出下面配置项:
+```
+credential.helper = store
+```
 
-## 我的 Git 是1.7版本为什么无法提交代码？
+## 我的 Git 是 1.7 版本为什么无法提交代码？
 
-由于 git版本过低，最好升级到1.9 以上
+该 Git 版本过低，请升级至 [最新版](https://git-scm.com/)。
 
 ## 如何设置分支的提交权限，让部分人可以提交？
 
-你可以用保护分支功能来划分不同成员对不同分支的操作权限, 参见[分支管理](/help/doc/git/git-branch.html) 的保护分支章节
+你可以用保护分支功能来划分不同成员对不同分支的操作权限, 参见 [分支管理](/help/doc/git/git-branch.html) 的保护分支章节
 
 ## Coding 的代码管理支持图形化工具吗？
 
-支持，我们推荐使用 SourceTree， 具体参见[开始使用 Git](/help/doc/git/getting-started.html)的安装章节。
+支持，我们推荐使用 SourceTree， 具体请阅读 [开始使用 Git](/help/doc/git/getting-started.html)的安装章节。
 
-## 出现 'Coding.net Tips : [Internal server error]' 怎么会事？
+## 出现 "Coding.net Tips : [Internal server error]" 怎么办？
 
-出现[Internal Server error] 表示我们服务器端的仓库访问可能有问题。 
-
-您可以通过[反馈](https://coding.net/u/coding/p/Coding-Feedback/topic)，提交你的项目的url地址 供研发人员排错。
+出现 [Internal Server error] 可能表示我们服务器端的仓库访问有问题，请通过 [反馈](https://coding.net/u/coding/p/Coding-Feedback/topic) 提交您的项目的 url 地址供研发人员排错。
 
 
-## Push 一直提示Permission denied (publickey) ?
+## Push 一直提示 "Permission denied (publickey) " 怎么办?
 
 这个可能是由于你的没有目标仓库和分支的权限，导致无法更新数据。
 
-- 检查你的push 方式，通过 SSH 还是 HTTPS ，如果是 SSH 请检查你的 SSH公钥是否正确。 HTTPS 的方式请检查你的密码是否正确
+- 确认您的 push 方式，如果是 SSH 方式请检查你的 SSH 公钥是否正确（如果您有多个私钥，请使用 ssh-add 命令来指定默认使用的私钥）； HTTPS 方式请检查密码及用户名是否正确。
 - 对目标分支是否有写权限。
+- 善用 [搜索](https://coding.net/search?q=Permission%20denied&type=project&project=Coding-Feedback&user=coding) 
 
-## 代码 push 不了，报 SSL Abort，SSL protocol error，或者 Connection Timeout 怎么办？
+## Push 提示“Couldn't resolve host 'git.coding.net'”怎么办？
 
-我们需要更多的信息来排查问题，如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：
+这是由于您的 DNS 设置造成的，请更换您的 DNS 为 8.8.8.8 或 114.114.114.114 后重启网络。
+
+## Push 提示 “RPC failed; result=22, HTTP code = 413” 怎么办?
+
+这是由于 https 推送方式的 http.postBuffer 对推送文件大小有限制造成的，请更换使用 [SSH 方式](https://coding.net/help/doc/git/ssh-key.html) 进行推送。
+
+## Push 提示其他错误怎么办？
+
+请参考 [文档](https://coding.net/help/doc/git/index.html) 并确保您执行了正确的操作，如果仍然报错请在 [反馈区](https://coding.net/u/coding/p/Coding-Feedback/topic) 提供我们以下信息以便工程师为您解决问题：
+
+- Git 报错信息
+- 执行 'git --version' 的结果
+- 其他有用的信息（如屏幕截图、`$ ssh -vvvT git@git.coding.net`（如果您目前使用了 SSH 方式推送的话）、`$ ping git.coding.net`、您目前的 [IP 地址](http://ip.cn)，及您目前使用的 DNS 等信息）
+
+
+如果可以的话运行如下的脚本，并将生成的 git.log 贴给我们：
+
 > 注意： Windows 用户需要在 git bash 下运行
-	
+
+```	
 	#!/bin/bash
 	# this script will collect some logs for Coding.net 
 
@@ -78,16 +103,7 @@ title: Git 操作常见问题
 	ssh -v git@git.coding.net git-upload-pack wzw/test-for-1.git >> git.log 2>&1
 	echo "## git pull  ##############" >> git.log
 	GIT_CURL_VERBOSE=1 GIT_TRACE=1 GIT_TRACE_PACKET=1 git pull  >> git.log  2>&1
-
-
-同时由于 Coding 将 git 部署在 CDN 上，出现这种原因可能是你这边网络访问对应的 CDN 的节点有问题。 
-麻烦在反馈区，提供以下信息供研发人员提交到 CDN 服务商排查。
-
-	1. 您的上网IP
-	2. 您的 ping git.coding.net 的截图
-	3. 您的DNS设置
-	4. 修改您的 DNS 修改到 115.231.16.157 
-	5. 再次 ping git.coding.net 的截图
+```
 
 ## 如何在 Coding 上回退代码版本？
 
@@ -96,7 +112,7 @@ Coding 平台使用 git 来管理代码，Coding 没有提供版本回退的界�
 
 ## 如何设 SSH Key？怎么设置了之后还是要输入密码？
 
-设置 SSH Key 的方式参见[SSH公钥配置](/help/doc/git/ssh-key.html)
+设置 SSH Key 的方式参见 [SSH 公钥配置](/help/doc/git/ssh-key.html)
 
 如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
 > 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。
