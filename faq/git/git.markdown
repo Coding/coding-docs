@@ -17,7 +17,7 @@ CODING 是国内专业的一站式云端软件服务平台，成立于 2014 年 
 
 Coding.net 为开发者提供了免费的基础服务，包括但不限于 Git 代码托管，项目管理，Pages 服务，代码质量管理。您可以在 Coding.net 一站完成代码及代码质量，项目及项目人员的管理，Coding.net 让开发变得前所未有的敏捷和简单。
 
-同时，Coding.net 采用整站 SSL 加密，数据实时备份，异地数据备份等措施保护您的数据安全及系统可用性，具体请阅读我们的 [安全策略](https://coding.net/security) 及 [Git 代码托管服务等级协议](https://coding.net/gitsla)。
+同时，Coding.net 采用整站 SSL 加密，数据实时备份，异地数据备份等措施保障用户数据安全及系统可用性，具体请阅读我们的 [安全策略](https://coding.net/security) 及 [Git 代码托管服务等级协议](https://coding.net/gitsla)。
 
 ## 怎样在每次 Push 时不用重复输入密码？
 
