@@ -6,14 +6,13 @@ title: 码币和商城
 
 ## 什么是码币
 
-码币是 Coding 平台推出的线上虚拟货币，可通过在 Coding 上进行 push 代码、完善个人信息、冒泡等动作赚取，目前可用于购买  Coding  商店的礼品以及购买项目升级代金券。
+码币是 Coding 平台推出的线上虚拟货币，可通过在 Coding 上进行冒泡，完善个人信息等操作免费获取，也可以使用人民币进行兑换，可用于购买 [Coding商城](https://coding.net/shop) 的礼品以及购买项目升级代金券。
 
 ### 可以用码币做什么
 
 1）你可以利用码币购买 Shop 页面所列 Coding 定制等商品：如洋葱猴抱枕、Coding 毛巾、T恤、短裤、Coding 定制拖鞋等
 
-2）购买 Coding 推出的项目升级业务，拥有更多资源，提供更多个性化的服务详情请点击https://coding.net/upgrade
-(推代码是真的能挣钱！)
+2）购买 Coding 推出的项目升级业务，拥有更多资源，提供更多个性化的服务详情请点击 [https://coding.net/upgrade](https://coding.net/upgrade) 
 
 ### 如何获取码币
 
@@ -35,7 +34,7 @@ Coding Shop 是 Coding 平台推出的使用虚拟货币码币来购买 Shop 中
 
 ### Coding Shop 商品
 
-Shop 中的商品现阶段有洋葱猴抱枕、Coding 定制毛巾、Coding 定制纯棉T恤、Coding 代金券（50元、200元,500元）、Coding 人字拖、Coding 短裤、推荐图书等。
+Shop 中的商品现阶段有洋葱猴抱枕、Coding 定制毛巾、Coding 定制纯棉T恤、Coding 代金券（50元、200元,500元）、Coding 人字拖、Coding 短裤、其他服务商代金券等。
 Coding 不定时地会在 Shop 中推出相关的定制商品，请多多关注。
 
 ### 商品发货&物流
