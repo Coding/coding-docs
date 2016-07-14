@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>演示平台常见问题</title>
+  <title>使用 Feature Branch Workflow</title>
   <meta name="keywords" content="Coding,git,代码托管,运行空间,在线演示,演示平台,代码质量分析,在线IDE,webide,项目管理,开发协作,悬赏众包,洋葱猴">
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/help/dist/css/main.min.css?rjf4glnd">
   <!-- endinject -->
 
-  <link rel="canonical" href="https://coding.net/help/faq/paas/">
+  <link rel="canonical" href="https://coding.net/help/doc/practice/git-feature-branch.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
@@ -599,7 +599,7 @@
                         <div class="document-header">
                             <h3>
                                 <i class="fa fa-caret-down "></i>
-                                演示平台常见问题
+                                使用 Feature Branch Workflow
                             </h3>
                         </div>
                         <div class="document-body">
@@ -615,13 +615,116 @@
         });
     });
 </script>
-                                <p>演示平台的常见问题包括如下：</p>
+                                <h3 id="workflow">什么是 Workflow？</h3>
+<p>工作流（Workflow），是对工作流程及其各操作步骤之间业务规则的抽象、概括描述 [1] 。合理选择并使用一套工作流可以让技术团队开发更高效，更简单！</p>
 
-<ol>
-  <li><a href="/help/faq/paas/deploy.html">部署问题</a></li>
-  <li><a href="/help/faq/paas/language.html">支持语言</a></li>
-  <li><a href="/help/faq/paas/service.html">第三方服务问题</a></li>
-</ol>
+<h3 id="workflow-1">如何选择一个 Workflow？</h3>
+
+<p>推荐阅读：<a href="https://blog.coding.net/blog/git-workflow">大话 Git 工作流</a></p>
+
+<p>Workflow 没有银弹 [2] ，如果你的：</p>
+
+<ul>
+  <li>生产环境有多个版本，需要持续支持旧版本的软件服务如操作系统，自定义应用程序等，可使用 <a href="https://help.gitcafe.com/practices/workflow">Gitflow</a></li>
+  <li>生产环境只有一个版本，如网站，网络服务等，可使用 Feature Branch Workflow</li>
+  <li>生产环境只有一个版本但软件很复杂，需要 CI/CD 后才能进入生产环境的如 Gmail，Twitter 等，可使用 <a href="https://about.gitlab.com/2014/09/29/gitlab-flow/">Gitlab-flow</a></li>
+</ul>
+
+<h3 id="feature-branch-workflow-">Feature Branch Workflow 是什么？</h3>
+
+<p>Feature Branch Workflow 的核心理念是：master 分支用于部署，功能开发应该在专门的分支而非 master 分支上，任何推向 master 分支的 feature-branch 都应该经过代码审核。即，团队成员共用一个私有项目仓库进行管理协作，开发者在各自的 feature-branch 中进行开发，开发完成后通过提交 Merge Request 进行代码评审，通过代码评审后 merge 进入 master 分支（即可部署到生产环境）。</p>
+
+<blockquote>
+  <p>Merge Request 是一个请其他项目成员对代码进行 review 并 merge 的 request。类似 GitHub 的 Pull Request, 两者都是实现对两个 repo 或 branch 的合并。Coding.net 提供了一个友好的 Merge Request 界面，在合并提交的变更到正式项目前可以对其代码进行评审。</p>
+</blockquote>
+
+<h3 id="feature-branch-workflow--1">如何进行 Feature Branch Workflow ？</h3>
+
+<p>我们通过一个简单的例子来看 Feature Branch Workflow 如何运行。</p>
+
+<h4 id="section">洋葱猴开发一个新功能</h4>
+
+<p>在开发功能前，洋葱猴需要一个独立的分支去工作。他使用以下命令基于 master 分支新建了一个名为 <code class="highlighter-rouge">banana</code> 的分支：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git checkout -b banana master
+</code></pre>
+</div>
+
+<p>在该新分支上，洋葱猴按常用办法来编辑、暂存和提交修改以实现了新功能：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git status
+git add &lt;some-banana&gt;
+git commit 
+</code></pre>
+</div>
+
+<h4 id="section-1">洋葱猴要去吃香蕉</h4>
+
+<p>在吃饭前提交刚才的代码到远程中央仓库吧，这样可以方便地备份，也可以让其它小伙伴看到洋葱猴的提交。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git push -u origin banana
+</code></pre>
+</div>
+
+<h4 id="section-2">洋葱猴完成了新功能的开发</h4>
+
+<p>洋葱猴完成了该功能的开发，并在 Coding.net 项目合并请求页面中发起了一个 Merge Request，请求合并 banana 分支到 master 分支，其团队成员会自动收到通知。 Coding.net 提供的 Merge Request 界面可以让团队成员在相关的代码旁边进行评论，更方便地对某个变更提问。</p>
+
+<p><img src="https://dn-coding-net-production-pp.qbox.me/79d860ea-56eb-4adf-810b-e8f83403be38.png" alt="图片" /></p>
+
+<blockquote>
+  <p>git push origin banana:mr/master/banana 可以同时 push banana 分支并 <a href="https://coding.net/help/doc/git/git-branch.html#mr">自动发起 Merge Ruquest</a></p>
+</blockquote>
+
+<h4 id="merge-request">大圣收到 Merge Request</h4>
+
+<p>大圣收到了 Merge Request 后进行代码评审。他将决定在将其合并到 master 分支前是否要做修改，并且通过 Merge Request 和洋葱猴进行讨论。</p>
+
+<p><img src="https://dn-coding-net-production-pp.qbox.me/fdb49937-5e03-4290-ab88-4ea4d8bfb21c.png" alt="图片" /></p>
+
+<h4 id="section-3">洋葱猴再次修改</h4>
+<p>和之前的操作一样，洋葱猴再次进行了一些编辑，暂存，提交。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add &lt;another-banana&gt;
+git commit 
+git push -u origin banana
+</code></pre>
+</div>
+
+<p>这些变化会自动更新到该 Merge Request，同时大圣也可以继续做代码评审，对其特定代码发起讨论。当然大圣也可以把 banana 分支拉到本地进行修改。他提交的任何变更也会一样显示在 Merge Request 中。</p>
+
+<h4 id="section-4">发布新功能</h4>
+
+<p>一旦大圣同意（对此 +1），测试（如果有）也通过了，就可以进行 merge。洋葱猴（或大圣）可以直接在 Coding.net 网页端点击“合并”，或通过以下命令进行合并：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git checkout master
+git pull
+git pull origin banana
+git push
+</code></pre>
+</div>
+
+<p>这个过程常常会生成一个合并提交。有些开发者喜欢这个，因为它像一个新功能和原代码基线的连通符。 但如果你喜欢线性的提交历史，可以在执行合并时 rebase 功能分支到 master 分支的顶部，这样生成一个 <a href="https://coding.net/help/doc/git/git-branch.html#fastforward--mrpr">快进（fast-forward）的合并</a>。</p>
+
+<p>注：</p>
+
+<ul>
+  <li>当一个分支被合并后，这个分支就可以删除了。</li>
+  <li>为防止其他成员误操作，开发者还可以使用 Coding.net 的 <a href="https://coding.net/help/doc/git/git-branch.html#section-11">分支保护</a> 功能来实现对代码分支的保护。</li>
+  <li>常用 rebase 可避免/解决冲突。</li>
+</ul>
+
+<p>Happy Coding ; )</p>
+
+<p>[1] <a href="http://dwz.cn/3mrIEk">https://zh.wikipedia.org/wiki/工作流技术</a></p>
+
+<p>[2] http://stackoverflow.com/a/35915110</p>
+
+<p>（完）</p>
+
+<div class="footer-nav">
+  <div class="left-nav"><i class="fa fa-angle-left"></i><a href="/help/doc/practice/git-deploy.html">上一篇：如何部署软件</a></div>
+</div>
 
                             </article>
                         </div>
