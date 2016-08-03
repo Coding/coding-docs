@@ -68,12 +68,93 @@ credential.helper = store
 
 这是由于 https 推送方式的 http.postBuffer 对推送文件大小有限制造成的，请更换使用 [SSH 方式](https://coding.net/help/doc/git/ssh-key.html) 进行推送。
 
+## Clone 出错怎么办？
+
+- 请确保安装并使用了最新版 [官方 Git 客户端](https://git-scm.com/downloads)
+- 请确保 remote url (大小写敏感）是正确的
+
+```
+$ git remote -v 
+# 查看目前使用的 remote url
+origin	https://git.coding.net/username/repo-name.git (fetch)
+origin	https://git.coding.net/username/repo-name.git (push) 
+
+$ git remote set-url origin https://git.coding.net:username/right-name.git
+# 修改为正确的 remote url
+```
+
+-  请确保自己在项目中的权限非 [受限](https://coding.net/help/doc/project/getting-started.html#section)；
+
+-  如果使用 https 方式 clone，服务器端一直返回 403 并且客户端不提示输入密码，则有可能是 git 客户端缓存了错误的密码，请清除已保存的密码
+
+```
+# Mac 用户请依次输入
+
+$ git credential-osxkeychain erase
+host=git.coding.net
+protocol=https
+[按回车]
+```
+
+-  如果以上都无法解决，请尝试使用 [SSH 地址](https://coding.net/help/doc/git/ssh-key.html) 进行 clone
+-  如果 SSH clone 出错，请检查你是否连接到正确的地址
+
+```
+$ ssh -vT git@git.coding.net
+OpenSSH_6.9p1, LibreSSL 2.1.8
+debug1: Reading configuration data /Users/.ssh/config
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to git.coding.net [111.202.69.69] port 22.
+debug1: Connection established.
+# 请注意 SSH 地址为 git.coding.net (而非 coding.net)
+```
+
+- 请使用 git 作为用户名
+
+```
+$ ssh -T username@git.coding.net
+# 使用自己的用户名进行链接会出错，请使用 git 作为用户名
+
+$ ssh -T git@git.coding.net
+Hello usernanme! You've connected to Coding.net via SSH successfully!
+```
+- 确保 git 使用了密钥
+
+```
+$ ssh -vT git@git.coding.net
+...
+debug1: identity file /Users/you/.ssh/id_rsa type -1
+debug1: identity file /Users/you/.ssh/id_rsa-cert type -1
+debug1: identity file /Users/you/.ssh/id_dsa type -1
+debug1: identity file /Users/you/.ssh/id_dsa-cert type -1
+...
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /Users/you/.ssh/id_rsa
+debug1: Trying private key: /Users/you/.ssh/id_dsa
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+# -1 表示未找到密钥，请参考帮助文档重新生成 rsa 密钥并进行配置
+
+$ ssh -vT git@git.coding.net
+...
+debug1: identity file /Users/you/.ssh/id_rsa type 1
+...
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering RSA public key: /Users/you/.ssh/id_rsa
+# 1 表示找到了密钥
+```
+- 确保 [SSH 公钥上传到了 Coding.net](https://coding.net/help/doc/git/ssh-key.html#codingnet-)
+- 如果以上方法都解决不了问题，请发送执行 `$ssh -vvT git@git.coding.net` 的结果到 [Feedback](https://coding.net/feedback)
+
 ## Push 提示其他错误怎么办？
 
 请参考 [文档](https://coding.net/help/doc/git/index.html) 并确保您执行了正确的操作，如果仍然报错请在 [反馈区](https://coding.net/u/coding/p/Coding-Feedback/topic) 提供我们以下信息以便工程师为您解决问题：
 
 - Git 报错信息
-- 执行 'git --version' 的结果
+- 执行 `git --version` 的结果
 - 其他有用的信息（如屏幕截图、`$ ssh -vvvT git@git.coding.net`（如果您目前使用了 SSH 方式推送的话）、`$ ping git.coding.net`、您目前的 [IP 地址](http://ip.cn)，及您目前使用的 DNS 等信息）
 
 
