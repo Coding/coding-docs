@@ -219,7 +219,7 @@ Coding 推荐使用合并请求，在线将2个分支合并。合并请求分为
 
 #### 通过命令行创建 MR
 
-- push 到 mr/master/branch_name 分支即可自动创建 MR，如 $git push origin Feature-x:mr/master/Feature-X
+- push 到 mr/master/branch_name 分支即可自动创建远端分支并提交 MR（合并入 master），如 `$git push origin Feature-X:mr/master/Feature-X`  
 - 自动创建的使用最后一个 commit message 作为标题和内容
 - 自动解析 commit message 中 @ 的人，自动加成评审者，自动# 加为关联资源
 - 自动创建出来的新的分支，只能有创建者再次 push 到这个分支，也允许 force push
