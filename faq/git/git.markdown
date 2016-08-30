@@ -35,6 +35,9 @@ $git config --global credential.helper store
 credential.helper = store
 ```
 
+详情请参考[凭证存储](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching) 。
+
+
 ## 我的 Git 是 1.7 版本为什么无法提交代码？
 
 该 Git 版本过低，请升级至 [最新版](https://git-scm.com/)。
@@ -66,7 +69,9 @@ credential.helper = store
 
 ## Push 提示 “RPC failed; result=22, HTTP code = 413” 怎么办?
 
-这是由于 https 推送方式的 http.postBuffer 对推送文件大小有限制造成的，请更换使用 [SSH 方式](https://coding.net/help/doc/git/ssh-key.html) 进行推送。
+这是由于 https 推送方式的 http.postBuffer 对推送文件大小有限制造成的。  
+可以执行 `git config http.postBuffer 524288000` 设置更大的限制值。  
+或者更换使用 [SSH 方式](https://coding.net/help/doc/git/ssh-key.html) 进行推送。
 
 ## Clone 出错怎么办？
 
