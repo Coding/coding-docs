@@ -619,9 +619,8 @@
 
 <h2 id="ssh">配置SSH公钥</h2>
 
-<p>有关什么是 SSH，可参考中文维基百科（http://zh.wikipedia.org/zh/Secure_Shell）。
-这里要说明的是，Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
-用户可以在认证身份时选择在账户里面设置 SSH公钥，并获所有仓库的读写权限（注意！您的公钥对应的私钥必须要妥善保存，如果您的私钥被第三方获取，那么他将可以以您的身份来操作 Git 仓库，这跟密码被盗一样严重）]， 也可以在项目设置里面设置项目部署公钥，获取仓库的只读权限。</p>
+<p>Coding.net 支持使用 SSH 协议来访问 Git仓库，提供账户 SSH 公钥和项目部署 SSH 公钥设置。
+用户可以在认证身份时选择在账户里面设置 SSH公钥，并获所有仓库的读写权限（注意！您的公钥对应的私钥必须要妥善保存，如果您的私钥被第三方获取，那么他将可以以您的身份来操作 Git 仓库，这跟密码被盗一样严重）， 也可以在项目设置里面设置项目部署公钥，获取仓库的只读权限。</p>
 
 <p>添加公钥后，您就可以在项目的代码页面点击 SSH 切换到 SSH 协议的 clone 地址，类似这样：（git@git.coding.net:wzw/leave-a-message.git），这样就可以使用 SSH 协议来访问 Git 仓库了，每次链接都不需要再输入账号和密码了。</p>
 
@@ -629,9 +628,35 @@
   <p>注意：一个公钥只能认证一个用户，而一个用户却可以拥有多个公钥。</p>
 </blockquote>
 
-<h3 id="ssh-1">账户SSH公钥</h3>
+<h3 id="git-">Git 协议比较</h3>
 
-<p>账户 SSH 公钥是跟用户账户关联的公钥，一旦设置，就拥有账户下所有项目仓库的读写权限。</p>
+<h4 id="https">HTTPS（推荐轻量级用户使用）</h4>
+
+<p>使用加密的网页访问通道读写仓库，使用用户名及密码进行鉴权。
+避免重复输入密码，查看<a href="/help/faq/git/git.html#push-">怎样在每次 Push 时不用重复输入密码</a>？</p>
+
+<blockquote>
+  <p>提示：Git 用户名为 Coding 的账户邮箱或者个性后缀，密码为 Coding 的账户密码。<br />
+注意：HTTPS 方式 push 大文件可能引发错误，查看 <a href="/help/faq/git/git.html">Push 出错怎么办</a>？</p>
+</blockquote>
+
+<h4 id="ssh-1">SSH（推荐资深用户或经常推送大型文件用户使用）</h4>
+
+<p>有关什么是 SSH，可参考中文维基百科（<a href="http://zh.wikipedia.org/zh/Secure_Shell">http://zh.wikipedia.org/zh/Secure_Shell</a>）。<br />
+使用加密通道读写仓库，无单次上传限制，需先设置<a href="#ssh-">“账户 SSH 公钥”</a>，完成配对验证。</p>
+
+<h4 id="git--1">Git （只读）</h4>
+
+<p>Git 协议是 Git 使用的网络传输协议里最快的，但缺乏授权机制，仅适用于公开项目 clone 使用。</p>
+
+<h3 id="ssh-">账户 SSH 公钥</h3>
+
+<p>账户 SSH 公钥是跟用户账户关联的公钥，一旦设置，SSH 就拥有账户下所有项目仓库的读写权限。
+设置“账户 SSH 公钥”是开发者使用 SSH 方式访问/修改代码仓库的“前置工作”，分为“获取 SSH 协议地址”、“生成公钥”、“在 Coding.net 添加公钥”三个步骤。</p>
+
+<h4 id="ssh--1">获取 SSH 协议地址</h4>
+<p>在项目的代码页面点击 SSH 切换到 SSH 协议， 获得 clone 地址，形如<code class="highlighter-rouge">git@git.coding.net:wzw/leave-a-message.git</code>。
+<strong>请使用这个地址来访问您的代码仓库。</strong></p>
 
 <h4 id="section">生成公钥</h4>
 
@@ -687,7 +712,7 @@ IdentityFile ~/.ssh/coding_rsa  // 生成的非默认地址的公钥存放点
 </code></pre>
 </div>
 
-<h3 id="ssh-">项目部署 SSH 公钥</h3>
+<h3 id="ssh--2">项目部署 SSH 公钥</h3>
 
 <p>部署公钥是 SSH 公钥的一种，不同之处在于：个人设置的 SSH 公钥是用来认证用户身份并进行 Git 操作的，而部署公钥是用来授权项目的只读权限（用于部署）的。注意：部署公钥没有 push 权限（只有只读权限）；一个部署公钥可以同时应用于多个项目，而且一个项目也可以设置多个部署公钥。</p>
 
