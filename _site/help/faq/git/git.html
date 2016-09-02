@@ -11,14 +11,14 @@
   <meta name="description" content="Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。">
   <link rel="shortcut icon" href="/help/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/help/dist/css/main.min.css?rjf4glnd">
+  <link rel="stylesheet" href="/help/dist/css/main.min.css?m4izg7us">
   <!-- endinject -->
 
   <link rel="canonical" href="https://coding.net/help/faq/git/git.html">
   <link rel="alternate" type="application/rss+xml" title="Coding 帮助文档" href="https://coding.net/help/feed.xml" />
 
   <!-- inject:js -->
-  <script src="/help/dist/js/main.min.js?1igtg35g"></script>
+  <script src="/help/dist/js/main.min.js?m07vqjto"></script>
   <!-- endinject -->
 </head>
 
@@ -639,17 +639,17 @@
     <p>使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置文档</a></p>
   </li>
   <li>
-    <p>对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net   然后执行配置 Git 命令存储认证命令： 
-<code class="highlighter-rouge">
-$git config --global credential.helper store 
-</code></p>
+    <p>对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）内添加 https://{username}:{passwd}@git.coding.net   然后执行配置 Git 命令存储认证命令：</p>
+    <div class="highlighter-rouge"><pre class="highlight"><code>$git config --global credential.helper store 
+</code></pre>
+    </div>
   </li>
 </ul>
 
-<p>执行后在 ~/.gitconfig 文件会多出下面配置项:
-<code class="highlighter-rouge">
-credential.helper = store
-</code></p>
+<p>执行后在 ~/.gitconfig 文件会多出下面配置项:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>credential.helper = store
+</code></pre>
+</div>
 
 <p>详情请参考<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching">凭证存储</a> 。</p>
 
@@ -834,8 +834,10 @@ debug1: Offering RSA public key: /Users/you/.ssh/id_rsa
 
 <p>设置 SSH Key 的方式参见 <a href="/help/doc/git/ssh-key.html">SSH 公钥配置</a></p>
 
-<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码
-&gt; 注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
+<p>如果用户自己对 SSH 私钥加了密，仍然需要使用密码来访问私钥，因此需要输入密码</p>
+<blockquote>
+  <p>注意： 配置了 SSH 公钥后，需要使用 SSH 地址操作仓库。</p>
+</blockquote>
 
 <h2 id="ssh-">无法使用 22 端口的 SSH 服务怎么办？</h2>
 
