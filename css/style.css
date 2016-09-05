@@ -247,6 +247,10 @@
     bottom: 0;
 }
 
+.help-banner + .help-container .container-wrapper:before {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
 
     .help-container {
