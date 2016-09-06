@@ -1054,8 +1054,7 @@
     opacity: 1;
 }
 
-#footer .share .wechat,
-#footer .share .weibo {
+#footer .share > div {
     display: inline-block;
     cursor: pointer;
     position: relative;
