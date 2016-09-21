@@ -10,8 +10,8 @@
     "url": "https://git.coding.net/kin/coding-manual.git"
   },
   "scripts": {
-    "build": "npm install && bower install && gulp build",
-    "start": "npm install && bower install && gulp build && jekyll server"
+    "init": "npm install && bower install",
+    "start": "gulp build && jekyll build && jekyll server"
   },
   "dependencies": {
     "babel-core": "6.7.4",
@@ -50,7 +50,9 @@
     "watch-array": "0.0.1-security",
     "watchify": "3.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-uglify": "^1.1.0"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": ">= 0.6"

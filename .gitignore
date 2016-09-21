@@ -1,3 +1,4 @@
+_includes/head.html
 /static/vendor
 /bower
 .sass-cache
@@ -5,4 +6,6 @@
 /node_modules
 /react/configs/app.config.json
 /npm-debug.log
+/dist
+_site/
 .idea

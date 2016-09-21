@@ -2,7 +2,7 @@
 
 ## 使用 Jekyll 搭建的静态文档
 
-所有文档使用 `markdown` 文件保存，由 `JeKyll` 编译成静态 `HTML` 后运行。`Coding` 文档主要分为俩部分：1、常见问题；2、文档。
+所有文档使用 `markdown` 文件保存，由 `Jekyll` 编译成静态 `HTML` 后运行。`Coding` 文档主要分为两部分：1、常见问题；2、文档。
 
 一. 常见问题 
 
@@ -27,7 +27,7 @@
 
 四. 侧边菜单栏维护
 
-侧边栏菜单文件在 `_includes/sidebar.html` 文件中，如果熟悉或者了解 `HTML` 语法，请根据自己需要直接编辑该文件，如不熟悉 `HTML` 请不要修改此文件，可 `@书一` 修改。
+侧边栏菜单文件在 `_includes/sidebar.html` 文件中，如果熟悉或者了解 `HTML` 语法，请根据自己需要直接编辑该文件，如不熟悉 `HTML` 请不要修改此文件。
 
 
 五. 构建和启动
@@ -35,5 +35,12 @@
 - `Jekyll` 项目需要 `ruby` 环境，请自行安装 `ruby`
 - 项目有使用到 `node` 构建 `js` 文件，需要 安装 `nodejs`
 - 安装好 `nodejs` 之后 `npm install` 安装依赖，需要 `bower` 和 `gulp` 支持，使用命令 `npm install bower -g` 和 `npm install gulp -g` 安装 `bower` 和 `gulp`
-- 使用 `npm run build` 构建
-- 使用 `npm run start` 启动
+- 准备 `cd coding-docs/react/configs/ && cp app.config.json.sample app.config.json` 
+- 使用 `npm run init` 初始化
+- 使用 `npm run start` 构建并启动，请注意在修改完样式后也需要重新执行该命令以生效
+
+六. 版权
+
+代码内容采用 [新 BSD 许可](LICENSE)
+
+文档内容采用 [署名-禁止演绎 4.0 国际协议许可](https://creativecommons.org/licenses/by-nd/4.0/deed.zh)
