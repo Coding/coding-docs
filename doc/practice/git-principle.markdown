@@ -342,6 +342,33 @@ pick e370289 add a
 
 所以使用 rebase 最好不要在公共分支上进行操作。
 
+### 3.2.4 Squash and Merge
+
+本节将描述“压缩提交”并合并的实现细节。  
+假设欲提交的如图。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/46ec1466-e53c-4664-a42e-9869d3ea7f7f.png)
+
+ 并以“压缩提交”的方式进行合并，系统对合并行为的操作如下：
+
+ 首先会创建一个临时分支，指向当前 feature 的最新 commit。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/8881502e-310a-4b51-b75c-67692197e0ab.png)
+
+然后如图上述 rebase 操作，变基到 master 的最新 commit 处。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/52f44406-a03b-43a6-bf1e-a54564d22171.png)
+
+ 接着用 rebase 来 squash 之，压缩这些提交为一个提交。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/d5029370-8b2c-42ed-843d-535158c2731f.png)
+
+ 最后以 fast forward 的方式合并到 master 中。
+
+ ![图片](https://dn-coding-net-production-pp.qbox.me/05cc4575-c325-4810-8420-fdebc5dab78e.png)
+
+ 可见此时 master 分支多且只多了一个描述了这次改动的提交，这对于大型工程，保持主分支的简洁易懂有很大的帮助。
+
 ## 3.3 Checkout、Revert、Reset
 
 ### 3.3.1 Checkout
