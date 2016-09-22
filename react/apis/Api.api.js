@@ -3,7 +3,7 @@
  */
 
 var Request = require('request');
-var jQuery = require('jQuery');
+var jQuery = require('jquery');
 var Api = {
     get: function () {
         var url, params = {}, success = undefined, error = undefined;
